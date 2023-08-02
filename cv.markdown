@@ -13,7 +13,7 @@ permalink: /cv/
   - Served as KATUSA in 8th Army
   - November 2020 - May 2022
 
-- **Hansung Science High School**, Seoul, Korea
+- **한성과학고등학교**, Seoul, Korea
   - High School Student
   - 2015 - 2016
 
@@ -24,4 +24,7 @@ Static analysis, Fuzzer @ Prosyslab, KAIST
 SMT solver, Graph Theory
 
 ## Languages
-Korean, English, C, Python, Scala, [Anglican](https://probprog.github.io/anglican/index.html)(Clojure), Rust, [OCaml](https://ocaml.org/), Espanol(a poco)
+한국어, English, C, Python, Scala, [Anglican](https://probprog.github.io/anglican/index.html)(Clojure), Rust, [OCaml](https://ocaml.org/), Español(a poco)
+
+## Awards
+관세청 후원 인공지능 모델개발 경진대회, 최우수상 (23.06.30)
