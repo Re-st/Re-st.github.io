@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "asdf!"
+title:  "First post!"
 date:   2023-08-02 18:03:41 +0900
-categories: jekyll update
+categories: first_post
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
@@ -15,7 +15,7 @@ Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit number
 Jekyll also offers powerful support for code snippets:
 
 {% highlight python %}
-def hihihi():
+def the_day_today():
   print(f"Hello, {you}")
 {% endhighlight %}
 
