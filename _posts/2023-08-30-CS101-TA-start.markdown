@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "As a TA of CS101"
+date:   2023-08-30 17:32:00 +0900
+categories: teach
+---
+Frequent mistakes from students:
+- not putting `:` (colon) after for loop
+- no indentation
+- misspelling `range`
+
+Frequent tips to students:
+- use `_` instead of `i`
+- group indent by tabbing the block
+- write the rest of the function name automatically by pressing tab
+- delete repeating parts and fill for loop instead
+- copy-reuse the first four lines loading library (`cs1robots`) and world data (`load_world`, `create_world`, etc.)
+
+Easy debloating
+- repetance to for loop
+- repetance to function
