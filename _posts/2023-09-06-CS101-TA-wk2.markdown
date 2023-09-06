@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "As a TA of CS101"
+date:   2023-09-06 18:00:00 +0900
+categories: teach
+---
+# 1. Frequent mistakes from students
+- not putting `:` (colon) after if/while loop
+- using `else` with `while`
+- IndentationError
+
+# 2. Frequent tips to students
+- copy the code from other task and modify a very little bit
+- `print` statement to debug
+- `ctrl + /` to comment out a line
+- `while True` and `break`
+- `tab` and `shift + tab` to indent and unindent
+- Block indent by scrolling through multiple lines
+- `ctrl + h` to replace
+
+# 3. Easy refactoring
+halt in the middle of the last loop of `for`
+{% highlight python %}
+for i in range(5):
+    # Your code here (repeated action)
+    if i == 4:
+        break
+    # Rest of the code
+{% endhighlight %}`
