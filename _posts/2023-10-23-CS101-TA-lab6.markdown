@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "As a TA of CS101"
+date:   2023-10-23 16:00:00 +0900
+categories: teach
+---
+요약 : In Python, the `range` function is a handy tool for generating a sequence of numbers. It is commonly used in `for` loops, which are essentially a syntax sugar for `while` loops. 
+# 1. What is `for` loop?
+It's just a syntax sugar for `while` loop.
+```python
+for i in range(5):
+    # Your code here (repeated action)
+```
+is equivalent to
+```python
+i = 0
+while i < 5:
+    # Your code here (repeated action)
+    i += 1
+```
+syntax sugar에 대해 더 알아보기 -> [[JS]Syntax Sugar(문법 설탕)][문법설탕] 
+## Note
+- `i += 1` is equivalent to `i = i + 1`
+- If you don't use `i` inside the for loop, then you can change `for i in range(5)` to `for _ in range(5)`.
+
+# 2. What is `range`?
+- `range` is a function that returns a list of numbers
+- `range(5)` returns `Iterable` object that is similar to `[0, 1, 2, 3, 4]`
+  - List와 다른 점 : You can not access the elements of `range(5)` object directly
+  - You can only access the elements of `range(5)` object sequentially (순서대로)
+  - Iterable에 대해 더 알아보기 -> [파이썬 - 기본을 갈고 닦자!][Iterable]
+  - Iterable에 대해 조금 더 알아보기 -> 아마 프밍이에서 가르칠지도 모른다. 혹은 [이곳][Iterable2]에서 확인
+- `range(1, 5)` returns `Iterable` object that is similar to `[1, 2, 3, 4]`
+  - Hence, 1 is lower bound and 5 - 1 is upper bound
+  - 1 이상, 5 미만
+  - `range(n)` is equivalent to `range(0, n)`.
+  - Python automatically assumes 0 as the lower bound if you don't specify it.
+
+[문법설탕]: https://dkje.github.io/2020/09/02/SyntaxSugar/
+[Iterable]: https://wikidocs.net/16068
+[Iterable2]: https://velog.io/@clueless_coder/%ED%8C%8C%EC%9D%B4%EC%8D%AC-iterable%EA%B3%BC-iterator-%EC%9D%98-%EC%B0%A8%EC%9D%B4%EA%B0%80-%EB%AD%90%EC%98%88%EC%9A%94
