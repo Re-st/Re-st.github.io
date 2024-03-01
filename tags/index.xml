@@ -6,6 +6,9 @@
     <description>Recent content in Tags on Park, Geon (re-st)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <atom:link href="https://re-st.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://re-st.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>

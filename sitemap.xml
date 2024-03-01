@@ -1,27 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://re-st.github.io/post/chromedriver/</loc>
+    <lastmod>2024-03-01T17:06:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://re-st.github.io/</loc>
+    <lastmod>2024-03-01T17:06:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://re-st.github.io/post/</loc>
+    <lastmod>2024-03-01T17:06:30+09:00</lastmod>
+  </url>
+  
   <url>
     <loc>https://re-st.github.io/post/calendar/</loc>
-    <lastmod>2024-02-02T20:54:07+09:00</lastmod>
-  </url><url>
-    <loc>https://re-st.github.io/</loc>
-    <lastmod>2024-02-02T21:59:35+09:00</lastmod>
-  </url><url>
-    <loc>https://re-st.github.io/post/</loc>
-    <lastmod>2024-02-02T21:59:35+09:00</lastmod>
-  </url><url>
+    <lastmod>2024-03-01T16:15:40+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://re-st.github.io/post/janestreet-jan24/</loc>
-    <lastmod>2024-02-02T21:59:35+09:00</lastmod>
-  </url><url>
+    <lastmod>2024-03-01T16:15:40+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://re-st.github.io/post/cs101-tip/</loc>
-    <lastmod>2024-02-02T20:50:13+09:00</lastmod>
-  </url><url>
+    <lastmod>2024-03-01T16:15:40+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://re-st.github.io/readme/</loc>
-    <lastmod>2024-02-02T20:22:23+09:00</lastmod>
-  </url><url>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://re-st.github.io/categories/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://re-st.github.io/tags/</loc>
   </url>
+  
 </urlset>
