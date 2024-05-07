@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Park, Geon (re-st)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 01 Mar 2024 17:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://re-st.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Janestreet 2024-03 Solution</title>
+      <link>https://re-st.github.io/post/janestreet-mar24/</link>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-st.github.io/post/janestreet-mar24/</guid>
+      <description>지뢰찾기 비슷한 퀴즈 풀이</description>
+    </item>
     
     <item>
       <title>chromedriver</title>
