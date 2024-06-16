@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://re-st.github.io/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://re-st.github.io/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://re-st.github.io/css/github.min.css' />
+    <link rel="stylesheet" href='https://re-st.github.io/css/github-style.css' />
+    <link rel="stylesheet" href='https://re-st.github.io/css/light.css' />
+    <link rel="stylesheet" href='https://re-st.github.io/css/dark.css' />
+    <link rel="stylesheet" href='https://re-st.github.io/css/syntax.css' />
+    <title> - Park, Geon (re-st)</title>
+    
+    <link rel="icon" type="image/x-icon" href='/images/github.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    
+    <meta name="description"
+  content="출처 https://forum.dotnetdev.kr/t/winget-cdn/8519
+답변1 저도 같은 증상을 겪었는데
+업데이트가 되는 것 같지만 실패하거나 되지 않는 부분도 많습니다. 제 경우에는 winget source update 실행 후에 winget upgrade 를 실행해서 해결했습니다.
+작동 안함 답변 2 winget upgrade --all --accept-package-agreements 작동 안함 답변 3 winget upgrade -all --force --accept-package-agreements --accept-source-agreements --include-unknown --silent 작동 안함 PS C:\Users\익명&amp;gt; winget upgrade --all --force --accept-package-agreements --accept-source-agreements --include-unknown --silent원본을 업데이트하지 못했습니다. winget이름 장치 ID 버전 사용 가능 원본---------------------------------------------------------------MEGAsync Mega." />
+<meta name="keywords"
+  content='blog, google analytics' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://re-st.github.io/post/%EC%9B%90%EB%B3%B8%EC%9D%84-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%ED%95%98%EC%A7%80-%EB%AA%BB%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4.-winget/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content=" - Park, Geon (re-st)" />
+<meta name="twitter:description"
+  content="출처 https://forum.dotnetdev.kr/t/winget-cdn/8519
+답변1 저도 같은 증상을 겪었는데
+업데이트가 되는 것 같지만 실패하거나 되지 않는 부분도 많습니다. 제 경우에는 winget source update 실행 후에 winget upgrade 를 실행해서 해결했습니다.
+작동 안함 답변 2 winget upgrade --all --accept-package-agreements 작동 안함 답변 3 winget upgrade -all --force --accept-package-agreements --accept-source-agreements --include-unknown --silent 작동 안함 PS C:\Users\익명&amp;gt; winget upgrade --all --force --accept-package-agreements --accept-source-agreements --include-unknown --silent원본을 업데이트하지 못했습니다. winget이름 장치 ID 버전 사용 가능 원본---------------------------------------------------------------MEGAsync Mega." />
+<meta name="twitter:site" content="https://re-st.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="https://re-st.github.io/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content=" - Park, Geon (re-st)">
+<meta property="og:description"
+  content="출처 https://forum.dotnetdev.kr/t/winget-cdn/8519
+답변1 저도 같은 증상을 겪었는데
+업데이트가 되는 것 같지만 실패하거나 되지 않는 부분도 많습니다. 제 경우에는 winget source update 실행 후에 winget upgrade 를 실행해서 해결했습니다.
+작동 안함 답변 2 winget upgrade --all --accept-package-agreements 작동 안함 답변 3 winget upgrade -all --force --accept-package-agreements --accept-source-agreements --include-unknown --silent 작동 안함 PS C:\Users\익명&amp;gt; winget upgrade --all --force --accept-package-agreements --accept-source-agreements --include-unknown --silent원본을 업데이트하지 못했습니다. winget이름 장치 ID 버전 사용 가능 원본---------------------------------------------------------------MEGAsync Mega." />
+<meta property="og:url" content="https://re-st.github.io/post/%EC%9B%90%EB%B3%B8%EC%9D%84-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%ED%95%98%EC%A7%80-%EB%AA%BB%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4.-winget/" />
+<meta property="og:site_name" content="" />
+<meta property="og:image"
+  content="https://re-st.github.io/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://re-st.github.io/">
+        <img class="octicon" height="32" width="32" src="/images/GitHub-Mark-Light-32px.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <img height="24" class="octicon octicon-three-bars" width="24" src="/images/GitHub-Mark-Light-32px.png">
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          <form target="_blank" action="https://www.google.com/search" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+              <input type="hidden" name="q" value="site:https://re-st.github.io/">
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://re-st.github.io/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="/images/GitHub-Mark-Light-32px.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  
+<div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="https://re-st.github.io/">
+                  <img class=" avatar-user"
+                    src="/images/avatar.jpg"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="https://re-st.github.io/">Park, Geon</a></span><span
+                    class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
+                      href="https://re-st.github.io/post/%EC%9B%90%EB%B3%B8%EC%9D%84-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%ED%95%98%EC%A7%80-%EB%AA%BB%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4.-winget/"></a></strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Mon, 01 Jan 0001 00:00:00 &#43;0000"
+                    class="no-wrap">
+                    Mon, 01 Jan 0001 00:00:00 &#43;0000</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Sun, 16 Jun 2024 14:24:57 &#43;0900"
+                    class="no-wrap">
+                    Sun, 16 Jun 2024 14:24:57 &#43;0900</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      670 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><p>출처 <a href="https://forum.dotnetdev.kr/t/winget-cdn/8519">https://forum.dotnetdev.kr/t/winget-cdn/8519</a></p>
+<h1 id="답변1">답변1</h1>
+<p>저도 같은 증상을 겪었는데<br>
+업데이트가 되는 것 같지만 실패하거나 되지 않는 부분도 많습니다.
+제 경우에는
+<code>winget source update</code>
+실행 후에
+<code>winget upgrade</code>
+를 실행해서 해결했습니다.</p>
+<h2 id="작동-안함">작동 안함</h2>
+<h1 id="답변-2">답변 2</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>winget upgrade --all --accept-package-agreements
+</span></span></code></pre></div><h2 id="작동-안함-1">작동 안함</h2>
+<h1 id="답변-3">답변 3</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>winget upgrade -all --force --accept-package-agreements --accept-source-agreements --include-unknown --silent
+</span></span></code></pre></div><h2 id="작동-안함-2">작동 안함</h2>
+<pre tabindex="0"><code>PS C:\Users\익명&gt; winget upgrade --all --force --accept-package-
+agreements --accept-source-agreements --include-unknown --silent
+
+원본을 업데이트하지 못했습니다. winget
+이름          장치 ID       버전          사용 가능      원본
+---------------------------------------------------------------
+MEGAsync      Mega.MEGASync Unknown       4.6.6.0        winget
+DeepL         DeepL.DeepL   Unknown       3.5.25837      winget
+Microsoft Vi… Microsoft.VC… 9.0.30729.41… 9.0.30729.6161 winget
+Microsoft Vi… Microsoft.VC… 9.0.30729.41… 9.0.30729.6161 winget
+NVIDIA GeFor… Nvidia.GeFor… 3.20.4.14     3.25.1.27      winget
+5 업그레이드를 사용할 수 있습니다.
+명령을 실행하는 동안 예기치 않은 오류가 발생했습니다.
+Download request status is not success.
+0x80190194 : ã�� �� ����(404).
+</code></pre><p><a href="https://github.com/microsoft/winget-cli/issues/4440">https://github.com/microsoft/winget-cli/issues/4440</a>
+이 상황이다.</p>
+<h2 id="silent하지-않다면">silent하지 않다면?</h2>
+<pre tabindex="0"><code>PS C:\Users\익명&gt; winget upgrade --all
+원본을 업데이트하지 못했습니다. winget
+이름          장치 ID       버전          사용 가능      원본
+---------------------------------------------------------------
+Microsoft Vi… Microsoft.VC… 9.0.30729.41… 9.0.30729.6161 winget
+Microsoft Vi… Microsoft.VC… 9.0.30729.41… 9.0.30729.6161 winget
+NVIDIA GeFor… Nvidia.GeFor… 3.20.4.14     3.25.1.27      winget
+3 업그레이드를 사용할 수 있습니다.
+2 패키지에 확인할 수 없는 버전 번호가 있습니다. 모든 결과를 보려면 --include-unknown 사용하세요.
+
+(1/1) 찾음 NVIDIA GeForce Experience [Nvidia.GeForceExperience] 버전 3.25.1.27
+이 응용 프로그램의 라이선스는 그 소유자가 사용자에게 부여했습니 다.
+Microsoft는 타사 패키지에 대한 책임을 지지 않고 라이선스를 부여 하지도 않습니다.
+명령을 실행하는 동안 예기치 않은 오류가 발생했습니다.
+0x80070005 : �׼����� �źεǾ����ϴ�.
+</code></pre><p><a href="https://re-st.github.io/post/0x80070005/">0x80070005</a>의 마지막까지 하고 나니 해결!</p>
+</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='https://re-st.github.io/js/toc.js'></script>
+<link rel="stylesheet" href='https://re-st.github.io/css/toc.css' />
+
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="https://re-st.github.io/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+</body>
+
+<script type="application/javascript" src="https://re-st.github.io/js/github-style.js"></script>
+
+
+
+
+</html>
