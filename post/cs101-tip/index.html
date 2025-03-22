@@ -138,9 +138,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sat, 22 Mar 2025 15:41:43 &#43;0900"
+                  Modified <relative-time datetime="Sat, 22 Mar 2025 15:59:37 &#43;0900"
                     class="no-wrap">
-                    Sat, 22 Mar 2025 15:41:43 &#43;0900</relative-time>
+                    Sat, 22 Mar 2025 15:59:37 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -170,7 +170,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      214 Words
+                      234 Words
                     
 
                   </div>
@@ -225,25 +225,27 @@
 </ul>
 <h2 id="3-easy-refactoring">3. Easy refactoring</h2>
 <ul>
-<li>
-<p>repetition -&gt; for loop
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Your code here (repeated action)</span></span></span></code></pre></div></p>
-</li>
-<li>
-<p>repetition -&gt; function
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_function</span>():
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Your code here (repeated action)</span></span></span></code></pre></div></p>
-</li>
+<li>repetition -&gt; for loop
+{{&lt; highlight python &gt;}}
+for i in range(5):# Your code here (repeated action)</li>
+</ul>
+<p>{{&lt; / highlight &gt;}}</p>
+<ul>
+<li>repetition -&gt; function
+{{&lt; highlight python &gt;}}
+def my_function():# Your code here (repeated action)</li>
+</ul>
+<p>{{&lt; / highlight &gt;}}</p>
+<ul>
 <li>
 <p>action <code>ABABA</code> -&gt; halt in the middle of the last loop of <code>for</code>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Your code here (repeated action)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Rest of the code</span></span></span></code></pre></div></p>
+{{&lt; highlight python &gt;}}
+for i in range(3):# Your code here (repeated action)</p>
+<p>if i == 2:
+break# Rest of the code</p>
 </li>
 </ul>
+<p>{{&lt; / highlight &gt;}}</p>
 <h1 id="learning">Learning</h1>
 <ul>
 <li>How to teach
