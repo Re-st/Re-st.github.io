@@ -10,7 +10,7 @@
     <link rel="stylesheet" href='https://re-st.github.io/css/light.css' />
     <link rel="stylesheet" href='https://re-st.github.io/css/dark.css' />
     <link rel="stylesheet" href='https://re-st.github.io/css/syntax.css' />
-    <title>chromedriver - Park, Geon (re-st)</title>
+    <title>vi 의 shell zsh로 바꾸기 - Park, Geon (re-st)</title>
     
     <link rel="icon" type="image/x-icon" href='/images/github.png'>
     
@@ -18,17 +18,17 @@
 
     
     <meta name="description"
-  content="installing chromedriver" />
+  content="vi 의 shell zsh로 바꾸기" />
 <meta name="keywords"
   content='blog, google analytics' />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://re-st.github.io/post/chromedriver/" />
+<link rel="canonical" href="https://re-st.github.io/post/vi-%EC%9D%98-shell-zsh%EB%A1%9C-%EB%B0%94%EA%BE%B8%EA%B8%B0/" />
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="chromedriver - Park, Geon (re-st)" />
+<meta name="twitter:title" content="vi 의 shell zsh로 바꾸기 - Park, Geon (re-st)" />
 <meta name="twitter:description"
-  content="installing chromedriver" />
+  content="vi 의 shell zsh로 바꾸기" />
 <meta name="twitter:site" content="https://re-st.github.io/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image"
@@ -36,17 +36,17 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="chromedriver - Park, Geon (re-st)">
+<meta property="og:title" content="vi 의 shell zsh로 바꾸기 - Park, Geon (re-st)">
 <meta property="og:description"
-  content="installing chromedriver" />
-<meta property="og:url" content="https://re-st.github.io/post/chromedriver/" />
-<meta property="og:site_name" content="chromedriver" />
+  content="vi 의 shell zsh로 바꾸기" />
+<meta property="og:url" content="https://re-st.github.io/post/vi-%EC%9D%98-shell-zsh%EB%A1%9C-%EB%B0%94%EA%BE%B8%EA%B8%B0/" />
+<meta property="og:site_name" content="vi 의 shell zsh로 바꾸기" />
 <meta property="og:image"
   content="https://re-st.github.io/">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2024-06-16 17:40:43 &#43;0900 KST" />
+<meta property="article:published_time" content="2024-07-23 14:11:43 &#43;0900 KST" />
 
 
 
@@ -129,12 +129,12 @@
                   <span class="author">
                     <a href="https://re-st.github.io/">Park, Geon</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://re-st.github.io/post/chromedriver/">chromedriver</a></strong>
+                      href="https://re-st.github.io/post/vi-%EC%9D%98-shell-zsh%EB%A1%9C-%EB%B0%94%EA%BE%B8%EA%B8%B0/">vi 의 shell zsh로 바꾸기</a></strong>
                 </h1>
                 <div class="note m-0">
-                  Created <relative-time datetime="Sun, 16 Jun 2024 17:40:43 &#43;0900"
+                  Created <relative-time datetime="Tue, 23 Jul 2024 14:11:43 &#43;0900"
                     class="no-wrap">
-                    Sun, 16 Jun 2024 17:40:43 &#43;0900</relative-time>
+                    Tue, 23 Jul 2024 14:11:43 &#43;0900</relative-time>
 
                   
                   <span class="file-info-divider"></span>
@@ -170,7 +170,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      224 Words
+                      185 Words
                     
 
                   </div>
@@ -182,36 +182,10 @@
 
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
-                <article class="markdown-body entry-content container-lg"><h1 id="chromedriver-버전-문제">chromedriver 버전 문제</h1>
-<ol>
-<li>chromedriver 버전을 너무 낮은 걸 설치하면, 최신형 chrome을 사용할 줄 몰라서 실행이 안 된다.</li>
-<li>한편 chrome은 최신형 말고는 찾을 수가 없다.</li>
-<li>아래와 같이 행동하자.</li>
-</ol>
-<h1 id="selenium-스크랩-위해-chromedriver-설치">selenium 스크랩 위해 chromedriver 설치</h1>
-<ol start="0">
-<li>
-<p><a href="https://bill1224.tistory.com/381">https://bill1224.tistory.com/381</a> 를 참고.</p>
-</li>
-<li>
-<p>위 링크대로 linux용 chrome을 설치한다.</p>
-</li>
-<li>
-<p><a href="https://googlechromelabs.github.io/chrome-for-testing/">https://googlechromelabs.github.io/chrome-for-testing/</a> 에서 버전을 찾아
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo wget https://chromedriver.storage.googleapis.com/<span style="color:#f92672">(</span>버전명<span style="color:#f92672">)</span>/chromedriver-linux64.zip</span></span></code></pre></div>
-를 한다.</p>
-</li>
-<li>
-<p>이후
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo unzip chromedriver-linux64.zip
-</span></span><span style="display:flex;"><span>sudo mv chromedriver /bin/chromedriver
-</span></span><span style="display:flex;"><span>which chromedriver</span></span></code></pre></div>
-를 한다.</p>
-</li>
-<li>
-<p>이후는 블로그 그대로</p>
-</li>
-</ol>
+                <article class="markdown-body entry-content container-lg"><p>Vim에서 <code>!</code> 명령어를 사용하여 외부 명령을 실행할 수 있으며, 이를 통해 <code>zsh</code>에서 정의한 alias와 함수를 사용할 수 있다. 이를 위해서는 Vim에서 <code>zsh</code>를 쉘로 사용하도록 설정하면 된다. Vim이 기본적으로 사용하고 있는 쉘을 <code>zsh</code>로 변경하면 <code>zsh</code>의 환경설정을 그대로 사용할 수 있다.</p>
+<p>Vim 설정 파일 (<code>~/.vimrc</code>)에 다음 줄을 추가한다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vim" data-lang="vim"><span style="display:flex;"><span><span style="color:#66d9ef">set</span> <span style="color:#a6e22e">shell</span>=<span style="color:#e6db74">/bin/</span><span style="color:#a6e22e">zsh</span>
+</span></span></code></pre></div><p>이렇게 하면 Vim이 외부 명령어를 실행할 때 <code>zsh</code>를 사용하게 된다.</p>
 </article>
               </div>
             </div>
