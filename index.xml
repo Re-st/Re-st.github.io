@@ -6,119 +6,13 @@
     <description>Recent content on Park, Geon (re-st)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 07 Apr 2025 17:35:56 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>chromedriver</title>
-      <link>https://re-st.github.io/post/chromedriver/</link>
-      <pubDate>Sat, 22 Mar 2025 16:47:48 +0900</pubDate>
-      <guid>https://re-st.github.io/post/chromedriver/</guid>
-      <description>installing chromedriver</description>
-    </item>
-    <item>
-      <title>github.io 검색 엔진에 노출시키기</title>
-      <link>https://re-st.github.io/post/github.io-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84%EC%97%90-%EB%85%B8%EC%B6%9C%EC%8B%9C%ED%82%A4%EA%B8%B0/</link>
-      <pubDate>Sat, 22 Mar 2025 16:47:48 +0900</pubDate>
-      <guid>https://re-st.github.io/post/github.io-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84%EC%97%90-%EB%85%B8%EC%B6%9C%EC%8B%9C%ED%82%A4%EA%B8%B0/</guid>
-      <description>github.io 검색 엔진에 노출시키기</description>
-    </item>
-    <item>
-      <title>how to turn off google calendar messages in slack</title>
-      <link>https://re-st.github.io/post/how-to-turn-off-google-calendar-messages-in-slack/</link>
-      <pubDate>Sat, 22 Mar 2025 16:47:48 +0900</pubDate>
-      <guid>https://re-st.github.io/post/how-to-turn-off-google-calendar-messages-in-slack/</guid>
-      <description>how to turn off google calendar messages in slack</description>
-    </item>
-    <item>
-      <title>Obsidian 안 켜지던 문제</title>
-      <link>https://re-st.github.io/post/obsidian-%EC%95%88-%EC%BC%9C%EC%A7%80%EB%8D%98-%EB%AC%B8%EC%A0%9C/</link>
-      <pubDate>Sat, 22 Mar 2025 16:47:48 +0900</pubDate>
-      <guid>https://re-st.github.io/post/obsidian-%EC%95%88-%EC%BC%9C%EC%A7%80%EB%8D%98-%EB%AC%B8%EC%A0%9C/</guid>
-      <description>Obsidian 안 켜지던 문제</description>
-    </item>
-    <item>
-      <title>obsidian-to-hugo로 옵시디언 내용 블로그에 올리기</title>
-      <link>https://re-st.github.io/post/obsidian-to-hugo%EB%A1%9C-%EC%98%B5%EC%8B%9C%EB%94%94%EC%96%B8-%EB%82%B4%EC%9A%A9-%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%97%90-%EC%98%AC%EB%A6%AC%EA%B8%B0/</link>
-      <pubDate>Sat, 22 Mar 2025 16:47:48 +0900</pubDate>
-      <guid>https://re-st.github.io/post/obsidian-to-hugo%EB%A1%9C-%EC%98%B5%EC%8B%9C%EB%94%94%EC%96%B8-%EB%82%B4%EC%9A%A9-%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%97%90-%EC%98%AC%EB%A6%AC%EA%B8%B0/</guid>
-      <description>obsidian-to-hugo로 옵시디언 내용 블로그에 올리기</description>
-    </item>
-    <item>
-      <title>vi 의 shell zsh로 바꾸기</title>
-      <link>https://re-st.github.io/post/vi-%EC%9D%98-shell-zsh%EB%A1%9C-%EB%B0%94%EA%BE%B8%EA%B8%B0/</link>
-      <pubDate>Sat, 22 Mar 2025 16:47:48 +0900</pubDate>
-      <guid>https://re-st.github.io/post/vi-%EC%9D%98-shell-zsh%EB%A1%9C-%EB%B0%94%EA%BE%B8%EA%B8%B0/</guid>
-      <description>vi 의 shell zsh로 바꾸기</description>
-    </item>
-    <item>
-      <title>Windows Update 오류 코드 0x80070005 해결 방법</title>
-      <link>https://re-st.github.io/post/0x80070005/</link>
-      <pubDate>Sat, 22 Mar 2025 16:47:48 +0900</pubDate>
-      <guid>https://re-st.github.io/post/0x80070005/</guid>
-      <description>Windows Update 오류 코드 0x80070005 해결 방법</description>
-    </item>
-    <item>
-      <title>winget에서 원본을 업데이트하지 못했다 말할 때</title>
-      <link>https://re-st.github.io/post/%EC%9B%90%EB%B3%B8%EC%9D%84-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%ED%95%98%EC%A7%80-%EB%AA%BB%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4.-winget/</link>
-      <pubDate>Sat, 22 Mar 2025 16:47:48 +0900</pubDate>
-      <guid>https://re-st.github.io/post/%EC%9B%90%EB%B3%B8%EC%9D%84-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%ED%95%98%EC%A7%80-%EB%AA%BB%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4.-winget/</guid>
-      <description>winget에서 원본을 업데이트하지 못했다 말할 때</description>
-    </item>
-    <item>
-      <title>네이버 링크 오류</title>
-      <link>https://re-st.github.io/post/%EB%84%A4%EC%9D%B4%EB%B2%84-%EB%A7%81%ED%81%AC-%EC%98%A4%EB%A5%98/</link>
-      <pubDate>Sat, 22 Mar 2025 16:47:48 +0900</pubDate>
-      <guid>https://re-st.github.io/post/%EB%84%A4%EC%9D%B4%EB%B2%84-%EB%A7%81%ED%81%AC-%EC%98%A4%EB%A5%98/</guid>
-      <description>네이버 링크 오류</description>
-    </item>
-    <item>
-      <title>윈도 공간 부족 해결</title>
-      <link>https://re-st.github.io/post/%EC%9C%88%EB%8F%84-%EA%B3%B5%EA%B0%84-%EB%B6%80%EC%A1%B1-%ED%95%B4%EA%B2%B0/</link>
-      <pubDate>Sat, 22 Mar 2025 16:47:48 +0900</pubDate>
-      <guid>https://re-st.github.io/post/%EC%9C%88%EB%8F%84-%EA%B3%B5%EA%B0%84-%EB%B6%80%EC%A1%B1-%ED%95%B4%EA%B2%B0/</guid>
-      <description>Treesize, 그리고 ext4.vhdx</description>
-    </item>
-    <item>
-      <title>윈도에서 정적 블로그 쉽게 만들기</title>
-      <link>https://re-st.github.io/post/%EC%9C%88%EB%8F%84%EC%97%90%EC%84%9C-%EC%A0%95%EC%A0%81-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%89%BD%EA%B2%8C-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
-      <pubDate>Sat, 22 Mar 2025 16:47:48 +0900</pubDate>
-      <guid>https://re-st.github.io/post/%EC%9C%88%EB%8F%84%EC%97%90%EC%84%9C-%EC%A0%95%EC%A0%81-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%89%BD%EA%B2%8C-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
-      <description>윈도에서 정적 블로그 쉽게 만들기</description>
-    </item>
-    <item>
-      <title>Janestreet 2024-03 Solution</title>
-      <link>https://re-st.github.io/post/janestreet-mar24/</link>
-      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://re-st.github.io/post/janestreet-mar24/</guid>
-      <description>지뢰찾기 비슷한 퀴즈 풀이</description>
-    </item>
-    <item>
-      <title>Janestreet 2024-01 Solution</title>
-      <link>https://re-st.github.io/post/janestreet-jan24/</link>
-      <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>https://re-st.github.io/post/janestreet-jan24/</guid>
-      <description>노노그램 비슷한 퀴즈 풀이</description>
-    </item>
-    <item>
-      <title>CS101 TA Experience</title>
-      <link>https://re-st.github.io/post/cs101-tip/</link>
-      <pubDate>Wed, 30 Aug 2023 17:32:00 +0900</pubDate>
-      <guid>https://re-st.github.io/post/cs101-tip/</guid>
-      <description>Teaching and Learning</description>
-    </item>
     <item>
       <title></title>
       <link>https://re-st.github.io/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://re-st.github.io/readme/</guid>
       <description>M.S. Candidate in Programming Systems Laboratory, 2024.03 - Positions MAR24 - CURR : Graduate, KAIST @ South Korea Fuzzing study in Programming Systems Lab MAR17 - FEB24 : Undergraduate, KAIST @ South Korea B.S. student, Math-CS Double Major, GPA 3.61 JUL23 - FEB24 : Undergraduate intern, Programming Systems Lab @ KAIST NOV20 - MAY22 : Military Service, ROKA @ South Korea KATUSA, augmented in US Eighth Army Interests Static analysis, Fuzzing, Graph Theory, and the Spanish language </description>
-    </item>
-    <item>
-      <title>Calendar</title>
-      <link>https://re-st.github.io/post/calendar/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://re-st.github.io/post/calendar/</guid>
-      <description>my schedule in google calendar</description>
     </item>
   </channel>
 </rss>
