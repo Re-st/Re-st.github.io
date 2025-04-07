@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Park, Geon (re-st)</title>
-    <link>https://re-st.github.io/</link>
-    <description>Recent content on Park, Geon (re-st)</description>
+    <title>Posts on Park, Geon (re-st)</title>
+    <link>https://re-st.github.io/post/</link>
+    <description>Recent content in Posts on Park, Geon (re-st)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <lastBuildDate>Mon, 07 Apr 2025 17:35:56 +0900</lastBuildDate>
-    <atom:link href="https://re-st.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://re-st.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>chromedriver</title>
       <link>https://re-st.github.io/post/chromedriver/</link>
@@ -105,13 +105,6 @@
       <pubDate>Wed, 30 Aug 2023 17:32:00 +0900</pubDate>
       <guid>https://re-st.github.io/post/cs101-tip/</guid>
       <description>Teaching and Learning</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://re-st.github.io/readme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://re-st.github.io/readme/</guid>
-      <description>M.S. Candidate in Programming Systems Laboratory, 2024.03 - Positions MAR24 - CURR : Graduate, KAIST @ South Korea Fuzzing study in Programming Systems Lab MAR17 - FEB24 : Undergraduate, KAIST @ South Korea B.S. student, Math-CS Double Major, GPA 3.61 JUL23 - FEB24 : Undergraduate intern, Programming Systems Lab @ KAIST NOV20 - MAY22 : Military Service, ROKA @ South Korea KATUSA, augmented in US Eighth Army Interests Static analysis, Fuzzing, Graph Theory, and the Spanish language </description>
     </item>
     <item>
       <title>Calendar</title>
