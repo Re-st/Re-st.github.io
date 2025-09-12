@@ -57,6 +57,14 @@
 
 
 
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
 </head>
 
 <body>
@@ -138,9 +146,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Fri, 12 Sep 2025 16:06:27 &#43;0900"
+                  Modified <relative-time datetime="Fri, 12 Sep 2025 17:22:00 &#43;0900"
                     class="no-wrap">
-                    Fri, 12 Sep 2025 16:06:27 &#43;0900</relative-time>
+                    Fri, 12 Sep 2025 17:22:00 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -170,7 +178,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      992 Words
+                      1005 Words
                     
 
                   </div>
@@ -182,9 +190,11 @@
 
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
-                <article class="markdown-body entry-content container-lg"><p>Logic-based computational method in extremal combinatorics
-[[양홍석 교수님|양홍석 교수님]]
-<a href="https://github.com/Re-st/Documents/blob/8679e9e85cf3152a021e0ac686f358f316ddaec3/3.%20Resource%20%28%EB%82%A8%29/KAIST25-flag-algebra.pdf">발표자료</a></p>
+                <article class="markdown-body entry-content container-lg"><p>Logic-based computational method in extremal combinatorics</p>
+<ul>
+<li>[[양홍석 교수님|양홍석 교수님]]</li>
+<li><a href="https://github.com/Re-st/Documents/blob/8679e9e85cf3152a021e0ac686f358f316ddaec3/3.%20Resource%20%28%EB%82%A8%29/KAIST25-flag-algebra.pdf">발표자료</a></li>
+</ul>
 <h1 id="왜-pl커뮤니티에-강연하나">왜 PL커뮤니티에 강연하나?</h1>
 <p>Flag algebra는 logic에서 나옴.
 [[abstract interpretation|요약 해석]]등의 개념이, [[갈루아 연결|갈루아 연결]]도, flag algebra의 증명과정에서 쓰임.</p>
@@ -196,44 +206,44 @@
 <h1 id="flag-algebra">Flag algebra</h1>
 <p>옛날에 유행하던. 10년 동안 open problem을 풀음.
 Stability = opt.sol이 근본적으로 유일한지, 아니면 여러 구조가 비슷한 최적치를 갖는지
-subgraph density 가 중요 개념. $p (H, G)$ $(,|,H,|,=m \le ,|,G,|,=n)$</p>
-<p>infinite case ($n\to \infty$)일 때 flag alg. 가 잘 작동.
-e.g. $\lim_{  n \to \infty }\sup K_{3}\text{-free}$</p>
+subgraph density 가 중요 개념. \(p (H, G)\) \((\,|\,H\,|\,=m \le \,|\,G\,|\,=n)\)</p>
+<p>infinite case (\(n\to \infty\))일 때 flag alg. 가 잘 작동.
+e.g. \(\lim_{  n \to \infty }\sup K_{3}\text{-free}\)</p>
 <p>semidefinite problem solver 인 flagmatic이용해 풀음.
 <mark>Flag Algebra defines a proof system, which flagmatic searches on.</mark></p>
 <h1 id="subgraph-density">Subgraph density</h1>
-<p>G 는 feature vector로 간주. $p(-, G)$라는 $\infty$-차원 벡터로 이해 (embedding)</p>
+<p>G 는 feature vector로 간주. \(p(-, G)\)라는 \(\infty\)-차원 벡터로 이해 (embedding)</p>
 <ul>
-<li>모든 $H$마다 하나의 index.
-H 는 feature map로 간주. $p(H, -):FinGraph \to \mathbb{R}$</li>
+<li>모든 \(H\)마다 하나의 index.
+H 는 feature map로 간주. \(p(H, -):FinGraph \to \mathbb{R}\)</li>
 </ul>
-<h2 id="limiting-graph--infty-차원-벡터">Limiting graph = $\infty$-차원 벡터.</h2>
-<p>$(G_{n})<em>{n\in\mathbb{N}}$ is increasing , converging ($\forall H.\exists\lim</em>{n \to \infty } p(H, G_{n})$)
-Set of limiting graphs $\Phi={\lim_{ n \to \infty } p(-, G_{n})}$</p>
+<h2 id="limiting-graph--infty-차원-벡터">Limiting graph = \(\infty\)-차원 벡터.</h2>
+<p>\((G_{n})_{n\in\mathbb{N}}\) is increasing , converging (\(\forall H.\exists\lim_{n \to \infty } p(H, G_{n})\))
+Set of limiting graphs \(\Phi={\lim_{ n \to \infty } p(-, G_{n})}\)</p>
 <ul>
 <li>&ldquo;graphon 이론&quot;과 같은 범주</li>
 </ul>
 <h1 id="fa-logic">FA logic</h1>
-<p>Expression. $H,|,r\times E,|,0,|,+,|,1,|,\times$, Assertions. $E=E,|,E\le E,|,A\land A,|,\neg A$
-Semantics. $[ [E] ]:\Phi\to \mathbb{R}$. $[ [A] ]:\Phi\to \mathbb{B}$</p>
+<p>Expression. \(H\,|\,r\times E\,|\,0\,|\,+\,|\,1\,|\,\times\), Assertions. \(E=E\,|\,E\le E\,|\,A\land A\,|\,\neg A\)
+Semantics. \([ [E] ]:\Phi\to \mathbb{R}\). \([ [A] ]:\Phi\to \mathbb{B}\)</p>
 <h2 id="non-trivial-ineq어떻게">Non-trivial ineq.어떻게?</h2>
-<p>$H_{\cdot}$ 으로, single-labelled vertex가진 subgraph를 Expression에서 사용.
-monotone $\alpha:Expr_{\cdot}\to Expr$ 도 정의.
-$E_{\cdot}$ $k$개 뽑은 후 $\sum_{k} E_{\cdot, i}^{2}\ge 0$ 사용. 후, 양변에 $\alpha$ wrapping (monotone하므로 ㄱㄴ)</p>
+<p>\(H_{\cdot}\) 으로, single-labelled vertex가진 subgraph를 Expression에서 사용.
+monotone \(\alpha:Expr_{\cdot}\to Expr\) 도 정의.
+\(E_{\cdot}\) \(k\)개 뽑은 후 \(\sum_{k} E_{\cdot, i}^{2}\ge 0\) 사용. 후, 양변에 \(\alpha\) wrapping (monotone하므로 ㄱㄴ)</p>
 <blockquote>
-<p>[!QUESTION] 그 sum-of-squares 항등식에서 labelled vertex가 하는 일을 모르겠다. $\alpha$ 만들때 말고 언제 쓰이나?
-$\times$ 등을 계산할 때 역할을 한다.</p>
+<p>[!QUESTION] 그 sum-of-squares 항등식에서 labelled vertex가 하는 일을 모르겠다. \(\alpha\) 만들때 말고 언제 쓰이나?
+\(\times\) 등을 계산할 때 역할을 한다.</p>
 </blockquote>
-<h2 id="무슨-alpha_d">무슨 $\alpha_{d}$?</h2>
+<h2 id="무슨-alpha_d">무슨 \(\alpha_{d}\)?</h2>
 <p>adjoint. 내지는 [[갈루아 연결|갈루아 연결]]과 비슷.
-$\gamma_{d}:FinGraph\to Pr(FinGraph_{\cdot})$ 생각. vertex 암거나 선택해 label주는 확률.
-Galois connection이 여기서는 $$p(\alpha_{d} (H_{\cdot}), G)=\mathbb{E}<em>{G</em>{\cdot}\sim\gamma_{d}(G)}[p_{\cdot}(H_{\cdot},G_{\cdot})]$$임. 선형대수에서도 $\langle MV, w\rangle = \langle MV, M^{T}w\rangle$에서 비슷한 adjoint relationship이 성립.</p>
+\(\gamma_{d}:FinGraph\to Pr(FinGraph_{\cdot})\) 생각. vertex 암거나 선택해 label주는 확률.
+Galois connection이 여기서는 $$p(\alpha_{d} (H_{\cdot}), G)=\mathbb{E}_{G_{\cdot}\sim\gamma_{d}(G)}[p_{\cdot}(H_{\cdot},G_{\cdot})]$$임. 선형대수에서도 \(\langle MV, w\rangle = \langle MV, M^{T}w\rangle\)에서 비슷한 adjoint relationship이 성립.</p>
 <p>monotone한 증명 : gamma 이용해서..</p>
 <h1 id="lean으로-도입">Lean으로 도입</h1>
 <p>[[엄상일 교수님|엄상일 교수님]], 대학원생들과 직접 하는중인데. subtype coercion (Lean이 두 타입을 같다고 인식을 못함)
 그리고 many calculation to be verified. automate하면 좋은데.</p>
 <h1 id="purely-logical">purely logical</h1>
-<p>checking $E\ge 0$ is [[undecidable|undecidable]].
+<p>checking \(E\ge 0\) is [[undecidable|undecidable]].
 생각) 따라서 SDP solver(Flagmatic 등)으로 bounded-depth relaxation을 쓰는 것.</p>
 <blockquote>
 <p>[!QUESTION] flagmatic의 UB 구하는 과정 중에 결국 search depth에 의존적인 부분이 있는데, <a href="https://re-st.github.io/post/lean/">Lean</a>에서는 그걸 사용하지 않을 수 있게 되나?
@@ -277,6 +287,14 @@ Galois connection이 여기서는 $$p(\alpha_{d} (H_{\cdot}), G)=\mathbb{E}<em>{
 </body>
 
 <script type="application/javascript" src="https://re-st.github.io/js/github-style.js"></script>
+
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://fastly.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://fastly.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
 
 
 
