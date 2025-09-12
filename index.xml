@@ -6,7 +6,7 @@
     <description>Recent content on Park, Geon (re-st)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 12 Sep 2025 17:35:10 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 12 Sep 2025 17:45:59 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>내 janestreet puzzle 풀이</title>
@@ -154,6 +154,20 @@
       <pubDate>Wed, 01 Nov 2023 17:23:59 +0900</pubDate>
       <guid>https://re-st.github.io/post/how-to-install-chromedriver/</guid>
       <description>installing chromedriver</description>
+    </item>
+    <item>
+      <title>FishFuzz 논문</title>
+      <link>https://re-st.github.io/post/fishfuzz-%EB%85%BC%EB%AC%B8/</link>
+      <pubDate>Fri, 01 Sep 2023 12:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/post/fishfuzz-%EB%85%BC%EB%AC%B8/</guid>
+      <description>너는 오류를 낚는 어부가 되어라</description>
+    </item>
+    <item>
+      <title>큐컬링</title>
+      <link>https://re-st.github.io/post/%ED%81%90%EC%BB%AC%EB%A7%81/</link>
+      <pubDate>Fri, 01 Sep 2023 12:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/post/%ED%81%90%EC%BB%AC%EB%A7%81/</guid>
+      <description>퍼징에서 다음 시드를 선택하는 알고리즘</description>
     </item>
     <item>
       <title>cs101-ta-experience</title>
