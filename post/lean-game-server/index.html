@@ -10,7 +10,7 @@
     <link rel="stylesheet" href='https://re-st.github.io/css/light.css' />
     <link rel="stylesheet" href='https://re-st.github.io/css/dark.css' />
     <link rel="stylesheet" href='https://re-st.github.io/css/syntax.css' />
-    <title>윈도 공간 부족 해결 - Park, Geon (re-st)</title>
+    <title>Lean 게임 서버 - Park, Geon (re-st)</title>
     
     <link rel="icon" type="image/x-icon" href='/images/github.png'>
     
@@ -18,17 +18,17 @@
 
     
     <meta name="description"
-  content="Treesize, 그리고 ext4.vhdx" />
+  content="Lean 게임 서버" />
 <meta name="keywords"
   content='blog, google analytics' />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://re-st.github.io/post/%EC%9C%88%EB%8F%84-%EA%B3%B5%EA%B0%84-%EB%B6%80%EC%A1%B1-%ED%95%B4%EA%B2%B0/" />
+<link rel="canonical" href="https://re-st.github.io/post/lean-game-server/" />
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="윈도 공간 부족 해결 - Park, Geon (re-st)" />
+<meta name="twitter:title" content="Lean 게임 서버 - Park, Geon (re-st)" />
 <meta name="twitter:description"
-  content="Treesize, 그리고 ext4.vhdx" />
+  content="Lean 게임 서버" />
 <meta name="twitter:site" content="https://re-st.github.io/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image"
@@ -36,17 +36,17 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="윈도 공간 부족 해결 - Park, Geon (re-st)">
+<meta property="og:title" content="Lean 게임 서버 - Park, Geon (re-st)">
 <meta property="og:description"
-  content="Treesize, 그리고 ext4.vhdx" />
-<meta property="og:url" content="https://re-st.github.io/post/%EC%9C%88%EB%8F%84-%EA%B3%B5%EA%B0%84-%EB%B6%80%EC%A1%B1-%ED%95%B4%EA%B2%B0/" />
-<meta property="og:site_name" content="윈도 공간 부족 해결" />
+  content="Lean 게임 서버" />
+<meta property="og:url" content="https://re-st.github.io/post/lean-game-server/" />
+<meta property="og:site_name" content="Lean 게임 서버" />
 <meta property="og:image"
   content="https://re-st.github.io/">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2024-01-01 12:00:00 &#43;0900 KST" />
+<meta property="article:published_time" content="2025-09-12 14:47:07 &#43;0900 KST" />
 
 
 
@@ -129,12 +129,12 @@
                   <span class="author">
                     <a href="https://re-st.github.io/">Park, Geon</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://re-st.github.io/post/%EC%9C%88%EB%8F%84-%EA%B3%B5%EA%B0%84-%EB%B6%80%EC%A1%B1-%ED%95%B4%EA%B2%B0/">윈도 공간 부족 해결</a></strong>
+                      href="https://re-st.github.io/post/lean-game-server/">Lean 게임 서버</a></strong>
                 </h1>
                 <div class="note m-0">
-                  Created <relative-time datetime="Mon, 01 Jan 2024 12:00:00 &#43;0900"
+                  Created <relative-time datetime="Fri, 12 Sep 2025 14:47:07 &#43;0900"
                     class="no-wrap">
-                    Mon, 01 Jan 2024 12:00:00 &#43;0900</relative-time>
+                    Fri, 12 Sep 2025 14:47:07 &#43;0900</relative-time>
 
                   
                   <span class="file-info-divider"></span>
@@ -170,7 +170,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      102 Words
+                      327 Words
                     
 
                   </div>
@@ -182,13 +182,43 @@
 
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
-                <article class="markdown-body entry-content container-lg"><h1 id="용량-잡아먹는-폴더-확인">용량 잡아먹는 폴더 확인</h1>
-<p>TreeSize Free 프로그램을 이용해 용량 큰 순서대로 폴더를 정렬해보니, ext4.vhdx라는, WSL2 우분투와 연관된 파일이 크다.</p>
-<h1 id="ext4vhdx-파일-용량-줄이기">ext4.vhdx 파일 용량 줄이기</h1>
-<p><a href="https://unfinishedgod.netlify.app/2021/07/14/wsl2-ext4-vhdx-%ED%8C%8C%EC%9D%BC-%EC%9A%A9%EB%9F%89-%EC%A4%84%EC%9D%B4%EA%B8%B0/">https://unfinishedgod.netlify.app/2021/07/14/wsl2-ext4-vhdx-%ED%8C%8C%EC%9D%BC-%EC%9A%A9%EB%9F%89-%EC%A4%84%EC%9D%B4%EA%B8%B0/</a>
-이거대로 하면 된다고들 하는데, 효과가 없었음.
-다른 폴더를 줄여서 해결</p>
-</article>
+                <article class="markdown-body entry-content container-lg"><p><a href="https://adam.math.hhu.de/">https://adam.math.hhu.de/</a></p>
+<h1 id="checkpoint">checkpoint</h1>
+<p><a href="https://adam.math.hhu.de/#/g/leanprover-community/nng4/world/Algorithm/level/0">https://adam.math.hhu.de/#/g/leanprover-community/nng4/world/Algorithm/level/0</a>
+<figure><img src="../lean-progress.png"/>
+</figure>
+
+로그인 없음.</p>
+<h1 id="wil">WIL</h1>
+<h2 id="tutorial-world">Tutorial world</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ocaml" data-lang="ocaml"><span style="display:flex;"><span>rfl
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>repeat<span style="color:#f92672">)</span> rw <span style="color:#f92672">[</span>h<span style="color:#f92672">]</span>  <span style="color:#75715e">(* 쓰면 %s/h의LHS/h의 RHS/g*)</span>
+</span></span><span style="display:flex;"><span>rw <span style="color:#f92672">[&lt;-</span> h<span style="color:#f92672">]</span>  <span style="color:#75715e">(* \l (&lt;-) 쓰면 %s/h의RHS/h의 LHS/g*)</span>
+</span></span><span style="display:flex;"><span>rw <span style="color:#f92672">[</span>h c<span style="color:#f92672">]</span>  <span style="color:#75715e">(* 변수 c에 대해 thm 적용*)</span>
+</span></span><span style="display:flex;"><span>nth_rewrite 3 <span style="color:#f92672">[</span>h<span style="color:#f92672">]</span>  <span style="color:#75715e">(* 3번째 적용례에만 thm 적용*)</span>
+</span></span><span style="display:flex;"><span>add_succ x d <span style="color:#f92672">:</span> x <span style="color:#f92672">+</span> succ d <span style="color:#f92672">=</span> succ <span style="color:#f92672">(</span>x <span style="color:#f92672">+</span> d<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h2 id="addition-world">Addition world</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ocaml" data-lang="ocaml"><span style="display:flex;"><span>induction <span style="color:#75715e">(* 0 + n = n을 증명키 위해. [add_zero, add_succ]을 n번 노가다할 필요없이.*)</span>
+</span></span><span style="display:flex;"><span>induction n <span style="color:#66d9ef">with</span> d hd
+</span></span></code></pre></div><h3 id="lemma">lemma</h3>
+<p>add_assoc
+add_comm : repeat적용시 infinite recursion 넘김.
+<figure><img src="../2%20&#43;%202%20=%204.png"/>
+</figure>
+</p>
+<h2 id="implication-world">Implication world</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ocaml" data-lang="ocaml"><span style="display:flex;"><span>exact <span style="color:#75715e">(* rfl과 비슷하지만, 좌변=우변이 아니라 assumption중 하나와 같을때 끝내기. *)</span>
+</span></span><span style="display:flex;"><span>rw <span style="color:#f92672">[</span>l<span style="color:#f92672">]</span> at <span style="color:#f92672">[</span>h<span style="color:#f92672">]</span> <span style="color:#75715e">(* l을 h에 적용.*)</span>
+</span></span><span style="display:flex;"><span>apply h2 at h1 <span style="color:#75715e">(* h2 (implication)을 h1에 적용.*)</span>
+</span></span><span style="display:flex;"><span>succ_inj <span style="color:#75715e">(* Peano arithmetic의 첫 thm. implication임.*)</span>
+</span></span><span style="display:flex;"><span>intro h <span style="color:#75715e">(* h라는 가정하기. (Goal의 antecedent)*)</span>
+</span></span></code></pre></div><h3 id="neq">$\neq$</h3>
+<p>In Lean, <code>a ≠ b</code> is <em>notation</em> for <code>a = b → False</code></p>
+<h2 id="algorithm-world">Algorithm world</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ocaml" data-lang="ocaml"><span style="display:flex;"><span>simp only <span style="color:#f92672">[</span>add_assoc<span style="color:#f92672">,</span> add_left_comm<span style="color:#f92672">,</span> add_comm<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>macro <span style="color:#e6db74">&#34;simp_add&#34;</span> <span style="color:#f92672">:</span> tactic <span style="color:#f92672">=&gt;</span> <span style="color:#f92672">`(</span>tactic<span style="color:#f92672">|(</span>
+</span></span><span style="display:flex;"><span>  simp only <span style="color:#f92672">[</span>add_assoc<span style="color:#f92672">,</span> add_left_comm<span style="color:#f92672">,</span> add_comm<span style="color:#f92672">]))</span>
+</span></span></code></pre></div></article>
               </div>
             </div>
           </div>

@@ -46,7 +46,7 @@
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2025-03-22 16:47:48 &#43;0900 KST" />
+<meta property="article:published_time" content="2024-01-01 12:00:00 &#43;0900 KST" />
 
 
 
@@ -132,15 +132,15 @@
                       href="https://re-st.github.io/post/obsidian-to-hugo%EB%A1%9C-%EC%98%B5%EC%8B%9C%EB%94%94%EC%96%B8-%EB%82%B4%EC%9A%A9-%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%97%90-%EC%98%AC%EB%A6%AC%EA%B8%B0/">obsidian-to-hugo로 옵시디언 내용 블로그에 올리기</a></strong>
                 </h1>
                 <div class="note m-0">
-                  Created <relative-time datetime="Sat, 22 Mar 2025 16:47:48 &#43;0900"
+                  Created <relative-time datetime="Mon, 01 Jan 2024 12:00:00 &#43;0900"
                     class="no-wrap">
-                    Sat, 22 Mar 2025 16:47:48 &#43;0900</relative-time>
+                    Mon, 01 Jan 2024 12:00:00 &#43;0900</relative-time>
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 07 Apr 2025 17:40:51 &#43;0900"
+                  Modified <relative-time datetime="Fri, 12 Sep 2025 16:06:27 &#43;0900"
                     class="no-wrap">
-                    Mon, 07 Apr 2025 17:40:51 &#43;0900</relative-time>
+                    Fri, 12 Sep 2025 16:06:27 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -170,7 +170,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      126 Words
+                      67 Words
                     
 
                   </div>
@@ -182,20 +182,16 @@
 
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
-                <article class="markdown-body entry-content container-lg"><p>python 3.10은 python &ndash;version 인식 못한다.
-그래서 python 설치함.</p>
-<p><a href="https://github.com/devidw/obsidian-to-hugo">https://github.com/devidw/obsidian-to-hugo</a></p>
+                <article class="markdown-body entry-content container-lg"><p><a href="https://github.com/devidw/obsidian-to-hugo">참고 링크</a></p>
 <h2 id="installation">Installation</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pip install obsidian-to-hugo
 </span></span></code></pre></div><h2 id="usage">usage</h2>
-<p>It only takes two arguments: The obsidian vault directory (<code>--obsidian-vault-dir</code>) and the hugo content directory (<code>--hugo-content-dir</code>).</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>python -m obsidian_to_hugo --obsidian-vault-dir<span style="color:#f92672">=</span>&lt;path&gt; --hugo-content-dir<span style="color:#f92672">=</span>&lt;path&gt;
-</span></span></code></pre></div><p>It takes care of the following steps:</p>
+</span></span></code></pre></div><h2 id="what-it-does">what it does</h2>
 <ul>
-<li>Clears hugo content directory (directory will be deleted and recreated)</li>
-<li>Copies obsidian vault contents into hugo content directory (<code>.obsidian</code> gets removed immediately after copying</li>
-<li>Replaces obsidian wiki links (<code>[[wikilink]]</code>) with hugo shortcode links (<code>[wikilink]()</code>)</li>
-<li>Replaces obsidian marks (<code>==important==</code>) with HTML marks (<code>&lt;mark&gt;important&lt;/mark&gt;</code>)</li>
+<li>Copies obsidian vault contents into hugo content directory</li>
+<li>Replaces obsidian wiki links with hugo shortcode links</li>
+<li>Replaces obsidian <mark>marks</mark> with HTML marks</li>
 <li>Want to do more? You can write and register custom <a href="https://github.com/devidw/obsidian-to-hugo#filters">filters</a> to dynamically include/exclude content from processing and <a href="https://github.com/devidw/obsidian-to-hugo#processors">processors</a> to do whatever you want with the file contents.</li>
 </ul>
 </article>

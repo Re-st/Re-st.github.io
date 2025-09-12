@@ -22,7 +22,7 @@
 <meta name="keywords"
   content='blog, google analytics' />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://re-st.github.io/post/0x80070005/" />
+<link rel="canonical" href="https://re-st.github.io/post/windows-update-%EC%98%A4%EB%A5%98-%EC%BD%94%EB%93%9C-0x80070005-%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95/" />
 
 
 <meta name="twitter:card" content="summary" />
@@ -39,14 +39,14 @@
 <meta property="og:title" content="Windows Update 오류 코드 0x80070005 해결 방법 - Park, Geon (re-st)">
 <meta property="og:description"
   content="Windows Update 오류 코드 0x80070005 해결 방법" />
-<meta property="og:url" content="https://re-st.github.io/post/0x80070005/" />
+<meta property="og:url" content="https://re-st.github.io/post/windows-update-%EC%98%A4%EB%A5%98-%EC%BD%94%EB%93%9C-0x80070005-%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95/" />
 <meta property="og:site_name" content="Windows Update 오류 코드 0x80070005 해결 방법" />
 <meta property="og:image"
   content="https://re-st.github.io/">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2025-03-22 16:47:48 &#43;0900 KST" />
+<meta property="article:published_time" content="2024-01-01 00:00:00 &#43;0900 KST" />
 
 
 
@@ -129,18 +129,18 @@
                   <span class="author">
                     <a href="https://re-st.github.io/">Park, Geon</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://re-st.github.io/post/0x80070005/">Windows Update 오류 코드 0x80070005 해결 방법</a></strong>
+                      href="https://re-st.github.io/post/windows-update-%EC%98%A4%EB%A5%98-%EC%BD%94%EB%93%9C-0x80070005-%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95/">Windows Update 오류 코드 0x80070005 해결 방법</a></strong>
                 </h1>
                 <div class="note m-0">
-                  Created <relative-time datetime="Sat, 22 Mar 2025 16:47:48 &#43;0900"
+                  Created <relative-time datetime="Mon, 01 Jan 2024 00:00:00 &#43;0900"
                     class="no-wrap">
-                    Sat, 22 Mar 2025 16:47:48 &#43;0900</relative-time>
+                    Mon, 01 Jan 2024 00:00:00 &#43;0900</relative-time>
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 07 Apr 2025 17:40:51 &#43;0900"
+                  Modified <relative-time datetime="Fri, 12 Sep 2025 16:06:27 &#43;0900"
                     class="no-wrap">
-                    Mon, 07 Apr 2025 17:40:51 &#43;0900</relative-time>
+                    Fri, 12 Sep 2025 16:06:27 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -170,7 +170,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      586 Words
+                      214 Words
                     
 
                   </div>
@@ -182,21 +182,14 @@
 
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
-                <article class="markdown-body entry-content container-lg"><h3 id="windows-update-오류-코드-0x80070005-해결-방법">Windows Update 오류 코드 0x80070005 해결 방법</h3>
-<p>Windows Update를 진행할 때 발생하는 오류 코드 0x80070005에 대해 문의하셨습니다. 이 오류 코드는 업데이트를 설치하는 데 필요한 파일이나 레지스트리에 대한 사용 권한이 없을 때 발생합니다.</p>
-<p>아래 링크를 클릭하시면 해당 오류 코드의 해결 방법이 설명되어 있으니 참고하여 진행해 보시기 바랍니다: <a href="https://answers.microsoft.com/ko-kr/windows/forum/all/%EC%9C%88%EB%8F%84%EC%9A%B0-10-%EC%BD%94%EB%93%9C/3c9b1950-bdfd-43ab-8ac9-88ebc393e102">Microsoft Answers</a></p>
-<p><strong>디바이스에 충분한 공간이 있는지 확인합니다.</strong> 32비트 OS를 업그레이드하는 경우 16GB 이상, 64비트 OS를 업그레이드하는 경우 20GB 이상의 사용 가능한 공간이 필요합니다. 장치의 하드 드라이브 용량이 작을 경우 USB 드라이브를 이용해 업데이트를 진행해야 합니다.</p>
-<h3 id="아하-공간-부족일-수-있겠군요">아하, 공간 부족일 수 있겠군요.</h3>
-<p><a href="/post/%EC%9C%88%EB%8F%84-%EA%B3%B5%EA%B0%84-%EB%B6%80%EC%A1%B1-%ED%95%B4%EA%B2%B0/">윈도 공간 부족 해결</a>은 어떨까요?</p>
-<ul>
-<li>문제는 여전합니다.</li>
-<li>powershell 권한 문제일 수도 있겠습니다.</li>
-</ul>
-<p>PowerShell을 관리자 권한으로 실행해 보았습니다. 이전에는 <code>winget upgrade --all</code> 명령어로 3개의 업데이트만 찾았었는데, 이제는 24개의 업데이트를 찾아 업그레이드를 진행했습니다. 노션을 포함한 여러 프로그램이 업데이트되었습니다.</p>
-<h3 id="그런데-winget-upgrade---all을-꼭-해야-할까요">그런데 <code>winget upgrade --all</code>을 꼭 해야 할까요?</h3>
-<p><code>winget update</code>만으로도 충분히 해결할 수 있습니다. 빨리 Hugo를 다운로드하고 싶습니다. Visual Studio Community는 다운로드가 되었지만, 용량이 너무 커서 노트북이 부담스러워 할 수 있습니다. 검색 기능(WIN + S)으로는 찾을 수 없었지만, 업데이트는 진행되었습니다.</p>
-<h3 id="해결-완료">해결 완료!</h3>
-<p>이제 문제를 해결했습니다! 여러분도 이 방법을 참고하여 문제를 해결해 보세요.</p>
+                <article class="markdown-body entry-content container-lg"><blockquote>
+<p>이 오류 코드는 업데이트를 설치하는 데 필요한 파일이나 레지스트리에 대한 사용 권한이 없을 때 발생합니다.
+아래 링크를 클릭하시면 해당 오류 코드의 해결 방법이 설명되어 있으니 참고하여 진행해 보시기 바랍니다: <a href="https://answers.microsoft.com/ko-kr/windows/forum/all/%EC%9C%88%EB%8F%84%EC%9A%B0-10-%EC%BD%94%EB%93%9C/3c9b1950-bdfd-43ab-8ac9-88ebc393e102">Microsoft Answers</a></p>
+</blockquote>
+<p>해결을 위해 <a href="https://re-st.github.io/post/%EC%9C%88%EB%8F%84-%EA%B3%B5%EA%B0%84-%EB%B6%80%EC%A1%B1-%ED%95%B4%EA%B2%B0/">윈도 공간 부족 해결</a>을 했으나 통하지 않았다.</p>
+<p>결국 해결한 방법은, 관리자 권한 powershell에서 <code>winget upgrade --all</code>.
+(일반 사용자 권한이었을 때는 3개의 업데이트만 찾았었는데, 이제는 24개 업데이트)</p>
+<p>다른 해결방법으로, <code>winget update</code>만으로 해결할 수 있었을지 모르겠다.</p>
 </article>
               </div>
             </div>
