@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Park, Geon (re-st)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 12 Sep 2025 17:29:40 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 12 Sep 2025 17:35:10 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>내 janestreet puzzle 풀이</title>
@@ -79,11 +79,11 @@
       <description>매번 슬랙에서 뜨는 캘린더 알람 없애기</description>
     </item>
     <item>
-      <title>윈도에서-hugo로-정적-블로그-만들기</title>
+      <title>[플젝] 윈도에서 hugo로 정적 블로그 만들기</title>
       <link>https://re-st.github.io/post/%EC%9C%88%EB%8F%84%EC%97%90%EC%84%9C-hugo%EB%A1%9C-%EC%A0%95%EC%A0%81-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
       <pubDate>Sat, 15 Jun 2024 17:15:29 +0900</pubDate>
       <guid>https://re-st.github.io/post/%EC%9C%88%EB%8F%84%EC%97%90%EC%84%9C-hugo%EB%A1%9C-%EC%A0%95%EC%A0%81-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
-      <description>윈도에서-hugo로-정적-블로그-만들기</description>
+      <description>[플젝] 윈도에서 hugo로 정적 블로그 만들기</description>
     </item>
     <item>
       <title>vi의-shell-zsh로-바꾸기</title>
@@ -125,14 +125,14 @@
       <link>https://re-st.github.io/post/tmux-resurrect/</link>
       <pubDate>Mon, 01 Jan 2024 12:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/post/tmux-resurrect/</guid>
-      <description>tmux-resurrect</description>
+      <description>컴퓨터를 껐다 켜도 tmux를 복구할 수 있게 하는 법.</description>
     </item>
     <item>
       <title>원본을 업데이트 하지 못했습니다. winget</title>
       <link>https://re-st.github.io/post/%EC%9B%90%EB%B3%B8%EC%9D%84-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%ED%95%98%EC%A7%80-%EB%AA%BB%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4-winget/</link>
       <pubDate>Mon, 01 Jan 2024 12:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/post/%EC%9B%90%EB%B3%B8%EC%9D%84-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%ED%95%98%EC%A7%80-%EB%AA%BB%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4-winget/</guid>
-      <description>원본을 업데이트 하지 못했습니다. winget</description>
+      <description>&amp;ldquo;[플젝] 윈도에서 hugo로 정적 블로그 만들기&amp;rdquo; 에서 이어짐.</description>
     </item>
     <item>
       <title>윈도 공간 부족 해결</title>
@@ -146,7 +146,7 @@
       <link>https://re-st.github.io/post/windows-update-%EC%98%A4%EB%A5%98-%EC%BD%94%EB%93%9C-0x80070005-%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/post/windows-update-%EC%98%A4%EB%A5%98-%EC%BD%94%EB%93%9C-0x80070005-%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95/</guid>
-      <description>Windows Update 오류 코드 0x80070005 해결 방법</description>
+      <description>&amp;ldquo;원본을 업데이트 하지 못했습니다 winget&amp;rdquo; 에서 이어짐.</description>
     </item>
     <item>
       <title>how-to-install-chromedriver</title>
