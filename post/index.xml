@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Park, Geon (re-st)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 12 Sep 2025 17:45:59 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 12 Sep 2025 18:41:23 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>내 janestreet puzzle 풀이</title>
@@ -175,6 +175,13 @@
       <pubDate>Wed, 30 Aug 2023 17:32:00 +0900</pubDate>
       <guid>https://re-st.github.io/post/cs101-ta-experience/</guid>
       <description>Teaching and Learning</description>
+    </item>
+    <item>
+      <title>AFLRun 논문</title>
+      <link>https://re-st.github.io/post/aflrun-%EB%85%BC%EB%AC%B8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://re-st.github.io/post/aflrun-%EB%85%BC%EB%AC%B8/</guid>
+      <description>클러스터링을 하는 다중 지향성 퍼징</description>
     </item>
   </channel>
 </rss>
