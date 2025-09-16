@@ -6,8 +6,22 @@
     <description>Recent content in Posts on Park, Geon (re-st)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 12 Sep 2025 18:41:23 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 16 Sep 2025 18:48:49 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(강연 요약) AI시대 성공적인 커리어에 관하여</title>
+      <link>https://re-st.github.io/post/%EA%B0%95%EC%97%B0-%EC%9A%94%EC%95%BD-ai%EC%8B%9C%EB%8C%80-%EC%84%B1%EA%B3%B5%EC%A0%81%EC%9D%B8-%EC%BB%A4%EB%A6%AC%EC%96%B4%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/</link>
+      <pubDate>Tue, 16 Sep 2025 18:44:35 +0900</pubDate>
+      <guid>https://re-st.github.io/post/%EA%B0%95%EC%97%B0-%EC%9A%94%EC%95%BD-ai%EC%8B%9C%EB%8C%80-%EC%84%B1%EA%B3%B5%EC%A0%81%EC%9D%B8-%EC%BB%A4%EB%A6%AC%EC%96%B4%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/</guid>
+      <description>(강연 요약) AI시대 성공적인 커리어에 관하여</description>
+    </item>
+    <item>
+      <title>From Alarms to Real Bugs - Multi-target Multi-step Directed Greybox Fuzzing for Static Analysis Result Verification (Lyso)</title>
+      <link>https://re-st.github.io/post/from-alarms-to-real-bugs-multi-target-multi-step-directed-greybox-fuzzing-for-static-analysis-result-verification-lyso/</link>
+      <pubDate>Fri, 12 Sep 2025 19:04:43 +0900</pubDate>
+      <guid>https://re-st.github.io/post/from-alarms-to-real-bugs-multi-target-multi-step-directed-greybox-fuzzing-for-static-analysis-result-verification-lyso/</guid>
+      <description>From Alarms to Real Bugs - Multi-target Multi-step Directed Greybox Fuzzing for Static Analysis Result Verification (Lyso)</description>
+    </item>
     <item>
       <title>내 janestreet puzzle 풀이</title>
       <link>https://re-st.github.io/post/%EB%82%B4-janestreet-puzzle-%ED%92%80%EC%9D%B4/</link>
