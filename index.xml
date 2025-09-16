@@ -6,7 +6,7 @@
     <description>Recent content on Park, Geon (re-st)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 16 Sep 2025 20:36:01 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 16 Sep 2025 20:36:04 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>(논문 요약) (다중 지향성 퍼징) Lyso</title>
@@ -23,7 +23,7 @@
       <description>(강연 요약) AI시대 성공적인 커리어에 관하여</description>
     </item>
     <item>
-      <title>내 janestreet puzzle 풀이</title>
+      <title>[분류] 내 janestreet puzzle 풀이</title>
       <link>https://re-st.github.io/post/%EB%82%B4-janestreet-puzzle-%ED%92%80%EC%9D%B4/</link>
       <pubDate>Fri, 12 Sep 2025 15:25:23 +0900</pubDate>
       <guid>https://re-st.github.io/post/%EB%82%B4-janestreet-puzzle-%ED%92%80%EC%9D%B4/</guid>
@@ -37,7 +37,7 @@
       <description>[분류] Lean</description>
     </item>
     <item>
-      <title>Lean Game Server (adam.math.hhu.de)</title>
+      <title>(북마크) Lean 게임 서버</title>
       <link>https://re-st.github.io/post/%EB%B6%81%EB%A7%88%ED%81%AC-lean-%EA%B2%8C%EC%9E%84-%EC%84%9C%EB%B2%84/</link>
       <pubDate>Fri, 12 Sep 2025 14:47:07 +0900</pubDate>
       <guid>https://re-st.github.io/post/%EB%B6%81%EB%A7%88%ED%81%AC-lean-%EA%B2%8C%EC%9E%84-%EC%84%9C%EB%B2%84/</guid>
@@ -58,21 +58,21 @@
       <description>(강연 요약) Introduction to Razborov&amp;rsquo;s Flag Algebra</description>
     </item>
     <item>
-      <title>(Method) Exposure your github.io blog to search engines</title>
+      <title>(방법) github.io 블로그 검색 엔진에 노출시키기</title>
       <link>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-github.io-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84%EC%97%90-%EB%85%B8%EC%B6%9C%EC%8B%9C%ED%82%A4%EA%B8%B0/</link>
       <pubDate>Sat, 22 Mar 2025 17:19:19 +0900</pubDate>
       <guid>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-github.io-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84%EC%97%90-%EB%85%B8%EC%B6%9C%EC%8B%9C%ED%82%A4%EA%B8%B0/</guid>
-      <description>최근에 갱신 안해서 다시 없어졌지만..</description>
+      <description>(Method) Exposure your github.io blog to search engines</description>
     </item>
     <item>
-      <title>(Method) Solve mega.nz sync error causing failure in launching Obsidian</title>
+      <title>(방법) Mega.nz 동기화 오류 때문에 Obsidian이 켜지지 않을 때 해결법</title>
       <link>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-mega.nz-%EB%8F%99%EA%B8%B0%ED%99%94-%EC%98%A4%EB%A5%98-%EB%95%8C%EB%AC%B8%EC%97%90-obsidian%EC%9D%B4-%EC%BC%9C%EC%A7%80%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C-%ED%95%B4%EA%B2%B0%EB%B2%95/</link>
       <pubDate>Thu, 01 Aug 2024 17:20:13 +0900</pubDate>
       <guid>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-mega.nz-%EB%8F%99%EA%B8%B0%ED%99%94-%EC%98%A4%EB%A5%98-%EB%95%8C%EB%AC%B8%EC%97%90-obsidian%EC%9D%B4-%EC%BC%9C%EC%A7%80%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C-%ED%95%B4%EA%B2%B0%EB%B2%95/</guid>
       <description>(Method) Solve mega.nz sync error causing failure in launching Obsidian</description>
     </item>
     <item>
-      <title>Outdated Grafolio link in Naver mail page</title>
+      <title>(발견) Naver 메일 오류 페이지의 작동 않는 Grafolio 링크</title>
       <link>https://re-st.github.io/post/%EB%B0%9C%EA%B2%AC-naver-%EB%A9%94%EC%9D%BC-%EC%98%A4%EB%A5%98-%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9D%98-%EC%9E%91%EB%8F%99-%EC%95%8A%EB%8A%94-grafolio-%EB%A7%81%ED%81%AC/</link>
       <pubDate>Mon, 01 Jul 2024 17:28:43 +0900</pubDate>
       <guid>https://re-st.github.io/post/%EB%B0%9C%EA%B2%AC-naver-%EB%A9%94%EC%9D%BC-%EC%98%A4%EB%A5%98-%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9D%98-%EC%9E%91%EB%8F%99-%EC%95%8A%EB%8A%94-grafolio-%EB%A7%81%ED%81%AC/</guid>
@@ -182,6 +182,13 @@
       <pubDate>Wed, 30 Aug 2023 17:32:00 +0900</pubDate>
       <guid>https://re-st.github.io/post/cs101-ta-experience/</guid>
       <description>Teaching and Learning</description>
+    </item>
+    <item>
+      <title>My Curriculum Vitae</title>
+      <link>https://re-st.github.io/post/%EB%82%B4-cv-%EC%9E%90%EA%B8%B0%EC%86%8C%EA%B0%9C%EC%84%9C/</link>
+      <pubDate>Wed, 27 Oct 1999 23:59:59 +0900</pubDate>
+      <guid>https://re-st.github.io/post/%EB%82%B4-cv-%EC%9E%90%EA%B8%B0%EC%86%8C%EA%B0%9C%EC%84%9C/</guid>
+      <description>My Curriculum Vitae</description>
     </item>
     <item>
       <title></title>
