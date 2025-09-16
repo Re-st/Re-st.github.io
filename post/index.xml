@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Park, Geon (re-st)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 16 Sep 2025 20:54:49 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 16 Sep 2025 20:58:16 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>(강연 요약) AI시대 성공적인 커리어에 관하여</title>
@@ -100,24 +100,24 @@
       <description>(Method) Use ZSH for a shell of VI editor</description>
     </item>
     <item>
-      <title>Janestreet 2024년 3월 풀이</title>
-      <link>https://re-st.github.io/post/janestreet-2024%EB%85%84-3%EC%9B%94-%ED%92%80%EC%9D%B4/</link>
+      <title>(풀이) (미완) Janestreet 2024년 3월 퍼즐</title>
+      <link>https://re-st.github.io/post/%ED%92%80%EC%9D%B4-%EB%AF%B8%EC%99%84-janestreet-2024%EB%85%84-3%EC%9B%94-%ED%8D%BC%EC%A6%90/</link>
       <pubDate>Sat, 02 Mar 2024 00:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/post/janestreet-2024%EB%85%84-3%EC%9B%94-%ED%92%80%EC%9D%B4/</guid>
+      <guid>https://re-st.github.io/post/%ED%92%80%EC%9D%B4-%EB%AF%B8%EC%99%84-janestreet-2024%EB%85%84-3%EC%9B%94-%ED%8D%BC%EC%A6%90/</guid>
       <description>(Korean) Janestreet 2024 Mar solution (Not finished)</description>
     </item>
     <item>
-      <title>my-schedule-calendar</title>
-      <link>https://re-st.github.io/post/my-schedule-calendar/</link>
+      <title>내 스케쥴</title>
+      <link>https://re-st.github.io/post/%EB%82%B4-%EC%8A%A4%EC%BC%80%EC%A5%B4/</link>
       <pubDate>Fri, 02 Feb 2024 20:32:36 +0900</pubDate>
-      <guid>https://re-st.github.io/post/my-schedule-calendar/</guid>
-      <description>my schedule in google calendar</description>
+      <guid>https://re-st.github.io/post/%EB%82%B4-%EC%8A%A4%EC%BC%80%EC%A5%B4/</guid>
+      <description>My worktime schedule</description>
     </item>
     <item>
-      <title>Janestreet 2024년 1월 풀이</title>
-      <link>https://re-st.github.io/post/janestreet-2024%EB%85%84-1%EC%9B%94-%ED%92%80%EC%9D%B4/</link>
+      <title>(풀이) Janestreet 2024년 1월 퍼즐</title>
+      <link>https://re-st.github.io/post/%ED%92%80%EC%9D%B4-janestreet-2024%EB%85%84-1%EC%9B%94-%ED%8D%BC%EC%A6%90/</link>
       <pubDate>Fri, 02 Feb 2024 00:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/post/janestreet-2024%EB%85%84-1%EC%9B%94-%ED%92%80%EC%9D%B4/</guid>
+      <guid>https://re-st.github.io/post/%ED%92%80%EC%9D%B4-janestreet-2024%EB%85%84-1%EC%9B%94-%ED%8D%BC%EC%A6%90/</guid>
       <description>(Korean) Janestreet 2024 Jan solution (A Nonogram-esque puzzle)</description>
     </item>
     <item>
