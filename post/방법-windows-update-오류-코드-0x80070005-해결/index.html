@@ -10,7 +10,7 @@
     <link rel="stylesheet" href='https://re-st.github.io/css/light.css' />
     <link rel="stylesheet" href='https://re-st.github.io/css/dark.css' />
     <link rel="stylesheet" href='https://re-st.github.io/css/syntax.css' />
-    <title>(논문 요약) (극다중 지향성 퍼징) FishFuzz - Park, Geon (re-st)</title>
+    <title>(방법) Windows Update 오류 코드 0x80070005 해결 - Park, Geon (re-st)</title>
     
     <link rel="icon" type="image/x-icon" href='/images/github.png'>
     
@@ -18,17 +18,17 @@
 
     
     <meta name="description"
-  content="너는 오류를 낚는 어부가 되어라" />
+  content="&amp;ldquo;원본을 업데이트 하지 못했습니다 winget&amp;rdquo; 에서 이어짐." />
 <meta name="keywords"
   content='blog, google analytics' />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://re-st.github.io/post/%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD-%EA%B7%B9%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-fishfuzz/" />
+<link rel="canonical" href="https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-windows-update-%EC%98%A4%EB%A5%98-%EC%BD%94%EB%93%9C-0x80070005-%ED%95%B4%EA%B2%B0/" />
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="(논문 요약) (극다중 지향성 퍼징) FishFuzz - Park, Geon (re-st)" />
+<meta name="twitter:title" content="(방법) Windows Update 오류 코드 0x80070005 해결 - Park, Geon (re-st)" />
 <meta name="twitter:description"
-  content="너는 오류를 낚는 어부가 되어라" />
+  content="&amp;ldquo;원본을 업데이트 하지 못했습니다 winget&amp;rdquo; 에서 이어짐." />
 <meta name="twitter:site" content="https://re-st.github.io/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image"
@@ -36,17 +36,17 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="(논문 요약) (극다중 지향성 퍼징) FishFuzz - Park, Geon (re-st)">
+<meta property="og:title" content="(방법) Windows Update 오류 코드 0x80070005 해결 - Park, Geon (re-st)">
 <meta property="og:description"
-  content="너는 오류를 낚는 어부가 되어라" />
-<meta property="og:url" content="https://re-st.github.io/post/%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD-%EA%B7%B9%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-fishfuzz/" />
-<meta property="og:site_name" content="(논문 요약) (극다중 지향성 퍼징) FishFuzz" />
+  content="&amp;ldquo;원본을 업데이트 하지 못했습니다 winget&amp;rdquo; 에서 이어짐." />
+<meta property="og:url" content="https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-windows-update-%EC%98%A4%EB%A5%98-%EC%BD%94%EB%93%9C-0x80070005-%ED%95%B4%EA%B2%B0/" />
+<meta property="og:site_name" content="(방법) Windows Update 오류 코드 0x80070005 해결" />
 <meta property="og:image"
   content="https://re-st.github.io/">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2023-09-01 12:00:00 &#43;0900 KST" />
+<meta property="article:published_time" content="2024-01-01 00:00:00 &#43;0900 KST" />
 
 
 
@@ -58,11 +58,6 @@
 
 
 
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 
 
 </head>
@@ -137,18 +132,18 @@
                   <span class="author">
                     <a href="https://re-st.github.io/">Park, Geon</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://re-st.github.io/post/%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD-%EA%B7%B9%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-fishfuzz/">(논문 요약) (극다중 지향성 퍼징) FishFuzz</a></strong>
+                      href="https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-windows-update-%EC%98%A4%EB%A5%98-%EC%BD%94%EB%93%9C-0x80070005-%ED%95%B4%EA%B2%B0/">(방법) Windows Update 오류 코드 0x80070005 해결</a></strong>
                 </h1>
                 <div class="note m-0">
-                  Created <relative-time datetime="Fri, 01 Sep 2023 12:00:00 &#43;0900"
+                  Created <relative-time datetime="Mon, 01 Jan 2024 00:00:00 &#43;0900"
                     class="no-wrap">
-                    Fri, 01 Sep 2023 12:00:00 &#43;0900</relative-time>
+                    Mon, 01 Jan 2024 00:00:00 &#43;0900</relative-time>
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Tue, 16 Sep 2025 20:10:51 &#43;0900"
+                  Modified <relative-time datetime="Tue, 16 Sep 2025 20:36:01 &#43;0900"
                     class="no-wrap">
-                    Tue, 16 Sep 2025 20:10:51 &#43;0900</relative-time>
+                    Tue, 16 Sep 2025 20:36:01 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -178,7 +173,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      569 Words
+                      218 Words
                     
 
                   </div>
@@ -190,81 +185,14 @@
 
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
-                <article class="markdown-body entry-content container-lg"><p><a href="https://www.usenix.org/system/files/usenixsecurity23-zheng.pdf">https://www.usenix.org/system/files/usenixsecurity23-zheng.pdf</a></p>
-<h1 id="요약">요약</h1>
-<p>[[다중 지향성 퍼징|다중 지향성 퍼징]]이나, [[정적분석|정적분석]] 결과인 수천 개의 예상지점을 가지고 인풋을 [[power schedule|스케쥴링]] 함.</p>
-<p>키워드
-<a href="https://re-st.github.io/post/%ED%81%90%EC%BB%AC%EB%A7%81/">큐컬링</a> [[Sanitizer-guided fuzzing (SGF)|Sanitizer-guided fuzzing (SGF)]]</p>
-<h4 id="1-목적">1. <strong>목적</strong></h4>
-<ul>
-<li><strong>다이나믹</strong> <a href="https://re-st.github.io/post/%ED%81%90%EC%BB%AC%EB%A7%81/">큐컬링</a>으로 퍼저의 성능 최적화 (w/ .[[favored|favored]] flag)</li>
-<li>시드-타깃 거리 계산 개선 (w/ function-lvl CG, CFG, and Static analysis)</li>
-<li>타깃 우선순위 동적 조정 (w/ instrumentation)</li>
-</ul>
-<figure><img src="../Figure%203%20Overview%20of%20FISHFUZZ%20workflow.png"/>
-</figure>
-
-<h4 id="3-구현">3. <strong>구현</strong></h4>
-<ul>
-<li><strong>모든 [[sanitizer|sanitizer]] 레이블 고려</strong>
-<ul>
-<li>[[llvm bc|llvm bc]]에 instrument한 그 각 줄을 타깃으로</li>
-<li>sanitizer 레이블은 [[compiler-rt|compiler-rt]]</li>
-</ul>
-</li>
-<li><strong>LLVM 기반 정적 분석</strong> 1,500LoC
-<ul>
-<li>CFG, CG 추출</li>
-<li>정적 함수 거리 계산</li>
-</ul>
-</li>
-<li><strong>AFL/AFL++ 확장</strong>
-<ul>
-<li>[[cull_queue|cull_queue]]에서 inter-function exploration 구현 2,000LoC</li>
-</ul>
-</li>
-<li><strong>컴파일러 Instrumentation</strong> 200LoC
-<ul>
-<li>런타임 거리 갱신</li>
-<li>타깃 메타데이터 기록</li>
-</ul>
-</li>
-</ul>
-<h4 id="5-결과">5. <strong>결과</strong></h4>
-<ul>
-<li>벤치마크 성능 비교
-<ul>
-<li>[[TortoiseFuzz|TortoiseFuzz]], [[SAVIOR|SAVIOR]]의 벤치마크 + ad-hoc 벤치마크 (Two-Stage)
-<ul>
-<li>제외: non-resolvable exception, non-compatible to OS</li>
-</ul>
-</li>
-<li>기존 DGF(SGF 포함) 대비 개선</li>
-<li>30 real-world program 대상 실험, 1주일
-<ul>
-<li>TortoiseFuzz [27], SAVIOR [7], GREYONE [9], FuzzGen 의 프로그램 대상</li>
-<li>38개 새로운 CVE 발견</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>다양한 프로그램에서 탐색 및 버그 발견 효과 확인</li>
-<li>UBSan 벤치마크는 타깃이 버그가 아니라 그냥 의도된 overflow일 수도 있음</li>
-</ul>
-<h4 id="7-한계점">7. 한계점</h4>
-<ul>
-<li>cxxfilt에선 FFAFL이 우세, CVE-2017-13731은 FFAFL++과 AFL++만 발동
-<ul>
-<li>“이것은 FishFuzz가 intra-ftn. explor.은 건드리지 않기 때문이다”</li>
-</ul>
-</li>
-<li>보통 exploitation을 길게하면 좋지만, UBSan같이 간단한 타깃은 아님</li>
-<li>타깃집합이 ~10로 작으면 FishFuzz가 별로다.
-<ul>
-<li>여러 개 만들고 트레이드오프 계산필요</li>
-</ul>
-</li>
-</ul>
+                <article class="markdown-body entry-content container-lg"><blockquote>
+<p>이 오류 코드는 업데이트를 설치하는 데 필요한 파일이나 레지스트리에 대한 사용 권한이 없을 때 발생합니다.
+아래 링크를 클릭하시면 해당 오류 코드의 해결 방법이 설명되어 있으니 참고하여 진행해 보시기 바랍니다: <a href="https://answers.microsoft.com/ko-kr/windows/forum/all/%EC%9C%88%EB%8F%84%EC%9A%B0-10-%EC%BD%94%EB%93%9C/3c9b1950-bdfd-43ab-8ac9-88ebc393e102">Microsoft Answers</a></p>
+</blockquote>
+<p>해결을 위해 <a href="https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-%EC%9C%88%EB%8F%84-%EA%B3%B5%EA%B0%84-%EB%B6%80%EC%A1%B1-%ED%95%B4%EA%B2%B0/">(방법) 윈도 공간 부족 해결</a>을 했으나 통하지 않았다.</p>
+<p>결국 해결한 방법은, 관리자 권한 powershell에서 <code>winget upgrade --all</code>.
+(일반 사용자 권한이었을 때는 3개의 업데이트만 찾았었는데, 이제는 24개 업데이트)</p>
+<p>다른 해결방법으로, <code>winget update</code>만으로 해결할 수 있었을지 모르겠다.</p>
 </article>
               </div>
             </div>
@@ -303,14 +231,6 @@
 </body>
 
 <script type="application/javascript" src="https://re-st.github.io/js/github-style.js"></script>
-
-<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
-  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-<script defer src="https://fastly.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
-  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://fastly.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
-  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-  onload="renderMathInElement(document.body);"></script>
 
 
 
