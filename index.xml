@@ -6,7 +6,7 @@
     <description>Recent content on Park, Geon (re-st)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 16 Sep 2025 20:58:16 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 16 Sep 2025 20:59:04 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>(강연 요약) AI시대 성공적인 커리어에 관하여</title>
@@ -142,11 +142,11 @@
       <description>Treesize, 그리고 ext4.vhdx</description>
     </item>
     <item>
-      <title>tmux-resurrect</title>
-      <link>https://re-st.github.io/post/%EC%BB%B4%ED%93%A8%ED%84%B0%EB%A5%BC-%EA%BB%90%EB%8B%A4-%EC%BC%9C%EB%8F%84-tmux%EB%A5%BC-%EB%B3%B5%EA%B5%AC%ED%95%A0-%EC%88%98-%EC%9E%88%EA%B2%8C-%ED%95%98%EB%8A%94-%EB%B2%95-tmux-resurrect/</link>
+      <title>(방법) 재부팅 후 tmux를 복구할 수 있게 하기 (tmux-resurrect)</title>
+      <link>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-%EC%9E%AC%EB%B6%80%ED%8C%85-%ED%9B%84-tmux%EB%A5%BC-%EB%B3%B5%EA%B5%AC%ED%95%A0-%EC%88%98-%EC%9E%88%EA%B2%8C-%ED%95%98%EA%B8%B0-tmux-resurrect/</link>
       <pubDate>Mon, 01 Jan 2024 12:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/post/%EC%BB%B4%ED%93%A8%ED%84%B0%EB%A5%BC-%EA%BB%90%EB%8B%A4-%EC%BC%9C%EB%8F%84-tmux%EB%A5%BC-%EB%B3%B5%EA%B5%AC%ED%95%A0-%EC%88%98-%EC%9E%88%EA%B2%8C-%ED%95%98%EB%8A%94-%EB%B2%95-tmux-resurrect/</guid>
-      <description>How to restore TMUX after rebooting (tmux-resurrect)</description>
+      <guid>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-%EC%9E%AC%EB%B6%80%ED%8C%85-%ED%9B%84-tmux%EB%A5%BC-%EB%B3%B5%EA%B5%AC%ED%95%A0-%EC%88%98-%EC%9E%88%EA%B2%8C-%ED%95%98%EA%B8%B0-tmux-resurrect/</guid>
+      <description>(Method) Restore TMUX after rebooting (tmux-resurrect)</description>
     </item>
     <item>
       <title>(방법) Windows Update 오류 코드 0x80070005 해결</title>
