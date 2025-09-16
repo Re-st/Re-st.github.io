@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Park, Geon (re-st)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 16 Sep 2025 21:09:49 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 16 Sep 2025 21:23:11 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>(강연 요약) AI시대 성공적인 커리어에 관하여</title>
@@ -70,6 +70,20 @@
       <pubDate>Sat, 22 Mar 2025 17:19:19 +0900</pubDate>
       <guid>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-github.io-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84%EC%97%90-%EB%85%B8%EC%B6%9C%EC%8B%9C%ED%82%A4%EA%B8%B0/</guid>
       <description>(Method) Exposure your github.io blog to search engines</description>
+    </item>
+    <item>
+      <title>(에세이) 정보보호대학원 세미나를 들으며 2025-01-03</title>
+      <link>https://re-st.github.io/post/%EC%97%90%EC%84%B8%EC%9D%B4-%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%8C%80%ED%95%99%EC%9B%90-%EC%84%B8%EB%AF%B8%EB%82%98%EB%A5%BC-%EB%93%A4%EC%9C%BC%EB%A9%B0-2025-01-03/</link>
+      <pubDate>Fri, 03 Jan 2025 21:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/post/%EC%97%90%EC%84%B8%EC%9D%B4-%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%8C%80%ED%95%99%EC%9B%90-%EC%84%B8%EB%AF%B8%EB%82%98%EB%A5%BC-%EB%93%A4%EC%9C%BC%EB%A9%B0-2025-01-03/</guid>
+      <description>(에세이) 정보보호대학원 세미나를 들으며 2025-01-03</description>
+    </item>
+    <item>
+      <title>(기록) 2024 정보보호대학원 세미나 QnA</title>
+      <link>https://re-st.github.io/post/%EA%B8%B0%EB%A1%9D-2024-%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%8C%80%ED%95%99%EC%9B%90-%EC%84%B8%EB%AF%B8%EB%82%98-qna/</link>
+      <pubDate>Tue, 03 Dec 2024 18:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/post/%EA%B8%B0%EB%A1%9D-2024-%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%8C%80%ED%95%99%EC%9B%90-%EC%84%B8%EB%AF%B8%EB%82%98-qna/</guid>
+      <description>(기록) 2024 정보보호대학원 세미나 QnA</description>
     </item>
     <item>
       <title>(방법) Mega.nz 동기화 오류 때문에 Obsidian이 켜지지 않을 때 해결법</title>
