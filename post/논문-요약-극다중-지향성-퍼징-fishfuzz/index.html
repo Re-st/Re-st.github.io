@@ -10,7 +10,7 @@
     <link rel="stylesheet" href='https://re-st.github.io/css/light.css' />
     <link rel="stylesheet" href='https://re-st.github.io/css/dark.css' />
     <link rel="stylesheet" href='https://re-st.github.io/css/syntax.css' />
-    <title>(강연 요약) Introduction to Razborov&#39;s Flag Algebra - Park, Geon (re-st)</title>
+    <title>FishFuzz 논문 - Park, Geon (re-st)</title>
     
     <link rel="icon" type="image/x-icon" href='/images/github.png'>
     
@@ -18,17 +18,17 @@
 
     
     <meta name="description"
-  content="(강연 요약) Introduction to Razborov&amp;rsquo;s Flag Algebra" />
+  content="너는 오류를 낚는 어부가 되어라" />
 <meta name="keywords"
   content='blog, google analytics' />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://re-st.github.io/post/2025-08-27-introduction-to-razborovs-flag-algebra/" />
+<link rel="canonical" href="https://re-st.github.io/post/%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD-%EA%B7%B9%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-fishfuzz/" />
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="(강연 요약) Introduction to Razborov&#39;s Flag Algebra - Park, Geon (re-st)" />
+<meta name="twitter:title" content="FishFuzz 논문 - Park, Geon (re-st)" />
 <meta name="twitter:description"
-  content="(강연 요약) Introduction to Razborov&amp;rsquo;s Flag Algebra" />
+  content="너는 오류를 낚는 어부가 되어라" />
 <meta name="twitter:site" content="https://re-st.github.io/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image"
@@ -36,17 +36,17 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="(강연 요약) Introduction to Razborov&#39;s Flag Algebra - Park, Geon (re-st)">
+<meta property="og:title" content="FishFuzz 논문 - Park, Geon (re-st)">
 <meta property="og:description"
-  content="(강연 요약) Introduction to Razborov&amp;rsquo;s Flag Algebra" />
-<meta property="og:url" content="https://re-st.github.io/post/2025-08-27-introduction-to-razborovs-flag-algebra/" />
-<meta property="og:site_name" content="(강연 요약) Introduction to Razborov&#39;s Flag Algebra" />
+  content="너는 오류를 낚는 어부가 되어라" />
+<meta property="og:url" content="https://re-st.github.io/post/%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD-%EA%B7%B9%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-fishfuzz/" />
+<meta property="og:site_name" content="FishFuzz 논문" />
 <meta property="og:image"
   content="https://re-st.github.io/">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2025-08-27 15:30:00 &#43;0900 KST" />
+<meta property="article:published_time" content="2023-09-01 12:00:00 &#43;0900 KST" />
 
 
 
@@ -137,18 +137,18 @@
                   <span class="author">
                     <a href="https://re-st.github.io/">Park, Geon</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://re-st.github.io/post/2025-08-27-introduction-to-razborovs-flag-algebra/">(강연 요약) Introduction to Razborov&#39;s Flag Algebra</a></strong>
+                      href="https://re-st.github.io/post/%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD-%EA%B7%B9%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-fishfuzz/">FishFuzz 논문</a></strong>
                 </h1>
                 <div class="note m-0">
-                  Created <relative-time datetime="Wed, 27 Aug 2025 15:30:00 &#43;0900"
+                  Created <relative-time datetime="Fri, 01 Sep 2023 12:00:00 &#43;0900"
                     class="no-wrap">
-                    Wed, 27 Aug 2025 15:30:00 &#43;0900</relative-time>
+                    Fri, 01 Sep 2023 12:00:00 &#43;0900</relative-time>
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Fri, 12 Sep 2025 17:35:10 &#43;0900"
+                  Modified <relative-time datetime="Tue, 16 Sep 2025 20:10:48 &#43;0900"
                     class="no-wrap">
-                    Fri, 12 Sep 2025 17:35:10 &#43;0900</relative-time>
+                    Tue, 16 Sep 2025 20:10:48 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -178,7 +178,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      1009 Words
+                      569 Words
                     
 
                   </div>
@@ -190,68 +190,81 @@
 
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
-                <article class="markdown-body entry-content container-lg"><p>Logic-based computational method in extremal combinatorics</p>
+                <article class="markdown-body entry-content container-lg"><p><a href="https://www.usenix.org/system/files/usenixsecurity23-zheng.pdf">https://www.usenix.org/system/files/usenixsecurity23-zheng.pdf</a></p>
+<h1 id="요약">요약</h1>
+<p>[[다중 지향성 퍼징|다중 지향성 퍼징]]이나, [[정적분석|정적분석]] 결과인 수천 개의 예상지점을 가지고 인풋을 [[power schedule|스케쥴링]] 함.</p>
+<p>키워드
+<a href="https://re-st.github.io/post/%ED%81%90%EC%BB%AC%EB%A7%81/">큐컬링</a> [[Sanitizer-guided fuzzing (SGF)|Sanitizer-guided fuzzing (SGF)]]</p>
+<h4 id="1-목적">1. <strong>목적</strong></h4>
 <ul>
-<li>[[양홍석 교수님|양홍석 교수님]]</li>
-<li><a href="https://github.com/Re-st/Documents/blob/8679e9e85cf3152a021e0ac686f358f316ddaec3/3.%20Resource%20%28%EB%82%A8%29/KAIST25-flag-algebra.pdf">발표자료</a></li>
+<li><strong>다이나믹</strong> <a href="https://re-st.github.io/post/%ED%81%90%EC%BB%AC%EB%A7%81/">큐컬링</a>으로 퍼저의 성능 최적화 (w/ .[[favored|favored]] flag)</li>
+<li>시드-타깃 거리 계산 개선 (w/ function-lvl CG, CFG, and Static analysis)</li>
+<li>타깃 우선순위 동적 조정 (w/ instrumentation)</li>
 </ul>
-<h1 id="왜-pl커뮤니티에-강연하나">왜 PL커뮤니티에 강연하나?</h1>
-<p>Flag algebra는 logic에서 나옴.
-[[abstract interpretation|요약 해석]]등의 개념이, [[갈루아 연결|갈루아 연결]]도, flag algebra의 증명과정에서 쓰임.</p>
-<h1 id="math-to-cs">Math to CS</h1>
-<p>Auto-formalization (수학개념-&gt;전산논리)</p>
+<figure><img src="../Figure%203%20Overview%20of%20FISHFUZZ%20workflow.png"/>
+</figure>
+
+<h4 id="3-구현">3. <strong>구현</strong></h4>
 <ul>
-<li>Morph社의 Trinity가 ABC 추측의 weak ver. 증명</li>
-</ul>
-<h1 id="flag-algebra">Flag algebra</h1>
-<p>옛날에 유행하던. 10년 동안 open problem을 풀음.
-Stability = opt.sol이 근본적으로 유일한지, 아니면 여러 구조가 비슷한 최적치를 갖는지
-subgraph density 가 중요 개념. \(p (H, G)\) \((\,|\,H\,|\,=m \le \,|\,G\,|\,=n)\)</p>
-<p>infinite case (\(n\to \infty\))일 때 flag alg. 가 잘 작동.
-e.g. \(\lim_{  n \to \infty }\sup K_{3}\text{-free}\)</p>
-<p>semidefinite problem solver 인 flagmatic이용해 풀음.
-<mark>Flag Algebra defines a proof system, which flagmatic searches on.</mark></p>
-<h1 id="subgraph-density">Subgraph density</h1>
-<p>G 는 feature vector로 간주. \(p(-, G)\)라는 \(\infty\)-차원 벡터로 이해 (embedding)</p>
+<li><strong>모든 [[sanitizer|sanitizer]] 레이블 고려</strong>
 <ul>
-<li>모든 \(H\)마다 하나의 index.
-H 는 feature map로 간주. \(p(H, -):FinGraph \to \mathbb{R}\)</li>
+<li>[[llvm bc|llvm bc]]에 instrument한 그 각 줄을 타깃으로</li>
+<li>sanitizer 레이블은 [[compiler-rt|compiler-rt]]</li>
 </ul>
-<h2 id="limiting-graph--infty-차원-벡터">Limiting graph = \(\infty\)-차원 벡터.</h2>
-<p>\((G_{n})_{n\in\mathbb{N}}\) is increasing , converging (\(\forall H.\exists\lim_{n \to \infty } p(H, G_{n})\))
-Set of limiting graphs \(\Phi={\lim_{ n \to \infty } p(-, G_{n})}\)</p>
+</li>
+<li><strong>LLVM 기반 정적 분석</strong> 1,500LoC
 <ul>
-<li>&ldquo;graphon 이론&quot;과 같은 범주</li>
+<li>CFG, CG 추출</li>
+<li>정적 함수 거리 계산</li>
 </ul>
-<h1 id="fa-logic">FA logic</h1>
+</li>
+<li><strong>AFL/AFL++ 확장</strong>
 <ul>
-<li>Expression \(E\coloneqq H\,|\,r\times E\,|\,0\,|\,+\,|\,1\,|\,\times\)</li>
-<li>Assertions. \(A\coloneqq E=E\,|\,E\le E\,|\,A\land A\,|\,\neg A\)</li>
-<li>Semantics. \([ [E] ]:\Phi\to \mathbb{R}\). \([ [A] ]:\Phi\to \mathbb{B}\)</li>
+<li>[[cull_queue|cull_queue]]에서 inter-function exploration 구현 2,000LoC</li>
 </ul>
-<h2 id="non-trivial-ineq어떻게">Non-trivial ineq.어떻게?</h2>
-<p>\(H_{\cdot}\) 으로, single-labelled vertex가진 subgraph를 Expression에서 사용.
-monotone \(\alpha:Expr_{\cdot}\to Expr\) 도 정의.
-\(E_{\cdot}\) \(k\)개 뽑은 후 \(\sum_{k} E_{\cdot, i}^{2}\ge 0\) 사용. 후, 양변에 \(\alpha\) wrapping (monotone하므로 ㄱㄴ)</p>
-<blockquote>
-<p>[!QUESTION] 그 sum-of-squares 항등식에서 labelled vertex가 하는 일을 모르겠다. \(\alpha\) 만들때 말고 언제 쓰이나?</p>
-<p>A. \(\times\) 등을 계산할 때 역할을 한다.</p>
-</blockquote>
-<h2 id="무슨-alpha_d">무슨 \(\alpha_{d}\)?</h2>
-<p>adjoint. 내지는 [[갈루아 연결|갈루아 연결]]과 비슷.
-\(\gamma_{d}:FinGraph\to Pr(FinGraph_{\cdot})\) 생각. vertex 암거나 선택해 label주는 확률.
-Galois connection이 여기서는 $$p(\alpha_{d} (H_{\cdot}), G)=\mathbb{E}_{G_{\cdot}\sim\gamma_{d}(G)}[p_{\cdot}(H_{\cdot},G_{\cdot})]$$임. 선형대수에서도 \(\langle MV, w\rangle = \langle MV, M^{T}w\rangle\)에서 비슷한 adjoint relationship이 성립.</p>
-<p>monotone한 증명 : gamma 이용해서..</p>
-<h1 id="lean으로-도입">Lean으로 도입</h1>
-<p>[[엄상일 교수님|엄상일 교수님]], 대학원생들과 직접 하는중인데. subtype coercion (Lean이 두 타입을 같다고 인식을 못함)
-그리고 many calculation to be verified. automate하면 좋은데.</p>
-<h1 id="purely-logical">purely logical</h1>
-<p>checking \(E\ge 0\) is [[undecidable|undecidable]].
-생각) 따라서 SDP solver(Flagmatic 등)으로 bounded-depth relaxation을 쓰는 것.</p>
-<blockquote>
-<p>[!QUESTION] flagmatic의 UB 구하는 과정 중에 결국 search depth에 의존적인 부분이 있는데, <a href="https://re-st.github.io/post/lean/">Lean</a>에서는 그걸 사용하지 않을 수 있게 되나?</p>
-<p>A. 아직은 그걸 하는게 아니고, 이미 증명된 것들을 옮겨오는 중이다.</p>
-</blockquote>
+</li>
+<li><strong>컴파일러 Instrumentation</strong> 200LoC
+<ul>
+<li>런타임 거리 갱신</li>
+<li>타깃 메타데이터 기록</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-결과">5. <strong>결과</strong></h4>
+<ul>
+<li>벤치마크 성능 비교
+<ul>
+<li>[[TortoiseFuzz|TortoiseFuzz]], [[SAVIOR|SAVIOR]]의 벤치마크 + ad-hoc 벤치마크 (Two-Stage)
+<ul>
+<li>제외: non-resolvable exception, non-compatible to OS</li>
+</ul>
+</li>
+<li>기존 DGF(SGF 포함) 대비 개선</li>
+<li>30 real-world program 대상 실험, 1주일
+<ul>
+<li>TortoiseFuzz [27], SAVIOR [7], GREYONE [9], FuzzGen 의 프로그램 대상</li>
+<li>38개 새로운 CVE 발견</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>다양한 프로그램에서 탐색 및 버그 발견 효과 확인</li>
+<li>UBSan 벤치마크는 타깃이 버그가 아니라 그냥 의도된 overflow일 수도 있음</li>
+</ul>
+<h4 id="7-한계점">7. 한계점</h4>
+<ul>
+<li>cxxfilt에선 FFAFL이 우세, CVE-2017-13731은 FFAFL++과 AFL++만 발동
+<ul>
+<li>“이것은 FishFuzz가 intra-ftn. explor.은 건드리지 않기 때문이다”</li>
+</ul>
+</li>
+<li>보통 exploitation을 길게하면 좋지만, UBSan같이 간단한 타깃은 아님</li>
+<li>타깃집합이 ~10로 작으면 FishFuzz가 별로다.
+<ul>
+<li>여러 개 만들고 트레이드오프 계산필요</li>
+</ul>
+</li>
+</ul>
 </article>
               </div>
             </div>

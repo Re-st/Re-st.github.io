@@ -6,21 +6,21 @@
     <description>Recent content in Posts on Park, Geon (re-st)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 16 Sep 2025 18:51:32 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 16 Sep 2025 20:10:48 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(논문 요약) (다중 지향성 퍼징) Lyso</title>
+      <link>https://re-st.github.io/post/%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD-%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-lyso/</link>
+      <pubDate>Tue, 16 Sep 2025 18:55:35 +0900</pubDate>
+      <guid>https://re-st.github.io/post/%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD-%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-lyso/</guid>
+      <description>(논문 요약) (다중 지향성 퍼징) Lyso</description>
+    </item>
     <item>
       <title>(강연 요약) AI시대 성공적인 커리어에 관하여</title>
       <link>https://re-st.github.io/post/successful-career-on-ai-era/</link>
       <pubDate>Tue, 16 Sep 2025 18:44:35 +0900</pubDate>
       <guid>https://re-st.github.io/post/successful-career-on-ai-era/</guid>
       <description>(강연 요약) AI시대 성공적인 커리어에 관하여</description>
-    </item>
-    <item>
-      <title>From Alarms to Real Bugs - Multi-target Multi-step Directed Greybox Fuzzing for Static Analysis Result Verification (Lyso)</title>
-      <link>https://re-st.github.io/post/from-alarms-to-real-bugs-multi-target-multi-step-directed-greybox-fuzzing-for-static-analysis-result-verification-lyso/</link>
-      <pubDate>Fri, 12 Sep 2025 19:04:43 +0900</pubDate>
-      <guid>https://re-st.github.io/post/from-alarms-to-real-bugs-multi-target-multi-step-directed-greybox-fuzzing-for-static-analysis-result-verification-lyso/</guid>
-      <description>From Alarms to Real Bugs - Multi-target Multi-step Directed Greybox Fuzzing for Static Analysis Result Verification (Lyso)</description>
     </item>
     <item>
       <title>내 janestreet puzzle 풀이</title>
@@ -51,11 +51,11 @@
       <description>(펌) Why Lean 4 replaced OCaml as my Primary Language</description>
     </item>
     <item>
-      <title>2025-08-27 Introduction to Razborov&#39;s Flag Algebra</title>
+      <title>(강연 요약) Introduction to Razborov&#39;s Flag Algebra</title>
       <link>https://re-st.github.io/post/2025-08-27-introduction-to-razborovs-flag-algebra/</link>
       <pubDate>Wed, 27 Aug 2025 15:30:00 +0900</pubDate>
       <guid>https://re-st.github.io/post/2025-08-27-introduction-to-razborovs-flag-algebra/</guid>
-      <description>2025-08-27 Introduction to Razborov&amp;rsquo;s Flag Algebra</description>
+      <description>(강연 요약) Introduction to Razborov&amp;rsquo;s Flag Algebra</description>
     </item>
     <item>
       <title>github.io 검색 엔진에 노출시키기</title>
@@ -171,9 +171,9 @@
     </item>
     <item>
       <title>FishFuzz 논문</title>
-      <link>https://re-st.github.io/post/fishfuzz-%EB%85%BC%EB%AC%B8/</link>
+      <link>https://re-st.github.io/post/%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD-%EA%B7%B9%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-fishfuzz/</link>
       <pubDate>Fri, 01 Sep 2023 12:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/post/fishfuzz-%EB%85%BC%EB%AC%B8/</guid>
+      <guid>https://re-st.github.io/post/%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD-%EA%B7%B9%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-fishfuzz/</guid>
       <description>너는 오류를 낚는 어부가 되어라</description>
     </item>
     <item>
@@ -192,9 +192,9 @@
     </item>
     <item>
       <title>AFLRun 논문</title>
-      <link>https://re-st.github.io/post/aflrun-%EB%85%BC%EB%AC%B8/</link>
+      <link>https://re-st.github.io/post/%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD-%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-aflrun/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://re-st.github.io/post/aflrun-%EB%85%BC%EB%AC%B8/</guid>
+      <guid>https://re-st.github.io/post/%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD-%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-aflrun/</guid>
       <description>클러스터링을 하는 다중 지향성 퍼징</description>
     </item>
   </channel>
