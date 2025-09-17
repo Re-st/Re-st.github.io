@@ -6,7 +6,7 @@
     <description>Recent content on Park, Geon (re-st)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 16 Sep 2025 21:48:32 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 17 Sep 2025 12:09:53 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>(강연 요약) AI시대 성공적인 커리어에 관하여</title>
@@ -52,9 +52,9 @@
     </item>
     <item>
       <title>(조교) 2025년도 여름학기 Co-op을 하며</title>
-      <link>https://re-st.github.io/post/%EC%A1%B0%EA%B5%90-2025%EB%85%84%EB%8F%84-%EC%97%AC%EB%A6%84%ED%95%99%EA%B8%B0-co-op%EC%9D%84-%ED%95%98%EB%A9%B0/</link>
+      <link>https://re-st.github.io/post/2025-summer-co-op/</link>
       <pubDate>Thu, 14 Aug 2025 18:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/post/%EC%A1%B0%EA%B5%90-2025%EB%85%84%EB%8F%84-%EC%97%AC%EB%A6%84%ED%95%99%EA%B8%B0-co-op%EC%9D%84-%ED%95%98%EB%A9%B0/</guid>
+      <guid>https://re-st.github.io/post/2025-summer-co-op/</guid>
       <description>(조교) 2025년도 여름학기 Co-op을 하며</description>
     </item>
     <item>
@@ -206,10 +206,10 @@
     </item>
     <item>
       <title>(조교) CS101 TA 진행방향, 느낀 점 (in English)</title>
-      <link>https://re-st.github.io/post/%EC%A1%B0%EA%B5%90-cs101-ta-%EC%A7%84%ED%96%89%EB%B0%A9%ED%96%A5-%EB%8A%90%EB%82%80-%EC%A0%90-in-english/</link>
+      <link>https://re-st.github.io/post/cs101-tip/</link>
       <pubDate>Wed, 30 Aug 2023 17:32:00 +0900</pubDate>
-      <guid>https://re-st.github.io/post/%EC%A1%B0%EA%B5%90-cs101-ta-%EC%A7%84%ED%96%89%EB%B0%A9%ED%96%A5-%EB%8A%90%EB%82%80-%EC%A0%90-in-english/</guid>
-      <description>CS101 TA experience - Teaching and Learning!</description>
+      <guid>https://re-st.github.io/post/cs101-tip/</guid>
+      <description>CS101 (Basic Python) Tips in both Learning and Teaching!</description>
     </item>
     <item>
       <title>내 CV (자기소개서)</title>
