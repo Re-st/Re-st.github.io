@@ -2,14 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://re-st.github.io/post/successful-career-on-ai-era/</loc>
-    <lastmod>2025-09-16T18:51:34+09:00</lastmod>
+    <loc>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-afl-no-instrumentation-detected-%ED%98%B9%EC%9D%80-fork-server-handshake-fail/</loc>
+    <lastmod>2025-09-22T14:56:49+09:00</lastmod>
   </url><url>
     <loc>https://re-st.github.io/</loc>
-    <lastmod>2025-09-17T12:09:56+09:00</lastmod>
+    <lastmod>2025-09-22T14:56:49+09:00</lastmod>
   </url><url>
     <loc>https://re-st.github.io/post/</loc>
-    <lastmod>2025-09-17T12:09:56+09:00</lastmod>
+    <lastmod>2025-09-22T14:56:49+09:00</lastmod>
+  </url><url>
+    <loc>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-afl-afl&#43;&#43;-%EB%94%94%EB%B2%84%EA%B9%85-setaffinity-%EB%AC%B8%EC%A0%9C%EC%99%80-%ED%95%B4%EA%B2%B0-bind_to_free_cpu%EC%97%90%EC%84%9C-%EC%97%90%EB%9F%AC/</loc>
+    <lastmod>2025-09-22T14:56:49+09:00</lastmod>
+  </url><url>
+    <loc>https://re-st.github.io/post/successful-career-on-ai-era/</loc>
+    <lastmod>2025-09-16T18:51:34+09:00</lastmod>
   </url><url>
     <loc>https://re-st.github.io/post/%EB%82%B4-janestreet-puzzle-%ED%92%80%EC%9D%B4/</loc>
     <lastmod>2025-09-16T20:58:19+09:00</lastmod>
@@ -19,6 +25,9 @@
   </url><url>
     <loc>https://re-st.github.io/post/%EB%B6%81%EB%A7%88%ED%81%AC-lean-%EA%B2%8C%EC%9E%84-%EC%84%9C%EB%B2%84/</loc>
     <lastmod>2025-09-16T20:39:35+09:00</lastmod>
+  </url><url>
+    <loc>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-afl-afl&#43;&#43;-%EB%94%94%EB%B2%84%EA%B9%85-asan%EC%9C%BC%EB%A1%9C-instrument%ED%95%98%EA%B3%A0-%EB%8F%8C%EB%A6%AC%EA%B8%B0/</loc>
+    <lastmod>2025-09-22T14:56:49+09:00</lastmod>
   </url><url>
     <loc>https://re-st.github.io/post/%ED%8E%8C-why-lean-4-replaced-ocaml-as-my-primary-language/</loc>
     <lastmod>2025-09-16T20:36:04+09:00</lastmod>

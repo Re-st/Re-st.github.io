@@ -6,8 +6,22 @@
     <description>Recent content on Park, Geon (re-st)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 19 Sep 2025 15:12:38 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 22 Sep 2025 14:56:49 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(방법) AFL - No instrumentation detected, 혹은 Fork server handshake fail</title>
+      <link>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-afl-no-instrumentation-detected-%ED%98%B9%EC%9D%80-fork-server-handshake-fail/</link>
+      <pubDate>Mon, 22 Sep 2025 14:30:58 +0900</pubDate>
+      <guid>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-afl-no-instrumentation-detected-%ED%98%B9%EC%9D%80-fork-server-handshake-fail/</guid>
+      <description>(방법) AFL - No instrumentation detected, 혹은 Fork server handshake fail</description>
+    </item>
+    <item>
+      <title>(방법) AFL (AFL&#43;&#43;) 디버깅 - setaffinity 문제와 해결 (bind_to_free_cpu에서 에러)</title>
+      <link>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-afl-afl&#43;&#43;-%EB%94%94%EB%B2%84%EA%B9%85-setaffinity-%EB%AC%B8%EC%A0%9C%EC%99%80-%ED%95%B4%EA%B2%B0-bind_to_free_cpu%EC%97%90%EC%84%9C-%EC%97%90%EB%9F%AC/</link>
+      <pubDate>Mon, 22 Sep 2025 12:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-afl-afl&#43;&#43;-%EB%94%94%EB%B2%84%EA%B9%85-setaffinity-%EB%AC%B8%EC%A0%9C%EC%99%80-%ED%95%B4%EA%B2%B0-bind_to_free_cpu%EC%97%90%EC%84%9C-%EC%97%90%EB%9F%AC/</guid>
+      <description>(방법) AFL (AFL++) 디버깅 - setaffinity 문제와 해결 (bind_to_free_cpu에서 에러)</description>
+    </item>
     <item>
       <title>(강연 요약) AI시대 성공적인 커리어에 관하여</title>
       <link>https://re-st.github.io/post/successful-career-on-ai-era/</link>
@@ -35,6 +49,13 @@
       <pubDate>Fri, 12 Sep 2025 14:47:07 +0900</pubDate>
       <guid>https://re-st.github.io/post/%EB%B6%81%EB%A7%88%ED%81%AC-lean-%EA%B2%8C%EC%9E%84-%EC%84%9C%EB%B2%84/</guid>
       <description>Lean Game Server (adam.math.hhu.de)</description>
+    </item>
+    <item>
+      <title>(방법) AFL (AFL&#43;&#43;) 디버깅 - ASAN으로 instrument하고 돌리기</title>
+      <link>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-afl-afl&#43;&#43;-%EB%94%94%EB%B2%84%EA%B9%85-asan%EC%9C%BC%EB%A1%9C-instrument%ED%95%98%EA%B3%A0-%EB%8F%8C%EB%A6%AC%EA%B8%B0/</link>
+      <pubDate>Wed, 03 Sep 2025 14:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-afl-afl&#43;&#43;-%EB%94%94%EB%B2%84%EA%B9%85-asan%EC%9C%BC%EB%A1%9C-instrument%ED%95%98%EA%B3%A0-%EB%8F%8C%EB%A6%AC%EA%B8%B0/</guid>
+      <description>(방법) AFL (AFL++) 디버깅 - ASAN으로 instrument하고 돌리기</description>
     </item>
     <item>
       <title>(펌) Why Lean 4 replaced OCaml as my Primary Language</title>
