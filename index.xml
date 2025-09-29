@@ -6,7 +6,7 @@
     <description>Recent content on Park, Geon (re-st)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 30 Sep 2025 01:42:03 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 30 Sep 2025 01:46:01 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>(방법) Error building site: assemble: failed to unmarshal YAML: yaml: line 1: did not find expected key 해결</title>
@@ -14,6 +14,13 @@
       <pubDate>Tue, 30 Sep 2025 01:36:00 +0900</pubDate>
       <guid>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-error-building-site-assemble-failed-to-unmarshal-yaml-yaml-line-1-did-not-find-expected-key-%ED%95%B4%EA%B2%B0/</guid>
       <description>(Method) Solve the following : Error building site: assemble: failed to unmarshal YAML: yaml: line 1: did not find expected key</description>
+    </item>
+    <item>
+      <title>[분류] 정적 블로그 제작 및 유지</title>
+      <link>https://re-st.github.io/post/%EC%A0%95%EC%A0%81-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EC%9E%91-%EB%B0%8F-%EC%9C%A0%EC%A7%80/</link>
+      <pubDate>Tue, 30 Sep 2025 01:33:48 +0900</pubDate>
+      <guid>https://re-st.github.io/post/%EC%A0%95%EC%A0%81-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EC%9E%91-%EB%B0%8F-%EC%9C%A0%EC%A7%80/</guid>
+      <description>[Category] Static blog production and maintenance</description>
     </item>
     <item>
       <title>(펌) [주말N수학] 챗GPT, 수학자에게 위협이 될까</title>
@@ -31,9 +38,9 @@
     </item>
     <item>
       <title>(방법) git status에서 한글이 깨질 때 (`%20` 등) 한글 뜨게 하기</title>
-      <link>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-git-status%EC%97%90%EC%84%9C-%ED%95%9C%EA%B8%80%EC%9D%B4-%EA%B9%A8%EC%A7%88-%EB%95%8C-%20-%EB%93%B1-%ED%95%9C%EA%B8%80-%EB%9C%A8%EA%B2%8C-%ED%95%98%EA%B8%B0/</link>
+      <link>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-git-status%EC%97%90%EC%84%9C-%ED%95%9C%EA%B8%80%EC%9D%B4-%EA%B9%A8%EC%A7%88-%EB%95%8C-%ED%95%9C%EA%B8%80-%EB%9C%A8%EA%B2%8C-%ED%95%98%EA%B8%B0/</link>
       <pubDate>Mon, 22 Sep 2025 17:30:09 +0900</pubDate>
-      <guid>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-git-status%EC%97%90%EC%84%9C-%ED%95%9C%EA%B8%80%EC%9D%B4-%EA%B9%A8%EC%A7%88-%EB%95%8C-%20-%EB%93%B1-%ED%95%9C%EA%B8%80-%EB%9C%A8%EA%B2%8C-%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-git-status%EC%97%90%EC%84%9C-%ED%95%9C%EA%B8%80%EC%9D%B4-%EA%B9%A8%EC%A7%88-%EB%95%8C-%ED%95%9C%EA%B8%80-%EB%9C%A8%EA%B2%8C-%ED%95%98%EA%B8%B0/</guid>
       <description>(방법) git status에서 한글이 깨질 때 (&lt;code&gt;%20&lt;/code&gt; 등) 한글 뜨게 하기</description>
     </item>
     <item>
@@ -136,9 +143,9 @@
     </item>
     <item>
       <title>(방법) github.io 블로그 검색 엔진에 노출시키기</title>
-      <link>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-github.io-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84%EC%97%90-%EB%85%B8%EC%B6%9C%EC%8B%9C%ED%82%A4%EA%B8%B0/</link>
+      <link>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-github-io-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84%EC%97%90-%EB%85%B8%EC%B6%9C%EC%8B%9C%ED%82%A4%EA%B8%B0/</link>
       <pubDate>Sat, 22 Mar 2025 17:19:19 +0900</pubDate>
-      <guid>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-github.io-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84%EC%97%90-%EB%85%B8%EC%B6%9C%EC%8B%9C%ED%82%A4%EA%B8%B0/</guid>
+      <guid>https://re-st.github.io/post/%EB%B0%A9%EB%B2%95-github-io-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84%EC%97%90-%EB%85%B8%EC%B6%9C%EC%8B%9C%ED%82%A4%EA%B8%B0/</guid>
       <description>(Method) Exposure your github.io blog to search engines</description>
     </item>
     <item>
