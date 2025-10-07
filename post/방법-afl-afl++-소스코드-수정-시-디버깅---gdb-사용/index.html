@@ -141,9 +141,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Tue, 07 Oct 2025 10:13:29 &#43;0900"
+                  Modified <relative-time datetime="Tue, 07 Oct 2025 12:33:47 &#43;0900"
                     class="no-wrap">
-                    Tue, 07 Oct 2025 10:13:29 &#43;0900</relative-time>
+                    Tue, 07 Oct 2025 12:33:47 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -173,7 +173,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      2078 Words
+                      2084 Words
                     
 
                   </div>
@@ -194,7 +194,7 @@
 </span></span><span style="display:flex;"><span>cmdline<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@@&#34;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 이전 실행 결과 및 ASAN 옵션 초기화</span>
-</span></span><span style="display:flex;"><span>rm -rf <span style="color:#66d9ef">$(</span>output_dir<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>rm -rf $output_dir
 </span></span><span style="display:flex;"><span>unset ASAN_OPTIONS
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 환경 변수 설정</span>
@@ -202,7 +202,9 @@
 </span></span><span style="display:flex;"><span>export AFL_NO_AFFINITY<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>  <span style="color:#75715e"># CPU 코어 고정 기능 비활성화 (디버깅 시 유용)</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># GDB로 afl-fuzz 실행</span>
-</span></span><span style="display:flex;"><span>gdb --args ./afl-fuzz -m none -d -i seed -o <span style="color:#ae81ff">\\</span><span style="color:#f92672">((</span>output<span style="color:#ae81ff">\_</span>dir<span style="color:#f92672">)</span> -- ./<span style="color:#ae81ff">\\</span><span style="color:#f92672">)</span>prog $cmdline
+</span></span><span style="display:flex;"><span>gdb --args ./afl-fuzz -m none -d -i seed -o $output_dir <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	-- ./$prog <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	$cmdline
 </span></span></code></pre></div><p>GDB 프롬프트가 뜨면, <code>r</code> 또는 <code>run</code>을 입력하여 실행을 시작합니다.</p>
 <h2 id="환경-변수의-의미">환경 변수의 의미</h2>
 <ul>
@@ -228,7 +230,9 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -ex run <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -ex bt <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -ex quit <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --args ./afl-fuzz -m none -i seed -o output -- ./<span style="color:#ae81ff">\\</span><span style="color:#f92672">(</span>prog <span style="color:#ae81ff">\\</span><span style="color:#f92672">)</span>cmdline
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --args ./afl-fuzz -m none -i seed -o $output_dir <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -- ./$prog <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  $cmdline
 </span></span></code></pre></div><p>이 스크립트는 GDB가 실행되자마자 프로그램을 구동하고, 만약 크래시로 멈추면 그 즉시 콜 스택(<code>bt</code>)을 화면에 출력한 후 자동으로 종료됩니다.</p>
 <h3 id="--batch-모드를-활용한-완전-자동화-및-병렬-실행"><code>--batch</code> 모드를 활용한 완전 자동화 및 병렬 실행</h3>
 <p>여기서 한 걸음 더 나아가, GDB를 스크립트 내에서 완벽한 자동화 도구로 사용할 수 있습니다. <strong><code>--batch</code></strong> 옵션은 GDB를 대화형 프롬프트 없이 실행하고, <code>-ex</code>로 주어진 모든 명령어 수행 후 즉시 종료시키는 &lsquo;배치 모드&rsquo;로 작동하게 합니다.</p>
@@ -242,7 +246,9 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -ex <span style="color:#e6db74">&#34;run&#34;</span> <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -ex <span style="color:#e6db74">&#34;bt&#34;</span> <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -ex <span style="color:#e6db74">&#34;quit&#34;</span> <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --args ./afl-fuzz -m none -i seed -o output -- ./<span style="color:#ae81ff">\\</span><span style="color:#f92672">((</span>prog<span style="color:#f92672">)</span> <span style="color:#ae81ff">\\</span><span style="color:#f92672">)(</span>cmdline<span style="color:#f92672">)</span> &amp;&gt; $GDB_LOG_FILE &amp;
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --args ./afl-fuzz -m none -i seed -o output <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -- ./$prog <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#ae81ff">\\</span><span style="color:#f92672">(</span>cmdline &amp;&gt; <span style="color:#ae81ff">\\</span><span style="color:#f92672">)</span>GDB_LOG_FILE &amp;
 </span></span></code></pre></div><p>위 스크립트의 주요 특징은 다음과 같습니다.</p>
 <ul>
 <li>
