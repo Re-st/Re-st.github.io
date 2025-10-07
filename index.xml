@@ -6,7 +6,7 @@
     <description>Recent content on Park, Geon (re-st)</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 07 Oct 2025 18:54:42 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 07 Oct 2025 18:56:44 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>(방법) AFL (AFL&#43;&#43;) 소스코드 수정 시 디버깅 - gdb 사용</title>
@@ -328,7 +328,7 @@
       <link>https://re-st.github.io/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://re-st.github.io/readme/</guid>
-      <description>&lt;h1 id=&#34;hi-welcome-&#34;&gt;Hi, welcome 👋&lt;/h1&gt;&#xA;&lt;h1 id=&#34;my-positions&#34;&gt;My Positions&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;March 2024 — Current (Est. 2026) : KAIST, Master’s in Information Security&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Fuzzing study in Programming Systems Lab&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;March 2017 — February 2024 : KAIST, B.S. Mathematics &amp;amp; Computer Science (Double Major)&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;July 2023 — February 2024 : Undergraduate intern, Programming Systems Lab @ KAIST&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;November 2020 — May 2022 : KASUTA Military Service&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;For more please look at &lt;a href=&#34;https://re-st.github.io/post/%EB%82%B4-cv-%EC%9E%90%EA%B8%B0%EC%86%8C%EA%B0%9C%EC%84%9C/&#34;&gt;My CV&lt;/a&gt; page&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;interests&#34;&gt;Interests&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Static analysis, Fuzzing, Graph Theory, Trading, and the Spanish language&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;hi-welcome-&#34;&gt;Hi, welcome 👋&lt;/h1&gt;&#xA;&lt;h1 id=&#34;my-positions&#34;&gt;My Positions&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;March 2024 — Current (Est. 2026) : KAIST, Master’s in Information Security&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Fuzzing study in Programming Systems Lab&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;March 2017 — February 2024 : KAIST, B.S. Mathematics &amp;amp; Computer Science (Double Major)&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;July 2023 — February 2024 : Undergraduate intern, Programming Systems Lab @ KAIST&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;November 2020 — May 2022 : KASUTA Military Service&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Detailed at &lt;a href=&#34;https://re-st.github.io/post/%EB%82%B4-cv-%EC%9E%90%EA%B8%B0%EC%86%8C%EA%B0%9C%EC%84%9C/&#34;&gt;My CV&lt;/a&gt; page&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;interests&#34;&gt;Interests&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Static analysis, Fuzzing (&lt;a href=&#34;https://re-st.github.io/post/afl-%ED%8D%BC%EC%A7%95/&#34;&gt;AFL&lt;/a&gt;), Graph Theory, Trading, and the Spanish language&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>
