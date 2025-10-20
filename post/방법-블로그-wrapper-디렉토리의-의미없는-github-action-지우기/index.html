@@ -146,9 +146,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 20 Oct 2025 13:28:08 &#43;0900"
+                  Modified <relative-time datetime="Mon, 20 Oct 2025 13:28:13 &#43;0900"
                     class="no-wrap">
-                    Mon, 20 Oct 2025 13:28:08 &#43;0900</relative-time>
+                    Mon, 20 Oct 2025 13:28:13 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -178,7 +178,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      39 Words
+                      549 Words
                     
 
                   </div>
@@ -190,16 +190,27 @@
 
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
-                <article class="markdown-body entry-content container-lg"><ol>
-<li>Go to <a href="https://github.com/Re-st/blog-profile-wrapper/settings/pages">https://github.com/Re-st/blog-profile-wrapper/settings/pages</a></li>
-<li>Check there is no unnecessary <code>Github Actions</code></li>
-<li>Change Build and deployment Source from <code>Deploy from a branch</code> to <code>Github Actions</code></li>
-</ol>
-<h2 id="효과">효과</h2>
-<p>기존의 deployment (아래)를 없애 준다.
-<figure><img src="Pasted%20image%2020251013103156.png"/>
+                <article class="markdown-body entry-content container-lg"><p>GitHub 블로그를 관리하다 보면 원치 않는 디렉토리에서 GitHub Actions이 실행되어 빌드 실패 알림이 쌓이는 상황이 발생한다.</p>
+<p>이 문제의 근본적인 원인을 해결하고 불필요한 배포(Deployment) 프로세스를 제거하는 방법을 여기 정리한다.</p>
+<h2 id="-문제-진단-원치-않는-github-actions-실행">🚨 문제 진단: 원치 않는 GitHub Actions 실행</h2>
+<p>블로그 디렉토리가 아닌 상위 관리 디렉토리(<strong><code>blog-profile-wrapper</code></strong> 와 같은)에서 커밋이 발생할 때마다 GitHub Pages 빌드 Action이 트리거되어 알림창에 빌드 실패 메시지가 반복적으로 나타나는 경우.</p>
+<p>이러한 불필요한 빌드는 기존의 <strong><code>Deploy from a branch</code></strong> 설정으로 인해 발생하며, 아래 이미지와 같은 불필요한 Deployment 레코드를 생성합니다.</p>
+<figure><img src="../pages%20build%20and%20deployment.png"/>
 </figure>
-</p>
+
+<h2 id="-해결-효과-깔끔한-deployment-관리">✅ 해결 효과: 깔끔한 Deployment 관리</h2>
+<p>이 방법을 적용하면 불필요한 자동 배포(자동 빌드/배포)가 중단되어, 알림창이 빌드 실패 메시지로 도배되는 현상이 사라집니다.</p>
+<h2 id="-해결-방법-github-pages-source-변경">🛠️ 해결 방법: GitHub Pages Source 변경</h2>
+<ol>
+<li>자동 배포 제거를 원하는 디렉토리의 GitHub Pages 설정으로 이동합니다.
+<ol>
+<li>예: <a href="https://github.com/Re-st/blog-profile-wrapper/settings/pages">https://github.com/Re-st/blog-profile-wrapper/settings/pages</a></li>
+</ol>
+</li>
+<li>작동 중인 GitHub Actions이 불필요한지 다시 확인합니다.</li>
+<li>&lsquo;Build and deployment&rsquo; 섹션에서 Source 설정을 <code>Deploy from a branch</code>에서 <strong><code>GitHub Actions</code></strong> 으로 변경합니다.</li>
+</ol>
+<p><strong>💡 핵심:</strong> 이 변경은 GitHub Pages의 기본 자동 빌드 기능을 비활성화하고, 명시적으로 정의된 YAML 워크플로우(<code>github/workflows</code>)를 통해서만 배포를 허용하도록 합니다. 이로써 상위 디렉토리의 변경사항이 Pages 빌드를 자동으로 트리거하는 것을 막을 수 있습니다.</p>
 </article>
               </div>
             </div>
