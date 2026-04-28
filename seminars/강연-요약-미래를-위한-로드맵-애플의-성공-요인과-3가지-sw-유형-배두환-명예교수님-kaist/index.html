@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>(강연 요약) 미래를 위한 로드맵: 애플의 성공 요인과 3가지 SW 유형 - 배두환 명예교수님 (KAIST) | Park, Geon (re-st)</title>
+<meta name="title" content="(강연 요약) 미래를 위한 로드맵: 애플의 성공 요인과 3가지 SW 유형 - 배두환 명예교수님 (KAIST)" />
+<meta name="description" content="1. 서론: AI와의 만남
+(연사: 배두환 교수. 카이스트 전산학부에서 30년간 재직 후 2023년 퇴임, 현 카이스트 소프트웨어 교육 센터장)
+제가 AI에 관심 갖게 된 것은 1983년경 타임지 (Time) 기사였습니다. &ldquo;사람 두뇌와 같은 컴퓨터는 뉴욕시만큼 커야 할 것&quot;이라는 내용이었죠. 그 당시 바둑은 8급 수준이었고, 사람은 절대 이길 수 없다고 했습니다.
+그런데 2016년, 알파고가 이세돌 9단을 4:1로 이기는 것을 보고 충격을 받았습니다. 그때부터 &ldquo;컴퓨터가 흉내 내지 못하고 사람만이 꼭 할 수 있는 게 뭘까?&ldquo;라는 관심을 갖게 되었습니다." />
+<meta name="keywords" content="Lecture-Summary," />
+
+
+<meta property="og:url" content="https://re-st.github.io/seminars/%EA%B0%95%EC%97%B0-%EC%9A%94%EC%95%BD-%EB%AF%B8%EB%9E%98%EB%A5%BC-%EC%9C%84%ED%95%9C-%EB%A1%9C%EB%93%9C%EB%A7%B5-%EC%95%A0%ED%94%8C%EC%9D%98-%EC%84%B1%EA%B3%B5-%EC%9A%94%EC%9D%B8%EA%B3%BC-3%EA%B0%80%EC%A7%80-sw-%EC%9C%A0%ED%98%95-%EB%B0%B0%EB%91%90%ED%99%98-%EB%AA%85%EC%98%88%EA%B5%90%EC%88%98%EB%8B%98-kaist/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="(강연 요약) 미래를 위한 로드맵: 애플의 성공 요인과 3가지 SW 유형 - 배두환 명예교수님 (KAIST)">
+  <meta property="og:description" content="1. 서론: AI와의 만남 (연사: 배두환 교수. 카이스트 전산학부에서 30년간 재직 후 2023년 퇴임, 현 카이스트 소프트웨어 교육 센터장)
+제가 AI에 관심 갖게 된 것은 1983년경 타임지 (Time) 기사였습니다. “사람 두뇌와 같은 컴퓨터는 뉴욕시만큼 커야 할 것&#34;이라는 내용이었죠. 그 당시 바둑은 8급 수준이었고, 사람은 절대 이길 수 없다고 했습니다.
+그런데 2016년, 알파고가 이세돌 9단을 4:1로 이기는 것을 보고 충격을 받았습니다. 그때부터 “컴퓨터가 흉내 내지 못하고 사람만이 꼭 할 수 있는 게 뭘까?“라는 관심을 갖게 되었습니다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="seminars">
+    <meta property="article:published_time" content="2025-02-05T13:10:00+09:00">
+    <meta property="article:modified_time" content="2026-04-28T17:52:24+09:00">
+    <meta property="article:tag" content="Lecture-Summary">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="(강연 요약) 미래를 위한 로드맵: 애플의 성공 요인과 3가지 SW 유형 - 배두환 명예교수님 (KAIST)">
+  <meta name="twitter:description" content="1. 서론: AI와의 만남 (연사: 배두환 교수. 카이스트 전산학부에서 30년간 재직 후 2023년 퇴임, 현 카이스트 소프트웨어 교육 센터장)
+제가 AI에 관심 갖게 된 것은 1983년경 타임지 (Time) 기사였습니다. “사람 두뇌와 같은 컴퓨터는 뉴욕시만큼 커야 할 것&#34;이라는 내용이었죠. 그 당시 바둑은 8급 수준이었고, 사람은 절대 이길 수 없다고 했습니다.
+그런데 2016년, 알파고가 이세돌 9단을 4:1로 이기는 것을 보고 충격을 받았습니다. 그때부터 “컴퓨터가 흉내 내지 못하고 사람만이 꼭 할 수 있는 게 뭘까?“라는 관심을 갖게 되었습니다.">
+
+
+
+
+  <meta itemprop="name" content="(강연 요약) 미래를 위한 로드맵: 애플의 성공 요인과 3가지 SW 유형 - 배두환 명예교수님 (KAIST)">
+  <meta itemprop="description" content="1. 서론: AI와의 만남 (연사: 배두환 교수. 카이스트 전산학부에서 30년간 재직 후 2023년 퇴임, 현 카이스트 소프트웨어 교육 센터장)
+제가 AI에 관심 갖게 된 것은 1983년경 타임지 (Time) 기사였습니다. “사람 두뇌와 같은 컴퓨터는 뉴욕시만큼 커야 할 것&#34;이라는 내용이었죠. 그 당시 바둑은 8급 수준이었고, 사람은 절대 이길 수 없다고 했습니다.
+그런데 2016년, 알파고가 이세돌 9단을 4:1로 이기는 것을 보고 충격을 받았습니다. 그때부터 “컴퓨터가 흉내 내지 못하고 사람만이 꼭 할 수 있는 게 뭘까?“라는 관심을 갖게 되었습니다.">
+  <meta itemprop="datePublished" content="2025-02-05T13:10:00+09:00">
+  <meta itemprop="dateModified" content="2026-04-28T17:52:24+09:00">
+  <meta itemprop="wordCount" content="835">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+  <meta itemprop="keywords" content="Lecture-Summary">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="1-서론-ai와의-만남">1. 서론: AI와의 만남</h1>
+<p>(연사: 배두환 교수. 카이스트 전산학부에서 30년간 재직 후 2023년 퇴임, 현 카이스트 소프트웨어 교육 센터장)</p>
+<p>제가 AI에 관심 갖게 된 것은 1983년경 타임지 (Time) 기사였습니다. &ldquo;사람 두뇌와 같은 컴퓨터는 뉴욕시만큼 커야 할 것&quot;이라는 내용이었죠. 그 당시 바둑은 8급 수준이었고, 사람은 절대 이길 수 없다고 했습니다.</p>
+<p>그런데 2016년, 알파고가 이세돌 9단을 4:1로 이기는 것을 보고 충격을 받았습니다. 그때부터 &ldquo;컴퓨터가 흉내 내지 못하고 사람만이 꼭 할 수 있는 게 뭘까?&ldquo;라는 관심을 갖게 되었습니다.</p>
+<p>얼마 후, 박사과정 커플의 주례를 서게 되었습니다. &ldquo;컴퓨터가 가장 흉내 내기 어려운 &lsquo;결혼&rsquo;을 두 사람이 한다&quot;는 주례사를 했습니다. 하지만 한 달 뒤, 비행기에서 영화 &lsquo;her&rsquo; (그녀)를 봤습니다. &lsquo;사만다&rsquo;라는 지능형 OS (인공지능 비서)와 주인공이 사랑에 빠지는 내용이었죠. 사만다는 사용자의 환경을 보고 음악을 틀어주고, 싸울 것 같으면 도망가서 싸울 일도 없습니다. 저는 이 영화를 보고 &ldquo;당시 컴퓨터 기술로도 구현하지 못할 게 하나도 없더라&quot;는 결론을 내렸고, 만약 이 영화를 먼저 봤다면 그런 주례사를 하지 못했을 겁니다.</p>
+<h1 id="2-소프트웨어-se와-ai의-관계">2. 소프트웨어 (SE)와 AI의 관계</h1>
+<ul>
+<li>
+<p><strong>2011년 (WSJ):</strong> &ldquo;소프트웨어 (SW)가 세상을 먹고 있다.&rdquo; (Software is eating the world)</p>
+</li>
+<li>
+<p><strong>2017년 (MIT Tech Review):</strong> &ldquo;&hellip;하지만 AI가 소프트웨어를 먹을 것이다.&rdquo; (AI is going to eat Software) (엔비디아 젠슨 황)</p>
+</li>
+<li>
+<p><strong>2019년 (Forbes):</strong> &ldquo;소프트웨어가 세상을 이미 먹었고, 이젠 AI가 소프트웨어를 먹고 있다.&rdquo;</p>
+</li>
+<li>
+<p><strong>2024년 12월 (Deloitte):</strong> &ldquo;하드웨어 (GPU)가 세상을 먹고 있다.&rdquo; (데이터 센터 콘크리트가 부족할 정도)</p>
+</li>
+<li>
+<p><strong>최근:</strong> &ldquo;소프트웨어가 하드웨어를 먹고 있다.&rdquo; (하드웨어 성능 향상이 컴퓨팅 파워 수요를 못 쫓아간다)</p>
+</li>
+</ul>
+<p>세상은 정말 빠르게 변하고 있습니다. AI가 소프트웨어를 먹는 것처럼 보이지만, 저는 AI 할아버지가 나와도 소프트웨어, 특히 소프트웨어공학 (SE)은 반드시 필요하다고 봅니다. 지금 정부 보고서 등에서 &lsquo;소프트웨어&rsquo;라는 키워드가 AI에 묻혀 보이지 않지만, 그 중요성은 변하지 않았습니다.</p>
+<h1 id="3-chatgpt는-지능-intelligence이-있는가">3. ChatGPT는 지능 (Intelligence)이 있는가?</h1>
+<p>작년 챗GPT (ChatGPT)에게 &ldquo;POS 시스템 설계를 할 수 있니?&ldquo;라고 물었더니, 웹사이트 2곳을 가르쳐줬습니다. 최근 다시 물어보니, 설계 스텝을 1, 2, 3, 4로 정리해서 보여주더군요. 클래스 다이어그램도 그려줬습니다.</p>
+<p>AI 연구자들은 챗GPT가 지능이 없다고 하지만, 인문학자들은 인격체로 보려는 경향이 있습니다. 저는 후자에 가깝습니다. 아인슈타인은 &lsquo;지능 (Intelligence)&lsquo;을 <strong>&ldquo;변화에 대응하는 역량 (Capability to respond to change)&rdquo;</strong> 이라고 했습니다. 이런 측면에서 챗GPT는 1년 전과 지금 확연히 다른 답을 내놓으며, 사람도 못할 정도로 변화에 잘 대응하고 있습니다.</p>
+<p>저는 챗GPT에게 &ldquo;너는 지혜 (Wisdom)가 있냐?&ldquo;고 물었습니다. 챗GPT는 &ldquo;나는 인간의 경험, 감정, 윤리적 고려가 결여되어 있어 진정한 지혜는 없다&quot;고 답했습니다.</p>
+<p>결국 AI는 지식 (Knowledge, How-to)은 압도적이지만, 지혜 (Wisdom)는 부족합니다. 지혜는 <strong>&ldquo;새로운 문제 해결에 과거의 지식과 경험을 적용하는 것&rdquo;</strong> (DIKUW 모델의 마지막 단계)입니다. 개발자 역시 유사하지만 조금씩 다른 문제를 풉니다. 여러분은 이 &lsquo;지혜&rsquo;로운 개발자, 연구자가 되어야 합니다.</p>
+<h1 id="4-생성형-ai가-개발과-연구에-미치는-영향">4. 생성형 AI가 개발과 연구에 미치는 영향</h1>
+<ul>
+<li>
+<p><strong>개발 (켄트 백의 고백):</strong> 세계적인 해커 켄트 백 (Kent Beck)은 &ldquo;내 코딩 스킬 90%의 가치가 0이 되었다. 나머지 10%의 가치는 1000배 올랐다&quot;고 했습니다. <a href="https://x.com/KentBeck/status/1648413998025707520">#</a> 켄트 백의 90%는 평범한 개발자의 스킬 100% 이상일 텐데, 이게 아예 쓸모없어질 수도 있다는 심각한 이야기입니다.</p>
+</li>
+<li>
+<p><strong>생산성 (기업 사례):</strong> &ldquo;2년 전 20명이 3달 걸릴 데이터 구축 작업을, (생성형 AI를 이용해) 1명이 10일 만에 끝냈다.&rdquo; 생산성 향상이 어마어마합니다.</p>
+</li>
+<li>
+<p><strong>연구 (AI 사이언티스트):</strong> 챗GPT로 논문을 쓰는 &lsquo;AI 사이언티스트&rsquo;가 등장했습니다. 논문 한 편당 15달러 (deepseek은 10달러) 미만으로, <strong>기계학습 (ML) 학회 심사 기준을 통과할 수준</strong>의 논문을 씁니다. 논문 심사도 사람보다 빠를 수 있습니다.</p>
+</li>
+</ul>
+<h1 id="5-미래를-위한-로드맵-애플의-성공-요인과-3가지-sw-유형">5. 미래를 위한 로드맵: 애플의 성공 요인과 3가지 SW 유형</h1>
+<p>여러분은 앞으로 100세까지 일해야 할지 모릅니다. 정신 노동자로서 계속 채워 넣어야 합니다.</p>
+<p>애플 (Apple)은 전 세계 스마트폰 수익의 70% 이상을 가져갑니다. 소프트웨어 관점에서 애플의 성공 요인을 3가지 SW 유형으로 분석할 수 있습니다. 각각 다른 사람 유형이므로 자신은 어디에 속할지 생각해 보세요.</p>
+<ul>
+<li>
+<p><strong>1. Commodity/Platform (플랫폼) 유형:</strong></p>
+<ul>
+<li>
+<p>운영체제, 프로그래밍 언어 이론, 데이터베이스, 소프트웨어공학 (소프트웨어 엔지니어링) 등 핵심 개념 이해가 필요합니다.</p>
+</li>
+<li>
+<p><strong>성향:</strong> 컴퓨터만 있으면 하루 종일 혼자서도 잘 놀 수 있는 사람.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>2. Value Added (가치 부가) 유형:</strong></p>
+<ul>
+<li>
+<p>전산 지식과 도메인 지식의 융합, 대형 시스템 개발 역량이 필요합니다.</p>
+</li>
+<li>
+<p><strong>성향:</strong> 새로운 도메인과 문제 해결에 관심이 많은 사람.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>3. Innovative (혁신) 유형:</strong></p>
+<ul>
+<li>
+<p>창의적이고 비판/분석적인 사고가 필요합니다.</p>
+</li>
+<li>
+<p><strong>성향:</strong> 저녁 식사 테이블에서 대화를 주도할 수 있는 사람. (제 주변 엔지니어 중엔 이런 사람 못 봤습니다.)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>애플은 이 세 가지를 다 잘합니다. &lsquo;생태계&rsquo;를 만든 것 (Innovative)도, iOS라는 &lsquo;고유 플랫폼&rsquo; (Platform)을 가진 것도 성공 요인입니다.</p>
+<p>플랫폼이 있기에 &lsquo;가치 부가&rsquo; (Value Added)도 압도적입니다. (아이폰 사진 확대 시 화질이 깨지지 않는) 애플의 이미지 프로세싱 알고리즘은 타사가 못 쫓아올 수준이며, 이는 비싼 카메라 부품을 쓰지 않고도 소프트웨어로 품질을 높여 마진을 극대화하는 비결입니다.</p>
+<p>여러분은 이 세 가지 유형 중 자신의 성향에 맞는 길을 선택하고 집중해야 합니다.</p>
+<p>제 생각에는, 혁신 유형 (창의성)이 중요합니다. <a href="">DIKUW</a>모델의 마지막 부분을 할 줄 알아야 합니다.</p>
+<h1 id="6-결론-만약-25살로-돌아간다면">6. 결론: 만약 25살로 돌아간다면</h1>
+<p>저는 25살로 돌아간다면, 단점을 보완하려 애썼던 과거와 달리 <strong>&lsquo;내 장점을 살리기 위해&rsquo;</strong> 훨씬 더 노력할 것입니다.</p>
+<ul>
+<li>
+<p><strong>선택과 집중:</strong> 남이 다 가는 길을 따라가지 마십시오.</p>
+</li>
+<li>
+<p><strong>Life Debt:</strong> 테크니컬 뎁 (Technical Debt)은 회사를 옮기면 그만이지만, &lsquo;라이프 뎁 (Life Debt)&lsquo;은 평생의 짐이 됩니다. 만들지 마십시오.</p>
+<ul>
+<li>(Q&amp;A: 라이프 뎁의 예시?) 박사 과정 중, 나는 못 푸는 문제를 옆의 태도 불량한 미국 학생이 1시간 만에 푸는 것을 봤습니다. &ldquo;나는 왜 저런 능력을 키우지 못했을까?&rdquo; 외우는 건 잘했지만, <strong>새로운 문제를 찾고 나만의 해법을 내는 능력 (창의력)</strong> 이 너무 부족했습니다. 그게 부끄러운 기억으로 남아있습니다.</li>
+</ul>
+</li>
+<li>
+<p><strong>인문학 소양과 운동:</strong> 정신과 육체를 모두 잘 키워야 합니다.</p>
+</li>
+<li>
+<p><strong>지속적인 적응:</strong> 변화에 적응하는 것이 &lsquo;지능&rsquo;이고, 지능에 지식을 더하는 것이 &lsquo;지혜&rsquo;입니다.</p>
+</li>
+</ul>
+<p>(Q&amp;A: 교육은 어떻게 바뀌어야 할까?) 교육 모델 자체가 바뀔 겁니다. 과거처럼 지식을 전달하는 강의가 아니라, &ldquo;여기 링크가 있으니 가서 찾아보고, 나랑은 토론하자&quot;는 식이 될 것입니다. 창의력을 교실에서 가르칠 수는 없다고 생각합니다.</p>
+
+</content>
+
+
+
+<p>
+  
+  <a href="https://re-st.github.io/blog/lecture-summary/">#Lecture-Summary</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>(강연 요약) 컨텍스트 터널링 - 고정관념에 도전하기 - 전민석 교수님 (DGIST) | Park, Geon (re-st)</title>
+<meta name="title" content="(강연 요약) 컨텍스트 터널링 - 고정관념에 도전하기 - 전민석 교수님 (DGIST)" />
+<meta name="description" content="1. &lsquo;Last k&rsquo;의 한계를 넘어 &lsquo;Important k&rsquo;로
+연구는 프로그램 정적 분석에서 널리 쓰이는 컨텍스트 민감도 (context sensitivity)의 전통적인 접근 방식에 도전하며 시작되었습니다.
+
+
+전통적 방식 (Last k): 최근 k개의 호출 스택 (call stack)을 컨텍스트로 사용합니다. (보통 k=2가 많이 사용됨)
+
+
+교수님의 제안 (Important k): &rsquo;last k&rsquo; (최근 k개) 접근 방식 대신, 분석에 정말로 중요한 &lsquo;important k&rsquo; (주요 k개)의 컨텍스트만 선별하여 사용하자는 것입니다.
+
+
+효과: 이 &lsquo;Important k&rsquo; 접근법은 k=1만으로도 기존의 &lsquo;Last k&rsquo; (k=2) 방식과 비슷한 성능을 보여주었습니다." />
+<meta name="keywords" content="Invited-Lecture," />
+
+
+<meta property="og:url" content="https://re-st.github.io/seminars/%EA%B0%95%EC%97%B0-%EC%9A%94%EC%95%BD-%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8-%ED%84%B0%EB%84%90%EB%A7%81-%EA%B3%A0%EC%A0%95%EA%B4%80%EB%85%90%EC%97%90-%EB%8F%84%EC%A0%84%ED%95%98%EA%B8%B0-%EC%A0%84%EB%AF%BC%EC%84%9D-%EA%B5%90%EC%88%98%EB%8B%98-dgist/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="(강연 요약) 컨텍스트 터널링 - 고정관념에 도전하기 - 전민석 교수님 (DGIST)">
+  <meta property="og:description" content="1. ‘Last k’의 한계를 넘어 ‘Important k’로 연구는 프로그램 정적 분석에서 널리 쓰이는 컨텍스트 민감도 (context sensitivity)의 전통적인 접근 방식에 도전하며 시작되었습니다.
+전통적 방식 (Last k): 최근 k개의 호출 스택 (call stack)을 컨텍스트로 사용합니다. (보통 k=2가 많이 사용됨)
+교수님의 제안 (Important k): ’last k’ (최근 k개) 접근 방식 대신, 분석에 정말로 중요한 ‘important k’ (주요 k개)의 컨텍스트만 선별하여 사용하자는 것입니다.
+효과: 이 ‘Important k’ 접근법은 k=1만으로도 기존의 ‘Last k’ (k=2) 방식과 비슷한 성능을 보여주었습니다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="seminars">
+    <meta property="article:published_time" content="2025-08-21T09:30:00+09:00">
+    <meta property="article:modified_time" content="2026-04-28T17:52:24+09:00">
+    <meta property="article:tag" content="Invited-Lecture">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="(강연 요약) 컨텍스트 터널링 - 고정관념에 도전하기 - 전민석 교수님 (DGIST)">
+  <meta name="twitter:description" content="1. ‘Last k’의 한계를 넘어 ‘Important k’로 연구는 프로그램 정적 분석에서 널리 쓰이는 컨텍스트 민감도 (context sensitivity)의 전통적인 접근 방식에 도전하며 시작되었습니다.
+전통적 방식 (Last k): 최근 k개의 호출 스택 (call stack)을 컨텍스트로 사용합니다. (보통 k=2가 많이 사용됨)
+교수님의 제안 (Important k): ’last k’ (최근 k개) 접근 방식 대신, 분석에 정말로 중요한 ‘important k’ (주요 k개)의 컨텍스트만 선별하여 사용하자는 것입니다.
+효과: 이 ‘Important k’ 접근법은 k=1만으로도 기존의 ‘Last k’ (k=2) 방식과 비슷한 성능을 보여주었습니다.">
+
+
+
+
+  <meta itemprop="name" content="(강연 요약) 컨텍스트 터널링 - 고정관념에 도전하기 - 전민석 교수님 (DGIST)">
+  <meta itemprop="description" content="1. ‘Last k’의 한계를 넘어 ‘Important k’로 연구는 프로그램 정적 분석에서 널리 쓰이는 컨텍스트 민감도 (context sensitivity)의 전통적인 접근 방식에 도전하며 시작되었습니다.
+전통적 방식 (Last k): 최근 k개의 호출 스택 (call stack)을 컨텍스트로 사용합니다. (보통 k=2가 많이 사용됨)
+교수님의 제안 (Important k): ’last k’ (최근 k개) 접근 방식 대신, 분석에 정말로 중요한 ‘important k’ (주요 k개)의 컨텍스트만 선별하여 사용하자는 것입니다.
+효과: 이 ‘Important k’ 접근법은 k=1만으로도 기존의 ‘Last k’ (k=2) 방식과 비슷한 성능을 보여주었습니다.">
+  <meta itemprop="datePublished" content="2025-08-21T09:30:00+09:00">
+  <meta itemprop="dateModified" content="2026-04-28T17:52:24+09:00">
+  <meta itemprop="wordCount" content="204">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+  <meta itemprop="keywords" content="Invited-Lecture">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="1-last-k의-한계를-넘어-important-k로">1. &lsquo;Last k&rsquo;의 한계를 넘어 &lsquo;Important k&rsquo;로</h1>
+<p>연구는 프로그램 정적 분석에서 널리 쓰이는 컨텍스트 민감도 (context sensitivity)의 전통적인 접근 방식에 도전하며 시작되었습니다.</p>
+<ul>
+<li>
+<p><strong>전통적 방식 (Last k):</strong> 최근 k개의 호출 스택 (call stack)을 컨텍스트로 사용합니다. (보통 k=2가 많이 사용됨)</p>
+</li>
+<li>
+<p><strong>교수님의 제안 (Important k):</strong> &rsquo;last k&rsquo; (최근 k개) 접근 방식 대신, 분석에 정말로 중요한 &lsquo;important k&rsquo; (주요 k개)의 컨텍스트만 선별하여 사용하자는 것입니다.</p>
+</li>
+<li>
+<p><strong>효과:</strong> 이 &lsquo;Important k&rsquo; 접근법은 <strong>k=1만으로도 기존의 &lsquo;Last k&rsquo; (k=2) 방식과 비슷한 성능</strong>을 보여주었습니다.</p>
+</li>
+</ul>
+<h1 id="2-고정관념-뒤집기-object-vs-call-site-sensitivity">2. 고정관념 뒤집기: Object vs. Call-Site Sensitivity</h1>
+<p>컨텍스트 민감도에는 역사적으로 두 가지 주요 갈래가 있습니다.</p>
+<ol>
+<li>
+<p><strong>Call-Site Sensitivity (k-CFA):</strong> 호출 &lsquo;위치&rsquo; (call-site)를 기반으로 컨텍스트를 구분합니다. (&lsquo;81년)</p>
+</li>
+<li>
+<p><strong>Object Sensitivity:</strong> 호출 대상 객체 (&lsquo;값&rsquo;)를 기반으로 컨텍스트를 구분합니다. (2002년)</p>
+</li>
+</ol>
+<p>교수님은 &ldquo;최근 학계 연구 동향이 계속 Object sensitivity의 우월성만 강조하고 있다&quot;고 지적하며, <strong>자신의 생각은 그 반대</strong>라고 밝혔습니다.</p>
+<blockquote>
+<p><strong>(교수님의 가설) &ldquo;주요 k (Important k) 개념을 적용하면, Call-site sensitivity가 Object sensitivity를 이깁니다.&rdquo;</strong></p>
+</blockquote>
+<h1 id="3-새로운-가설의-탄생과-obj2cfa">3. 새로운 가설의 탄생과 &lsquo;obj2cfa&rsquo;</h1>
+<p>이러한 가설은 교수님의 개인적인 경험에서 시작되었습니다.</p>
+<ul>
+<li>
+<p><strong>기존 학계의 통념:</strong> &ldquo;Call-site sensitivity가 Object sensitivity보다 부정확하다&quot;는 것을 증명하는 특정 예제 (example)가 존재한다고 알려져 있었습니다.</p>
+</li>
+<li>
+<p><strong>교수님의 발견:</strong> 그 <strong>예제를 (아무리 노력해도) 만들 수 없었습니다.</strong></p>
+</li>
+<li>
+<p><strong>새로운 가설:</strong> 이를 바탕으로 &ldquo;기존의 고정관념 (통념)이 틀렸을 수 있다&quot;는 새로운 가설을 세우게 되었습니다.</p>
+</li>
+</ul>
+<p>이 아이디어는 &lsquo;obj2cfa&rsquo;라는 연구로 구체화되었으며, 이는 Object sensitivity의 요약 (summary)을 &lsquo;주요 call-site&rsquo; 요약으로 변환해주는 기술입니다.</p>
+
+</content>
+
+
+
+<p>
+  
+  <a href="https://re-st.github.io/blog/invited-lecture/">#Invited-Lecture</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

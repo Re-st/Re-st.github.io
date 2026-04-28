@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>(극다중 지향성 퍼징) FishFuzz.md | Park, Geon (re-st)</title>
+<meta name="title" content="(극다중 지향성 퍼징) FishFuzz.md" />
+<meta name="description" content="너는 오류를 낚는 어부가 되어라" />
+<meta name="keywords" content="Paper-Summary," />
+
+
+<meta property="og:url" content="https://re-st.github.io/research/%EA%B7%B9%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-fishfuzz.md/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="(극다중 지향성 퍼징) FishFuzz.md">
+  <meta property="og:description" content="너는 오류를 낚는 어부가 되어라">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="research">
+    <meta property="article:published_time" content="2023-09-01T12:00:00+09:00">
+    <meta property="article:modified_time" content="2026-04-28T17:52:24+09:00">
+    <meta property="article:tag" content="Paper-Summary">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="(극다중 지향성 퍼징) FishFuzz.md">
+  <meta name="twitter:description" content="너는 오류를 낚는 어부가 되어라">
+
+
+
+
+  <meta itemprop="name" content="(극다중 지향성 퍼징) FishFuzz.md">
+  <meta itemprop="description" content="너는 오류를 낚는 어부가 되어라">
+  <meta itemprop="datePublished" content="2023-09-01T12:00:00+09:00">
+  <meta itemprop="dateModified" content="2026-04-28T17:52:24+09:00">
+  <meta itemprop="wordCount" content="400">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+  <meta itemprop="keywords" content="Paper-Summary">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="요약">요약</h1>
+<p><a href="">다중 지향성 퍼징</a>이나, <a href="">434_정적분석</a> 결과인 수천 개의 예상지점을 가지고 인풋을 <a href="">스케쥴링</a> 함.</p>
+<p>키워드
+<a href="">(설명) 퍼징에서의 큐 컬링 (인풋 줄세우기)</a> <a href="">Sanitizer-guided fuzzing (SGF)</a></p>
+<h4 id="1-목적">1. <strong>목적</strong></h4>
+<ul>
+<li><strong>다이나믹</strong> <a href="">(설명) 퍼징에서의 큐 컬링 (인풋 줄세우기)</a>으로 퍼저의 성능 최적화 (w/ .<a href="">favored</a> flag)</li>
+<li>시드-타깃 거리 계산 개선 (w/ function-lvl CG, CFG, and Static analysis)</li>
+<li>타깃 우선순위 동적 조정 (w/ instrumentation)</li>
+</ul>
+<hr>
+<h4 id="2-핵심-개념">2. <strong>핵심 개념</strong></h4>
+<ul>
+<li><strong>다이나믹 타깃 우선순위</strong>
+<ul>
+<li>타깃 메타데이터 (hit_freq, reached, triggered) 활용</li>
+<li>런타임 중 타깃 상태 갱신</li>
+<li>덜 탐험된 타깃 우선순위 상승</li>
+</ul>
+</li>
+<li><strong>다이나믹 시드-함수 거리</strong>
+<ul>
+<li>정적 거리 맵 (LLVM-IR 기반 분석)
+<ul>
+<li>f_i (prologue BB m) 에 f를 call하는 BB m_f가 있을 시,
+dbb(f_i, f) = mindbb(m, m_f)</li>
+<li>함수인 이유 : BB 단위면 오버헤드가 심해서</li>
+<li>함수 내부는 일반 퍼징 테크닉 활용</li>
+</ul>
+</li>
+<li>다이나믹 런타임 거리 계산
+<ul>
+<li>시드가 지나는 각 함수와 목표 함수간 거리의 min</li>
+</ul>
+</li>
+<li><a href="">indirect call</a>은 고려하지 않지만, 잘 핸들됨을 예제로 보임</li>
+<li>기존 <a href="">Directed Greybox Fuzzing (DGF)</a>, <a href="">Sanitizer-guided fuzzing (SGF)</a>에서 쓰이던 <a href="">조화평균</a> 거리가, 여러 타깃의 정보를 어 흐릿하게 만들어 버리는 단점을 해결.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><img src="/research%5c" alt="../Figure 3 Overview of FISHFUZZ workflow.png"/></p>
+<h4 id="3-구현">3. <strong>구현</strong></h4>
+<ul>
+<li><strong>모든 <a href="">sanitizer</a> 레이블 고려</strong>
+<ul>
+<li><a href="">llvm bc</a>에 instrument한 그 각 줄을 타깃으로</li>
+<li>sanitizer 레이블은 <a href="">compiler-rt</a></li>
+</ul>
+</li>
+<li><strong>LLVM 기반 정적 분석</strong> 1,500LoC
+<ul>
+<li>CFG, CG 추출</li>
+<li>정적 함수 거리 계산</li>
+</ul>
+</li>
+<li><strong>AFL/AFL++ 확장</strong>
+<ul>
+<li><a href="">cull_queue</a>에서 inter-function exploration 구현 2,000LoC</li>
+</ul>
+</li>
+<li><strong>컴파일러 Instrumentation</strong> 200LoC
+<ul>
+<li>런타임 거리 갱신</li>
+<li>타깃 메타데이터 기록</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="4-전략">4. <strong>전략</strong></h4>
+<ul>
+<li><strong>큐컬링</strong>
+<ul>
+<li>함수 간 탐색 (inter-function exploration)
+<ul>
+<li>미도달 함수마다, 가장 가까운 시드.favored = 1</li>
+</ul>
+</li>
+<li>함수 내 탐색 (intra-function exploration)</li>
+<li>타깃 발동 기반 exploitation
+<ul>
+<li>t.reached를 모아, 가장 적게 건드린 20%의 각각마다, 가장 빠르게 도달하는 시드.favored = 1</li>
+</ul>
+</li>
+<li><a href="">각 행위가 목적달성 못하고 오랜시간 지나면 다음행위로</a></li>
+<li>자세한 건 <a href="">cull_queue (FishFuzz)</a></li>
+</ul>
+</li>
+<li><strong>타깃 크기 관리</strong>
+<ul>
+<li>대규모 타깃 집합 (&gt;20k)에서도 효과적 동작</li>
+<li>작은 타깃 집합(~10)에서 한계 존재</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="5-결과">5. <strong>결과</strong></h4>
+<ul>
+<li>벤치마크 성능 비교
+<ul>
+<li><a href="">TortoiseFuzz</a>, <a href="">SAVIOR</a>의 벤치마크 + ad-hoc 벤치마크 (Two-Stage)
+<ul>
+<li>제외: non-resolvable exception, non-compatible to OS</li>
+</ul>
+</li>
+<li>기존 DGF(SGF 포함) 대비 개선</li>
+<li>30 real-world program 대상 실험, 1주일
+<ul>
+<li>TortoiseFuzz [27], SAVIOR [7], GREYONE [9], FuzzGen 의 프로그램 대상</li>
+<li>38개 새로운 CVE 발견</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>다양한 프로그램에서 탐색 및 버그 발견 효과 확인</li>
+<li>UBSan 벤치마크는 타깃이 버그가 아니라 그냥 의도된 overflow일 수도 있음</li>
+</ul>
+<hr>
+<h4 id="6-이전-연구와-비교">6. <strong>이전 연구와 비교</strong></h4>
+<ul>
+<li><strong>SGF vs FishFuzz</strong>
+<ul>
+<li>SGF: 정적 타깃 우선순위</li>
+<li>FishFuzz: 다이나믹 타깃 우선순위</li>
+</ul>
+</li>
+<li><strong><a href="">ParmeSan</a>, SAVIOR</strong>
+<ul>
+<li>ParmeSan : 큐컬링한 이후에는 우선순위가 불변</li>
+<li>FishFuzz는 더 빠른 타깃 검수 가능</li>
+</ul>
+</li>
+<li><strong><a href="">Two-stage Fuzzing</a></strong> (<a href="">exploration + exploitation</a>)
+<ul>
+<li>FishFuzz는 큐컬링과 타깃 우선순위로 개선</li>
+<li>기존 <a href="">AFLFast</a>, FairFuzz, EcoFuzz, K-Scheduler</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="7-한계점">7. 한계점</h4>
+<ul>
+<li>cxxfilt에선 FFAFL이 우세, CVE-2017-13731은 FFAFL++과 AFL++만 발동
+<ul>
+<li>“이것은 FishFuzz가 intra-ftn. explor.은 건드리지 않기 때문이다”</li>
+</ul>
+</li>
+<li>보통 exploitation을 길게하면 좋지만, UBSan같이 간단한 타깃은 아님</li>
+<li>타깃집합이 ~10로 작으면 FishFuzz가 별로다.
+<ul>
+<li>여러 개 만들고 트레이드오프 계산필요</li>
+</ul>
+</li>
+</ul>
+
+</content>
+
+
+
+<p>
+  
+  <a href="https://re-st.github.io/blog/paper-summary/">#Paper-Summary</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

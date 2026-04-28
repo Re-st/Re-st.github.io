@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>AFL | Park, Geon (re-st)</title>
+<meta name="title" content="AFL" />
+<meta name="description" content="AFL 구성요소
+
+virgin_bits
+trace_bits
+(설명) 퍼징에서의 큐 컬링 (인풋 줄세우기)
+
+AFL 디버깅
+
+(방법) AFL (AFL&#43;&#43;) 디버깅 - ASAN으로 instrument하고 돌리기
+(방법) AFL (AFL&#43;&#43;) 소스코드 수정 시 디버깅 - gdb 사용
+(방법) AFL (AFL&#43;&#43;) 디버깅 - setaffinity 문제와 해결 (bind_to_free_cpu에서 에러)
+" />
+<meta name="keywords" content="Explanation," />
+
+
+<meta property="og:url" content="https://re-st.github.io/research/afl/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="AFL">
+  <meta property="og:description" content="AFL 구성요소 virgin_bits trace_bits (설명) 퍼징에서의 큐 컬링 (인풋 줄세우기) AFL 디버깅 (방법) AFL (AFL&#43;&#43;) 디버깅 - ASAN으로 instrument하고 돌리기 (방법) AFL (AFL&#43;&#43;) 소스코드 수정 시 디버깅 - gdb 사용 (방법) AFL (AFL&#43;&#43;) 디버깅 - setaffinity 문제와 해결 (bind_to_free_cpu에서 에러)">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="research">
+    <meta property="article:published_time" content="2025-10-06T21:22:27+09:00">
+    <meta property="article:modified_time" content="2026-04-28T17:52:24+09:00">
+    <meta property="article:tag" content="Explanation">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="AFL">
+  <meta name="twitter:description" content="AFL 구성요소 virgin_bits trace_bits (설명) 퍼징에서의 큐 컬링 (인풋 줄세우기) AFL 디버깅 (방법) AFL (AFL&#43;&#43;) 디버깅 - ASAN으로 instrument하고 돌리기 (방법) AFL (AFL&#43;&#43;) 소스코드 수정 시 디버깅 - gdb 사용 (방법) AFL (AFL&#43;&#43;) 디버깅 - setaffinity 문제와 해결 (bind_to_free_cpu에서 에러)">
+
+
+
+
+  <meta itemprop="name" content="AFL">
+  <meta itemprop="description" content="AFL 구성요소 virgin_bits trace_bits (설명) 퍼징에서의 큐 컬링 (인풋 줄세우기) AFL 디버깅 (방법) AFL (AFL&#43;&#43;) 디버깅 - ASAN으로 instrument하고 돌리기 (방법) AFL (AFL&#43;&#43;) 소스코드 수정 시 디버깅 - gdb 사용 (방법) AFL (AFL&#43;&#43;) 디버깅 - setaffinity 문제와 해결 (bind_to_free_cpu에서 에러)">
+  <meta itemprop="datePublished" content="2025-10-06T21:22:27+09:00">
+  <meta itemprop="dateModified" content="2026-04-28T17:52:24+09:00">
+  <meta itemprop="wordCount" content="40">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+  <meta itemprop="keywords" content="Explanation">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="afl-구성요소">AFL 구성요소</h1>
+<ul>
+<li><a href="https://re-st.github.io/research/virgin_bits.md/">virgin_bits</a></li>
+<li><a href="https://re-st.github.io/research/trace_bits.md/">trace_bits</a></li>
+<li><a href="">(설명) 퍼징에서의 큐 컬링 (인풋 줄세우기)</a></li>
+</ul>
+<h1 id="afl-디버깅">AFL 디버깅</h1>
+<ul>
+<li><a href="">(방법) AFL (AFL++) 디버깅 - ASAN으로 instrument하고 돌리기</a></li>
+<li><a href="">(방법) AFL (AFL++) 소스코드 수정 시 디버깅 - gdb 사용</a></li>
+<li><a href="">(방법) AFL (AFL++) 디버깅 - setaffinity 문제와 해결 (bind_to_free_cpu에서 에러)</a></li>
+</ul>
+
+</content>
+
+
+
+<p>
+  
+  <a href="https://re-st.github.io/blog/explanation/">#Explanation</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

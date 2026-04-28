@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paper-Summary on Park, Geon (re-st)</title>
+    <link>https://re-st.github.io/blog/paper-summary/</link>
+    <description>Recent content in Paper-Summary on Park, Geon (re-st)</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>Copyright © 2026, Geon Park.</copyright>
+    <lastBuildDate>Tue, 28 Apr 2026 17:52:24 +0900</lastBuildDate>
+    <atom:link href="https://re-st.github.io/blog/paper-summary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(강연 요약) Introduction to Razborov&#39;s Flag Algebra</title>
+      <link>https://re-st.github.io/research/%EA%B0%95%EC%97%B0-%EC%9A%94%EC%95%BD-introduction-to-razborovs-flag-algebra/</link>
+      <pubDate>Wed, 27 Aug 2025 15:30:00 +0900</pubDate>
+      <guid>https://re-st.github.io/research/%EA%B0%95%EC%97%B0-%EC%9A%94%EC%95%BD-introduction-to-razborovs-flag-algebra/</guid>
+      <description>&lt;p&gt;Logic-based computational method in extremal combinatorics&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://sites.google.com/view/hongseokyang/home&#34;&gt;양홍석 교수님&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/Re-st/Documents/blob/8679e9e85cf3152a021e0ac686f358f316ddaec3/3.%20Resource%20%28%EB%82%A8%29/KAIST25-flag-algebra.pdf&#34;&gt;발표자료&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;왜-pl커뮤니티에-강연하나&#34;&gt;왜 PL커뮤니티에 강연하나?&lt;/h1&gt;&#xA;&lt;p&gt;Flag algebra는 logic에서 나옴.&#xA;요약 해석등의 개념이, 갈루아 연결도, flag algebra의 증명과정에서 쓰임.&lt;/p&gt;&#xA;&lt;h1 id=&#34;math-to-cs&#34;&gt;Math to CS&lt;/h1&gt;&#xA;&lt;p&gt;Auto-formalization (수학개념-&amp;gt;전산논리)&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Morph社의 Trinity가 ABC 추측의 weak ver. 증명&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;flag-algebra&#34;&gt;Flag algebra&lt;/h1&gt;&#xA;&lt;p&gt;옛날에 유행하던. 10년 동안 open problem을 풀음.&#xA;Stability = opt.sol이 근본적으로 유일한지, 아니면 여러 구조가 비슷한 최적치를 갖는지&#xA;subgraph density 가 중요 개념. $p (H, G)$ $(,|,H,|,=m \le ,|,G,|,=n)$&lt;/p&gt;&#xA;&lt;p&gt;infinite case ($n\to \infty$)일 때 flag alg. 가 잘 작동.&#xA;e.g. $\lim_{  n \to \infty }\sup K_{3}\text{-free}$&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Seed-Prover.md</title>
+      <link>https://re-st.github.io/research/seed-prover.md/</link>
+      <pubDate>Wed, 06 Aug 2025 13:47:44 +0900</pubDate>
+      <guid>https://re-st.github.io/research/seed-prover.md/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;ByteDance 개발 &lt;strong&gt;Seed-Prover&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/logs/lean/&#34;&gt;Lean&lt;/a&gt; 기반 정리 증명 모델, &lt;a href=&#34;&#34;&gt;IMO (올림피아드)&lt;/a&gt; 수준 문제 해결 시도&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;lemma-style proving&lt;/strong&gt;: 본 증명 전 레마 생성, 레마의 시드풀 관리, 단계적 접근&lt;/li&gt;&#xA;&lt;li&gt;Lean 컴파일러 피드백으로 증명 수정·보완, 필요 시 새로운 레마 도출&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Seed-Geometry&lt;/strong&gt;: 기하학 문제 전용 추론 엔진 추가, 복잡한 도형 문제 대응&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/pdf/2507.23726&#34;&gt;(논문) Seed-Prover: Deep and Broad Reasoning for Automated Theorem Proving&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.hanbit.co.kr/channel/view.html?cmscode=CMS0397526637&#34;&gt;hanbit.co.kr 논문요약&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/ByteDance-Seed/Seed-Prover/blob/main/SeedProver/imo2025/IMO2025/P1.lean&#34;&gt;IMO 2025의 P1 증명 (P1.lean)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>(다중 지향성 퍼징) Lyso.md</title>
+      <link>https://re-st.github.io/research/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-lyso.md/</link>
+      <pubDate>Thu, 01 May 2025 12:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/research/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-lyso.md/</guid>
+      <description>&lt;h1 id=&#34;제목&#34;&gt;제목&lt;/h1&gt;&#xA;&lt;p&gt;From Alarms to Real Bugs - Multi-target Multi-step Directed Greybox Fuzzing for Static Analysis Result Verification&lt;/p&gt;&#xA;&lt;h1 id=&#34;요약&#34;&gt;요약&lt;/h1&gt;&#xA;&lt;p&gt;이 논문은 &lt;mark&gt;정적 분석 결과의 효과적인 검증을 위한 새로운 퍼징 기법&lt;/mark&gt;인 Lyso를 제안합니다. Lyso는 &lt;a href=&#34;&#34;&gt;다중 지향성 퍼징&lt;/a&gt;, 다단계 유도.&#xA;정적 분석에서 얻은 의미론적 정보와 &lt;mark&gt;알람 간의 상관관계&lt;/mark&gt;를 활용&#xA;Lyso는 기존 기법들에 비해 평균 12.17배 빠른 속도, 18개의 새 취약점 발견&lt;/p&gt;&#xA;&lt;h1 id=&#34;주요-내용&#34;&gt;주요 내용&lt;/h1&gt;&#xA;&lt;h2 id=&#34;lyso의-주요-특징&#34;&gt;Lyso의 주요 특징&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;다중 타겟 동시 처리: 상호 의존적인 알람들을 그룹화하여 효율적으로 검증&#xA;&lt;ul&gt;&#xA;&lt;li&gt;한 목표에 대한 진전이 다른 연관된 목표들의 진전을 가속화&lt;/li&gt;&#xA;&lt;li&gt;&lt;img src=&#34;https://re-st.github.io/research%5c&#34; alt=&#34;../lyso 타깃 그룹핑.png&#34;/&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;단계별 가이드: 각 알람의 목표를 여러 단계로 나누어 점진적으로 접근&lt;/li&gt;&#xA;&lt;li&gt;정적 분석 정보 활용: 취약한 경로와 알람 간 상관관계 정보를 퍼징에 활용&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;기술적-구현&#34;&gt;기술적 구현&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;중요 단계 식별: CFG(Control Flow Graph)와 DFG(Data Flow Graph) 단계를 구분하여 식별&lt;/li&gt;&#xA;&lt;li&gt;단계 추적 시스템: 경량화된 실행 시간 단계 추적 구현&#xA;&lt;ul&gt;&#xA;&lt;li&gt;각 알람(목표)을 여러 단계로 나누어 접근합니다.&lt;/li&gt;&#xA;&lt;li&gt;이를 통해 복잡한 버그도 단계별로 접근할 수 있게 됩니다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;다중 지표 활용: overlap, depth, distance 등의 지표를 통한 씨드 선택 최적화&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Overlap: 씨드 실행 중 적어도 하나의 단계가 커버된 상호 의존적 알람의 수&lt;/li&gt;&#xA;&lt;li&gt;Depth: 씨드 실행 중 어떤 알람에 대해 연속적으로 커버된 최대 단계 수&lt;/li&gt;&#xA;&lt;li&gt;Distance: 다음 미탐색 단계까지의 거리&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;타임아웃 기반 전환: 고정된 시간 창(현재 10분)을 사용하여 다른 탐색 단계로 전환&lt;/li&gt;&#xA;&lt;li&gt;밀도 기반 전력 스케줄링: 희귀 알람에 대한 탐색 강화&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;실험-결과&#34;&gt;실험 결과&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Magma 벤치마크에서 8개의 최신 퍼저와 비교 평가&lt;/li&gt;&#xA;&lt;li&gt;평균 12.17배 빠른 버그 검증 속도 달성&lt;/li&gt;&#xA;&lt;li&gt;단일 목표에 대해서도 다단계 가이드를 적용 (Lyso-stms)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AFLGo와 비교했을 때 평균 10.76배의 속도 향상 달성&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;기존 도구들이 찾지 못한 버그들도 발견&lt;/li&gt;&#xA;&lt;li&gt;실제 프로그램 대상 실험에서 18개의 새로운 취약점 발견&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;비교-대상&#34;&gt;비교 대상&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;10i24h&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>(다중 지향성 퍼징) AFLRun.md</title>
+      <link>https://re-st.github.io/research/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-aflrun.md/</link>
+      <pubDate>Mon, 01 Jul 2024 12:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/research/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-aflrun.md/</guid>
+      <description>클러스터링을 하는 다중 지향성 퍼징</description>
+    </item>
+    <item>
+      <title>(극다중 지향성 퍼징) FishFuzz.md</title>
+      <link>https://re-st.github.io/research/%EA%B7%B9%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-fishfuzz.md/</link>
+      <pubDate>Fri, 01 Sep 2023 12:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/research/%EA%B7%B9%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-fishfuzz.md/</guid>
+      <description>너는 오류를 낚는 어부가 되어라</description>
+    </item>
+  </channel>
+</rss>

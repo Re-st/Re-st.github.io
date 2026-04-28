@@ -4,8 +4,9 @@
     <title>Categories on Park, Geon (re-st)</title>
     <link>https://re-st.github.io/categories/</link>
     <description>Recent content in Categories on Park, Geon (re-st)</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>ko-kr</language>
+    <copyright>Copyright © 2026, Geon Park.</copyright>
     <atom:link href="https://re-st.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

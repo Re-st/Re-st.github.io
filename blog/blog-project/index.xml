@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog-Project on Park, Geon (re-st)</title>
+    <link>https://re-st.github.io/blog/blog-project/</link>
+    <description>Recent content in Blog-Project on Park, Geon (re-st)</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>Copyright © 2026, Geon Park.</copyright>
+    <lastBuildDate>Tue, 28 Apr 2026 17:52:24 +0900</lastBuildDate>
+    <atom:link href="https://re-st.github.io/blog/blog-project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>윈도에서 hugo로 정적 블로그 만들기</title>
+      <link>https://re-st.github.io/project/%EC%9C%88%EB%8F%84%EC%97%90%EC%84%9C-hugo%EB%A1%9C-%EC%A0%95%EC%A0%81-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+      <pubDate>Sat, 15 Jun 2024 17:15:29 +0900</pubDate>
+      <guid>https://re-st.github.io/project/%EC%9C%88%EB%8F%84%EC%97%90%EC%84%9C-hugo%EB%A1%9C-%EC%A0%95%EC%A0%81-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+      <description>Create a static blog with Hugo on Windows</description>
+    </item>
+    <item>
+      <title>정적 블로그 제작 및 유지</title>
+      <link>https://re-st.github.io/project/%EC%A0%95%EC%A0%81-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EC%9E%91-%EB%B0%8F-%EC%9C%A0%EC%A7%80/</link>
+      <pubDate>Sat, 15 Jun 2024 17:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/project/%EC%A0%95%EC%A0%81-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EC%9E%91-%EB%B0%8F-%EC%9C%A0%EC%A7%80/</guid>
+      <description>[Category] Static blog production and maintenance</description>
+    </item>
+  </channel>
+</rss>

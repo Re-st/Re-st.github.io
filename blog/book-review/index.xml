@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Book-Review on Park, Geon (re-st)</title>
+    <link>https://re-st.github.io/blog/book-review/</link>
+    <description>Recent content in Book-Review on Park, Geon (re-st)</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>Copyright © 2026, Geon Park.</copyright>
+    <lastBuildDate>Tue, 28 Apr 2026 17:52:24 +0900</lastBuildDate>
+    <atom:link href="https://re-st.github.io/blog/book-review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>기계 학습을 다시 묻다.md</title>
+      <link>https://re-st.github.io/essays/%EA%B8%B0%EA%B3%84-%ED%95%99%EC%8A%B5%EC%9D%84-%EB%8B%A4%EC%8B%9C-%EB%AC%BB%EB%8B%A4.md/</link>
+      <pubDate>Wed, 24 Dec 2025 18:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/essays/%EA%B8%B0%EA%B3%84-%ED%95%99%EC%8A%B5%EC%9D%84-%EB%8B%A4%EC%8B%9C-%EB%AC%BB%EB%8B%A4.md/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>퍼징에서의 큐 컬링 (인풋 줄세우기).md | Park, Geon (re-st)</title>
+<meta name="title" content="퍼징에서의 큐 컬링 (인풋 줄세우기).md" />
+<meta name="description" content="퍼징에서 다음 시드를 선택하는 알고리즘" />
+<meta name="keywords" content="Explanation," />
+
+
+<meta property="og:url" content="https://re-st.github.io/research/%ED%8D%BC%EC%A7%95%EC%97%90%EC%84%9C%EC%9D%98-%ED%81%90-%EC%BB%AC%EB%A7%81-%EC%9D%B8%ED%92%8B-%EC%A4%84%EC%84%B8%EC%9A%B0%EA%B8%B0.md/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="퍼징에서의 큐 컬링 (인풋 줄세우기).md">
+  <meta property="og:description" content="퍼징에서 다음 시드를 선택하는 알고리즘">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="research">
+    <meta property="article:published_time" content="2023-09-01T12:00:00+09:00">
+    <meta property="article:modified_time" content="2026-04-28T17:52:24+09:00">
+    <meta property="article:tag" content="Explanation">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="퍼징에서의 큐 컬링 (인풋 줄세우기).md">
+  <meta name="twitter:description" content="퍼징에서 다음 시드를 선택하는 알고리즘">
+
+
+
+
+  <meta itemprop="name" content="퍼징에서의 큐 컬링 (인풋 줄세우기).md">
+  <meta itemprop="description" content="퍼징에서 다음 시드를 선택하는 알고리즘">
+  <meta itemprop="datePublished" content="2023-09-01T12:00:00+09:00">
+  <meta itemprop="dateModified" content="2026-04-28T17:52:24+09:00">
+  <meta itemprop="wordCount" content="135">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+  <meta itemprop="keywords" content="Explanation">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="정의">정의</h1>
+<p>choose the favored test cases in the queue to mutate and fuzz</p>
+<h1 id="afl">AFL</h1>
+<p>목적 : 커버리지 늘리기
+<a href="">top_rated</a> 맵 기반해서, <a href="">cull_queue</a>에서 <a href="">favored</a> 플래그 사용해 매김.</p>
+<h2 id="0x03-queue-culling">0x03 Queue Culling</h2>
+<p><a href="https://mem2019.github.io/jekyll/update/2019/08/26/AFL-Fuzzer-Notes-2.html">https://mem2019.github.io/jekyll/update/2019/08/26/AFL-Fuzzer-Notes-2.html</a>
+퍼징이 진행됨에 따라 queue의 총 테스트 사례 수가 증가합니다. 그러나 이러한 queue에 포함된 모든 경로를 적중하려면 이러한 테스트 사례의 하위 집합만 필요합니다. AFL은 queue을 선별하여 파일 실행 시간과 파일 크기가 최소화되는 최적의 하위 집합을 선택하려고 합니다.</p>
+<p>특정 경로(예: array의 인덱스)를 포괄할 수 있는 최적의 테스트 사례를 기록하는 데 사용되는 전역 변수 <code>struct queue_entry* top_rated[MAP_SIZE]</code>가 있습니다. 이 <code>top_rated</code>은 <code>update_bitmap_score</code> 함수로 업데이트됩니다.
+<a href="">top_rated</a> 업데이트.</p>
+<p>AFL에서 큐컬링은, 전체 queue에서 좀 중요한 작은 집합으로 top_rated를 고르고, 거기서 더 중요한 작은 집합인 favored 를 만드는 거.</p>
+<h2 id="기타">기타</h2>
+<p><a href="">cull_queue</a>
+<a href="">add_to_queue</a></p>
+<h2 id="angora-afl-sensitive"><a href="">angora</a>, <a href="">AFL-Sensitive</a></h2>
+<p>include additional information, such as the calling stack, the memory access address, and the n basic blocks execution path.</p>
+
+</content>
+
+
+
+<p>
+  
+  <a href="https://re-st.github.io/blog/explanation/">#Explanation</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>블로그 wrapper 디렉토리의 의미없는 github action 지우기.md | Park, Geon (re-st)</title>
+<meta name="title" content="블로그 wrapper 디렉토리의 의미없는 github action 지우기.md" />
+<meta name="description" content="GitHub 블로그를 관리하다 보면 원치 않는 디렉토리에서 GitHub Actions이 실행되어 빌드 실패 알림이 쌓이는 상황이 발생한다.
+이 문제의 근본적인 원인을 해결하고 불필요한 배포(Deployment) 프로세스를 제거하는 방법을 여기 정리한다.
+🚨 문제 진단: 원치 않는 GitHub Actions 실행
+블로그 디렉토리가 아닌 상위 관리 디렉토리(blog-profile-wrapper 와 같은)에서 커밋이 발생할 때마다 GitHub Pages 빌드 Action이 트리거되어 알림창에 빌드 실패 메시지가 반복적으로 나타나는 경우.
+이러한 불필요한 빌드는 기존의 Deploy from a branch 설정으로 인해 발생하며, 아래 이미지와 같은 불필요한 Deployment 레코드를 생성합니다." />
+<meta name="keywords" content="How-to," />
+
+
+<meta property="og:url" content="https://re-st.github.io/logs/%EB%B8%94%EB%A1%9C%EA%B7%B8-wrapper-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC%EC%9D%98-%EC%9D%98%EB%AF%B8%EC%97%86%EB%8A%94-github-action-%EC%A7%80%EC%9A%B0%EA%B8%B0.md/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="블로그 wrapper 디렉토리의 의미없는 github action 지우기.md">
+  <meta property="og:description" content="GitHub 블로그를 관리하다 보면 원치 않는 디렉토리에서 GitHub Actions이 실행되어 빌드 실패 알림이 쌓이는 상황이 발생한다.
+이 문제의 근본적인 원인을 해결하고 불필요한 배포(Deployment) 프로세스를 제거하는 방법을 여기 정리한다.
+🚨 문제 진단: 원치 않는 GitHub Actions 실행 블로그 디렉토리가 아닌 상위 관리 디렉토리(blog-profile-wrapper 와 같은)에서 커밋이 발생할 때마다 GitHub Pages 빌드 Action이 트리거되어 알림창에 빌드 실패 메시지가 반복적으로 나타나는 경우.
+이러한 불필요한 빌드는 기존의 Deploy from a branch 설정으로 인해 발생하며, 아래 이미지와 같은 불필요한 Deployment 레코드를 생성합니다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="logs">
+    <meta property="article:published_time" content="2025-10-13T08:00:00+09:00">
+    <meta property="article:modified_time" content="2026-04-28T17:52:24+09:00">
+    <meta property="article:tag" content="How-To">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="블로그 wrapper 디렉토리의 의미없는 github action 지우기.md">
+  <meta name="twitter:description" content="GitHub 블로그를 관리하다 보면 원치 않는 디렉토리에서 GitHub Actions이 실행되어 빌드 실패 알림이 쌓이는 상황이 발생한다.
+이 문제의 근본적인 원인을 해결하고 불필요한 배포(Deployment) 프로세스를 제거하는 방법을 여기 정리한다.
+🚨 문제 진단: 원치 않는 GitHub Actions 실행 블로그 디렉토리가 아닌 상위 관리 디렉토리(blog-profile-wrapper 와 같은)에서 커밋이 발생할 때마다 GitHub Pages 빌드 Action이 트리거되어 알림창에 빌드 실패 메시지가 반복적으로 나타나는 경우.
+이러한 불필요한 빌드는 기존의 Deploy from a branch 설정으로 인해 발생하며, 아래 이미지와 같은 불필요한 Deployment 레코드를 생성합니다.">
+
+
+
+
+  <meta itemprop="name" content="블로그 wrapper 디렉토리의 의미없는 github action 지우기.md">
+  <meta itemprop="description" content="GitHub 블로그를 관리하다 보면 원치 않는 디렉토리에서 GitHub Actions이 실행되어 빌드 실패 알림이 쌓이는 상황이 발생한다.
+이 문제의 근본적인 원인을 해결하고 불필요한 배포(Deployment) 프로세스를 제거하는 방법을 여기 정리한다.
+🚨 문제 진단: 원치 않는 GitHub Actions 실행 블로그 디렉토리가 아닌 상위 관리 디렉토리(blog-profile-wrapper 와 같은)에서 커밋이 발생할 때마다 GitHub Pages 빌드 Action이 트리거되어 알림창에 빌드 실패 메시지가 반복적으로 나타나는 경우.
+이러한 불필요한 빌드는 기존의 Deploy from a branch 설정으로 인해 발생하며, 아래 이미지와 같은 불필요한 Deployment 레코드를 생성합니다.">
+  <meta itemprop="datePublished" content="2025-10-13T08:00:00+09:00">
+  <meta itemprop="dateModified" content="2026-04-28T17:52:24+09:00">
+  <meta itemprop="wordCount" content="153">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+  <meta itemprop="keywords" content="How-To">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+</nav>
+</header>
+  <main>
+
+<content>
+  <p>GitHub 블로그를 관리하다 보면 원치 않는 디렉토리에서 GitHub Actions이 실행되어 빌드 실패 알림이 쌓이는 상황이 발생한다.</p>
+<p>이 문제의 근본적인 원인을 해결하고 불필요한 배포(Deployment) 프로세스를 제거하는 방법을 여기 정리한다.</p>
+<h2 id="-문제-진단-원치-않는-github-actions-실행">🚨 문제 진단: 원치 않는 GitHub Actions 실행</h2>
+<p>블로그 디렉토리가 아닌 상위 관리 디렉토리(<strong><code>blog-profile-wrapper</code></strong> 와 같은)에서 커밋이 발생할 때마다 GitHub Pages 빌드 Action이 트리거되어 알림창에 빌드 실패 메시지가 반복적으로 나타나는 경우.</p>
+<p>이러한 불필요한 빌드는 기존의 <strong><code>Deploy from a branch</code></strong> 설정으로 인해 발생하며, 아래 이미지와 같은 불필요한 Deployment 레코드를 생성합니다.</p>
+<p><img src="/logs%5c" alt="../pages build and deployment.png"/></p>
+<h2 id="-해결-효과-깔끔한-deployment-관리">✅ 해결 효과: 깔끔한 Deployment 관리</h2>
+<p>이 방법을 적용하면 불필요한 자동 배포(자동 빌드/배포)가 중단되어, 알림창이 빌드 실패 메시지로 도배되는 현상이 사라집니다.</p>
+<h2 id="-해결-방법">🛠️ 해결 방법</h2>
+<ol>
+<li>GitHub Pages Source 변경
+<ol>
+<li>GitHub Pages 설정으로 이동
+<ol>
+<li>예: <a href="https://github.com/Re-st/blog-profile-wrapper/settings/pages">https://github.com/Re-st/blog-profile-wrapper/settings/pages</a></li>
+</ol>
+</li>
+<li>작동 중인 GitHub Actions이 불필요한지 다시 확인</li>
+<li>&lsquo;Build and deployment&rsquo; 섹션에서 Source 설정을 <code>Deploy from a branch</code>에서 <strong><code>GitHub Actions</code></strong> 으로 변경</li>
+</ol>
+</li>
+<li>(Deploy Hugo sites to Pages가 남았을 때) Actions permissions 비활성화
+<ol>
+<li>GitHub Actions 설정으로 이동
+<ol>
+<li>예: <a href="https://github.com/Re-st/blog-profile-wrapper/settings/actions">https://github.com/Re-st/blog-profile-wrapper/settings/actions</a></li>
+</ol>
+</li>
+<li>Actions permissions를 <code>Disable actions</code>로 변경</li>
+</ol>
+</li>
+</ol>
+
+</content>
+
+
+
+<p>
+  
+  <a href="https://re-st.github.io/blog/how-to/">#How-To</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

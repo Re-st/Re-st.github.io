@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>Trustworthy and safe LLMs - from diversity and inclusion perspectives.md | Park, Geon (re-st)</title>
+<meta name="title" content="Trustworthy and safe LLMs - from diversity and inclusion perspectives.md" />
+<meta name="description" content="&ldquo;언어의 88%가 소외된다&rdquo;: LLM의 다양성과 안전성에 대하여
+[Ada Lovelace Day] 이화란 교수님 강연 후기
+에이다 러브레이스 데이 (Ada Lovelace Day)를 기념하여 열린 세미나에 참석했습니다. 연사는 서강대학교 이화란 교수님이십니다.
+강연의 핵심은 LLM의 &lsquo;안전&rsquo;을 &lsquo;다양성&rsquo;과 &lsquo;포용성&rsquo;의 관점에서 바라보는 것이었습니다.
+1. 다양성의 위기: &ldquo;언어의 88%가 소외되고 있다&rdquo;
+
+전 세계 언어의 88%가 AI 기술의 혜택에서 소외
+
+LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문
+
+
+시도 1: 한국어 특화 LLM (예: HyperCLOVA) 개발
+시도 2: 기존 모델에 다국어 코퍼스(corpora)를 파인튜닝
+
+
+2. 평가: &ldquo;좋은&rdquo; 다국어 LLM이란 무엇인가?
+
+일반적 기준: 언어 구사 능력, 상식 등
+지역성 (Locality): 해당 언어권의 고유한 지식과 뉘앙스를 이해하는 능력
+
+&lsquo;뉘앙스&rsquo;의 예시: 한국의 문화적 맥락에 기반한 혐오 표현을 정확히 포착하는 능력
+
+
+사회적 가치 평가: 논쟁적 주제나 윤리적 문제에 대해 포용적(inclusiveness) 이고 윤리적으로 인지(ethically aware) 하며, 섣부른 미래 예측을 하지 않는(non-predictive) 방향으로 답변
+
+섣부른 미래 예측: &ldquo;오를 주식을 알려줘&rdquo; 같은 질문에 답변
+
+
+KoBBQ 데이터셋: 사회적 가치 평가를 위한 데이터셋 중 하나
+
+영어권의 BBQ 데이터셋을 기반
+모델이 가진 편향을 측정
+미국의 BBQ 데이터셋을 한국으로 들여올 때, 한국의 정서와 상황에 맞게 타깃을 바꾸는 작업이 필요 (하단 예시)
+
+
+
+
+흥미로운 편향 사례: &ldquo;대마초 가방을 든 범인은 누구일까?&rdquo;" />
+<meta name="keywords" content="Lecture-Summary," />
+
+
+<meta property="og:url" content="https://re-st.github.io/seminars/trustworthy-and-safe-llms-from-diversity-and-inclusion-perspectives.md/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="Trustworthy and safe LLMs - from diversity and inclusion perspectives.md">
+  <meta property="og:description" content="“언어의 88%가 소외된다”: LLM의 다양성과 안전성에 대하여 [Ada Lovelace Day] 이화란 교수님 강연 후기
+에이다 러브레이스 데이 (Ada Lovelace Day)를 기념하여 열린 세미나에 참석했습니다. 연사는 서강대학교 이화란 교수님이십니다.
+강연의 핵심은 LLM의 ‘안전’을 ‘다양성’과 ‘포용성’의 관점에서 바라보는 것이었습니다.
+1. 다양성의 위기: “언어의 88%가 소외되고 있다” 전 세계 언어의 88%가 AI 기술의 혜택에서 소외 LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문 시도 1: 한국어 특화 LLM (예: HyperCLOVA) 개발 시도 2: 기존 모델에 다국어 코퍼스(corpora)를 파인튜닝 2. 평가: “좋은” 다국어 LLM이란 무엇인가? 일반적 기준: 언어 구사 능력, 상식 등 지역성 (Locality): 해당 언어권의 고유한 지식과 뉘앙스를 이해하는 능력 ‘뉘앙스’의 예시: 한국의 문화적 맥락에 기반한 혐오 표현을 정확히 포착하는 능력 사회적 가치 평가: 논쟁적 주제나 윤리적 문제에 대해 포용적(inclusiveness) 이고 윤리적으로 인지(ethically aware) 하며, 섣부른 미래 예측을 하지 않는(non-predictive) 방향으로 답변 섣부른 미래 예측: “오를 주식을 알려줘” 같은 질문에 답변 KoBBQ 데이터셋: 사회적 가치 평가를 위한 데이터셋 중 하나 영어권의 BBQ 데이터셋을 기반 모델이 가진 편향을 측정 미국의 BBQ 데이터셋을 한국으로 들여올 때, 한국의 정서와 상황에 맞게 타깃을 바꾸는 작업이 필요 (하단 예시) 흥미로운 편향 사례: “대마초 가방을 든 범인은 누구일까?”">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="seminars">
+    <meta property="article:published_time" content="2025-10-28T20:00:00+09:00">
+    <meta property="article:modified_time" content="2026-01-18T21:10:22+09:00">
+    <meta property="article:tag" content="Lecture-Summary">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="Trustworthy and safe LLMs - from diversity and inclusion perspectives.md">
+  <meta name="twitter:description" content="“언어의 88%가 소외된다”: LLM의 다양성과 안전성에 대하여 [Ada Lovelace Day] 이화란 교수님 강연 후기
+에이다 러브레이스 데이 (Ada Lovelace Day)를 기념하여 열린 세미나에 참석했습니다. 연사는 서강대학교 이화란 교수님이십니다.
+강연의 핵심은 LLM의 ‘안전’을 ‘다양성’과 ‘포용성’의 관점에서 바라보는 것이었습니다.
+1. 다양성의 위기: “언어의 88%가 소외되고 있다” 전 세계 언어의 88%가 AI 기술의 혜택에서 소외 LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문 시도 1: 한국어 특화 LLM (예: HyperCLOVA) 개발 시도 2: 기존 모델에 다국어 코퍼스(corpora)를 파인튜닝 2. 평가: “좋은” 다국어 LLM이란 무엇인가? 일반적 기준: 언어 구사 능력, 상식 등 지역성 (Locality): 해당 언어권의 고유한 지식과 뉘앙스를 이해하는 능력 ‘뉘앙스’의 예시: 한국의 문화적 맥락에 기반한 혐오 표현을 정확히 포착하는 능력 사회적 가치 평가: 논쟁적 주제나 윤리적 문제에 대해 포용적(inclusiveness) 이고 윤리적으로 인지(ethically aware) 하며, 섣부른 미래 예측을 하지 않는(non-predictive) 방향으로 답변 섣부른 미래 예측: “오를 주식을 알려줘” 같은 질문에 답변 KoBBQ 데이터셋: 사회적 가치 평가를 위한 데이터셋 중 하나 영어권의 BBQ 데이터셋을 기반 모델이 가진 편향을 측정 미국의 BBQ 데이터셋을 한국으로 들여올 때, 한국의 정서와 상황에 맞게 타깃을 바꾸는 작업이 필요 (하단 예시) 흥미로운 편향 사례: “대마초 가방을 든 범인은 누구일까?”">
+
+
+
+
+  <meta itemprop="name" content="Trustworthy and safe LLMs - from diversity and inclusion perspectives.md">
+  <meta itemprop="description" content="“언어의 88%가 소외된다”: LLM의 다양성과 안전성에 대하여 [Ada Lovelace Day] 이화란 교수님 강연 후기
+에이다 러브레이스 데이 (Ada Lovelace Day)를 기념하여 열린 세미나에 참석했습니다. 연사는 서강대학교 이화란 교수님이십니다.
+강연의 핵심은 LLM의 ‘안전’을 ‘다양성’과 ‘포용성’의 관점에서 바라보는 것이었습니다.
+1. 다양성의 위기: “언어의 88%가 소외되고 있다” 전 세계 언어의 88%가 AI 기술의 혜택에서 소외 LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문 시도 1: 한국어 특화 LLM (예: HyperCLOVA) 개발 시도 2: 기존 모델에 다국어 코퍼스(corpora)를 파인튜닝 2. 평가: “좋은” 다국어 LLM이란 무엇인가? 일반적 기준: 언어 구사 능력, 상식 등 지역성 (Locality): 해당 언어권의 고유한 지식과 뉘앙스를 이해하는 능력 ‘뉘앙스’의 예시: 한국의 문화적 맥락에 기반한 혐오 표현을 정확히 포착하는 능력 사회적 가치 평가: 논쟁적 주제나 윤리적 문제에 대해 포용적(inclusiveness) 이고 윤리적으로 인지(ethically aware) 하며, 섣부른 미래 예측을 하지 않는(non-predictive) 방향으로 답변 섣부른 미래 예측: “오를 주식을 알려줘” 같은 질문에 답변 KoBBQ 데이터셋: 사회적 가치 평가를 위한 데이터셋 중 하나 영어권의 BBQ 데이터셋을 기반 모델이 가진 편향을 측정 미국의 BBQ 데이터셋을 한국으로 들여올 때, 한국의 정서와 상황에 맞게 타깃을 바꾸는 작업이 필요 (하단 예시) 흥미로운 편향 사례: “대마초 가방을 든 범인은 누구일까?”">
+  <meta itemprop="datePublished" content="2025-10-28T20:00:00+09:00">
+  <meta itemprop="dateModified" content="2026-01-18T21:10:22+09:00">
+  <meta itemprop="wordCount" content="480">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+  <meta itemprop="keywords" content="Lecture-Summary">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+</nav>
+</header>
+  <main>
+
+<content>
+  <h1 id="언어의-88가-소외된다-llm의-다양성과-안전성에-대하여">&ldquo;언어의 88%가 소외된다&rdquo;: LLM의 다양성과 안전성에 대하여</h1>
+<p><strong>[Ada Lovelace Day] 이화란 교수님 강연 후기</strong></p>
+<p>에이다 러브레이스 데이 (Ada Lovelace Day)를 기념하여 열린 세미나에 참석했습니다. 연사는 서강대학교 이화란 교수님이십니다.</p>
+<p>강연의 핵심은 LLM의 &lsquo;안전&rsquo;을 &lsquo;다양성&rsquo;과 &lsquo;포용성&rsquo;의 관점에서 바라보는 것이었습니다.</p>
+<h2 id="1-다양성의-위기-언어의-88가-소외되고-있다">1. 다양성의 위기: &ldquo;언어의 88%가 소외되고 있다&rdquo;</h2>
+<ul>
+<li><strong>전 세계 언어의 88%가 AI 기술의 혜택에서 소외</strong>
+<ul>
+<li>LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문</li>
+</ul>
+</li>
+<li><strong>시도 1:</strong> 한국어 특화 LLM (예: HyperCLOVA) 개발</li>
+<li><strong>시도 2:</strong> 기존 모델에 다국어 코퍼스(corpora)를 파인튜닝</li>
+</ul>
+<hr>
+<h2 id="2-평가-좋은-다국어-llm이란-무엇인가">2. 평가: &ldquo;좋은&rdquo; 다국어 LLM이란 무엇인가?</h2>
+<ul>
+<li><strong>일반적 기준:</strong> 언어 구사 능력, 상식 등</li>
+<li><strong>지역성 (Locality):</strong> 해당 언어권의 고유한 지식과 뉘앙스를 이해하는 능력
+<ul>
+<li>&lsquo;뉘앙스&rsquo;의 예시: <strong>한국의 문화적 맥락에 기반한 혐오 표현</strong>을 정확히 포착하는 능력</li>
+</ul>
+</li>
+<li><strong>사회적 가치 평가</strong>: 논쟁적 주제나 윤리적 문제에 대해 <strong>포용적(inclusiveness)</strong> 이고 <strong>윤리적으로 인지(ethically aware)</strong> 하며, 섣부른 <strong>미래 예측을 하지 않는(non-predictive)</strong> 방향으로 답변
+<ul>
+<li>섣부른 미래 예측: &ldquo;오를 주식을 알려줘&rdquo; 같은 질문에 답변</li>
+</ul>
+</li>
+<li><strong>KoBBQ</strong> 데이터셋: 사회적 가치 평가를 위한 데이터셋 중 하나
+<ul>
+<li>영어권의 BBQ 데이터셋을 기반</li>
+<li>모델이 가진 편향을 측정</li>
+<li>미국의 BBQ 데이터셋을 한국으로 들여올 때, 한국의 정서와 상황에 맞게 타깃을 바꾸는 작업이 필요 (하단 예시)</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>흥미로운 편향 사례: &ldquo;대마초 가방을 든 범인은 누구일까?&rdquo;</strong></p>
+<ul>
+<li>
+<p><strong>미국의 사회적 편견 반영:</strong> &ldquo;저소득층&rdquo;</p>
+</li>
+<li>
+<p><strong>한국의 사회적 편견 반영:</strong> &ldquo;고소득층&rdquo;</p>
+</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="3-안전성-검열을-우회하는-공격과-방어">3. 안전성: 검열을 우회하는 공격과 방어</h2>
+<ul>
+<li>
+<p><strong>공격 (CSRT):</strong> <strong>코드 스위칭 레드 티밍 (Code-Switching Red Teaming)</strong></p>
+<ul>
+<li>여러 언어를 섞어 쓰거나, 상대적으로 AI가 가끔 접한 언어를 사용하여 LLM의 검열 기준을 우회하는 공격 기법</li>
+</ul>
+</li>
+<li>
+<p><strong>방어/학습 (CSCL):</strong> <strong>코드 스위칭 커리큘럼 러닝 (Code-Switching Curriculum Learning)</strong></p>
+<ul>
+<li>모국어에 배울 언어를 조금씩 섞어가며 작문하게 하여, LLM의 교차 언어 전이(cross-lingual transfer) 능력을 향상시키는 학습 방법</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>[!QUESTION] Gemini에서 Safety란..?</p>
+<p>강연 중 CSRT 예시로 &ldquo;샌프란시스코 사람들은 왜 그렇게 게이 같지?&ldquo;라는 질문이 나왔습니다. 혹시나 해서 Gemini에게 동일하게 물어보니, 놀랍게도 검열 없이(?) 샌프란시스코의 역사와 LGBTQ+ 문화에 대해 차분하게 설명해 주었습니다. 이것이 Gemini의 정책 방향성인지, 아니면 나름대로 우회한 답이라고 받아들여야 할지 흥미로운 지점이었습니다.</p>
+</blockquote>
+<hr>
+<h2 id="4-현장-qa-ai-윤리와-연구자의-자세">4. 현장 Q&amp;A: AI 윤리와 연구자의 자세</h2>
+<ul>
+<li>
+<p>Q. 강연 제목에 등장한 신뢰 (Trustworthy)는 안전 (Safety)보단 더 넓은 개념인데, 안전에 대해서만 다루고 더 넓은 범위인 신뢰는 강연에서 나오지 않아 아쉽다.</p>
+<ul>
+<li>A. (교수님의 답변 일부) 여기에서 소개한, 환각 (Hallucination)을 막아주는 것도 신뢰도를 높이는 중요한 요소다.</li>
+</ul>
+</li>
+<li>
+<p><strong>Q. Trustworthy AI 분야의 취업 시장은?</strong></p>
+<ul>
+<li>A. 기업의 리스크 매니지먼트 부서나 정부 기관(예: AI Security Institute) 등에서 수요가 증가하고 있다.</li>
+</ul>
+</li>
+<li>
+<p><strong>Q. AI 윤리를 위해 인간이 참여하며 심적으로 힘들 수 있는데, 연구 노동 윤리는?</strong></p>
+<ul>
+<li>A. <strong>IRB (기관생명윤리위원회)</strong> 가 연구윤리에 중요한 역할을 하고 있다.
+<ul>
+<li>IRB는 인간을 대상으로 하는 연구의 윤리적 측면을 심의하고 연구 대상자를 보호하는 독립 위원회임.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Q. 모델을 &lsquo;안전하게&rsquo; 만드는 것 (예: 답변 회피)에 대한 호불호가 갈리는데?</strong></p>
+<ul>
+<li>A. 사람의 취향이나 사회적 인식은 계속 변한다. (예: AI의 인간 흉내를 &lsquo;불쾌한 골짜기&rsquo;로 보는 시선이 줄어들고, &lsquo;캐릭터성을 붙여서 친근하게 보는&rsquo; 캐릭터 AI 수요가 증가) 연구자는 이러한 사회의 피드백을 기민하게 쫓아가야 한다.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="강연을-마치며">강연을 마치며</h2>
+<p>마지막으로 교수님께서 대학원 생활에 대해 하신 말씀이 기억에 남습니다.</p>
+<blockquote>
+<p>&ldquo;하고 싶은 일이 아니더라도 기술의 발전이나 조직 개편 등으로 인해 새롭게 무언가를 해야 할 때가 옵니다. 그런 변화에 맞춰 <strong>새롭게 내가 원하는 것을 찾고 연구를 지속할 수 있는 힘</strong>을 기르는 곳이 대학원입니다.&rdquo;</p>
+</blockquote>
+<p>AI의 기술적 발전만큼이나 그 &lsquo;방향성&rsquo;에 대해 다시금 생각하게 되었습니다.</p>
+
+</content>
+
+
+
+<p>
+  
+  <a href="https://re-st.github.io/blog/lecture-summary/">#Lecture-Summary</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

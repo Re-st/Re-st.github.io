@@ -1,3 +1,2 @@
-User-agent: *
-Allow: /
-Sitemap: https://re-st.github.io/
+User-Agent: *
+Sitemap: https://re-st.github.io/sitemap.xml

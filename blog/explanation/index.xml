@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Explanation on Park, Geon (re-st)</title>
+    <link>https://re-st.github.io/blog/explanation/</link>
+    <description>Recent content in Explanation on Park, Geon (re-st)</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>Copyright © 2026, Geon Park.</copyright>
+    <lastBuildDate>Tue, 28 Apr 2026 17:52:24 +0900</lastBuildDate>
+    <atom:link href="https://re-st.github.io/blog/explanation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AFL</title>
+      <link>https://re-st.github.io/research/afl/</link>
+      <pubDate>Mon, 06 Oct 2025 21:22:27 +0900</pubDate>
+      <guid>https://re-st.github.io/research/afl/</guid>
+      <description>&lt;h1 id=&#34;afl-구성요소&#34;&gt;AFL 구성요소&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/research/virgin_bits.md/&#34;&gt;virgin_bits&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/research/trace_bits.md/&#34;&gt;trace_bits&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;&#34;&gt;(설명) 퍼징에서의 큐 컬링 (인풋 줄세우기)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;afl-디버깅&#34;&gt;AFL 디버깅&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;&#34;&gt;(방법) AFL (AFL++) 디버깅 - ASAN으로 instrument하고 돌리기&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;&#34;&gt;(방법) AFL (AFL++) 소스코드 수정 시 디버깅 - gdb 사용&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;&#34;&gt;(방법) AFL (AFL++) 디버깅 - setaffinity 문제와 해결 (bind_to_free_cpu에서 에러)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>trace_bits.md</title>
+      <link>https://re-st.github.io/research/trace_bits.md/</link>
+      <pubDate>Mon, 01 Jul 2024 12:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/research/trace_bits.md/</guid>
+      <description>AFL 퍼징이 사용하는 매 실행 커버리지 기록 도구</description>
+    </item>
+    <item>
+      <title>virgin_bits.md</title>
+      <link>https://re-st.github.io/research/virgin_bits.md/</link>
+      <pubDate>Mon, 24 Jun 2024 12:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/research/virgin_bits.md/</guid>
+      <description>AFL 퍼징이 사용하는 역대 실행 커버리지 기록 도구</description>
+    </item>
+    <item>
+      <title>지향성 퍼징</title>
+      <link>https://re-st.github.io/research/%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/research/%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/prosyslab/pl-wiki/blob/main/%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95%28Directed-Fuzzing%29.md#%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-%EB%B6%84%EC%95%BC%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90&#34;&gt;(펌) 지향성 퍼징 - PL Wiki&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;&#34;&gt;(에세이) MODFuzz - 다른 관점의 지향성 퍼징&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>퍼징에서의 큐 컬링 (인풋 줄세우기).md</title>
+      <link>https://re-st.github.io/research/%ED%8D%BC%EC%A7%95%EC%97%90%EC%84%9C%EC%9D%98-%ED%81%90-%EC%BB%AC%EB%A7%81-%EC%9D%B8%ED%92%8B-%EC%A4%84%EC%84%B8%EC%9A%B0%EA%B8%B0.md/</link>
+      <pubDate>Fri, 01 Sep 2023 12:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/research/%ED%8D%BC%EC%A7%95%EC%97%90%EC%84%9C%EC%9D%98-%ED%81%90-%EC%BB%AC%EB%A7%81-%EC%9D%B8%ED%92%8B-%EC%A4%84%EC%84%B8%EC%9A%B0%EA%B8%B0.md/</guid>
+      <description>퍼징에서 다음 시드를 선택하는 알고리즘</description>
+    </item>
+  </channel>
+</rss>
