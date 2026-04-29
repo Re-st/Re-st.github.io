@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 08:24:03 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 08:29:55 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/category/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>워크샵 여행 등</title>
@@ -64,6 +64,13 @@
       <pubDate>Fri, 12 Sep 2025 15:14:57 +0900</pubDate>
       <guid>https://re-st.github.io/category/lean/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/log/lean-%EA%B2%8C%EC%9E%84-%EC%84%9C%EB%B2%84/&#34;&gt;Lean 게임 서버&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/repost/why-lean-4-replaced-ocaml-as-my-primary-language/&#34;&gt;Why Lean 4 replaced OCaml as my Primary Language&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>다중 지향성 퍼징</title>
+      <link>https://re-st.github.io/category/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/</link>
+      <pubDate>Wed, 01 Jan 2025 08:25:39 +0900</pubDate>
+      <guid>https://re-st.github.io/category/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/</guid>
+      <description>다중 지향성 퍼징</description>
     </item>
     <item>
       <title>지향성 퍼징</title>

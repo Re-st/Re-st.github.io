@@ -7,15 +7,8 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 08:24:04 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 08:29:55 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>FishFuzz는 왜 60시간을 주는가</title>
-      <link>https://re-st.github.io/research/fishfuzz%EB%8A%94-%EC%99%9C-60%EC%8B%9C%EA%B0%84%EC%9D%84-%EC%A3%BC%EB%8A%94%EA%B0%80/</link>
-      <pubDate>Thu, 30 Apr 2026 08:24:03 +0900</pubDate>
-      <guid>https://re-st.github.io/research/fishfuzz%EB%8A%94-%EC%99%9C-60%EC%8B%9C%EA%B0%84%EC%9D%84-%EC%A3%BC%EB%8A%94%EA%B0%80/</guid>
-      <description>FishFuzz는 왜 60시간을 주는가</description>
-    </item>
     <item>
       <title>Whoami</title>
       <link>https://re-st.github.io/pages/about/</link>
@@ -399,7 +392,7 @@
       <link>https://re-st.github.io/research/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-lyso/</link>
       <pubDate>Thu, 01 May 2025 12:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/research/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-lyso/</guid>
-      <description>&lt;h1 id=&#34;제목&#34;&gt;제목&lt;/h1&gt;&#xA;&lt;p&gt;From Alarms to Real Bugs - Multi-target Multi-step Directed Greybox Fuzzing for Static Analysis Result Verification&lt;/p&gt;&#xA;&lt;h1 id=&#34;요약&#34;&gt;요약&lt;/h1&gt;&#xA;&lt;p&gt;이 논문은 &lt;mark&gt;정적 분석 결과의 효과적인 검증을 위한 새로운 퍼징 기법&lt;/mark&gt;인 Lyso를 제안합니다. Lyso는 [[다중 지향성 퍼징|다중 지향성 퍼징]], 다단계 유도.&#xA;정적 분석에서 얻은 의미론적 정보와 &lt;mark&gt;알람 간의 상관관계&lt;/mark&gt;를 활용&#xA;Lyso는 기존 기법들에 비해 평균 12.17배 빠른 속도, 18개의 새 취약점 발견&lt;/p&gt;&#xA;&lt;h1 id=&#34;주요-내용&#34;&gt;주요 내용&lt;/h1&gt;&#xA;&lt;h2 id=&#34;lyso의-주요-특징&#34;&gt;Lyso의 주요 특징&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;다중 타겟 동시 처리: 상호 의존적인 알람들을 그룹화하여 효율적으로 검증&#xA;&lt;ul&gt;&#xA;&lt;li&gt;한 목표에 대한 진전이 다른 연관된 목표들의 진전을 가속화&lt;/li&gt;&#xA;&lt;li&gt;&lt;img src=&#34;https://re-st.github.io/lyso%20%ed%83%80%ea%b9%83%20%ea%b7%b8%eb%a3%b9%ed%95%91.png&#34; alt=&#34;../lyso 타깃 그룹핑.png&#34;/&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;단계별 가이드: 각 알람의 목표를 여러 단계로 나누어 점진적으로 접근&lt;/li&gt;&#xA;&lt;li&gt;정적 분석 정보 활용: 취약한 경로와 알람 간 상관관계 정보를 퍼징에 활용&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;기술적-구현&#34;&gt;기술적 구현&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;중요 단계 식별: CFG(Control Flow Graph)와 DFG(Data Flow Graph) 단계를 구분하여 식별&lt;/li&gt;&#xA;&lt;li&gt;단계 추적 시스템: 경량화된 실행 시간 단계 추적 구현&#xA;&lt;ul&gt;&#xA;&lt;li&gt;각 알람(목표)을 여러 단계로 나누어 접근합니다.&lt;/li&gt;&#xA;&lt;li&gt;이를 통해 복잡한 버그도 단계별로 접근할 수 있게 됩니다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;다중 지표 활용: overlap, depth, distance 등의 지표를 통한 씨드 선택 최적화&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Overlap: 씨드 실행 중 적어도 하나의 단계가 커버된 상호 의존적 알람의 수&lt;/li&gt;&#xA;&lt;li&gt;Depth: 씨드 실행 중 어떤 알람에 대해 연속적으로 커버된 최대 단계 수&lt;/li&gt;&#xA;&lt;li&gt;Distance: 다음 미탐색 단계까지의 거리&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;타임아웃 기반 전환: 고정된 시간 창(현재 10분)을 사용하여 다른 탐색 단계로 전환&lt;/li&gt;&#xA;&lt;li&gt;밀도 기반 전력 스케줄링: 희귀 알람에 대한 탐색 강화&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;실험-결과&#34;&gt;실험 결과&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Magma 벤치마크에서 8개의 최신 퍼저와 비교 평가&lt;/li&gt;&#xA;&lt;li&gt;평균 12.17배 빠른 버그 검증 속도 달성&lt;/li&gt;&#xA;&lt;li&gt;단일 목표에 대해서도 다단계 가이드를 적용 (Lyso-stms)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AFLGo와 비교했을 때 평균 10.76배의 속도 향상 달성&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;기존 도구들이 찾지 못한 버그들도 발견&lt;/li&gt;&#xA;&lt;li&gt;실제 프로그램 대상 실험에서 18개의 새로운 취약점 발견&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;비교-대상&#34;&gt;비교 대상&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;10i24h&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;제목&#34;&gt;제목&lt;/h1&gt;&#xA;&lt;p&gt;From Alarms to Real Bugs - Multi-target Multi-step Directed Greybox Fuzzing for Static Analysis Result Verification&lt;/p&gt;&#xA;&lt;h1 id=&#34;요약&#34;&gt;요약&lt;/h1&gt;&#xA;&lt;p&gt;이 논문은 &lt;mark&gt;정적 분석 결과의 효과적인 검증을 위한 새로운 퍼징 기법&lt;/mark&gt;인 Lyso를 제안합니다. Lyso는 &lt;a href=&#34;https://re-st.github.io/category/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/&#34;&gt;다중 지향성 퍼징&lt;/a&gt;, 다단계 유도.&#xA;정적 분석에서 얻은 의미론적 정보와 &lt;mark&gt;알람 간의 상관관계&lt;/mark&gt;를 활용&#xA;Lyso는 기존 기법들에 비해 평균 12.17배 빠른 속도, 18개의 새 취약점 발견&lt;/p&gt;&#xA;&lt;h1 id=&#34;주요-내용&#34;&gt;주요 내용&lt;/h1&gt;&#xA;&lt;h2 id=&#34;lyso의-주요-특징&#34;&gt;Lyso의 주요 특징&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;다중 타겟 동시 처리: 상호 의존적인 알람들을 그룹화하여 효율적으로 검증&#xA;&lt;ul&gt;&#xA;&lt;li&gt;한 목표에 대한 진전이 다른 연관된 목표들의 진전을 가속화&lt;/li&gt;&#xA;&lt;li&gt;&lt;img src=&#34;https://re-st.github.io/lyso%20%ed%83%80%ea%b9%83%20%ea%b7%b8%eb%a3%b9%ed%95%91.png&#34; alt=&#34;../lyso 타깃 그룹핑.png&#34;/&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;단계별 가이드: 각 알람의 목표를 여러 단계로 나누어 점진적으로 접근&lt;/li&gt;&#xA;&lt;li&gt;정적 분석 정보 활용: 취약한 경로와 알람 간 상관관계 정보를 퍼징에 활용&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;기술적-구현&#34;&gt;기술적 구현&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;중요 단계 식별: CFG(Control Flow Graph)와 DFG(Data Flow Graph) 단계를 구분하여 식별&lt;/li&gt;&#xA;&lt;li&gt;단계 추적 시스템: 경량화된 실행 시간 단계 추적 구현&#xA;&lt;ul&gt;&#xA;&lt;li&gt;각 알람(목표)을 여러 단계로 나누어 접근합니다.&lt;/li&gt;&#xA;&lt;li&gt;이를 통해 복잡한 버그도 단계별로 접근할 수 있게 됩니다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;다중 지표 활용: overlap, depth, distance 등의 지표를 통한 씨드 선택 최적화&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Overlap: 씨드 실행 중 적어도 하나의 단계가 커버된 상호 의존적 알람의 수&lt;/li&gt;&#xA;&lt;li&gt;Depth: 씨드 실행 중 어떤 알람에 대해 연속적으로 커버된 최대 단계 수&lt;/li&gt;&#xA;&lt;li&gt;Distance: 다음 미탐색 단계까지의 거리&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;타임아웃 기반 전환: 고정된 시간 창(현재 10분)을 사용하여 다른 탐색 단계로 전환&lt;/li&gt;&#xA;&lt;li&gt;밀도 기반 전력 스케줄링: 희귀 알람에 대한 탐색 강화&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;실험-결과&#34;&gt;실험 결과&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Magma 벤치마크에서 8개의 최신 퍼저와 비교 평가&lt;/li&gt;&#xA;&lt;li&gt;평균 12.17배 빠른 버그 검증 속도 달성&lt;/li&gt;&#xA;&lt;li&gt;단일 목표에 대해서도 다단계 가이드를 적용 (Lyso-stms)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AFLGo와 비교했을 때 평균 10.76배의 속도 향상 달성&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;기존 도구들이 찾지 못한 버그들도 발견&lt;/li&gt;&#xA;&lt;li&gt;실제 프로그램 대상 실험에서 18개의 새로운 취약점 발견&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;비교-대상&#34;&gt;비교 대상&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;10i24h&lt;/p&gt;</description>
     </item>
     <item>
       <title>Environmental Factors Leading to Bias in Fuzzing</title>
@@ -505,6 +498,13 @@
       <pubDate>Fri, 03 Jan 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%8C%80%ED%95%99%EC%9B%90-%EC%84%B8%EB%AF%B8%EB%82%98%EB%A5%BC-%EB%93%A4%EC%9C%BC%EB%A9%B0/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;&#34;&gt;[분류] 정보보호대학원 세미나&lt;/a&gt; | &lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&#xA;정보보호대학원 세미나에서 다양한 분야의 전문가를 만나며 연구와 삶에 대한 통찰을 얻었다. 연구의 관점 확장, 소통과 열정의 감화 효과, 그리고 연구 외적 삶 준비의 중요성 등을 깨달았고, 더불어 조교 활동을 통해 간단한 환경에서도 여러 돌발 상황이 발생함을 깨닫게 되었다.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;정보보호대학원 세미나에서 조교 겸 학생으로 한 학기 동안 8명의 연사님과 다양한 주제를 접하며 큰 배움을 얻었다. 각 분야의 전문가들을 멀리 가지 않고 바로 만날 수 있다는 건 큰 행운이었고, 익숙한 연구의 과업에서 벗어나 새로운 관점을 가질 기회가 되었다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>다중 지향성 퍼징</title>
+      <link>https://re-st.github.io/category/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/</link>
+      <pubDate>Wed, 01 Jan 2025 08:25:39 +0900</pubDate>
+      <guid>https://re-st.github.io/category/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/</guid>
+      <description>다중 지향성 퍼징</description>
     </item>
     <item>
       <title>쉬운 전문용어가 필요한 이유</title>
