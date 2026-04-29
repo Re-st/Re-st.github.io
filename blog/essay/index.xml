@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 07:31:51 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 08:00:35 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/blog/essay/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>한국의 능묘 조각(문인석 및 동자석) 심층 분석: 도상학적 기원과 디아스포라의 역사</title>
@@ -36,13 +36,6 @@
       <pubDate>Fri, 26 Sep 2025 13:48:30 +0900</pubDate>
       <guid>https://re-st.github.io/repost/%EC%B1%97gpt-%EC%88%98%ED%95%99%EC%9E%90%EC%97%90%EA%B2%8C-%EC%9C%84%ED%98%91%EC%9D%B4-%EB%90%A0%EA%B9%8C/</guid>
       <description>&lt;p&gt;2023년 6월의 글이다. 당시는 ChatGPT 자체가 언어모델, 내지는 일반인이 쉬이 사용 가능한 AI모델의 대명사로 불리던 시기라는 점이 주목된다. 지금처럼 형식 검증기를 뒤에 붙여 쓰는 모델이 거론되지 않았고, 단순히 ChatGPT의 역량이 얼마나 되는지 가늠되지 않아 무언가를 계속 시켜 보던 시절이었다.&lt;/p&gt;&#xA;&lt;p&gt;2025년 9월 현재에 읽으니 다음 구절들이 인상깊다.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;고등학생이나 대학생, 심지어는 일부 대학원생에게는 좋은 멘토가 될 수 있다고 생각해요. 교과서 수준의 수학 문제에는 어느 정도 괜찮게 답변하니까요. 물론 사람이 더 낫겠지만요. 사람은 일주일에 몇 시간만 만날 수 있지만, AI는 원하면 언제든지 이용할 수 있다는 장점도 있지요.&amp;quot;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>수학과 AI</title>
-      <link>https://re-st.github.io/category/%EC%88%98%ED%95%99%EA%B3%BC-ai/</link>
-      <pubDate>Fri, 26 Sep 2025 13:47:27 +0900</pubDate>
-      <guid>https://re-st.github.io/category/%EC%88%98%ED%95%99%EA%B3%BC-ai/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/research/seed-prover/&#34;&gt;Seed-Prover, IMO 금메달 수준 2025-08&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/repost/%EC%B1%97gpt-%EC%88%98%ED%95%99%EC%9E%90%EC%97%90%EA%B2%8C-%EC%9C%84%ED%98%91%EC%9D%B4-%EB%90%A0%EA%B9%8C/&#34;&gt;챗GPT, 수학자에게 위협이 될까&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>주간 글쓰기 Usable Fuzzing</title>

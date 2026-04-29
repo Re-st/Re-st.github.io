@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 07:31:50 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 08:00:34 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/howto/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Error building site: assemble: failed to unmarshal YAML: yaml: line 1: did not find expected key 해결</title>
@@ -21,7 +21,7 @@
       <link>https://re-st.github.io/howto/git-status%EC%97%90%EC%84%9C-%ED%95%9C%EA%B8%80%EC%9D%B4-%EA%B9%A8%EC%A7%88-%EB%95%8C--%EB%93%B1-%ED%95%9C%EA%B8%80-%EB%9C%A8%EA%B2%8C-%ED%95%98%EA%B8%B0/</link>
       <pubDate>Mon, 22 Sep 2025 17:30:09 +0900</pubDate>
       <guid>https://re-st.github.io/howto/git-status%EC%97%90%EC%84%9C-%ED%95%9C%EA%B8%80%EC%9D%B4-%EA%B9%A8%EC%A7%88-%EB%95%8C--%EB%93%B1-%ED%95%9C%EA%B8%80-%EB%9C%A8%EA%B2%8C-%ED%95%98%EA%B8%B0/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/project/%EC%A0%95%EC%A0%81-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EC%9E%91-%EB%B0%8F-%EC%9C%A0%EC%A7%80/&#34;&gt;[분류] 정적 블로그 제작 및 유지&lt;/a&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&lt;/span&gt;&lt;span&gt;git config --global core.quotepath &lt;span style=&#34;color:#007020&#34;&gt;false&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&lt;/span&gt;&lt;span&gt;git config --global core.quotepath &lt;span style=&#34;color:#007020&#34;&gt;false&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>AFL (AFL&#43;&#43;) 디버깅 - ASAN으로 instrument하고 돌리기</title>
