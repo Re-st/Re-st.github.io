@@ -8,14 +8,25 @@
 <link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
 <title>AI does math olympiad. How about open problems | Park, Geon (re-st)</title>
 <meta name="title" content="AI does math olympiad. How about open problems" />
-<meta name="description" content="[분류] 에세이" />
+<meta name="description" content="Abstract
+Seed-Prover&rsquo;s success comes from a bottom-up search that builds a knowledge base by curating lemmas.
+Such is analogous to fuzzing&rsquo;s two-stage search and queue culling.
+Further, techniques for directed fuzzing may be a key to apply Seed-Prover to open-ended problems.
+본문
+Seed-Prover succeeds in solving difficult IMO problems by a systematic, bottom-up search of facts.
+It does not focus on the problem goal and make conjecture top-down.
+Instead, it first generates thousands of candidate lemmas before considering the goal.
+It then builds a knowledge base by scoring lemmas based on difficulty and empirical relevance,
+and uses top-scored ones to make and prove conjectures.
+The approach is akin to how human would map out a problem&rsquo;s landscape before hypothesizing a direct solution." />
 <meta name="keywords" content="Essay," />
 
 
 <meta property="og:url" content="https://re-st.github.io/essay/ai-does-math-olympiad.-how-about-open-problems/">
   <meta property="og:site_name" content="Park, Geon (re-st)">
   <meta property="og:title" content="AI does math olympiad. How about open problems">
-  <meta property="og:description" content="[분류] 에세이">
+  <meta property="og:description" content="Abstract Seed-Prover’s success comes from a bottom-up search that builds a knowledge base by curating lemmas. Such is analogous to fuzzing’s two-stage search and queue culling. Further, techniques for directed fuzzing may be a key to apply Seed-Prover to open-ended problems.
+본문 Seed-Prover succeeds in solving difficult IMO problems by a systematic, bottom-up search of facts. It does not focus on the problem goal and make conjecture top-down. Instead, it first generates thousands of candidate lemmas before considering the goal. It then builds a knowledge base by scoring lemmas based on difficulty and empirical relevance, and uses top-scored ones to make and prove conjectures. The approach is akin to how human would map out a problem’s landscape before hypothesizing a direct solution.">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
@@ -30,16 +41,18 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
   <meta name="twitter:title" content="AI does math olympiad. How about open problems">
-  <meta name="twitter:description" content="[분류] 에세이">
+  <meta name="twitter:description" content="Abstract Seed-Prover’s success comes from a bottom-up search that builds a knowledge base by curating lemmas. Such is analogous to fuzzing’s two-stage search and queue culling. Further, techniques for directed fuzzing may be a key to apply Seed-Prover to open-ended problems.
+본문 Seed-Prover succeeds in solving difficult IMO problems by a systematic, bottom-up search of facts. It does not focus on the problem goal and make conjecture top-down. Instead, it first generates thousands of candidate lemmas before considering the goal. It then builds a knowledge base by scoring lemmas based on difficulty and empirical relevance, and uses top-scored ones to make and prove conjectures. The approach is akin to how human would map out a problem’s landscape before hypothesizing a direct solution.">
 
 
 
 
   <meta itemprop="name" content="AI does math olympiad. How about open problems">
-  <meta itemprop="description" content="[분류] 에세이">
+  <meta itemprop="description" content="Abstract Seed-Prover’s success comes from a bottom-up search that builds a knowledge base by curating lemmas. Such is analogous to fuzzing’s two-stage search and queue culling. Further, techniques for directed fuzzing may be a key to apply Seed-Prover to open-ended problems.
+본문 Seed-Prover succeeds in solving difficult IMO problems by a systematic, bottom-up search of facts. It does not focus on the problem goal and make conjecture top-down. Instead, it first generates thousands of candidate lemmas before considering the goal. It then builds a knowledge base by scoring lemmas based on difficulty and empirical relevance, and uses top-scored ones to make and prove conjectures. The approach is akin to how human would map out a problem’s landscape before hypothesizing a direct solution.">
   <meta itemprop="datePublished" content="2025-08-07T00:00:00+09:00">
   <meta itemprop="dateModified" content="2026-04-29T14:24:39+09:00">
-  <meta itemprop="wordCount" content="2">
+  <meta itemprop="wordCount" content="307">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Essay">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -265,11 +278,35 @@
     </i>
     <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[essay]</span>
     
-    <span style="opacity:0.6; font-size:0.85em;">1 min read</span>
+    <span style="opacity:0.6; font-size:0.85em;">2 min read</span>
     
   </p>
   <content>
-    <p><a href="https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/">[분류] 에세이</a></p>
+    <h1 id="abstract">Abstract</h1>
+<p>Seed-Prover&rsquo;s success comes from a bottom-up search that builds a knowledge base by curating lemmas.
+Such is analogous to fuzzing&rsquo;s two-stage search and queue culling.
+Further, techniques for directed fuzzing may be a key to apply Seed-Prover to open-ended problems.</p>
+<h1 id="본문">본문</h1>
+<p>Seed-Prover succeeds in solving difficult IMO problems by a systematic, bottom-up search of facts.
+It does not focus on the problem goal and make conjecture top-down.
+Instead, it first generates thousands of candidate lemmas before considering the goal.
+It then builds a knowledge base by scoring lemmas based on difficulty and empirical relevance,
+and uses top-scored ones to make and prove conjectures.
+The approach is akin to how human would map out a problem&rsquo;s landscape before hypothesizing a direct solution.</p>
+<p>This architecture is conceptually parallel to modern directed fuzzing.
+The initial, broad generation of lemmas matches exploration phase to maximize coverage.
+Selecting top-ranked lemmas for a focused proof matches exploitation and queue culling.
+Furthermore, prioritizing difficult lemmas matches energy scheduling between targets in multi-directed fuzzing.</p>
+<p>However, this core heuristic may not work well for open-ended problems.
+IMO problems are closed-world systems with a finite search space, where all given clues are guaranteed to be relevant for the proof.
+Thus, every lemma marks progress, which validates prioritizing difficult (non-trivial) lemmas.
+Open-ended problems in contrast have a vast search space, where the lemmas criticality comes from its creative insight, not difficulty.</p>
+<p>To address this, we might draw inspiration from relevance scoring in directed fuzzing.
+We could evaluate how relevant a lemma&rsquo;s pre and post-conditions (properties) are to the final proof&rsquo;s requirements,
+which will prune search space and prioritize lemmas effectively.
+The fundamental challenge in this lies in defining the distance metric for such an analysis.
+The key step forward is to define one on the space of mathematical knowledge,
+that would capture the progress of a proof.</p>
 
   </content>
 

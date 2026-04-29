@@ -224,6 +224,7 @@
   onload="renderMathInElement(document.body, {
     delimiters: [
       {left: '$$', right: '$$', display: true},
+      {left: '\\(', right: '\\)', display: false},
       {left: '$', right: '$', display: false}
     ]
   });"></script>
@@ -319,7 +320,7 @@
 <p>AFL은 <code>has_new_bits()</code> 함수를 통해 새로운 엣지를 발견했는지 검사합니다. 이 과정에서 두 개의 비트맵이 사용됩니다.</p>
 <ul>
 <li><code>virgin_bits</code> (vir): 전체 퍼징 과정 동안의 모든 커버리지를 누적 기록합니다. <strong>0xFF는 &lsquo;아직 발견된 적 없음&rsquo;</strong> 을 의미합니다.</li>
-<li><code>trace_bits</code> (cur): 단일 실행에서 기록된 커버리지 정보입니다. 대상 프로그램의 매 실행 전 0으로 초기화되며, 엣지를 방문하면 해당 위치의 값이 변경됩니다. (참고: [[trace_bits|trace_bits]])</li>
+<li><code>trace_bits</code> (cur): 단일 실행에서 기록된 커버리지 정보입니다. 대상 프로그램의 매 실행 전 0으로 초기화되며, 엣지를 방문하면 해당 위치의 값이 변경됩니다. (참고: <a href="https://re-st.github.io/research/trace_bits/">trace_bits</a>)</li>
 <li>즉, <code>virgin_bits</code>는 평생에 한 번이라도 만족한 커버리지에 해당하는 비트를 0으로 두고, 반대로 <code>trace_bits</code>는 이번 실행에 만족한 커버리지에 해당하는 비트를 1로 둡니다.</li>
 </ul>
 <p>아래 코드는 <code>trace_bits</code>와 <code>virgin_bits</code>를 비교하여 새로운 커버리지를 찾는 로직의 일부입니다. 짧게 하기 위해 vir, cur 등을 쓰지 않았습니다.</p>

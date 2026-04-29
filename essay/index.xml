@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Wed, 29 Apr 2026 21:45:02 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 22:06:15 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/essay/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>한국의 능묘 조각(문인석 및 동자석) 심층 분석: 도상학적 기원과 디아스포라의 역사</title>
@@ -84,21 +84,21 @@
       <link>https://re-st.github.io/essay/our-work-for-no-targets/</link>
       <pubDate>Fri, 22 Aug 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/our-work-for-no-targets/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;원고-없음&#34;&gt;원고 없음&lt;/h1&gt;&#xA;&lt;p&gt;LaTeX 원고 없음. 2025-08-22 작성 예정이었으나 draft 상태로 미완성.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI does math olympiad. How about open problems</title>
       <link>https://re-st.github.io/essay/ai-does-math-olympiad.-how-about-open-problems/</link>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/ai-does-math-olympiad.-how-about-open-problems/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;Seed-Prover&amp;rsquo;s success comes from a bottom-up search that builds a knowledge base by curating lemmas.&#xA;Such is analogous to fuzzing&amp;rsquo;s two-stage search and queue culling.&#xA;Further, techniques for directed fuzzing may be a key to apply Seed-Prover to open-ended problems.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;Seed-Prover succeeds in solving difficult IMO problems by a systematic, bottom-up search of facts.&#xA;It does not focus on the problem goal and make conjecture top-down.&#xA;Instead, it first generates thousands of candidate lemmas before considering the goal.&#xA;It then builds a knowledge base by scoring lemmas based on difficulty and empirical relevance,&#xA;and uses top-scored ones to make and prove conjectures.&#xA;The approach is akin to how human would map out a problem&amp;rsquo;s landscape before hypothesizing a direct solution.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Implementation on AFL&#43;&#43; has cons too</title>
       <link>https://re-st.github.io/essay/implementation-on-afl-has-cons-too/</link>
       <pubDate>Thu, 24 Jul 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/implementation-on-afl-has-cons-too/</guid>
-      <description>&lt;p&gt;&lt;em&gt;AFL++, an updating version of , suffers performance loss in some cases. Loss inherits to its directed-fuzzing fork implementations, too. We, directed fuzzing researchers, cannot tune on such losses forever, hence better to focus on robust ideas outside of runtime logic.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;AFL++ is a fork of  with consistent update on scalability and efficiency.&#xA;Notably, its LTO (link-time optimization) mode enumerates all edges in the global CFG,&#xA;allowing shared map to resize dynamically suitable for instrumentation.&#xA;This improves coverage accuracy and execution speed.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;AFL++, an updating version of , suffers performance loss in some cases. Loss inherits to its directed-fuzzing fork implementations, too. We, directed fuzzing researchers, cannot tune on such losses forever, hence better to focus on robust ideas outside of runtime logic.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;AFL++ is a fork of  with consistent update on scalability and efficiency.&#xA;Notably, its LTO (link-time optimization) mode enumerates all edges in the global CFG,&#xA;allowing shared map to resize dynamically suitable for instrumentation.&#xA;This improves coverage accuracy and execution speed.&lt;/p&gt;</description>
     </item>
     <item>
       <title>PLDI 2025에 가서</title>
@@ -112,70 +112,70 @@
       <link>https://re-st.github.io/essay/effective-target-grouping-for-our-work/</link>
       <pubDate>Fri, 23 May 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/effective-target-grouping-for-our-work/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;Grouping works only if it lowers the round-robin divisor, but safe grouping is hard because targets often compete and degrade each other&amp;rsquo;s search efficiency.&#xA;Redirecting all group energy to already-covered targets, using a find-and-prune strategy, helps resolve this contention.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;We aim to extend a single-target directed fuzzer to support multiple targets simultaneously.&#xA;Our baseline implementation uses a round-robin scheduler that divides time equally among targets, but with large number of targets, each gets too little attention.&#xA;To reduce the divisor, we attempt grouping, but only when it avoids intra-group inefficiency.&lt;/p&gt;</description>
     </item>
     <item>
       <title>WAFLGo as our comparison not a good idea</title>
       <link>https://re-st.github.io/essay/waflgo-as-our-comparison-not-a-good-idea/</link>
       <pubDate>Thu, 15 May 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/waflgo-as-our-comparison-not-a-good-idea/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;Benchmarking multi-target fuzzers is tricky because some tools exploit commit history while others rely on static locations only.&#xA;I explain why WAFLGo can distort such experiments and propose a safer comparison strategy.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;Most recent evaluation plans reuse a fixed list of historical bug locations, yet WAFLGo was designed for regression testing on fresh commits.&#xA;This mismatch raises two hidden biases that can mislead reviewers and ourselves.&lt;/p&gt;&#xA;&lt;p&gt;WAFLGo first parses the latest diff, builds a write-after-load slice, and labels every block in that slice as a target.&#xA;It then assigns a critical score that gives more energy to seeds covering those blocks[1].&#xA;If we strip away the diff and hand the tool our legacy list, the critical score collapses to zero and WAFLGo devolves into ordinary AFLGo behaviour.&#xA;Any performance ranking that follows would reward parameter coincidence rather than the commit-aware idea the authors proposed.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Environmental Factors Leading to Bias in Fuzzing</title>
       <link>https://re-st.github.io/essay/environmental-factors-leading-to-bias-in-fuzzing/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/environmental-factors-leading-to-bias-in-fuzzing/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;Fuzzing performance is often affected by subtle, easily overlooked factors, such as differences in default settings among fuzzers and hardware execution environments.&#xA;Recognizing and mitigating these factors is essential for producing reliable and comparable experimental results.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;Many factors affect fuzzing performance, but some are easily overlooked although they can significantly distort results.&#xA;Two particularly impactful yet often ignored variables deserve attention.&lt;/p&gt;&#xA;&lt;p&gt;First is the difference in default settings among fuzzers.&#xA;AFL++ provides an option to apply a bespoke dictionary consisting of keyword suggestions derived from code analysis.&#xA;However, among AFL++ and its derivative AFLRun, only AFLRun enables this feature by default.&#xA;If the researcher does not set an environment variable to disable it, the dictionary will help generate seeds that satisfy conditions involving hardcoded text comparisons, leading to faster bug reproduction.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Revisiting Memory Safety for Modern Concurrency</title>
       <link>https://re-st.github.io/essay/revisiting-memory-safety-for-modern-concurrency/</link>
       <pubDate>Fri, 11 Apr 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/revisiting-memory-safety-for-modern-concurrency/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;Hazard Pointers, a classic mechanism for safe memory reclamation in modern concurrent structures, struggle under overhead.&#xA;A recent paper proposes a new validation strategy based on immutability, enabling simple and sound reuse of HP.&#xA;This raises the question of how such bugs could be reproduced through fuzzing, and what would be required to make it effective.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;A recent PLDI paper addresses memory safety in concurrent systems.[^lee2025]&#xA;While our lab emphasizes static analysis and dynamic bug detection to ensure code safety,&#xA;this work takes a different approach:&lt;br&gt;&#xA;it designs a runtime-compatible mechanism that enforces memory safety under concurrency.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Reducing Latency for Efficient Research</title>
       <link>https://re-st.github.io/essay/reducing-latency-for-efficient-research/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/reducing-latency-for-efficient-research/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;Effective research requires minimizing unnecessary latency across tooling, scripting, and decision-making.&#xA;This involves selecting controllable targets, avoiding overengineered automation, and critically limiting reliance on AI tools.&#xA;By focusing time on core problems rather than operational overhead, research can proceed with greater speed.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;Research process is often obstructed by various forms of latency.&lt;br&gt;&#xA;Experiments to evaluate configuration changes are the main source of latency.&#xA;Runtime indicators and logging are introduced to monitor progress,&#xA;yet these measures do not fully address the issue.&#xA;Additional overhead arises from result parsing and the response time of AI tools.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Debugging Custom Fuzzing Development on AFL</title>
       <link>https://re-st.github.io/essay/debugging-custom-fuzzing-development-on-afl/</link>
       <pubDate>Fri, 21 Mar 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/debugging-custom-fuzzing-development-on-afl/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;원고-없음&#34;&gt;원고 없음&lt;/h1&gt;&#xA;&lt;p&gt;LaTeX 원고 없음. 2025-03-21.tex는 Related Work on Multi-Target Fuzzing의 이전 초안으로 내용 상이.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Related Work on Multi-Target Fuzzing</title>
       <link>https://re-st.github.io/essay/related-work-on-multi-target-fuzzing/</link>
       <pubDate>Fri, 28 Feb 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/related-work-on-multi-target-fuzzing/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;There has been several multi-target fuzzing techniques, with approaches orthogonal to ours.&#xA;We focus on the problem to be solved by using only selective coverage,&#xA;and tackle the problem of unfair energy allocation due to the similarity of targets.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Directed Grey-box Fuzzing (DGF) 은 프로그램 내의 특정한 목표 지점을 집중해서 퍼징하는 기법이다.&#xA;이는 주로 주어진 목표 지점과 시드의 커버리지와의 거리를 이용해, 가까운 시드에 에너지를 몰아주는 방식으로&#xA;구현이 된다.&#xA;이와 함께 multiple target locations을 지정할 수 있는 퍼징도 나오고 있다.&#xA;AFLGo가 최초의 것 중 하나로, 목표별로 계산되는 거리를 합쳐서 에너지를 주도록 한다.&#xA;그러나 각 타깃별 정보를 단순히 합치는 것을 넘어, 각 개별 목표로 향하는 시드를 관리해&#xA;에너지를 조정하게끔 하는 퍼징이 존재한다.&#xA;Directed Grey-box Fuzzing (DGF) is a technique that focuses on fuzzing specific target locations within a program.&#xA;It typically prioritizes seeds based on their proximity to the target,&#xA;allocating more energy to seeds closer to it.&#xA;Fuzzing techniques supporting multiple target locations have emerged since AFLGo,&#xA;by averaging proximity to each target into a single scalar value.&#xA;Later work take into account a more fine-grained approach,&#xA;by dynamically adjusting energy on each targets.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DIKUW 모델과 AI 시대의 연구자 역량</title>
       <link>https://re-st.github.io/essay/dikuw-%EB%AA%A8%EB%8D%B8%EA%B3%BC-ai-%EC%8B%9C%EB%8C%80%EC%9D%98-%EC%97%B0%EA%B5%AC%EC%9E%90-%EC%97%AD%EB%9F%89/</link>
       <pubDate>Thu, 13 Feb 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/dikuw-%EB%AA%A8%EB%8D%B8%EA%B3%BC-ai-%EC%8B%9C%EB%8C%80%EC%9D%98-%EC%97%B0%EA%B5%AC%EC%9E%90-%EC%97%AD%EB%9F%89/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;DIKUW 모델은 데이터를 활용하여 효과적인 의사결정을 내리는 다섯 단계를 설명한다.&#xA;이 글에선 Topuzz 연구 경험에 비추어 보아 DIKUW 모델이 소프트웨어 엔지니어가 갖춰야&#xA;할 핵심 역량과 어떻게 연관되는지를 살펴본다.&#xA;AI시대에 이 핵심 역량은 결국 잘 듣고, 성실하게 연구하는 소프트 스킬일 것이다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;이번 ERC에서 가장 인상깊었던 강연은 AI시대에 소프트웨어 엔지니어가 갖춰야 할 역량에 대한 것이었다.&#xA;강연자는 창의성과 분석적 사고가 중요하며, 특히 DIKUW 모델의 마지막 부분을 할 줄 알아야 한다고 하셨다.&#xA;그렇다면, 지금까지 내가 석사 과정에서 진행한 퍼징 연구를 DIKUW 모델에 맞춰 보면,&#xA;나는 어디에 가장 많은 시간을 투자했을까?&lt;/p&gt;</description>
     </item>
     <item>
       <title>FishFuzz 논문의 평가 단락을 읽으며</title>
       <link>https://re-st.github.io/essay/fishfuzz-%EB%85%BC%EB%AC%B8%EC%9D%98-%ED%8F%89%EA%B0%80-%EB%8B%A8%EB%9D%BD%EC%9D%84-%EC%9D%BD%EC%9C%BC%EB%A9%B0/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/fishfuzz-%EB%85%BC%EB%AC%B8%EC%9D%98-%ED%8F%89%EA%B0%80-%EB%8B%A8%EB%9D%BD%EC%9D%84-%EC%9D%BD%EC%9C%BC%EB%A9%B0/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;FishFuzz 논문의 평가 방식은 정성적 분석을 강조하며, 퍼징 도구 비교에서&#xA;벤 다이어그램을 활용해 자신의 도구가 여러 퍼징 도구를 합친 것만큼 좋음을 드러낸다.&#xA;또한, 하이퍼파라미터 최적화를 통해 다양한 오류 유형에 대한 성능을 명확히 설명한다.&#xA;그러나 특정 오류에서의 유별난 강점을 충분히 분석하지 않은 점은 아쉬움으로 남는다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;FishFuzz 논문의 평가는 단순한 커버리지나 오류 유발 시간과 같은 정량적 지표를 넘어,&#xA;매 탐구 질문 (RQ) 단락마다 정성적 분석을 통해 자신의 우수성을 강조한다.&#xA;대표적으로, 오류 탐지 효과성을 논의하는 부분에서는 벤 다이어그램을 활용하여&#xA;여러 도구가 찾은 오류 간의 관계를 시각화한다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>퍼징 도구를 건드릴 때는 체크섬에 주의하세요</title>
       <link>https://re-st.github.io/essay/%ED%8D%BC%EC%A7%95-%EB%8F%84%EA%B5%AC%EB%A5%BC-%EA%B1%B4%EB%93%9C%EB%A6%B4-%EB%95%8C%EB%8A%94-%EC%B2%B4%ED%81%AC%EC%84%AC%EC%97%90-%EC%A3%BC%EC%9D%98%ED%95%98%EC%84%B8%EC%9A%94/</link>
       <pubDate>Thu, 16 Jan 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/%ED%8D%BC%EC%A7%95-%EB%8F%84%EA%B5%AC%EB%A5%BC-%EA%B1%B4%EB%93%9C%EB%A6%B4-%EB%95%8C%EB%8A%94-%EC%B2%B4%ED%81%AC%EC%84%AC%EC%97%90-%EC%A3%BC%EC%9D%98%ED%95%98%EC%84%B8%EC%9A%94/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;체크섬은 데이터의 동일성을 확인하는 효율적인 방법으로,&#xA;퍼징 도구 AFL에서는 커버리지 비교와 입력 최적화 작업에 체크섬을 활용해 메모리 접근을 최소화한다.&#xA;입력 최적화 작업은 퍼징의 성능을 크게 좌우하기 때문에, 다중 지향성 퍼징의 개발에 있어서&#xA;AFL의 체크섬 알고리즘이 방해를 받지 않게 주의해야 한다.&#xA;퍼징 개발에 있어 이처럼 주의할 요소를 파악하기 위해서는 실험 중 생성되는 데이터를 효과적으로 시각화하는&#xA;자세가 필요하다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;체크섬은 데이터의 동일성을 효율적으로 확인하는 방법이다.&#xA;데이터를 해시 함수에 통과시켜 생성된 작은 값을 저장하고,&#xA;이후 비교 대상 데이터의 해시 값과 비교하여 두 데이터가 같은지를 판단하게 되며,&#xA;보통 데이터의 변경 여부를 감지하는 데 쓰인다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>정보보호대학원 세미나를 들으며</title>
@@ -189,14 +189,14 @@
       <link>https://re-st.github.io/essay/%EC%89%AC%EC%9A%B4-%EC%A0%84%EB%AC%B8%EC%9A%A9%EC%96%B4%EA%B0%80-%ED%95%84%EC%9A%94%ED%95%9C-%EC%9D%B4%EC%9C%A0/</link>
       <pubDate>Fri, 20 Dec 2024 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/%EC%89%AC%EC%9A%B4-%EC%A0%84%EB%AC%B8%EC%9A%A9%EC%96%B4%EA%B0%80-%ED%95%84%EC%9A%94%ED%95%9C-%EC%9D%B4%EC%9C%A0/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;좋은 컴퓨터과학 용어는 개념을 잘 설명할 수 있도록 상대의 직관에 호소한다.&#xA;이미 서양에서 정립된 단어를 번역하든, 우리가 만들든,&#xA;연구 이해와 발전에는 좋은 단어 표현이 필요하다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;90년대에 한미 정상간에 휘호를 교환할 일이 있었다. 큰 길엔 문이 (막힘이) 없다는 사자성어였는데,&#xA;우리야 감이 잡혀 있지만, 이를 단순 직역한다면 미국인에겐 꽤 막연했을 것이다.&#xA;이때 통역이 번역한 것은 &amp;lsquo;고속도로에는 톨게이트가 없다&amp;rsquo;로,&#xA;이 정도는 되어야 그 문화권에 뜻을 전달할 수 있었다.&#xA;우리의 문화인 사자성어는 이렇게 적절한 말로 번역해야 한다는 데는 많이들 공감할 수 있을 것이다.&#xA;나는 이와 같이, 서양에서 시작한 컴퓨터과학의 단어들을 한국어로 들여올 때도&#xA;우리가 알기 쉬운 말을 쓰는 게 중요하다고 생각한다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>정의 사용 그래프를 빨리 만드는 방법</title>
       <link>https://re-st.github.io/essay/%EC%A0%95%EC%9D%98-%EC%82%AC%EC%9A%A9-%EA%B7%B8%EB%9E%98%ED%94%84%EB%A5%BC-%EB%B9%A8%EB%A6%AC-%EB%A7%8C%EB%93%9C%EB%8A%94-%EB%B0%A9%EB%B2%95/</link>
       <pubDate>Fri, 06 Dec 2024 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/%EC%A0%95%EC%9D%98-%EC%82%AC%EC%9A%A9-%EA%B7%B8%EB%9E%98%ED%94%84%EB%A5%BC-%EB%B9%A8%EB%A6%AC-%EB%A7%8C%EB%93%9C%EB%8A%94-%EB%B0%A9%EB%B2%95/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;정적 분석을 활용한 정의-사용 그래프 생성 과정의 속도를 개선하기 위해&#xA;세 가지 방향으로 탐구를 진행하고 있다.&#xA;이는 실행 불가 코드 제거,&#xA;포인터 집합의 크기 관리,&#xA;그리고 부하가 큰 함수 발견 및 처리로,&#xA;이 과정에서 사람의 개입을 없애는 것까지가 연구의 목표이다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;우리 연구실의 지향성 퍼징 기술인 DAFL과 Topuzz는&#xA;목표 지점으로 이어지는 데이터 흐름을 활용하여 좋은 성과를 내고 있으며,&#xA;이를 위해 필수적인 작업이 정적 분석을 통한 정의-사용 그래프의 생성이다.&#xA;그러나 Topuzz에서는 각 목표 지점별로 그래프를 생성해야 하므로 큰 시간 부하에 직면했다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>보고서의 평가 단락이란</title>
@@ -210,7 +210,7 @@
       <link>https://re-st.github.io/essay/%EC%9A%B0%EB%A6%AC-%ED%8D%BC%EC%A7%95-%EA%B3%A0%EB%A5%B4%EA%B2%8C-%EA%B3%A0%EB%A5%B4%EA%B2%8C/</link>
       <pubDate>Fri, 08 Nov 2024 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/%EC%9A%B0%EB%A6%AC-%ED%8D%BC%EC%A7%95-%EA%B3%A0%EB%A5%B4%EA%B2%8C-%EA%B3%A0%EB%A5%B4%EA%B2%8C/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;다중 지향성 퍼징에서 여러 오류를 노리는 효과적인 방법으로 각 목표에 고르게 접근하는 것이 있다. 현재는 목표별로 퍼징의 내부 정보를 따로 구별하면 할수록 성능이 나아지고 있다. 하지만 미래에는 일부 내부 정보를 합산하여 상호 보완적인 효과를 노릴 수도 있지 않을까?&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;다중 지향성 퍼징에서 각 오류가 언제 재현될지 미리 내다볼 방법이 없다면, 제한시간 내 많은 오류를 찾기 위해서 각 목표 지점에 자원을 고르게 분배하는 것은 가장 직관적인 해결책이다.&lt;/p&gt;&#xA;&lt;p&gt;목표별로 자원을 고르게 분배할 때에는 목표별 퍼징 정보가 구별될 필요성이 있다. 퍼징은 입력을 실행하고 까먹는 게 아니라 이전에 실행한 모든 우수한 입력의 실행 정보를 기억하며 스스로를 발전시킨다. 이 정보들은 평균내어져 실시간 입력이 얼마나 우월한지를 계산하는 등 퍼징의 휴리스틱에 관여한다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>퍼징 트리아지의 관찰</title>
@@ -224,14 +224,14 @@
       <link>https://re-st.github.io/essay/%ED%8D%BC%EC%A7%95-%EC%97%B0%EA%B5%AC-%EC%8B%A0%EB%A2%B0-%ED%99%95%EB%B3%B4%EB%8A%94-%ED%86%B5%EC%A0%9C%EB%90%9C-%EC%8B%A4%ED%97%98%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EB%B6%80%ED%84%B0/</link>
       <pubDate>Thu, 24 Oct 2024 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/%ED%8D%BC%EC%A7%95-%EC%97%B0%EA%B5%AC-%EC%8B%A0%EB%A2%B0-%ED%99%95%EB%B3%B4%EB%8A%94-%ED%86%B5%EC%A0%9C%EB%90%9C-%EC%8B%A4%ED%97%98%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EB%B6%80%ED%84%B0/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;퍼징 실험의 신뢰성과 재현성을 확보하기 위해서는 외부 변수를 모두 일정하게 통제하고 그 내용을 공개해야 한다. 여기에는 실험이 실행되는 장비 등 하드웨어뿐 아니라 실험이 돌아가는 가상환경도 포함된다. 연구자는 실험 환경이 결과에 미치는 영향을 이해해야 하며, 또한 실험이 시스템의 불확실한 요소에 방해를 받지 않게 섬세히 설계해야 한다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;퍼징도 실험 연구이니만큼, 결과에 대해 타인에게 신뢰를 주기 위해서는 신뢰성과 재현성이 필요하다. 이는 외부 변인을 모두 제거했다는 근거와, 실험을 재현해 동일한 결과를 얻을 수 있는 충분한 정보를 제공하는 걸 뜻한다. 따라서 신뢰 받는 연구자는 이런 실험 환경을 일정하게 유지하기 위해 최선을 다한다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>탐색과 활용 기법의 퍼징 적용례와 아이디어</title>
       <link>https://re-st.github.io/essay/%ED%83%90%EC%83%89%EA%B3%BC-%ED%99%9C%EC%9A%A9-%EA%B8%B0%EB%B2%95%EC%9D%98-%ED%8D%BC%EC%A7%95-%EC%A0%81%EC%9A%A9%EB%A1%80%EC%99%80-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/</link>
       <pubDate>Thu, 10 Oct 2024 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/%ED%83%90%EC%83%89%EA%B3%BC-%ED%99%9C%EC%9A%A9-%EA%B8%B0%EB%B2%95%EC%9D%98-%ED%8D%BC%EC%A7%95-%EC%A0%81%EC%9A%A9%EB%A1%80%EC%99%80-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/&#34;&gt;[분류] 에세이&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;탐색과 활용 기법에 영감을 받아, 현재의 다중 지향성 퍼징 연구에서 사용하는 자원 분배 전략이 악수가 되는 경우를 방지하고자 한다. 현재는 마땅한 탐색 기간 없이, 에너지를 더 쏟을 목표지점을 한 가지 전략으로 정하고 있지만, 이 전략이 더 큰 정체를 불러올 경우는 다른 좋은 목표지점이 있는지 조금씩 집중지점을 옮기며 탐색하는 게 좋을 것이다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;퍼징에서는 유한한 시간 자원을 탐색과 활용 사이에 어떻게 배분할지에 대한 고민이 존재한다. 탐색은 우수한 퍼징을 위한 여러 선택지를 시험해 보는 과정이며, 활용은 그중에서 효과적인 방법을 사용하는 단계이다. 각 변형에 사용할 입력값이나 코드의 특정 부분에 집중하는 시간 배분 방식 등에서 선택지가 생기며 좋은 선택지는 프로그램에 따라 달라진다. 따라서 다양한 선택지를 약간씩 시도하는 것이 탐색의 핵심이다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>퍼징의 성능을 분석하는 두 가지 방법</title>
@@ -245,14 +245,14 @@
       <link>https://re-st.github.io/essay/%ED%8D%BC%EC%A7%95%EC%9D%98-%EB%8B%A4%EC%96%91%ED%95%9C-%EA%B2%B0%EA%B3%BC-%EC%B8%A1%EC%A0%95-%EB%B0%A9%EB%B2%95-2%ED%8E%98%EC%9D%B4%EC%A7%80/</link>
       <pubDate>Mon, 30 Sep 2024 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/%ED%8D%BC%EC%A7%95%EC%9D%98-%EB%8B%A4%EC%96%91%ED%95%9C-%EA%B2%B0%EA%B3%BC-%EC%B8%A1%EC%A0%95-%EB%B0%A9%EB%B2%95-2%ED%8E%98%EC%9D%B4%EC%A7%80/</guid>
-      <description>&lt;p&gt;&lt;em&gt;퍼징 도구들의 성능을 평가하는 다양한 방법들이 존재하며, 각 방법은 퍼징의 목적과 특성에 따라 다르게 적용된다. 주요 성능 평가 지표의 사용례와 다중 지향성 퍼징을 위한 기존의, 그리고 새로운 지표를 소개한다.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;퍼징은 무작위 입력 생성으로 프로그램의 오류를 재현한다는 주 목적 아래 여러 가지 하위 분류가 있고, 각 분류의 목적에 맞는 평가기준이 사용되고 있다. 예로, 무지향성 퍼징의 목표는 코드의 많은 부분을 건드려 많은 오류를 잡는 것이므로, 그에 맞게 덮이나 발견된 고장입력 (crash)의 수를 비교한다. 이 비교를 쉽게 만들어주는 대표적 도구로 Fuzzbench가 있다. 한편 단일 지향성 퍼징의 목표는 특정 버그를 빨리 발견하는 것이므로, 그에 맞게 버그 재현 시간 (Time-To-Exposure)이 주로 사용된다. Beacon처럼 정적분석 등의 사전단계가 있으면 그 시간을 병기하기도 한다.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;퍼징 도구들의 성능을 평가하는 다양한 방법들이 존재하며, 각 방법은 퍼징의 목적과 특성에 따라 다르게 적용된다. 주요 성능 평가 지표의 사용례와 다중 지향성 퍼징을 위한 기존의, 그리고 새로운 지표를 소개한다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;퍼징은 무작위 입력 생성으로 프로그램의 오류를 재현한다는 주 목적 아래 여러 가지 하위 분류가 있고, 각 분류의 목적에 맞는 평가기준이 사용되고 있다. 예로, 무지향성 퍼징의 목표는 코드의 많은 부분을 건드려 많은 오류를 잡는 것이므로, 그에 맞게 덮이나 발견된 고장입력 (crash)의 수를 비교한다. 이 비교를 쉽게 만들어주는 대표적 도구로 Fuzzbench가 있다.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; 한편 단일 지향성 퍼징의 목표는 특정 버그를 빨리 발견하는 것이므로, 그에 맞게 버그 재현 시간 (Time-To-Exposure)이 주로 사용된다. Beacon처럼 정적분석 등의 사전단계가 있으면 그 시간을 병기하기도 한다.&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>AFL의 휴리스틱 알고 쓰기</title>
       <link>https://re-st.github.io/essay/afl%EC%9D%98-%ED%9C%B4%EB%A6%AC%EC%8A%A4%ED%8B%B1-%EC%95%8C%EA%B3%A0-%EC%93%B0%EA%B8%B0/</link>
       <pubDate>Fri, 27 Sep 2024 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/afl%EC%9D%98-%ED%9C%B4%EB%A6%AC%EC%8A%A4%ED%8B%B1-%EC%95%8C%EA%B3%A0-%EC%93%B0%EA%B8%B0/</guid>
-      <description>&lt;p&gt;&lt;em&gt;AFL 퍼징의 높은 성능을 만들어주는 휴리스틱의 목적과 이를 응용한 퍼징 도구의 사례를 서술한다. AFL 위에 새 기능을 추가할 때는 기존 휴리스틱이 망가지지 않도록 주의하며, 또한 이를 적절히 활용할 줄 알아야 한다.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;AFL은 간결하면서도 강력한 퍼징 도구이다. 사용자가 제공한 입력값 주머니에서 출발하여, 입력값을 하나 꺼내 변형한 자손들을 생성하고, 그중 코드의 간선 덮이 (edge coverage)를 확장한 자손을 주머니에 넣는 과정을 반복하며 프로그램 전 부분을 탐색한다. 간결하게도 간선 덮이 외에는 대상 코드의 추가 정보를 요구하지 않지만, 대부분의 퍼징 연구에서 비교 대상으로 꼽힐 만큼 뛰어난 성능을 자랑한다.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;AFL 퍼징의 높은 성능을 만들어주는 휴리스틱의 목적과 이를 응용한 퍼징 도구의 사례를 서술한다. AFL 위에 새 기능을 추가할 때는 기존 휴리스틱이 망가지지 않도록 주의하며, 또한 이를 적절히 활용할 줄 알아야 한다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;AFL은 간결하면서도 강력한 퍼징 도구이다. 사용자가 제공한 입력값 주머니에서 출발하여, 입력값을 하나 꺼내 변형한 자손들을 생성하고, 그중 코드의 간선 덮이 (edge coverage)를 확장한 자손을 주머니에 넣는 과정을 반복하며 프로그램 전 부분을 탐색한다. 간결하게도 간선 덮이 외에는 대상 코드의 추가 정보를 요구하지 않지만, 대부분의 퍼징 연구에서 비교 대상으로 꼽힐 만큼 뛰어난 성능을 자랑한다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>지향성 퍼징을 위해 정적분석기를 고친다면 (흐름 둔감 정적 분석)</title>

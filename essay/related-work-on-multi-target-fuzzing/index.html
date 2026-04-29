@@ -8,14 +8,34 @@
 <link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
 <title>Related Work on Multi-Target Fuzzing | Park, Geon (re-st)</title>
 <meta name="title" content="Related Work on Multi-Target Fuzzing" />
-<meta name="description" content="[분류] 에세이" />
+<meta name="description" content="Abstract
+There has been several multi-target fuzzing techniques, with approaches orthogonal to ours.
+We focus on the problem to be solved by using only selective coverage,
+and tackle the problem of unfair energy allocation due to the similarity of targets.
+본문
+
+Directed Grey-box Fuzzing (DGF) 은 프로그램 내의 특정한 목표 지점을 집중해서 퍼징하는 기법이다.
+이는 주로 주어진 목표 지점과 시드의 커버리지와의 거리를 이용해, 가까운 시드에 에너지를 몰아주는 방식으로
+구현이 된다.
+이와 함께 multiple target locations을 지정할 수 있는 퍼징도 나오고 있다.
+AFLGo가 최초의 것 중 하나로, 목표별로 계산되는 거리를 합쳐서 에너지를 주도록 한다.
+그러나 각 타깃별 정보를 단순히 합치는 것을 넘어, 각 개별 목표로 향하는 시드를 관리해
+에너지를 조정하게끔 하는 퍼징이 존재한다.
+Directed Grey-box Fuzzing (DGF) is a technique that focuses on fuzzing specific target locations within a program.
+It typically prioritizes seeds based on their proximity to the target,
+allocating more energy to seeds closer to it.
+Fuzzing techniques supporting multiple target locations have emerged since AFLGo,
+by averaging proximity to each target into a single scalar value.
+Later work take into account a more fine-grained approach,
+by dynamically adjusting energy on each targets." />
 <meta name="keywords" content="Essay,weekly-writing," />
 
 
 <meta property="og:url" content="https://re-st.github.io/essay/related-work-on-multi-target-fuzzing/">
   <meta property="og:site_name" content="Park, Geon (re-st)">
   <meta property="og:title" content="Related Work on Multi-Target Fuzzing">
-  <meta property="og:description" content="[분류] 에세이">
+  <meta property="og:description" content="Abstract There has been several multi-target fuzzing techniques, with approaches orthogonal to ours. We focus on the problem to be solved by using only selective coverage, and tackle the problem of unfair energy allocation due to the similarity of targets.
+본문 Directed Grey-box Fuzzing (DGF) 은 프로그램 내의 특정한 목표 지점을 집중해서 퍼징하는 기법이다. 이는 주로 주어진 목표 지점과 시드의 커버리지와의 거리를 이용해, 가까운 시드에 에너지를 몰아주는 방식으로 구현이 된다. 이와 함께 multiple target locations을 지정할 수 있는 퍼징도 나오고 있다. AFLGo가 최초의 것 중 하나로, 목표별로 계산되는 거리를 합쳐서 에너지를 주도록 한다. 그러나 각 타깃별 정보를 단순히 합치는 것을 넘어, 각 개별 목표로 향하는 시드를 관리해 에너지를 조정하게끔 하는 퍼징이 존재한다. Directed Grey-box Fuzzing (DGF) is a technique that focuses on fuzzing specific target locations within a program. It typically prioritizes seeds based on their proximity to the target, allocating more energy to seeds closer to it. Fuzzing techniques supporting multiple target locations have emerged since AFLGo, by averaging proximity to each target into a single scalar value. Later work take into account a more fine-grained approach, by dynamically adjusting energy on each targets.">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
@@ -31,16 +51,18 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
   <meta name="twitter:title" content="Related Work on Multi-Target Fuzzing">
-  <meta name="twitter:description" content="[분류] 에세이">
+  <meta name="twitter:description" content="Abstract There has been several multi-target fuzzing techniques, with approaches orthogonal to ours. We focus on the problem to be solved by using only selective coverage, and tackle the problem of unfair energy allocation due to the similarity of targets.
+본문 Directed Grey-box Fuzzing (DGF) 은 프로그램 내의 특정한 목표 지점을 집중해서 퍼징하는 기법이다. 이는 주로 주어진 목표 지점과 시드의 커버리지와의 거리를 이용해, 가까운 시드에 에너지를 몰아주는 방식으로 구현이 된다. 이와 함께 multiple target locations을 지정할 수 있는 퍼징도 나오고 있다. AFLGo가 최초의 것 중 하나로, 목표별로 계산되는 거리를 합쳐서 에너지를 주도록 한다. 그러나 각 타깃별 정보를 단순히 합치는 것을 넘어, 각 개별 목표로 향하는 시드를 관리해 에너지를 조정하게끔 하는 퍼징이 존재한다. Directed Grey-box Fuzzing (DGF) is a technique that focuses on fuzzing specific target locations within a program. It typically prioritizes seeds based on their proximity to the target, allocating more energy to seeds closer to it. Fuzzing techniques supporting multiple target locations have emerged since AFLGo, by averaging proximity to each target into a single scalar value. Later work take into account a more fine-grained approach, by dynamically adjusting energy on each targets.">
 
 
 
 
   <meta itemprop="name" content="Related Work on Multi-Target Fuzzing">
-  <meta itemprop="description" content="[분류] 에세이">
+  <meta itemprop="description" content="Abstract There has been several multi-target fuzzing techniques, with approaches orthogonal to ours. We focus on the problem to be solved by using only selective coverage, and tackle the problem of unfair energy allocation due to the similarity of targets.
+본문 Directed Grey-box Fuzzing (DGF) 은 프로그램 내의 특정한 목표 지점을 집중해서 퍼징하는 기법이다. 이는 주로 주어진 목표 지점과 시드의 커버리지와의 거리를 이용해, 가까운 시드에 에너지를 몰아주는 방식으로 구현이 된다. 이와 함께 multiple target locations을 지정할 수 있는 퍼징도 나오고 있다. AFLGo가 최초의 것 중 하나로, 목표별로 계산되는 거리를 합쳐서 에너지를 주도록 한다. 그러나 각 타깃별 정보를 단순히 합치는 것을 넘어, 각 개별 목표로 향하는 시드를 관리해 에너지를 조정하게끔 하는 퍼징이 존재한다. Directed Grey-box Fuzzing (DGF) is a technique that focuses on fuzzing specific target locations within a program. It typically prioritizes seeds based on their proximity to the target, allocating more energy to seeds closer to it. Fuzzing techniques supporting multiple target locations have emerged since AFLGo, by averaging proximity to each target into a single scalar value. Later work take into account a more fine-grained approach, by dynamically adjusting energy on each targets.">
   <meta itemprop="datePublished" content="2025-02-28T00:00:00+09:00">
   <meta itemprop="dateModified" content="2026-04-29T14:24:39+09:00">
-  <meta itemprop="wordCount" content="2">
+  <meta itemprop="wordCount" content="664">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Essay,Weekly-Writing">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -266,11 +288,79 @@
     </i>
     <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[essay]</span>
     
-    <span style="opacity:0.6; font-size:0.85em;">1 min read</span>
+    <span style="opacity:0.6; font-size:0.85em;">4 min read</span>
     
   </p>
   <content>
-    <p><a href="https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/">[분류] 에세이</a></p>
+    <h1 id="abstract">Abstract</h1>
+<p>There has been several multi-target fuzzing techniques, with approaches orthogonal to ours.
+We focus on the problem to be solved by using only selective coverage,
+and tackle the problem of unfair energy allocation due to the similarity of targets.</p>
+<h1 id="본문">본문</h1>
+<blockquote>
+<p>Directed Grey-box Fuzzing (DGF) 은 프로그램 내의 특정한 목표 지점을 집중해서 퍼징하는 기법이다.
+이는 주로 주어진 목표 지점과 시드의 커버리지와의 거리를 이용해, 가까운 시드에 에너지를 몰아주는 방식으로
+구현이 된다.
+이와 함께 multiple target locations을 지정할 수 있는 퍼징도 나오고 있다.
+AFLGo가 최초의 것 중 하나로, 목표별로 계산되는 거리를 합쳐서 에너지를 주도록 한다.
+그러나 각 타깃별 정보를 단순히 합치는 것을 넘어, 각 개별 목표로 향하는 시드를 관리해
+에너지를 조정하게끔 하는 퍼징이 존재한다.
+Directed Grey-box Fuzzing (DGF) is a technique that focuses on fuzzing specific target locations within a program.
+It typically prioritizes seeds based on their proximity to the target,
+allocating more energy to seeds closer to it.
+Fuzzing techniques supporting multiple target locations have emerged since AFLGo,
+by averaging proximity to each target into a single scalar value.
+Later work take into account a more fine-grained approach,
+by dynamically adjusting energy on each targets.</p>
+</blockquote>
+<blockquote>
+<p>AFLRun은 여러 타깃에 공평한 에너지를 부여해, 탐색이 덜 되는 타깃이 없도록 한다.
+AFLRun은 도달한 적이 없는 타깃은 가장 가까운 basic block을 지나는 시드에 에너지를 주고,
+각 타깃을 도달하는 시드들은 더 쉬운 조건으로 저장함으로써 타깃을 노린다.
+이는 본질적으로 각 타깃별로 에너지를 공평하게 주되, 비슷한 타깃들이 에너지를 과하게 받는 등의 문제는 고려하지 않는다.
+AFLRun은 비슷한 타깃을 묶는 퍼징이기도 하다. 그러나 타깃을 묶어 에너지 조정에 사용하는 게 아니라,
+타깃별 정보를 추적하는 데 드는 overhead를 줄이기 위해 사용하고 있다.
+AFLRun ensures fair energy distribution by separately maintaining coverage
+feedback per each target, and prioritizing seeds close to the yet uncovered targets.
+Yet it does not tackle the problem of unfair energy allocation due to the similarity of some targets.
+Although AFLRun takes similarity of targets into account,
+the similarity metric is defined based on the redundancy of fuzzer&rsquo;s coverage checking operations,
+for a purpose of reducing overhead of tracking coverage feedback.</p>
+</blockquote>
+<blockquote>
+<p>Titan은 오류를 정적분석해, 의미적으로 유사한 타깃과 아닌 타깃을 구별하고 있다. Titan은
+각 타깃으로 가기 위한 조건문을 분석하여, 시드의 어느 부분이 어느 조건문을 만족하는지를 알아낸다.
+이를 통해 입력의 변형을, 최대한 많은 타깃에 동시에 가까워질 수 있도록 변형하며,또한 가장 많은 타깃을
+노릴 수 있는 시드를 우선적으로 사용하도록 culls queue.
+이는 시드에 어느 목표지점을 노리는지 라벨링을 하며, 같이 노릴 수 있는 타깃을 계산한다는 점에서 우리의 연구와 비슷하나,
+이를 타깃별 에너지 분배에 사용하지 않고, mutation에 사용한다는 점에서 차이가 있다.
+또한 조건문을 모두 분석하므로 긴 정적분석 시간을 요구한다.
+이는 목표지점으로 가는 데이터 흐름만을 고려해 빠르게 정적분석을 하는 우리의 approach와 orthogonal하다.
+Titan analyzes branch conditions to determine target relationships and adjusts mutations accordingly.
+Similar to our approach, Titan labels each seed on its related targets.
+However, it is not used on energy allocation,
+but on mutating the seed to maximize number of benefitted targets.
+Titan&rsquo;s extensive static analysis contrasts with our lighter data-flow analysis too.</p>
+</blockquote>
+<blockquote>
+<p>이미 앞서 소개했듯이 multi-directed grey-box fuzzing이 나와 있지만,
+우리는 새로운 관점에서 주제를 접근했다.
+우리는 단일 지향성 퍼징에서 오류와 연관된 지점에서만 선별적으로 커버리지를 받아, 시드를 소수정예로 저장하는 것이
+좋은 성능을 보였음을 응용해, 각 타깃별로 유용하게 쓸 수 있는 시드에 라벨을 붙여 꼭 필요한 곳에 집중하도록 하며,
+이를 시간별로 각 타깃에 투자해 공평하게 에너지를 분배하는 방식으로 구현했다.
+또한, 선별적 커버리지 집합이 비슷한 타깃은, 구현상 에너지가 과하게 몰릴 것이므로 이를 방지하기 위해
+타깃을 묶는 방식을 사용했다.
+다른 퍼징이 놓친 부분을 챙기고 있는 만큼, 더 나은 퍼포먼스를 통해 세계에 울림을 전할 때다.
+We take a new perspective on multi-directed fuzzing by
+selectively storing seeds based on its relevance to targets,
+and distributing energy on each target fairly over time.
+Selective coverage method, already proven its efficiency by the implementation of DAFL,
+has yet to be applied to multi-target fuzzing.
+We propose a full fuzzing module that handles selective coverage for multiple targets,
+and also a clustering method to prevent excessive energy allocation to similar targets.
+By addressing overlooked aspects of previous approaches,
+we aim to achieve superior performance and make a meaningful impact on the fuzzing community.</p>
+</blockquote>
 
   </content>
 

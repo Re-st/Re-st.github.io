@@ -8,14 +8,24 @@
 <link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
 <title>Revisiting Memory Safety for Modern Concurrency | Park, Geon (re-st)</title>
 <meta name="title" content="Revisiting Memory Safety for Modern Concurrency" />
-<meta name="description" content="[분류] 에세이" />
+<meta name="description" content="Abstract
+Hazard Pointers, a classic mechanism for safe memory reclamation in modern concurrent structures, struggle under overhead.
+A recent paper proposes a new validation strategy based on immutability, enabling simple and sound reuse of HP.
+This raises the question of how such bugs could be reproduced through fuzzing, and what would be required to make it effective.
+본문
+A recent PLDI paper addresses memory safety in concurrent systems.[^lee2025]
+While our lab emphasizes static analysis and dynamic bug detection to ensure code safety,
+this work takes a different approach:
+it designs a runtime-compatible mechanism that enforces memory safety under concurrency." />
 <meta name="keywords" content="Essay,weekly-writing," />
 
 
 <meta property="og:url" content="https://re-st.github.io/essay/revisiting-memory-safety-for-modern-concurrency/">
   <meta property="og:site_name" content="Park, Geon (re-st)">
   <meta property="og:title" content="Revisiting Memory Safety for Modern Concurrency">
-  <meta property="og:description" content="[분류] 에세이">
+  <meta property="og:description" content="Abstract Hazard Pointers, a classic mechanism for safe memory reclamation in modern concurrent structures, struggle under overhead. A recent paper proposes a new validation strategy based on immutability, enabling simple and sound reuse of HP. This raises the question of how such bugs could be reproduced through fuzzing, and what would be required to make it effective.
+본문 A recent PLDI paper addresses memory safety in concurrent systems.[^lee2025] While our lab emphasizes static analysis and dynamic bug detection to ensure code safety, this work takes a different approach:
+it designs a runtime-compatible mechanism that enforces memory safety under concurrency.">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
@@ -31,16 +41,20 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
   <meta name="twitter:title" content="Revisiting Memory Safety for Modern Concurrency">
-  <meta name="twitter:description" content="[분류] 에세이">
+  <meta name="twitter:description" content="Abstract Hazard Pointers, a classic mechanism for safe memory reclamation in modern concurrent structures, struggle under overhead. A recent paper proposes a new validation strategy based on immutability, enabling simple and sound reuse of HP. This raises the question of how such bugs could be reproduced through fuzzing, and what would be required to make it effective.
+본문 A recent PLDI paper addresses memory safety in concurrent systems.[^lee2025] While our lab emphasizes static analysis and dynamic bug detection to ensure code safety, this work takes a different approach:
+it designs a runtime-compatible mechanism that enforces memory safety under concurrency.">
 
 
 
 
   <meta itemprop="name" content="Revisiting Memory Safety for Modern Concurrency">
-  <meta itemprop="description" content="[분류] 에세이">
+  <meta itemprop="description" content="Abstract Hazard Pointers, a classic mechanism for safe memory reclamation in modern concurrent structures, struggle under overhead. A recent paper proposes a new validation strategy based on immutability, enabling simple and sound reuse of HP. This raises the question of how such bugs could be reproduced through fuzzing, and what would be required to make it effective.
+본문 A recent PLDI paper addresses memory safety in concurrent systems.[^lee2025] While our lab emphasizes static analysis and dynamic bug detection to ensure code safety, this work takes a different approach:
+it designs a runtime-compatible mechanism that enforces memory safety under concurrency.">
   <meta itemprop="datePublished" content="2025-04-11T00:00:00+09:00">
   <meta itemprop="dateModified" content="2026-04-29T14:24:39+09:00">
-  <meta itemprop="wordCount" content="2">
+  <meta itemprop="wordCount" content="315">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Essay,Weekly-Writing">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -266,11 +280,44 @@
     </i>
     <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[essay]</span>
     
-    <span style="opacity:0.6; font-size:0.85em;">1 min read</span>
+    <span style="opacity:0.6; font-size:0.85em;">2 min read</span>
     
   </p>
   <content>
-    <p><a href="https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/">[분류] 에세이</a></p>
+    <h1 id="abstract">Abstract</h1>
+<p>Hazard Pointers, a classic mechanism for safe memory reclamation in modern concurrent structures, struggle under overhead.
+A recent paper proposes a new validation strategy based on immutability, enabling simple and sound reuse of HP.
+This raises the question of how such bugs could be reproduced through fuzzing, and what would be required to make it effective.</p>
+<h1 id="본문">본문</h1>
+<p>A recent PLDI paper addresses memory safety in concurrent systems.[^lee2025]
+While our lab emphasizes static analysis and dynamic bug detection to ensure code safety,
+this work takes a different approach:<br>
+it designs a runtime-compatible mechanism that enforces memory safety under concurrency.</p>
+<p>Hazard Pointers (HP) are a foundational runtime mechanism for ensuring memory<br>
+safety in modern concurrent systems. They let threads declare which memory<br>
+nodes they access, preventing premature reclamation (freeing memory still in use).<br>
+This requires confirming a node&rsquo;s reachability during traversal.<br>
+However, skipping logically deleted nodes for performance breaks this assumption,<br>
+and restoring correctness via frequent restarts is costly.</p>
+<p>The paper proposes an alternative: treat deleted nodes as immutable,<br>
+so their outgoing pointers remain fixed and no new node can be inserted<br>
+in a way that renders them unreachable.</p>
+<blockquote>
+<p>The verification of the method was conducted using concurrent separation logic,
+which is well-suited for reasoning about memory safety
+that threads protect disjoint portions of memory during access.</p>
+</blockquote>
+<p>The paper&rsquo;s refinement of a foundational mechanism is undoubtedly valuable,
+but it also raises a practical question:
+without such mechanism,
+how often do such theoretically unsafe behaviors actually lead to runtime violations?</p>
+<p>Fuzzing could serve as a complementary method in answering this.
+In particular, selective instrumentation can guide fuzzing toward concurrency-critical code regions,
+allowing more targeted coverage measurement.
+To be effective in this context, fuzzing would require more precise triaging mechanisms
+that go beyond crash-based detection and incorporate deeper semantic validation.
+For example, this would require enhancing sanitizers to detect silent runtime violations
+that do not result in crashes.</p>
 
   </content>
 

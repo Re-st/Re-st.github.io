@@ -272,7 +272,7 @@
   <content>
     <h1 id="afl의-눈-trace_bits는-어떻게-채워지는가">AFL의 눈, trace_bits는 어떻게 채워지는가?</h1>
 <p>AFL이 커버리지 기반 퍼징을 수행할 때, 프로그램의 어떤 경로가 실행되었는지의 정보를 담는 그릇이 바로 64KB 크기의 공유 메모리, 즉 <strong><code>trace_bits</code></strong> 비트맵입니다.</p>
-<p>[[virgin_bits|virgin_bits]]에 대한 글에서 우리는 <code>virgin_bits</code>를 통해 퍼저가 발견한 전체 커버리지를 누적 관리한다는 것을 배웠습니다. 반면 <code>trace_bits</code>는 매번의 <strong>단일 실행 (single run)</strong> 에서 어떤 엣지가 실행되었는지를 기록하는 &lsquo;일회용 보고서&rsquo;와 같습니다.</p>
+<p><a href="https://re-st.github.io/research/virgin_bits/">virgin_bits</a>에 대한 글에서 우리는 <code>virgin_bits</code>를 통해 퍼저가 발견한 전체 커버리지를 누적 관리한다는 것을 배웠습니다. 반면 <code>trace_bits</code>는 매번의 <strong>단일 실행 (single run)</strong> 에서 어떤 엣지가 실행되었는지를 기록하는 &lsquo;일회용 보고서&rsquo;와 같습니다.</p>
 <p>그렇다면 이 <code>trace_bits</code>는 언제, 어디서, 어떻게 설정되고 기록되는 것일까요?</p>
 <h2 id="1-fuzzer와-target의-공유-메모리-연결">1. Fuzzer와 Target의 공유 메모리 연결</h2>
 <p><code>afl-fuzz</code> (퍼저)와 우리가 퍼징할 대상 프로그램 (Target), 이 둘은 운영체제의 <strong>공유 메모리(Shared Memory)</strong> 기능을 통해 같은 메모리 공간을 바라보게 됩니다.</p>

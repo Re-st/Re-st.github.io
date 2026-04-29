@@ -8,14 +8,25 @@
 <link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
 <title>Reducing Latency for Efficient Research | Park, Geon (re-st)</title>
 <meta name="title" content="Reducing Latency for Efficient Research" />
-<meta name="description" content="[분류] 에세이" />
+<meta name="description" content="Abstract
+Effective research requires minimizing unnecessary latency across tooling, scripting, and decision-making.
+This involves selecting controllable targets, avoiding overengineered automation, and critically limiting reliance on AI tools.
+By focusing time on core problems rather than operational overhead, research can proceed with greater speed.
+본문
+Research process is often obstructed by various forms of latency.
+Experiments to evaluate configuration changes are the main source of latency.
+Runtime indicators and logging are introduced to monitor progress,
+yet these measures do not fully address the issue.
+Additional overhead arises from result parsing and the response time of AI tools." />
 <meta name="keywords" content="Essay,weekly-writing," />
 
 
 <meta property="og:url" content="https://re-st.github.io/essay/reducing-latency-for-efficient-research/">
   <meta property="og:site_name" content="Park, Geon (re-st)">
   <meta property="og:title" content="Reducing Latency for Efficient Research">
-  <meta property="og:description" content="[분류] 에세이">
+  <meta property="og:description" content="Abstract Effective research requires minimizing unnecessary latency across tooling, scripting, and decision-making. This involves selecting controllable targets, avoiding overengineered automation, and critically limiting reliance on AI tools. By focusing time on core problems rather than operational overhead, research can proceed with greater speed.
+본문 Research process is often obstructed by various forms of latency.
+Experiments to evaluate configuration changes are the main source of latency. Runtime indicators and logging are introduced to monitor progress, yet these measures do not fully address the issue. Additional overhead arises from result parsing and the response time of AI tools.">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
@@ -31,16 +42,20 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
   <meta name="twitter:title" content="Reducing Latency for Efficient Research">
-  <meta name="twitter:description" content="[분류] 에세이">
+  <meta name="twitter:description" content="Abstract Effective research requires minimizing unnecessary latency across tooling, scripting, and decision-making. This involves selecting controllable targets, avoiding overengineered automation, and critically limiting reliance on AI tools. By focusing time on core problems rather than operational overhead, research can proceed with greater speed.
+본문 Research process is often obstructed by various forms of latency.
+Experiments to evaluate configuration changes are the main source of latency. Runtime indicators and logging are introduced to monitor progress, yet these measures do not fully address the issue. Additional overhead arises from result parsing and the response time of AI tools.">
 
 
 
 
   <meta itemprop="name" content="Reducing Latency for Efficient Research">
-  <meta itemprop="description" content="[분류] 에세이">
+  <meta itemprop="description" content="Abstract Effective research requires minimizing unnecessary latency across tooling, scripting, and decision-making. This involves selecting controllable targets, avoiding overengineered automation, and critically limiting reliance on AI tools. By focusing time on core problems rather than operational overhead, research can proceed with greater speed.
+본문 Research process is often obstructed by various forms of latency.
+Experiments to evaluate configuration changes are the main source of latency. Runtime indicators and logging are introduced to monitor progress, yet these measures do not fully address the issue. Additional overhead arises from result parsing and the response time of AI tools.">
   <meta itemprop="datePublished" content="2025-03-28T00:00:00+09:00">
   <meta itemprop="dateModified" content="2026-04-29T14:24:39+09:00">
-  <meta itemprop="wordCount" content="2">
+  <meta itemprop="wordCount" content="431">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Essay,Weekly-Writing">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -266,11 +281,53 @@
     </i>
     <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[essay]</span>
     
-    <span style="opacity:0.6; font-size:0.85em;">1 min read</span>
+    <span style="opacity:0.6; font-size:0.85em;">3 min read</span>
     
   </p>
   <content>
-    <p><a href="https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/">[분류] 에세이</a></p>
+    <h1 id="abstract">Abstract</h1>
+<p>Effective research requires minimizing unnecessary latency across tooling, scripting, and decision-making.
+This involves selecting controllable targets, avoiding overengineered automation, and critically limiting reliance on AI tools.
+By focusing time on core problems rather than operational overhead, research can proceed with greater speed.</p>
+<h1 id="본문">본문</h1>
+<p>Research process is often obstructed by various forms of latency.<br>
+Experiments to evaluate configuration changes are the main source of latency.
+Runtime indicators and logging are introduced to monitor progress,
+yet these measures do not fully address the issue.
+Additional overhead arises from result parsing and the response time of AI tools.</p>
+<p>For efficiency, minimizing experiment sessions can be achieved by conducting quick pre-experiments to identify good targets.
+Good target is which a small number of variance factors result in big performance gaps.
+What sounds similar but is different is targets with largest observable gaps.
+Although working on these targets seems to hold the most potential,
+such targets often involve numerous uncontrolled variables,
+leading to two problems. One is prolonged bisecting time to identify the primary cause,
+and the other is the possibility of the causes not matching our interest.
+In other words, excessive focus on edge cases leads to inefficiency.
+Recent case of my experience was working hard on such target,
+wasting time on logging intricate details, only to find out
+the target was affected by an unusual performance of the underlying fuzzing algorithm,
+which was not a field of interest.</p>
+<p>Result handling must also avoid unnecessary complexity.
+My recent experience was focusing too much on the parsing scripts reusability, which had been an over-engineering.
+Slight variation across each situation and purpose to observe
+led to frequent modifications of the script, which reduced overall robustness.
+Purpose-built lightweight scripts or even manual measurements would be more effective.</p>
+<p>Limiting dependence on AI tools is also essential.
+For example, recent ChatGPT-4o offers impressive capabilities in image generation,
+with high-quality bespoke icons per prompt.
+However the manual iteration of running-evaluating-disappointment-&lsquo;prompt-engineering&rsquo;
+introduced significant latency.
+Generating a simple image with five icons consumed nearly an hour,
+which could be done in a few minutes manually when finding icons online.
+Thinking again after few minutes would&rsquo;ve been pragmatic.
+In situations where AI-generated results fall short,
+direct communication to exchange ideas often yields faster resolution, too.</p>
+<p>These observations highlight the importance of critical thinking to
+identify the most effective research targets and strategies.
+Given the consistently limited time available for research,
+latency hopelessly leads to no observable progress, and unproductive meetings.
+Intellectual effort is most valuable when directed at the problem itself,
+not the effort to automize all and commanding machines to do everything.</p>
 
   </content>
 

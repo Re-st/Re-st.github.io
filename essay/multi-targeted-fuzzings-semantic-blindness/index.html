@@ -20,7 +20,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
     <meta property="article:published_time" content="2025-11-14T00:00:00+09:00">
-    <meta property="article:modified_time" content="2026-04-29T21:45:02+09:00">
+    <meta property="article:modified_time" content="2026-04-29T21:45:09+09:00">
     <meta property="article:tag" content="Weekly-Writing">
     <meta property="og:image" content="https://re-st.github.io/images/share.png">
 
@@ -38,8 +38,8 @@
   <meta itemprop="name" content="Multi-Targeted Fuzzing&#39;s semantic blindness">
   <meta itemprop="description" content="Multi-Targeted Fuzzing’s semantic blindness">
   <meta itemprop="datePublished" content="2025-11-14T00:00:00+09:00">
-  <meta itemprop="dateModified" content="2026-04-29T21:45:02+09:00">
-  <meta itemprop="wordCount" content="301">
+  <meta itemprop="dateModified" content="2026-04-29T21:45:09+09:00">
+  <meta itemprop="wordCount" content="343">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Weekly-Writing">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -269,12 +269,14 @@
     
   </p>
   <content>
-    <p><em>Google&rsquo;s <em>Big Sleep</em> exposes the semantic blindness of traditional fuzzing.
+    <h1 id="abstract">Abstract</h1>
+<p>Google&rsquo;s <em>Big Sleep</em> exposes the semantic blindness of traditional fuzzing.
 This blindness causes significant inefficiency in multi-targeted greybox fuzzing, where shared context is currently ignored.
-The future of multi-directed fuzzing lies in reducing this inefficiency.</em></p>
-<p>Google&rsquo;s <em>Project Zero</em> demonstrated a paradigm shift with <em>Big Sleep</em>, an LLM-based agent. LLMs can now mimic the intuition of human researchers and overcome the blindness of coverage-guided fuzzing.</p>
+The future of multi-directed fuzzing lies in reducing this inefficiency.</p>
+<h1 id="본문">본문</h1>
+<p>Google&rsquo;s <em>Project Zero</em> demonstrated a paradigm shift with <em>Big Sleep</em>, an LLM-based agent.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> LLMs can now mimic the intuition of human researchers and overcome the blindness of coverage-guided fuzzing.</p>
 <p>Traditional fuzzing relies heavily on random mutations and initial seeds. Tools like AFL fails if the harness (code used to fuzz the target program) lacks a path to the faulty function or if specific keywords are missing from the initial seed pool or dictionary. Even with relevant keywords, fuzzers lack the semantic understanding to navigate the state space. They instead rely on brute-force attempts guided by predefined metrics like coverage.</p>
-<p>In contrast, Google employs LLMs for their context and historical memory. Analysis shows that many zero-day exploits are variants of previous vulnerabilities. LLMs excel at grasping the semantic aspect of previous bugs. <em>Big Sleep</em> acts like a developer, analyzing commit history to hypothesize error states. It then deduces semantic context and generates edge cases.</p>
+<p>In contrast, Google employs LLMs for their context and historical memory. Analysis shows that many zero-day exploits are variants of previous vulnerabilities.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> LLMs excel at grasping the semantic aspect of previous bugs. <em>Big Sleep</em> acts like a developer, analyzing commit history to hypothesize error states. It then deduces semantic context and generates edge cases.</p>
 <p>AFL&rsquo;s semantic blindness creates additional inefficiency in multi-targeted scenario.
 Ideally, the hard-earned progress made towards one target should benefit others.
 However, our current methods merely adjust energy schedules without understanding the targets&rsquo; semantic similarity.
@@ -285,6 +287,18 @@ For instance, we can identify each target&rsquo;s shared bottlenecks and measure
 helps traversing diverse paths to target B.
 Insight from LLMs in <em>Big Sleep</em> can help quantify these relationships.
 This would transform accidental synergies into an intentional, coordinated discovery process.</p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Google Project Zero, &ldquo;From Naptime to Big Sleep: Using Large Language Models To Catch Vulnerabilities In Real-World Code&rdquo;, 2024. <a href="https://googleprojectzero.blogspot.com/2024/10/from-naptime-to-big-sleep.html">https://googleprojectzero.blogspot.com/2024/10/from-naptime-to-big-sleep.html</a>, Last accessed on 2025-11-22.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Google Threat Analysis Group, &ldquo;The ups and downs of 0-days&rdquo;, 2023. <a href="https://blog.google/threat-analysis-group/0-days-exploited-wild-2022/">https://blog.google/threat-analysis-group/0-days-exploited-wild-2022/</a>, Last accessed on 2025-11-22.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
   </content>
 

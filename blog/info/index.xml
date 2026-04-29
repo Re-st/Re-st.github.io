@@ -7,14 +7,14 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Wed, 29 Apr 2026 21:45:03 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 22:06:15 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/blog/info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lean</title>
       <link>https://re-st.github.io/category/lean/</link>
       <pubDate>Fri, 12 Sep 2025 15:14:57 +0900</pubDate>
       <guid>https://re-st.github.io/category/lean/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;[[Lean 게임 서버|Lean 게임 서버]]&lt;/li&gt;&#xA;&lt;li&gt;[[Why Lean 4 replaced OCaml as my Primary Language|Why Lean 4 replaced OCaml as my Primary Language]]&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/log/lean-%EA%B2%8C%EC%9E%84-%EC%84%9C%EB%B2%84/&#34;&gt;Lean 게임 서버&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/repost/why-lean-4-replaced-ocaml-as-my-primary-language/&#34;&gt;Why Lean 4 replaced OCaml as my Primary Language&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>수치해석 라이브러리의 정확성을 각잡고 증명할 DSL의 필요성 - 이원열 교수님 (포항공대)</title>

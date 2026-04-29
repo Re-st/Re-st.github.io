@@ -20,7 +20,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
     <meta property="article:published_time" content="2025-11-28T00:00:00+09:00">
-    <meta property="article:modified_time" content="2026-04-29T21:45:02+09:00">
+    <meta property="article:modified_time" content="2026-04-29T21:45:09+09:00">
     <meta property="article:tag" content="Weekly-Writing">
     <meta property="og:image" content="https://re-st.github.io/images/share.png">
 
@@ -38,8 +38,8 @@
   <meta itemprop="name" content="Directed Fuzzing $$">
   <meta itemprop="description" content="Directed Fuzzing $$">
   <meta itemprop="datePublished" content="2025-11-28T00:00:00+09:00">
-  <meta itemprop="dateModified" content="2026-04-29T21:45:02+09:00">
-  <meta itemprop="wordCount" content="317">
+  <meta itemprop="dateModified" content="2026-04-29T21:45:09+09:00">
+  <meta itemprop="wordCount" content="361">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Weekly-Writing">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -269,12 +269,14 @@
     
   </p>
   <content>
-    <p><em>cm automates bug patching using internal validation loops.
+    <h1 id="abstract">Abstract</h1>
+<p>cm automates bug patching using internal validation loops.
 But self-verification mechanisms are prone to bias and hallucination.
 Directed fuzzing is essential for rigorous verification.
-Also, cm can help Multi-targeted Directed Fuzzing&rsquo;s fault masking problem.</em></p>
-<p>DeepMind&rsquo;s cm is an AI agent designed to automate the entire remediation lifecycle, from bug discovery to verification.
-Once a faulty input is found via <em>Big Sleep</em> or <em>OSS-Fuzz</em>, internal multi-agent systems make patches and validate them against regression tests or LLM-based judges.</p>
+Also, cm can help Multi-targeted Directed Fuzzing&rsquo;s fault masking problem.</p>
+<h1 id="본문">본문</h1>
+<p>DeepMind&rsquo;s cm is an AI agent designed to automate the entire remediation lifecycle, from bug discovery to verification.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
+Once a faulty input is found via <em>Big Sleep</em> or <em>OSS-Fuzz</em>, internal multi-agent systems make patches and validate them against regression tests or LLM-based judges.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
 <p>However, such internal validations are insufficient to guarantee security.
 An AI validator may hallucinate correctness, allowing a patch to pass internal criteria while leaving the vulnerability exposed to modified inputs.
 Relying on an AI&rsquo;s self-assessment is inherently risky, as models cannot act as unbiased adversaries to their own creations.
@@ -293,6 +295,18 @@ against both remaining targets and the patch itself.
 Thus, MDF can aim multiple targets without waste, and also validate each patch at the same time.</p>
 <p>By enabling fuzzers to rapidly stress-test AI-generated patches, we provide the ground truth required to trust automated repairs.
 It would also ease the review burden imposed by the surge of AI-generated Pull Requests.</p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>DeepMind. Introducing Codemender: An AI agent for code security, 2025. <a href="https://deepmind.google/blog/introducing-codemender-an-ai-agent-for-code-security/">https://deepmind.google/blog/introducing-codemender-an-ai-agent-for-code-security/</a>, Last accessed on 2025-11-28.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Asif Razzaq. Google DeepMind Introduces CodeMender: A New AI Agent that Uses Gemini Deep Think to Automatically Patch Critical Software Vulnerabilities, 2025. <a href="https://www.marktechpost.com/2025/10/07/google-deepmind-introduces-codemender-a-new-ai-agent-that-uses-gemini-deep-think-to-automatically-patch-critical-software-vulnerabilities/">https://www.marktechpost.com/2025/10/07/google-deepmind-introduces-codemender-a-new-ai-agent-that-uses-gemini-deep-think-to-automatically-patch-critical-software-vulnerabilities/</a>, Last accessed on 2025-11-28.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
   </content>
 

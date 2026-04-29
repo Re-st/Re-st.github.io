@@ -8,14 +8,25 @@
 <link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
 <title>Environmental Factors Leading to Bias in Fuzzing | Park, Geon (re-st)</title>
 <meta name="title" content="Environmental Factors Leading to Bias in Fuzzing" />
-<meta name="description" content="[분류] 에세이" />
+<meta name="description" content="Abstract
+Fuzzing performance is often affected by subtle, easily overlooked factors, such as differences in default settings among fuzzers and hardware execution environments.
+Recognizing and mitigating these factors is essential for producing reliable and comparable experimental results.
+본문
+Many factors affect fuzzing performance, but some are easily overlooked although they can significantly distort results.
+Two particularly impactful yet often ignored variables deserve attention.
+First is the difference in default settings among fuzzers.
+AFL&#43;&#43; provides an option to apply a bespoke dictionary consisting of keyword suggestions derived from code analysis.
+However, among AFL&#43;&#43; and its derivative AFLRun, only AFLRun enables this feature by default.
+If the researcher does not set an environment variable to disable it, the dictionary will help generate seeds that satisfy conditions involving hardcoded text comparisons, leading to faster bug reproduction." />
 <meta name="keywords" content="Essay,weekly-writing," />
 
 
 <meta property="og:url" content="https://re-st.github.io/essay/environmental-factors-leading-to-bias-in-fuzzing/">
   <meta property="og:site_name" content="Park, Geon (re-st)">
   <meta property="og:title" content="Environmental Factors Leading to Bias in Fuzzing">
-  <meta property="og:description" content="[분류] 에세이">
+  <meta property="og:description" content="Abstract Fuzzing performance is often affected by subtle, easily overlooked factors, such as differences in default settings among fuzzers and hardware execution environments. Recognizing and mitigating these factors is essential for producing reliable and comparable experimental results.
+본문 Many factors affect fuzzing performance, but some are easily overlooked although they can significantly distort results. Two particularly impactful yet often ignored variables deserve attention.
+First is the difference in default settings among fuzzers. AFL&#43;&#43; provides an option to apply a bespoke dictionary consisting of keyword suggestions derived from code analysis. However, among AFL&#43;&#43; and its derivative AFLRun, only AFLRun enables this feature by default. If the researcher does not set an environment variable to disable it, the dictionary will help generate seeds that satisfy conditions involving hardcoded text comparisons, leading to faster bug reproduction.">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
@@ -31,16 +42,20 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
   <meta name="twitter:title" content="Environmental Factors Leading to Bias in Fuzzing">
-  <meta name="twitter:description" content="[분류] 에세이">
+  <meta name="twitter:description" content="Abstract Fuzzing performance is often affected by subtle, easily overlooked factors, such as differences in default settings among fuzzers and hardware execution environments. Recognizing and mitigating these factors is essential for producing reliable and comparable experimental results.
+본문 Many factors affect fuzzing performance, but some are easily overlooked although they can significantly distort results. Two particularly impactful yet often ignored variables deserve attention.
+First is the difference in default settings among fuzzers. AFL&#43;&#43; provides an option to apply a bespoke dictionary consisting of keyword suggestions derived from code analysis. However, among AFL&#43;&#43; and its derivative AFLRun, only AFLRun enables this feature by default. If the researcher does not set an environment variable to disable it, the dictionary will help generate seeds that satisfy conditions involving hardcoded text comparisons, leading to faster bug reproduction.">
 
 
 
 
   <meta itemprop="name" content="Environmental Factors Leading to Bias in Fuzzing">
-  <meta itemprop="description" content="[분류] 에세이">
+  <meta itemprop="description" content="Abstract Fuzzing performance is often affected by subtle, easily overlooked factors, such as differences in default settings among fuzzers and hardware execution environments. Recognizing and mitigating these factors is essential for producing reliable and comparable experimental results.
+본문 Many factors affect fuzzing performance, but some are easily overlooked although they can significantly distort results. Two particularly impactful yet often ignored variables deserve attention.
+First is the difference in default settings among fuzzers. AFL&#43;&#43; provides an option to apply a bespoke dictionary consisting of keyword suggestions derived from code analysis. However, among AFL&#43;&#43; and its derivative AFLRun, only AFLRun enables this feature by default. If the researcher does not set an environment variable to disable it, the dictionary will help generate seeds that satisfy conditions involving hardcoded text comparisons, leading to faster bug reproduction.">
   <meta itemprop="datePublished" content="2025-04-25T00:00:00+09:00">
   <meta itemprop="dateModified" content="2026-04-29T14:24:39+09:00">
-  <meta itemprop="wordCount" content="2">
+  <meta itemprop="wordCount" content="369">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Essay,Weekly-Writing">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -266,11 +281,41 @@
     </i>
     <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[essay]</span>
     
-    <span style="opacity:0.6; font-size:0.85em;">1 min read</span>
+    <span style="opacity:0.6; font-size:0.85em;">2 min read</span>
     
   </p>
   <content>
-    <p><a href="https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/">[분류] 에세이</a></p>
+    <h1 id="abstract">Abstract</h1>
+<p>Fuzzing performance is often affected by subtle, easily overlooked factors, such as differences in default settings among fuzzers and hardware execution environments.
+Recognizing and mitigating these factors is essential for producing reliable and comparable experimental results.</p>
+<h1 id="본문">본문</h1>
+<p>Many factors affect fuzzing performance, but some are easily overlooked although they can significantly distort results.
+Two particularly impactful yet often ignored variables deserve attention.</p>
+<p>First is the difference in default settings among fuzzers.
+AFL++ provides an option to apply a bespoke dictionary consisting of keyword suggestions derived from code analysis.
+However, among AFL++ and its derivative AFLRun, only AFLRun enables this feature by default.
+If the researcher does not set an environment variable to disable it, the dictionary will help generate seeds that satisfy conditions involving hardcoded text comparisons, leading to faster bug reproduction.</p>
+<p>Second is the hardware execution environment that affects EPS (executions per second).
+EPS means the number of test cases completed each second, and a higher EPS allows faster seed generation and increases the likelihood of triggering bugs earlier.
+Such environmental factors include the number of parallel sessions running and the core locations they are distributed on.
+High number of parallel sessions leads to lower EPS, probably because of higher temperature or memory bus congestion.
+The stark increase of EPS from 90 to 130 in Figure fig:eps-temporal when 20 of 40 sessions complete is a good example.
+Moreover, on our server arranged in rows of 8 cores, sessions assigned to outer rows showed lower EPS, as clearly shown in Figure fig:eps-spatial.
+To mitigate this unexplained bias, we now assign cores evenly between inner and outer rows for each experiment.</p>
+<p>Distorted experimental results from unintended factors can lead to false conclusions, particularly in comparative fuzzing research.
+Hence researchers must understand fuzzer settings and hardware, and maintain it consistent.
+figure[h!]
+[width=0.7]{2025-04-25/rise-in-eps.png}
+Change in EPS (executions per second) during experiment.
+A sharp increase is observed around 16:40, when 20 of the 40 sessions completed.
+This rise is reflected in the sky-blue filled area, which represents the EPS values over time.
+fig:eps-temporal
+1em
+[width=0.7]{2025-04-25/eps-in-mujs.png}
+EPS during fuzzing of the {mujs program, depending on core placement.
+Sessions with mid-range iteration numbers, corresponding to cores near the center, show higher EPS.}
+fig:eps-spatial
+figure</p>
 
   </content>
 

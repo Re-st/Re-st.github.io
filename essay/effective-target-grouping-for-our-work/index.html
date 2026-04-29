@@ -8,14 +8,21 @@
 <link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
 <title>Effective Target Grouping for Our work | Park, Geon (re-st)</title>
 <meta name="title" content="Effective Target Grouping for Our work" />
-<meta name="description" content="[분류] 에세이" />
+<meta name="description" content="Abstract
+Grouping works only if it lowers the round-robin divisor, but safe grouping is hard because targets often compete and degrade each other&rsquo;s search efficiency.
+Redirecting all group energy to already-covered targets, using a find-and-prune strategy, helps resolve this contention.
+본문
+We aim to extend a single-target directed fuzzer to support multiple targets simultaneously.
+Our baseline implementation uses a round-robin scheduler that divides time equally among targets, but with large number of targets, each gets too little attention.
+To reduce the divisor, we attempt grouping, but only when it avoids intra-group inefficiency." />
 <meta name="keywords" content="Essay,weekly-writing," />
 
 
 <meta property="og:url" content="https://re-st.github.io/essay/effective-target-grouping-for-our-work/">
   <meta property="og:site_name" content="Park, Geon (re-st)">
   <meta property="og:title" content="Effective Target Grouping for Our work">
-  <meta property="og:description" content="[분류] 에세이">
+  <meta property="og:description" content="Abstract Grouping works only if it lowers the round-robin divisor, but safe grouping is hard because targets often compete and degrade each other’s search efficiency. Redirecting all group energy to already-covered targets, using a find-and-prune strategy, helps resolve this contention.
+본문 We aim to extend a single-target directed fuzzer to support multiple targets simultaneously. Our baseline implementation uses a round-robin scheduler that divides time equally among targets, but with large number of targets, each gets too little attention. To reduce the divisor, we attempt grouping, but only when it avoids intra-group inefficiency.">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
@@ -31,16 +38,18 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
   <meta name="twitter:title" content="Effective Target Grouping for Our work">
-  <meta name="twitter:description" content="[분류] 에세이">
+  <meta name="twitter:description" content="Abstract Grouping works only if it lowers the round-robin divisor, but safe grouping is hard because targets often compete and degrade each other’s search efficiency. Redirecting all group energy to already-covered targets, using a find-and-prune strategy, helps resolve this contention.
+본문 We aim to extend a single-target directed fuzzer to support multiple targets simultaneously. Our baseline implementation uses a round-robin scheduler that divides time equally among targets, but with large number of targets, each gets too little attention. To reduce the divisor, we attempt grouping, but only when it avoids intra-group inefficiency.">
 
 
 
 
   <meta itemprop="name" content="Effective Target Grouping for Our work">
-  <meta itemprop="description" content="[분류] 에세이">
+  <meta itemprop="description" content="Abstract Grouping works only if it lowers the round-robin divisor, but safe grouping is hard because targets often compete and degrade each other’s search efficiency. Redirecting all group energy to already-covered targets, using a find-and-prune strategy, helps resolve this contention.
+본문 We aim to extend a single-target directed fuzzer to support multiple targets simultaneously. Our baseline implementation uses a round-robin scheduler that divides time equally among targets, but with large number of targets, each gets too little attention. To reduce the divisor, we attempt grouping, but only when it avoids intra-group inefficiency.">
   <meta itemprop="datePublished" content="2025-05-23T00:00:00+09:00">
   <meta itemprop="dateModified" content="2026-04-29T14:24:39+09:00">
-  <meta itemprop="wordCount" content="2">
+  <meta itemprop="wordCount" content="307">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Essay,Weekly-Writing">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -266,11 +275,33 @@
     </i>
     <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[essay]</span>
     
-    <span style="opacity:0.6; font-size:0.85em;">1 min read</span>
+    <span style="opacity:0.6; font-size:0.85em;">2 min read</span>
     
   </p>
   <content>
-    <p><a href="https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/">[분류] 에세이</a></p>
+    <h1 id="abstract">Abstract</h1>
+<p>Grouping works only if it lowers the round-robin divisor, but safe grouping is hard because targets often compete and degrade each other&rsquo;s search efficiency.
+Redirecting all group energy to already-covered targets, using a find-and-prune strategy, helps resolve this contention.</p>
+<h1 id="본문">본문</h1>
+<p>We aim to extend a single-target directed fuzzer to support multiple targets simultaneously.
+Our baseline implementation uses a round-robin scheduler that divides time equally among targets, but with large number of targets, each gets too little attention.
+To reduce the divisor, we attempt grouping, but only when it avoids intra-group inefficiency.</p>
+<p>Targets interfere when their guidance does not help each other.
+One indicator is when their semantic slices do not overlap, meaning targets are on divergent paths.
+Even with overlap, grouping slices of different sizes can be inefficient, since smaller slices often provide more focused guidance,
+and merging it harms its usefulness.
+Moreover, targets with similar slices may still differ in how inputs evolve toward them,
+for example, if their call-graph paths diverge.
+These issues make safe grouping rare, causing most combinations to collapse to atomic scheduling.</p>
+<p>To preserve the gains of grouping, we tolerate limited contention but control energy dynamically.
+We group by slice or call-graph similarity to assure similar guidance, and reassign energy within a group to seeds that reach any target locations.
+This rewards easy-to-reach targets, which can be a guiding light to all targets in the group.
+Additionally, timely pruning of reached targets is required to avoid overinvestment and to increase energy for remaining members.
+Currently pruning when the crash reproduction for the location completes is one idea.</p>
+<p>In short, effective grouping tolerates minor interference by dynamic control, like rewarding early progress.
+Other ideas in mind are to weigh on small-slice targets (under the intuition
+that such have more focused guidance),
+or to keep slices separate and simply divide group-rationed time evenly.</p>
 
   </content>
 

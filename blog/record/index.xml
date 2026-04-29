@@ -7,14 +7,14 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Wed, 29 Apr 2026 21:45:03 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 22:06:15 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/blog/record/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024 정보보호대학원 세미나 QnA</title>
       <link>https://re-st.github.io/log/2024-%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%8C%80%ED%95%99%EC%9B%90-%EC%84%B8%EB%AF%B8%EB%82%98-qna/</link>
       <pubDate>Tue, 03 Dec 2024 18:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/log/2024-%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%8C%80%ED%95%99%EC%9B%90-%EC%84%B8%EB%AF%B8%EB%82%98-qna/</guid>
-      <description>&lt;p&gt;2024 정보보호대학원 세미나를 들으며 연사님께 질문했던 기록을 남겨 둔다.&#xA;다양한 분야의 전문가를 만날 수 있어 정말 행운이었다.&lt;/p&gt;&#xA;&lt;p&gt;참고 - [[정보보호대학원 세미나를 들으며|정보보호대학원 세미나를 들으며]]&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;93--abhik-roychoudhury-national-university-of-singapore-교수-fuzz-testing&#34;&gt;9.3 / Abhik Roychoudhury (National University of Singapore 교수) Fuzz Testing&lt;/h1&gt;&#xA;&lt;p&gt;질문: 퍼징의 에너지 스케줄링을 최적화 문제라고 하셨습니다. 최적화 문제는 보통 정해진 분포를 대상으로 합니다. 하지만 퍼징에서 커버리지 등의 지표는 사전에 알 수 있는 방법이 거의 없습니다. 이런 경우 최적화를 위해 어떤 접근을 하시나요?&lt;/p&gt;&#xA;&lt;p&gt;답: 퍼징이 실용적인 도구로서 가지는 가장 큰 장점 중 하나는 확장성입니다. 즉, 사용자가 자신의 목표에 맞게 설정을 조정하여 활용할 수 있다는 점입니다.&lt;/p&gt;</description>
+      <description>&lt;p&gt;2024 정보보호대학원 세미나를 들으며 연사님께 질문했던 기록을 남겨 둔다.&#xA;다양한 분야의 전문가를 만날 수 있어 정말 행운이었다.&lt;/p&gt;&#xA;&lt;p&gt;참고 - &lt;a href=&#34;https://re-st.github.io/essay/%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%8C%80%ED%95%99%EC%9B%90-%EC%84%B8%EB%AF%B8%EB%82%98%EB%A5%BC-%EB%93%A4%EC%9C%BC%EB%A9%B0/&#34;&gt;정보보호대학원 세미나를 들으며&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;93--abhik-roychoudhury-national-university-of-singapore-교수-fuzz-testing&#34;&gt;9.3 / Abhik Roychoudhury (National University of Singapore 교수) Fuzz Testing&lt;/h1&gt;&#xA;&lt;p&gt;질문: 퍼징의 에너지 스케줄링을 최적화 문제라고 하셨습니다. 최적화 문제는 보통 정해진 분포를 대상으로 합니다. 하지만 퍼징에서 커버리지 등의 지표는 사전에 알 수 있는 방법이 거의 없습니다. 이런 경우 최적화를 위해 어떤 접근을 하시나요?&lt;/p&gt;&#xA;&lt;p&gt;답: 퍼징이 실용적인 도구로서 가지는 가장 큰 장점 중 하나는 확장성입니다. 즉, 사용자가 자신의 목표에 맞게 설정을 조정하여 활용할 수 있다는 점입니다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

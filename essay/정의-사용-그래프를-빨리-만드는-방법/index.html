@@ -8,19 +8,31 @@
 <link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
 <title>정의 사용 그래프를 빨리 만드는 방법 | Park, Geon (re-st)</title>
 <meta name="title" content="정의 사용 그래프를 빨리 만드는 방법" />
-<meta name="description" content="[분류] 에세이" />
+<meta name="description" content="Abstract
+정적 분석을 활용한 정의-사용 그래프 생성 과정의 속도를 개선하기 위해
+세 가지 방향으로 탐구를 진행하고 있다.
+이는 실행 불가 코드 제거,
+포인터 집합의 크기 관리,
+그리고 부하가 큰 함수 발견 및 처리로,
+이 과정에서 사람의 개입을 없애는 것까지가 연구의 목표이다.
+본문
+우리 연구실의 지향성 퍼징 기술인 DAFL과 Topuzz는
+목표 지점으로 이어지는 데이터 흐름을 활용하여 좋은 성과를 내고 있으며,
+이를 위해 필수적인 작업이 정적 분석을 통한 정의-사용 그래프의 생성이다.
+그러나 Topuzz에서는 각 목표 지점별로 그래프를 생성해야 하므로 큰 시간 부하에 직면했다." />
 <meta name="keywords" content="Essay,weekly-writing," />
 
 
 <meta property="og:url" content="https://re-st.github.io/essay/%EC%A0%95%EC%9D%98-%EC%82%AC%EC%9A%A9-%EA%B7%B8%EB%9E%98%ED%94%84%EB%A5%BC-%EB%B9%A8%EB%A6%AC-%EB%A7%8C%EB%93%9C%EB%8A%94-%EB%B0%A9%EB%B2%95/">
   <meta property="og:site_name" content="Park, Geon (re-st)">
   <meta property="og:title" content="정의 사용 그래프를 빨리 만드는 방법">
-  <meta property="og:description" content="[분류] 에세이">
+  <meta property="og:description" content="Abstract 정적 분석을 활용한 정의-사용 그래프 생성 과정의 속도를 개선하기 위해 세 가지 방향으로 탐구를 진행하고 있다. 이는 실행 불가 코드 제거, 포인터 집합의 크기 관리, 그리고 부하가 큰 함수 발견 및 처리로, 이 과정에서 사람의 개입을 없애는 것까지가 연구의 목표이다.
+본문 우리 연구실의 지향성 퍼징 기술인 DAFL과 Topuzz는 목표 지점으로 이어지는 데이터 흐름을 활용하여 좋은 성과를 내고 있으며, 이를 위해 필수적인 작업이 정적 분석을 통한 정의-사용 그래프의 생성이다. 그러나 Topuzz에서는 각 목표 지점별로 그래프를 생성해야 하므로 큰 시간 부하에 직면했다.">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
     <meta property="article:published_time" content="2024-12-06T00:00:00+09:00">
-    <meta property="article:modified_time" content="2026-04-29T21:45:02+09:00">
+    <meta property="article:modified_time" content="2026-04-29T22:06:15+09:00">
     <meta property="article:tag" content="Essay">
     <meta property="article:tag" content="Weekly-Writing">
     <meta property="og:image" content="https://re-st.github.io/images/share.png">
@@ -31,16 +43,18 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
   <meta name="twitter:title" content="정의 사용 그래프를 빨리 만드는 방법">
-  <meta name="twitter:description" content="[분류] 에세이">
+  <meta name="twitter:description" content="Abstract 정적 분석을 활용한 정의-사용 그래프 생성 과정의 속도를 개선하기 위해 세 가지 방향으로 탐구를 진행하고 있다. 이는 실행 불가 코드 제거, 포인터 집합의 크기 관리, 그리고 부하가 큰 함수 발견 및 처리로, 이 과정에서 사람의 개입을 없애는 것까지가 연구의 목표이다.
+본문 우리 연구실의 지향성 퍼징 기술인 DAFL과 Topuzz는 목표 지점으로 이어지는 데이터 흐름을 활용하여 좋은 성과를 내고 있으며, 이를 위해 필수적인 작업이 정적 분석을 통한 정의-사용 그래프의 생성이다. 그러나 Topuzz에서는 각 목표 지점별로 그래프를 생성해야 하므로 큰 시간 부하에 직면했다.">
 
 
 
 
   <meta itemprop="name" content="정의 사용 그래프를 빨리 만드는 방법">
-  <meta itemprop="description" content="[분류] 에세이">
+  <meta itemprop="description" content="Abstract 정적 분석을 활용한 정의-사용 그래프 생성 과정의 속도를 개선하기 위해 세 가지 방향으로 탐구를 진행하고 있다. 이는 실행 불가 코드 제거, 포인터 집합의 크기 관리, 그리고 부하가 큰 함수 발견 및 처리로, 이 과정에서 사람의 개입을 없애는 것까지가 연구의 목표이다.
+본문 우리 연구실의 지향성 퍼징 기술인 DAFL과 Topuzz는 목표 지점으로 이어지는 데이터 흐름을 활용하여 좋은 성과를 내고 있으며, 이를 위해 필수적인 작업이 정적 분석을 통한 정의-사용 그래프의 생성이다. 그러나 Topuzz에서는 각 목표 지점별로 그래프를 생성해야 하므로 큰 시간 부하에 직면했다.">
   <meta itemprop="datePublished" content="2024-12-06T00:00:00+09:00">
-  <meta itemprop="dateModified" content="2026-04-29T21:45:02+09:00">
-  <meta itemprop="wordCount" content="2">
+  <meta itemprop="dateModified" content="2026-04-29T22:06:15+09:00">
+  <meta itemprop="wordCount" content="376">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Essay,Weekly-Writing">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -266,11 +280,48 @@
     </i>
     <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[essay]</span>
     
-    <span style="opacity:0.6; font-size:0.85em;">1 min read</span>
+    <span style="opacity:0.6; font-size:0.85em;">2 min read</span>
     
   </p>
   <content>
-    <p><a href="https://re-st.github.io/category/%EB%82%B4-%EC%97%90%EC%84%B8%EC%9D%B4/">[분류] 에세이</a></p>
+    <h1 id="abstract">Abstract</h1>
+<p>정적 분석을 활용한 정의-사용 그래프 생성 과정의 속도를 개선하기 위해
+세 가지 방향으로 탐구를 진행하고 있다.
+이는 실행 불가 코드 제거,
+포인터 집합의 크기 관리,
+그리고 부하가 큰 함수 발견 및 처리로,
+이 과정에서 사람의 개입을 없애는 것까지가 연구의 목표이다.</p>
+<h1 id="본문">본문</h1>
+<p>우리 연구실의 지향성 퍼징 기술인 DAFL과 Topuzz는
+목표 지점으로 이어지는 데이터 흐름을 활용하여 좋은 성과를 내고 있으며,
+이를 위해 필수적인 작업이 정적 분석을 통한 정의-사용 그래프의 생성이다.
+그러나 Topuzz에서는 각 목표 지점별로 그래프를 생성해야 하므로 큰 시간 부하에 직면했다.</p>
+<p>이를 빠르게 하기 위해 다음과 같은 방향을 도전 중이다.
+첫째로, 퍼징 대상인 고정된 명령 옵션에서 실행 가능성이 없는 코드 지점을 지운다.
+우리는 벤치마크 프로그램을 면밀히 읽고 그러한 지점을 직접 분류하여 속도가 크게 향상되는 것을 확인했다.
+정적 분석기가 해당 지점을 무시하는 것은 이미 구현되었으며, 앞으로는 이런 지점을 자동으로 선정하는
+것이 큰 과제이다.
+컴파일러의 상수 전파를 넘어 사용자 설정값을 활용하여 코드를 더 고정시키는 코드 디블로팅 연구[^trimmer] 등을 참고할 수 있다.</p>
+<p>둘째로, 불확실한 경로를 모은 포인터 집합의 크기를 관리한다.
+변수에 함수나 변수 포인터를 저장하고 넘겨받아 실행하는 코드를 정적 분석하면
+그게 가지고 있을 수 있는 포인터의 집합이 나오는데, 이가 클수록 정적 분석의 탐색 시간이 늘어난다.
+포인터 집합의 크기를 제한해본 결과 일부 벤치마크에서 성능 개선을 확인했다.
+이는 속도 외적으로 중요한 과제 두 가지를 더 만드는데, 강제조정이 부정확성을 높이는지 파악하는 것과,
+분석이 무한 루프에 빠지지 않도록 포인터 집합을 잘 관리하는 것이다.</p>
+<p>셋째로, 실행 경로 파악을 어렵게 하는 함수들을 식별하여 다른 곳에 흡수시키거나 제거한다.
+이런 함수는 여러 부모 함수에서 호출되고 여러 자식 함수를 호출하여 정적 분석이 파악하는 실행 경로를 섞어놓고,
+따라서 분석의 탐색 시간을 늘린다.
+현재 직접 코드를 읽거나 정적 분석 결과의 포인터 집합 크기를 분석하여 그런 함수를 추측하는 단계에 있으며,
+이러한 함수들을 다른 함수에 흡수시거나,
+정의-사용 관계에 큰 영향을 주지 않는다면 건너뛰도록 해 실행 경로 혼선을 막는 걸 수동으로 시연해 볼 예정이다.</p>
+<p>코드 중 정적 분석 그래프 제작에 시간 부하를 주는 부분을 식별하고 이를 처리하는 과정을 자동화하는 것이 목표이다.
+이는 여러 면에서 이점이 있다.
+첫째, 정의-사용 그래프를 적극 활용하는 우리 연구실에 적합한 연구이다.
+둘째, 우리만큼 정의-사용 그래프를 많이 사용하는 연구실은 드물기 때문에 이 연구는 매우 새로운 시도이다.
+또한, 이 연구는 정적 분석 연구이면서 정의-사용 그래프를 매개로 코드 자동 수정,
+퍼징 등 다른 연구와 결합되는 다각적 연구의 기반이 되어 다양한 방향으로 확장할 수 있다.
+예를 들어, Topuzz에서는 정의-사용 그래프의 일부 정보만 활용하므로,
+이를 유지하는 한에서 정적 분석을 더욱 간략화할 수도 있을 것이다.</p>
 
   </content>
 
