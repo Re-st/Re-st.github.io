@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 08:37:10 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 08:41:50 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Repost</title>
@@ -98,20 +98,6 @@
       <link>https://re-st.github.io/blog/afl/</link>
       <pubDate>Thu, 24 Jul 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/blog/afl/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>PLDI2025</title>
-      <link>https://re-st.github.io/blog/pldi2025/</link>
-      <pubDate>Sun, 29 Jun 2025 00:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/blog/pldi2025/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Trip</title>
-      <link>https://re-st.github.io/blog/trip/</link>
-      <pubDate>Sun, 29 Jun 2025 00:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/blog/trip/</guid>
       <description></description>
     </item>
     <item>
