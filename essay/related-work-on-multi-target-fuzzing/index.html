@@ -40,7 +40,7 @@ by dynamically adjusting energy on each targets." />
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
     <meta property="article:published_time" content="2025-02-28T00:00:00+09:00">
-    <meta property="article:modified_time" content="2026-04-29T14:24:39+09:00">
+    <meta property="article:modified_time" content="2026-04-29T22:06:32+09:00">
     <meta property="article:tag" content="Essay">
     <meta property="article:tag" content="Weekly-Writing">
     <meta property="og:image" content="https://re-st.github.io/images/share.png">
@@ -61,7 +61,7 @@ by dynamically adjusting energy on each targets." />
   <meta itemprop="description" content="Abstract There has been several multi-target fuzzing techniques, with approaches orthogonal to ours. We focus on the problem to be solved by using only selective coverage, and tackle the problem of unfair energy allocation due to the similarity of targets.
 본문 Directed Grey-box Fuzzing (DGF) 은 프로그램 내의 특정한 목표 지점을 집중해서 퍼징하는 기법이다. 이는 주로 주어진 목표 지점과 시드의 커버리지와의 거리를 이용해, 가까운 시드에 에너지를 몰아주는 방식으로 구현이 된다. 이와 함께 multiple target locations을 지정할 수 있는 퍼징도 나오고 있다. AFLGo가 최초의 것 중 하나로, 목표별로 계산되는 거리를 합쳐서 에너지를 주도록 한다. 그러나 각 타깃별 정보를 단순히 합치는 것을 넘어, 각 개별 목표로 향하는 시드를 관리해 에너지를 조정하게끔 하는 퍼징이 존재한다. Directed Grey-box Fuzzing (DGF) is a technique that focuses on fuzzing specific target locations within a program. It typically prioritizes seeds based on their proximity to the target, allocating more energy to seeds closer to it. Fuzzing techniques supporting multiple target locations have emerged since AFLGo, by averaging proximity to each target into a single scalar value. Later work take into account a more fine-grained approach, by dynamically adjusting energy on each targets.">
   <meta itemprop="datePublished" content="2025-02-28T00:00:00+09:00">
-  <meta itemprop="dateModified" content="2026-04-29T14:24:39+09:00">
+  <meta itemprop="dateModified" content="2026-04-29T22:06:32+09:00">
   <meta itemprop="wordCount" content="664">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Essay,Weekly-Writing">

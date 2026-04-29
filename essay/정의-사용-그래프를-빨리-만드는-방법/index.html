@@ -32,7 +32,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
     <meta property="article:published_time" content="2024-12-06T00:00:00+09:00">
-    <meta property="article:modified_time" content="2026-04-29T22:06:15+09:00">
+    <meta property="article:modified_time" content="2026-04-30T07:31:50+09:00">
     <meta property="article:tag" content="Essay">
     <meta property="article:tag" content="Weekly-Writing">
     <meta property="og:image" content="https://re-st.github.io/images/share.png">
@@ -53,8 +53,8 @@
   <meta itemprop="description" content="Abstract 정적 분석을 활용한 정의-사용 그래프 생성 과정의 속도를 개선하기 위해 세 가지 방향으로 탐구를 진행하고 있다. 이는 실행 불가 코드 제거, 포인터 집합의 크기 관리, 그리고 부하가 큰 함수 발견 및 처리로, 이 과정에서 사람의 개입을 없애는 것까지가 연구의 목표이다.
 본문 우리 연구실의 지향성 퍼징 기술인 DAFL과 Topuzz는 목표 지점으로 이어지는 데이터 흐름을 활용하여 좋은 성과를 내고 있으며, 이를 위해 필수적인 작업이 정적 분석을 통한 정의-사용 그래프의 생성이다. 그러나 Topuzz에서는 각 목표 지점별로 그래프를 생성해야 하므로 큰 시간 부하에 직면했다.">
   <meta itemprop="datePublished" content="2024-12-06T00:00:00+09:00">
-  <meta itemprop="dateModified" content="2026-04-29T22:06:15+09:00">
-  <meta itemprop="wordCount" content="376">
+  <meta itemprop="dateModified" content="2026-04-30T07:31:50+09:00">
+  <meta itemprop="wordCount" content="390">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Essay,Weekly-Writing">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -301,7 +301,7 @@
 우리는 벤치마크 프로그램을 면밀히 읽고 그러한 지점을 직접 분류하여 속도가 크게 향상되는 것을 확인했다.
 정적 분석기가 해당 지점을 무시하는 것은 이미 구현되었으며, 앞으로는 이런 지점을 자동으로 선정하는
 것이 큰 과제이다.
-컴파일러의 상수 전파를 넘어 사용자 설정값을 활용하여 코드를 더 고정시키는 코드 디블로팅 연구[^trimmer] 등을 참고할 수 있다.</p>
+컴파일러의 상수 전파를 넘어 사용자 설정값을 활용하여 코드를 더 고정시키는 코드 디블로팅 연구<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> 등을 참고할 수 있다.</p>
 <p>둘째로, 불확실한 경로를 모은 포인터 집합의 크기를 관리한다.
 변수에 함수나 변수 포인터를 저장하고 넘겨받아 실행하는 코드를 정적 분석하면
 그게 가지고 있을 수 있는 포인터의 집합이 나오는데, 이가 클수록 정적 분석의 탐색 시간이 늘어난다.
@@ -322,6 +322,15 @@
 퍼징 등 다른 연구와 결합되는 다각적 연구의 기반이 되어 다양한 방향으로 확장할 수 있다.
 예를 들어, Topuzz에서는 정의-사용 그래프의 일부 정보만 활용하므로,
 이를 유지하는 한에서 정적 분석을 더욱 간략화할 수도 있을 것이다.</p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Aatira Anum Ahmad and et al.. &ldquo;Trimmer: An Automated System for Configuration-Based Software Debloating&rdquo;&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
   </content>
 

@@ -20,7 +20,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
     <meta property="article:published_time" content="2025-10-17T00:00:00+09:00">
-    <meta property="article:modified_time" content="2026-04-29T21:45:09+09:00">
+    <meta property="article:modified_time" content="2026-04-29T22:06:32+09:00">
     <meta property="article:tag" content="Weekly-Writing">
     <meta property="og:image" content="https://re-st.github.io/images/share.png">
 
@@ -38,8 +38,8 @@
   <meta itemprop="name" content="Parse, don&#39;t Validate: Aid Static Analysis for C">
   <meta itemprop="description" content="Parse, don’t Vali">
   <meta itemprop="datePublished" content="2025-10-17T00:00:00+09:00">
-  <meta itemprop="dateModified" content="2026-04-29T21:45:09+09:00">
-  <meta itemprop="wordCount" content="284">
+  <meta itemprop="dateModified" content="2026-04-29T22:06:32+09:00">
+  <meta itemprop="wordCount" content="290">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Weekly-Writing">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -276,7 +276,7 @@ can significantly enhance static analysis by providing analyzers with powerful, 
 A compelling application is the systematic classification of function pointers
 in the C language to refine analysis precision.</p>
 <h1 id="본문">본문</h1>
-<p>The &ldquo;Parse, Don&rsquo;t Validate&rdquo;[^ParseDontValidate] philosophy, a zeitgeist for type-driven design,
+<p>The &ldquo;Parse, Don&rsquo;t Validate&rdquo;<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> philosophy, a zeitgeist for type-driven design,
 argues that replacing runtime validation checks with an upfront parsing step at the system&rsquo;s boundary makes program logic more robust and simple.
 For example, a validation-based approach for head returns an optional, monadic type,
 burdening the data pipeline with repetitive, often unnecessary downstream checks.
@@ -294,6 +294,15 @@ For example, a project like MP4Box loses crucial domain information by using gen
 However, by classifying them based on their semantic input/output contracts,
 and using separate parsing functions for each type,
 static analysis could leverage this classification to infer more precise abstract domains.</p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Alexis King. &ldquo;Parse, Don&rsquo;t Validate&rdquo;. <a href="https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/">https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
   </content>
 
