@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Research on Park, Geon (re-st)</title><link>https://re-st.github.io/categories/research/</link><description>Recent content in Research on Park, Geon (re-st)</description><generator>Hugo</generator><language>ko-kr</language><copyright>Copyright © 2026, Geon Park.</copyright><lastBuildDate>Wed, 29 Apr 2026 14:23:43 +0900</lastBuildDate><atom:link href="https://re-st.github.io/categories/research/index.xml" rel="self" type="application/rss+xml"/><item><title>AFL</title><link>https://re-st.github.io/category/afl/</link><pubDate>Mon, 06 Oct 2025 21:22:27 +0900</pubDate><guid>https://re-st.github.io/category/afl/</guid><description>&lt;h1 id="afl-구성요소"&gt;AFL 구성요소&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Research on Park, Geon (re-st)</title><link>https://re-st.github.io/categories/research/</link><description>Recent content in Research on Park, Geon (re-st)</description><generator>Hugo</generator><language>ko-kr</language><copyright>Copyright © 2026, Geon Park.</copyright><lastBuildDate>Wed, 29 Apr 2026 14:28:04 +0900</lastBuildDate><atom:link href="https://re-st.github.io/categories/research/index.xml" rel="self" type="application/rss+xml"/><item><title>AFL</title><link>https://re-st.github.io/category/afl/</link><pubDate>Mon, 06 Oct 2025 21:22:27 +0900</pubDate><guid>https://re-st.github.io/category/afl/</guid><description>&lt;h1 id="afl-구성요소"&gt;AFL 구성요소&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;[[virgin_bits|virgin_bits]]&lt;/li&gt;
 &lt;li&gt;[[trace_bits|trace_bits]]&lt;/li&gt;
@@ -25,7 +25,7 @@
 &lt;h1 id="flag-algebra"&gt;Flag algebra&lt;/h1&gt;
 &lt;p&gt;옛날에 유행하던. 10년 동안 open problem을 풀음.
 Stability = opt.sol이 근본적으로 유일한지, 아니면 여러 구조가 비슷한 최적치를 갖는지
-subgraph density 가 중요 개념. \(p (H, G)\) \((,|,H,|,=m \le ,|,G,|,=n)\)&lt;/p&gt;
+subgraph density 가 중요 개념. \(p (H, G)\) \((\,|\,H\,|\,=m \le \,|\,G\,|\,=n)\)&lt;/p&gt;
 &lt;p&gt;infinite case (\(n\to \infty\))일 때 flag alg. 가 잘 작동.
 e.g. \(\lim_{ n \to \infty }\sup K_{3}\text{-free}\)&lt;/p&gt;</description></item><item><title>Seed-Prover</title><link>https://re-st.github.io/research/seed-prover/</link><pubDate>Wed, 06 Aug 2025 13:47:44 +0900</pubDate><guid>https://re-st.github.io/research/seed-prover/</guid><description>&lt;ul&gt;
 &lt;li&gt;ByteDance 개발 &lt;strong&gt;Seed-Prover&lt;/strong&gt;&lt;/li&gt;
