@@ -7,14 +7,14 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 08:47:42 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 08:53:02 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/blog/info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>수학과 AI</title>
       <link>https://re-st.github.io/category/%EC%88%98%ED%95%99%EA%B3%BC-ai/</link>
       <pubDate>Fri, 26 Sep 2025 13:47:27 +0900</pubDate>
       <guid>https://re-st.github.io/category/%EC%88%98%ED%95%99%EA%B3%BC-ai/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/research/seed-prover/&#34;&gt;Seed-Prover, IMO 금메달 수준 2025-08&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/repost/%EC%B1%97gpt-%EC%88%98%ED%95%99%EC%9E%90%EC%97%90%EA%B2%8C-%EC%9C%84%ED%98%91%EC%9D%B4-%EB%90%A0%EA%B9%8C/&#34;&gt;챗GPT, 수학자에게 위협이 될까 2023-06&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/repost/gpt-%EC%97%90%EB%A5%B4%EB%90%98%EC%8B%9C-%EB%AC%B8%EC%A0%9C-%ED%95%9C-%EB%B2%88%EC%97%90-%EC%A6%9D%EB%AA%85-2026-04/&#34;&gt;GPT, 에르되시 문제 한 번에 증명 2026-04&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/repost/%EC%B1%97gpt-%EC%88%98%ED%95%99%EC%9E%90%EC%97%90%EA%B2%8C-%EC%9C%84%ED%98%91%EC%9D%B4-%EB%90%A0%EA%B9%8C/&#34;&gt;챗GPT, 수학자에게 위협이 될까 2023-06&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/repost/alphaproof-alphageometry-chatgpt-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%8B%A0%EA%B2%BD-%EA%B8%B0%ED%98%B8%EC%A0%81-ai%EC%9D%98-%EB%AF%B8%EB%9E%98-2024-07/&#34;&gt;AlphaProof, AlphaGeometry, ChatGPT 그리고 신경-기호적 AI의 미래 2024-07&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/research/seed-prover/&#34;&gt;Seed-Prover, IMO 금메달 수준 2025-08&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/repost/gpt-%EC%97%90%EB%A5%B4%EB%90%98%EC%8B%9C-%EB%AC%B8%EC%A0%9C-%ED%95%9C-%EB%B2%88%EC%97%90-%EC%A6%9D%EB%AA%85-2026-04/&#34;&gt;GPT, 에르되시 문제 한 번에 증명 2026-04&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Lean</title>

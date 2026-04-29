@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 08:47:43 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 08:53:03 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Whoami</title>
@@ -210,7 +210,7 @@
       <link>https://re-st.github.io/category/%EC%88%98%ED%95%99%EA%B3%BC-ai/</link>
       <pubDate>Fri, 26 Sep 2025 13:47:27 +0900</pubDate>
       <guid>https://re-st.github.io/category/%EC%88%98%ED%95%99%EA%B3%BC-ai/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/research/seed-prover/&#34;&gt;Seed-Prover, IMO 금메달 수준 2025-08&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/repost/%EC%B1%97gpt-%EC%88%98%ED%95%99%EC%9E%90%EC%97%90%EA%B2%8C-%EC%9C%84%ED%98%91%EC%9D%B4-%EB%90%A0%EA%B9%8C/&#34;&gt;챗GPT, 수학자에게 위협이 될까 2023-06&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/repost/gpt-%EC%97%90%EB%A5%B4%EB%90%98%EC%8B%9C-%EB%AC%B8%EC%A0%9C-%ED%95%9C-%EB%B2%88%EC%97%90-%EC%A6%9D%EB%AA%85-2026-04/&#34;&gt;GPT, 에르되시 문제 한 번에 증명 2026-04&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/repost/%EC%B1%97gpt-%EC%88%98%ED%95%99%EC%9E%90%EC%97%90%EA%B2%8C-%EC%9C%84%ED%98%91%EC%9D%B4-%EB%90%A0%EA%B9%8C/&#34;&gt;챗GPT, 수학자에게 위협이 될까 2023-06&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/repost/alphaproof-alphageometry-chatgpt-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%8B%A0%EA%B2%BD-%EA%B8%B0%ED%98%B8%EC%A0%81-ai%EC%9D%98-%EB%AF%B8%EB%9E%98-2024-07/&#34;&gt;AlphaProof, AlphaGeometry, ChatGPT 그리고 신경-기호적 AI의 미래 2024-07&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/research/seed-prover/&#34;&gt;Seed-Prover, IMO 금메달 수준 2025-08&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/repost/gpt-%EC%97%90%EB%A5%B4%EB%90%98%EC%8B%9C-%EB%AC%B8%EC%A0%9C-%ED%95%9C-%EB%B2%88%EC%97%90-%EC%A6%9D%EB%AA%85-2026-04/&#34;&gt;GPT, 에르되시 문제 한 번에 증명 2026-04&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>git status에서 한글이 깨질 때 (`%20` 등) 한글 뜨게 하기</title>
@@ -434,14 +434,14 @@
       <link>https://re-st.github.io/essay/related-work-on-multi-target-fuzzing/</link>
       <pubDate>Fri, 28 Feb 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/related-work-on-multi-target-fuzzing/</guid>
-      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;There has been several multi-target fuzzing techniques, with approaches orthogonal to ours.&#xA;We focus on the problem to be solved by using only selective coverage,&#xA;and tackle the problem of unfair energy allocation due to the similarity of targets.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Directed Grey-box Fuzzing (DGF) 은 프로그램 내의 특정한 목표 지점을 집중해서 퍼징하는 기법이다.&#xA;이는 주로 주어진 목표 지점과 시드의 커버리지와의 거리를 이용해, 가까운 시드에 에너지를 몰아주는 방식으로&#xA;구현이 된다.&#xA;이와 함께 multiple target locations을 지정할 수 있는 퍼징도 나오고 있다.&#xA;AFLGo가 최초의 것 중 하나로, 목표별로 계산되는 거리를 합쳐서 에너지를 주도록 한다.&#xA;그러나 각 타깃별 정보를 단순히 합치는 것을 넘어, 각 개별 목표로 향하는 시드를 관리해&#xA;에너지를 조정하게끔 하는 퍼징이 존재한다.&#xA;Directed Grey-box Fuzzing (DGF) is a technique that focuses on fuzzing specific target locations within a program.&#xA;It typically prioritizes seeds based on their proximity to the target,&#xA;allocating more energy to seeds closer to it.&#xA;Fuzzing techniques supporting multiple target locations have emerged since AFLGo,&#xA;by averaging proximity to each target into a single scalar value.&#xA;Later work take into account a more fine-grained approach,&#xA;by dynamically adjusting energy on each targets.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;There has been several multi-target fuzzing techniques, with approaches orthogonal to ours.&#xA;We focus on the problem to be solved by using only selective coverage,&#xA;and tackle the problem of unfair energy allocation due to the similarity of targets.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Directed Grey-box Fuzzing (DGF) 은 프로그램 내의 특정한 목표 지점을 집중해서 퍼징하는 기법이다.&#xA;이는 주로 주어진 목표 지점과 시드의 커버리지와의 거리를 이용해, 가까운 시드에 에너지를 몰아주는 방식으로&#xA;구현이 된다.&#xA;이와 함께 multiple target locations을 지정할 수 있는 퍼징도 나오고 있다.&#xA;AFLGo가 최초의 것 중 하나로, 목표별로 계산되는 거리를 합쳐서 에너지를 주도록 한다.&#xA;그러나 각 타깃별 정보를 단순히 합치는 것을 넘어, 각 개별 목표로 향하는 시드를 관리해&#xA;에너지를 조정하게끔 하는 퍼징이 존재한다.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>AlphaProof, AlphaGeometry, ChatGPT 그리고 신경-기호적 AI의 미래</title>
-      <link>https://re-st.github.io/repost/alphaproof-alphageometry-chatgpt-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%8B%A0%EA%B2%BD-%EA%B8%B0%ED%98%B8%EC%A0%81-ai%EC%9D%98-%EB%AF%B8%EB%9E%98/</link>
+      <title>AlphaProof, AlphaGeometry, ChatGPT 그리고 신경-기호적 AI의 미래 2024-07</title>
+      <link>https://re-st.github.io/repost/alphaproof-alphageometry-chatgpt-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%8B%A0%EA%B2%BD-%EA%B8%B0%ED%98%B8%EC%A0%81-ai%EC%9D%98-%EB%AF%B8%EB%9E%98-2024-07/</link>
       <pubDate>Mon, 17 Feb 2025 08:00:42 +0900</pubDate>
-      <guid>https://re-st.github.io/repost/alphaproof-alphageometry-chatgpt-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%8B%A0%EA%B2%BD-%EA%B8%B0%ED%98%B8%EC%A0%81-ai%EC%9D%98-%EB%AF%B8%EB%9E%98/</guid>
-      <description>AlphaProof, AlphaGeometry, ChatGPT 그리고 신경-기호적 AI의 미래</description>
+      <guid>https://re-st.github.io/repost/alphaproof-alphageometry-chatgpt-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%8B%A0%EA%B2%BD-%EA%B8%B0%ED%98%B8%EC%A0%81-ai%EC%9D%98-%EB%AF%B8%EB%9E%98-2024-07/</guid>
+      <description>AlphaProof, AlphaGeometry, ChatGPT 그리고 신경-기호적 AI의 미래 2024-07</description>
     </item>
     <item>
       <title>DIKUW 모델과 AI 시대의 연구자 역량</title>

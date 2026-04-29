@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 08:47:42 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 08:53:02 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/repost/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GPT, 에르되시 문제 한 번에 증명 2026-04</title>
@@ -31,11 +31,11 @@
       <description>&lt;ul&gt;&#xA;&lt;li&gt;Ocaml은 보수적 언어로, 안정적이지만 변화가 더디다.&lt;/li&gt;&#xA;&lt;li&gt;Jane Street가 개발한 Dune 같은 도구가 생태계를 발전시켰지만, 언어 자체는 크게 바뀌지 않는다.&lt;/li&gt;&#xA;&lt;li&gt;반면, Lean은 더 자주 바뀌고 매크로 작성이 쉬워 변화에 빠르게 대응할 수 있다.&lt;/li&gt;&#xA;&lt;li&gt;Ocaml 숙련자들은 매크로 변수 이름 충돌 같은 문제는 걱정하지 않지만, Lean은 이러한 걸 직접 해결해주고, 또한 매크로 작성도 훨씬 쉽다.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
-      <title>AlphaProof, AlphaGeometry, ChatGPT 그리고 신경-기호적 AI의 미래</title>
-      <link>https://re-st.github.io/repost/alphaproof-alphageometry-chatgpt-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%8B%A0%EA%B2%BD-%EA%B8%B0%ED%98%B8%EC%A0%81-ai%EC%9D%98-%EB%AF%B8%EB%9E%98/</link>
+      <title>AlphaProof, AlphaGeometry, ChatGPT 그리고 신경-기호적 AI의 미래 2024-07</title>
+      <link>https://re-st.github.io/repost/alphaproof-alphageometry-chatgpt-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%8B%A0%EA%B2%BD-%EA%B8%B0%ED%98%B8%EC%A0%81-ai%EC%9D%98-%EB%AF%B8%EB%9E%98-2024-07/</link>
       <pubDate>Mon, 17 Feb 2025 08:00:42 +0900</pubDate>
-      <guid>https://re-st.github.io/repost/alphaproof-alphageometry-chatgpt-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%8B%A0%EA%B2%BD-%EA%B8%B0%ED%98%B8%EC%A0%81-ai%EC%9D%98-%EB%AF%B8%EB%9E%98/</guid>
-      <description>AlphaProof, AlphaGeometry, ChatGPT 그리고 신경-기호적 AI의 미래</description>
+      <guid>https://re-st.github.io/repost/alphaproof-alphageometry-chatgpt-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%8B%A0%EA%B2%BD-%EA%B8%B0%ED%98%B8%EC%A0%81-ai%EC%9D%98-%EB%AF%B8%EB%9E%98-2024-07/</guid>
+      <description>AlphaProof, AlphaGeometry, ChatGPT 그리고 신경-기호적 AI의 미래 2024-07</description>
     </item>
     <item>
       <title>당신과 당신의 연구</title>
