@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 08:29:55 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 08:33:54 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Whoami</title>
@@ -365,6 +365,13 @@
       <pubDate>Thu, 19 Jun 2025 08:01:33 +0900</pubDate>
       <guid>https://re-st.github.io/seminar/lean-machine-checked-mathematics-and-verified-programming-past-and-future-leonardo-de-moura/</guid>
       <description>Lean Machine-Checked Mathematics and Verified Programming, Past and Future (Leonardo de Moura)</description>
+    </item>
+    <item>
+      <title>PLDI 2025</title>
+      <link>https://re-st.github.io/category/pldi-2025/</link>
+      <pubDate>Mon, 16 Jun 2025 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/category/pldi-2025/</guid>
+      <description>PLDI 2025</description>
     </item>
     <item>
       <title>MkDocs, Hugo, Jekyll (정적 사이트 생성기) 용도 비교</title>
