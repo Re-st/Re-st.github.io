@@ -20,7 +20,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="research">
     <meta property="article:published_time" content="2024-07-01T12:00:00+09:00">
-    <meta property="article:modified_time" content="2026-04-30T08:33:54+09:00">
+    <meta property="article:modified_time" content="2026-04-30T08:37:10+09:00">
     <meta property="article:tag" content="Paper-Summary">
     <meta property="og:image" content="https://re-st.github.io/images/share.png">
 
@@ -38,8 +38,8 @@
   <meta itemprop="name" content="(다중 지향성 퍼징) AFLRun">
   <meta itemprop="description" content="클러스터링을 하는 다중 지향성 퍼징">
   <meta itemprop="datePublished" content="2024-07-01T12:00:00+09:00">
-  <meta itemprop="dateModified" content="2026-04-30T08:33:54+09:00">
-  <meta itemprop="wordCount" content="744">
+  <meta itemprop="dateModified" content="2026-04-30T08:37:10+09:00">
+  <meta itemprop="wordCount" content="737">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Paper-Summary">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -324,14 +324,14 @@
 </li>
 </ul>
 <h1 id="note">Note</h1>
-<p>[[favored|favored]]를 사용. favored일 시 에너지 score대로, 아닐 시 1/20을 곱함.
+<p>favored를 사용. favored일 시 에너지 score대로, 아닐 시 1/20을 곱함.
 Besides a target virgin map for each cluster introduced in §5.2, AFLRUN also maintains a top-rated array for each cluster, similar to the original top-rated array discussed in §2.1.</p>
-<p>When a new seed is added to the corpus, a set of top-rated arrays are selected using Algorithm 5, and we update these top-rated arrays using the same method as [[AFL++|AFL++]].</p>
-<p>Using these top-rated arrays, we can select a set of favored seeds. We can apply the [[(설명) 퍼징에서의 큐 컬링 (인풋 줄세우기)|queue culling]] algorithm, similar to AFL++, on top-rated arrays of all clusters to select the
+<p>When a new seed is added to the corpus, a set of top-rated arrays are selected using Algorithm 5, and we update these top-rated arrays using the same method as AFL++.</p>
+<p>Using these top-rated arrays, we can select a set of favored seeds. We can apply the queue culling algorithm, similar to AFL++, on top-rated arrays of all clusters to select the
 favored seeds.</p>
 <p>For each top-rated array, we use the queue culling algorithm from AFL++ to select a set of favored seeds, and we then take the union of each set of favored seeds from each top-rated array to obtain the total set of favored seeds.</p>
 <h1 id="내-생각-7월">내 생각 (7월)</h1>
-<p>[[AFLRun과 Topuzz 비교|AFLRun과 Topuzz 비교]]
+<p>AFLRun과 Topuzz 비교
 논문 &ldquo;Toward Unbiased Multiple-Target Fuzzing with Path Diversity&quot;를 각 챕터별로 정리한다.</p>
 <h3 id="abstract">Abstract</h3>
 <p>AFLRUN이라는 새로운 퍼징 솔루션을 제안한다. 이는</p>
@@ -349,7 +349,7 @@ preconditioned flaw activation, or PFA</p>
 post-target activation, or PTA</p>
 <h3 id="2-background">2. Background</h3>
 <h4 id="21-coverage-guided-fuzzing">2.1 Coverage-guided Fuzzing</h4>
-<p>커버리지 기반 퍼징은 초기 시드 입력을 변형하여 테스트 케이스를 생성하고, 새로운 동작을 유발하는 테스트 케이스를 시드로 저장하여 [[커버리지|커버리지]]를 확장하는 방식으로 작동한다. [[AFL++|AFL++]]은 실행 경로를 기록하고, 새로운 비트를 덮는 테스트 케이스를 시드로 추가하여 커버리지를 향상시킨다.</p>
+<p>커버리지 기반 퍼징은 초기 시드 입력을 변형하여 테스트 케이스를 생성하고, 새로운 동작을 유발하는 테스트 케이스를 시드로 저장하여 커버리지를 확장하는 방식으로 작동한다. AFL++은 실행 경로를 기록하고, 새로운 비트를 덮는 테스트 케이스를 시드로 추가하여 커버리지를 향상시킨다.</p>
 <h4 id="22-directed-fuzzing">2.2 Directed Fuzzing</h4>
 <p>Directed Fuzzing은 특정 목표 위치를 테스트하는데 중점을 두고, 시드의 목표 위치 근접도를 평가하여 에너지를 할당한다. 이 접근법은 목표 위치에 더 가까운 시드에 더 많은 에너지를 할당하여 목표 위치의 취약점을 빠르게 발견하는 것을 목표로 한다.</p>
 <h3 id="3-motivation">3. Motivation</h3>

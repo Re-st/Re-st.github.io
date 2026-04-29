@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 08:33:54 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 08:37:10 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/blog/explanation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AFL</title>
@@ -35,7 +35,7 @@
       <link>https://re-st.github.io/category/%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/category/%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/prosyslab/pl-wiki/blob/main/%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95%28Directed-Fuzzing%29.md#%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-%EB%B6%84%EC%95%BC%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90&#34;&gt;(펌) 지향성 퍼징 - PL Wiki&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;[[(에세이) MODFuzz - 다른 관점의 지향성 퍼징|(에세이) MODFuzz - 다른 관점의 지향성 퍼징]]&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/prosyslab/pl-wiki/blob/main/%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95%28Directed-Fuzzing%29.md#%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-%EB%B6%84%EC%95%BC%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90&#34;&gt;(펌) 지향성 퍼징 - PL Wiki&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;(에세이) MODFuzz - 다른 관점의 지향성 퍼징&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>퍼징에서의 큐 컬링 (인풋 줄세우기)</title>

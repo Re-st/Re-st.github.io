@@ -7,14 +7,14 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 08:33:54 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 08:37:10 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/research/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Seed-Prover</title>
       <link>https://re-st.github.io/research/seed-prover/</link>
       <pubDate>Wed, 06 Aug 2025 13:47:44 +0900</pubDate>
       <guid>https://re-st.github.io/research/seed-prover/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;ByteDance 개발 &lt;strong&gt;Seed-Prover&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/category/lean/&#34;&gt;Lean&lt;/a&gt; 기반 정리 증명 모델, [[IMO (올림피아드)|IMO (올림피아드)]] 수준 문제 해결 시도&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;lemma-style proving&lt;/strong&gt;: 본 증명 전 레마 생성, 레마의 시드풀 관리, 단계적 접근&lt;/li&gt;&#xA;&lt;li&gt;Lean 컴파일러 피드백으로 증명 수정·보완, 필요 시 새로운 레마 도출&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Seed-Geometry&lt;/strong&gt;: 기하학 문제 전용 추론 엔진 추가, 복잡한 도형 문제 대응&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/pdf/2507.23726&#34;&gt;(논문) Seed-Prover: Deep and Broad Reasoning for Automated Theorem Proving&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.hanbit.co.kr/channel/view.html?cmscode=CMS0397526637&#34;&gt;hanbit.co.kr 논문요약&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/ByteDance-Seed/Seed-Prover/blob/main/SeedProver/imo2025/IMO2025/P1.lean&#34;&gt;IMO 2025의 P1 증명 (P1.lean)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;ByteDance 개발 &lt;strong&gt;Seed-Prover&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/category/lean/&#34;&gt;Lean&lt;/a&gt; 기반 정리 증명 모델, IMO (올림피아드) 수준 문제 해결 시도&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;lemma-style proving&lt;/strong&gt;: 본 증명 전 레마 생성, 레마의 시드풀 관리, 단계적 접근&lt;/li&gt;&#xA;&lt;li&gt;Lean 컴파일러 피드백으로 증명 수정·보완, 필요 시 새로운 레마 도출&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Seed-Geometry&lt;/strong&gt;: 기하학 문제 전용 추론 엔진 추가, 복잡한 도형 문제 대응&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/pdf/2507.23726&#34;&gt;(논문) Seed-Prover: Deep and Broad Reasoning for Automated Theorem Proving&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.hanbit.co.kr/channel/view.html?cmscode=CMS0397526637&#34;&gt;hanbit.co.kr 논문요약&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/ByteDance-Seed/Seed-Prover/blob/main/SeedProver/imo2025/IMO2025/P1.lean&#34;&gt;IMO 2025의 P1 증명 (P1.lean)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>(다중 지향성 퍼징) Lyso</title>

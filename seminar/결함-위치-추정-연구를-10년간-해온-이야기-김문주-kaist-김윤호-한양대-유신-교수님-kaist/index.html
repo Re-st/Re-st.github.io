@@ -35,7 +35,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="seminar">
     <meta property="article:published_time" content="2024-07-08T14:30:48+09:00">
-    <meta property="article:modified_time" content="2026-04-30T08:33:54+09:00">
+    <meta property="article:modified_time" content="2026-04-30T08:37:10+09:00">
     <meta property="article:tag" content="Lecture-Summary">
     <meta property="og:image" content="https://re-st.github.io/images/share.png">
 
@@ -61,8 +61,8 @@
 기존 접근법의 한계: Spectrum-Based FL (연사: 김윤호) 결함 위치 추정 (FL)의 전통적인 접근법은 Spectrum-Based FL (SBFL) 입니다. 이는 프로그램의 실행 ‘스펙트럼’ (커버리지)을 분석하는 방식입니다.
 이론: passing test (통과하는 테스트)에서 실행되는 코드 라인과 failing test (실패하는 테스트)에서 실행되는 코드 라인을 비교합니다. “실패하는 테스트에서는 많이 실행되지만, 통과하는 테스트에서는 적게 실행되는 라인&#34;이 버그일 확률이 높다고 추정합니다.">
   <meta itemprop="datePublished" content="2024-07-08T14:30:48+09:00">
-  <meta itemprop="dateModified" content="2026-04-30T08:33:54+09:00">
-  <meta itemprop="wordCount" content="364">
+  <meta itemprop="dateModified" content="2026-04-30T08:37:10+09:00">
+  <meta itemprop="wordCount" content="358">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Lecture-Summary">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -322,7 +322,7 @@
 <p><strong>MUSEUM (실전 적용):</strong> 이 기술을 <strong>Java</strong>처럼 인터페이스가 많아 분석이 까다로운 실제 프로그램에 적용했습니다.
 (참고: MUSEUM은 1년 반 동안 개발자들이 해결하지 못하고 헛방 패치만 내놓았던 <strong>Eclipse bug 322222</strong>의 원인을 쉽게 찾아내는 데 성공)</p>
 <ul>
-<li>[[MUSEUM (프로그램)|MUSEUM (프로그램)]]</li>
+<li>MUSEUM (프로그램)</li>
 </ul>
 </li>
 </ul>
@@ -330,13 +330,13 @@
 <p>하지만 mutation은 (MUSE든 어떤 방식이든) 근본적으로 비싼 작업입니다.</p>
 <ul>
 <li>
-<p><strong>비용 절감 1 ([[Ahead-of-Time MBFL|Ahead-of-Time MBFL]]):</strong> 미리 변이를 계산해두는 방식입니다.</p>
+<p><strong>비용 절감 1 (Ahead-of-Time MBFL):</strong> 미리 변이를 계산해두는 방식입니다.</p>
 </li>
 <li>
-<p><strong>비용 절감 2 ([Predictive Mutation Analysis]):</strong> <code>test_user_login_fail</code> 같은 테스트 케이스의 &lsquo;이름&rsquo;과 <code>user.password</code> 같은 소스 코드의 &lsquo;identifier&rsquo; (식별자)를 엮는, 이른바 **[[natural language channel|natural language channel]]**을 이용합니다. 이를 통해 <strong>실제로 돌려보지 않고도</strong> 유용할 것 같은 변이를 &lsquo;예측&rsquo; (predict)합니다.</p>
+<p><strong>비용 절감 2 ([Predictive Mutation Analysis]):</strong> <code>test_user_login_fail</code> 같은 테스트 케이스의 &lsquo;이름&rsquo;과 <code>user.password</code> 같은 소스 코드의 &lsquo;identifier&rsquo; (식별자)를 엮는, 이른바 <strong>natural language channel</strong>을 이용합니다. 이를 통해 <strong>실제로 돌려보지 않고도</strong> 유용할 것 같은 변이를 &lsquo;예측&rsquo; (predict)합니다.</p>
 </li>
 </ul>
-<p>현재 이 연구는 [[SBFL|SBFL]], [[MBFL|MBFL]], [[APR|APR]] (자동 버그 수정), LLM 등을 모두 합치는 방향 (예: [[defect prediction|defect prediction]], [[unified debugging|unified debugging]])으로 진화하고 있습니다. (유신 교수 등 여러 사람과 협업)</p>
+<p>현재 이 연구는 SBFL, MBFL, APR (자동 버그 수정), LLM 등을 모두 합치는 방향 (예: defect prediction, unified debugging)으로 진화하고 있습니다. (유신 교수 등 여러 사람과 협업)</p>
 <hr>
 <h1 id="결론-하나의-문제와-협력의-가치">결론: 하나의 문제와 협력의 가치</h1>
 <p><strong>&ldquo;Sticking to a single problem can be fun, if the problem is important.&rdquo;</strong></p>

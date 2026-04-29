@@ -39,7 +39,7 @@
   <meta itemprop="description" content="너는 오류를 낚는 어부가 되어라">
   <meta itemprop="datePublished" content="2023-09-01T12:00:00+09:00">
   <meta itemprop="dateModified" content="2026-04-30T08:30:02+09:00">
-  <meta itemprop="wordCount" content="194">
+  <meta itemprop="wordCount" content="190">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Paper-Summary">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -270,22 +270,22 @@
   </p>
   <content>
     <h1 id="요약">요약</h1>
-<p>타깃이 자동으로 정해지는 <a href="https://re-st.github.io/category/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/">다중 지향성 퍼징</a>으로, [[434_정적분석|정적분석]] 결과인 수천 개의 예상지점을 가지고 인풋을 [[power schedule|스케쥴링]] 함.</p>
+<p>타깃이 자동으로 정해지는 <a href="https://re-st.github.io/category/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/">다중 지향성 퍼징</a>으로, 정적분석 결과인 수천 개의 예상지점을 가지고 인풋을 스케쥴링 함.</p>
 <h2 id="키워드">키워드</h2>
-<p><a href="https://re-st.github.io/research/%ED%8D%BC%EC%A7%95%EC%97%90%EC%84%9C%EC%9D%98-%ED%81%90-%EC%BB%AC%EB%A7%81-%EC%9D%B8%ED%92%8B-%EC%A4%84%EC%84%B8%EC%9A%B0%EA%B8%B0/">큐 컬링</a> | [[Sanitizer-guided fuzzing (SGF)|Sanitizer-guided fuzzing (SGF)]]</p>
+<p><a href="https://re-st.github.io/research/%ED%8D%BC%EC%A7%95%EC%97%90%EC%84%9C%EC%9D%98-%ED%81%90-%EC%BB%AC%EB%A7%81-%EC%9D%B8%ED%92%8B-%EC%A4%84%EC%84%B8%EC%9A%B0%EA%B8%B0/">큐 컬링</a> | Sanitizer-guided fuzzing (SGF)</p>
 <h2 id="1-목적">1. <strong>목적</strong></h2>
 <ul>
-<li><strong>다이나믹</strong> <a href="https://re-st.github.io/research/%ED%8D%BC%EC%A7%95%EC%97%90%EC%84%9C%EC%9D%98-%ED%81%90-%EC%BB%AC%EB%A7%81-%EC%9D%B8%ED%92%8B-%EC%A4%84%EC%84%B8%EC%9A%B0%EA%B8%B0/">큐 컬링</a>으로 퍼저의 성능 최적화 (w/ .[[favored|favored]] flag)</li>
+<li><strong>다이나믹</strong> <a href="https://re-st.github.io/research/%ED%8D%BC%EC%A7%95%EC%97%90%EC%84%9C%EC%9D%98-%ED%81%90-%EC%BB%AC%EB%A7%81-%EC%9D%B8%ED%92%8B-%EC%A4%84%EC%84%B8%EC%9A%B0%EA%B8%B0/">큐 컬링</a>으로 퍼저의 성능 최적화 (w/ .favored flag)</li>
 <li>시드-타깃 거리 계산 개선 (w/ function-lvl CG, CFG, and Static analysis)</li>
 <li>타깃 우선순위 동적 조정 (w/ instrumentation)</li>
 </ul>
 <p><img src="/Figure%203%20Overview%20of%20FISHFUZZ%20workflow.png" alt="../Figure 3 Overview of FISHFUZZ workflow.png"/></p>
 <h2 id="3-구현">3. <strong>구현</strong></h2>
 <ul>
-<li><strong>모든 [[sanitizer|sanitizer]] 레이블 고려</strong>
+<li><strong>모든 sanitizer 레이블 고려</strong>
 <ul>
-<li>[[llvm bc|llvm bc]]에 instrument한 그 각 줄을 타깃으로</li>
-<li>sanitizer 레이블은 [[compiler-rt|compiler-rt]]</li>
+<li>llvm bc에 instrument한 그 각 줄을 타깃으로</li>
+<li>sanitizer 레이블은 compiler-rt</li>
 </ul>
 </li>
 <li><strong>LLVM 기반 정적 분석</strong> 1,500LoC
@@ -296,7 +296,7 @@
 </li>
 <li><strong>AFL/AFL++ 확장</strong>
 <ul>
-<li>[[cull_queue|cull_queue]]에서 inter-function exploration 구현 2,000LoC</li>
+<li>cull_queue에서 inter-function exploration 구현 2,000LoC</li>
 </ul>
 </li>
 <li><strong>컴파일러 Instrumentation</strong> 200LoC
@@ -310,7 +310,7 @@
 <ul>
 <li>벤치마크 성능 비교
 <ul>
-<li>[[TortoiseFuzz|TortoiseFuzz]], [[SAVIOR|SAVIOR]]의 벤치마크 + ad-hoc 벤치마크 (Two-Stage)
+<li>TortoiseFuzz, SAVIOR의 벤치마크 + ad-hoc 벤치마크 (Two-Stage)
 <ul>
 <li>제외: non-resolvable exception, non-compatible to OS</li>
 </ul>

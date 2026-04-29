@@ -38,7 +38,7 @@
   <meta itemprop="description" content="Titan">
   <meta itemprop="datePublished" content="2025-02-07T08:18:36+09:00">
   <meta itemprop="dateModified" content="2026-04-30T08:24:19+09:00">
-  <meta itemprop="wordCount" content="719">
+  <meta itemprop="wordCount" content="714">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -280,17 +280,17 @@
   <content>
     <h1 id="생각">생각</h1>
 <ul>
-<li>[[Beacon|Beacon]]의 [[precond-infer|precond-infer]] 사용.</li>
+<li>Beacon의 precond-infer 사용.</li>
 <li>has the potential to improve the performance of other directed fuzzers 라는데 유의깊게 볼구절인가? 해결 : RQ3이다.</li>
-<li>이런것도 [[symbolic execution|symbolic execution]]으로 볼 수 있나?</li>
+<li>이런것도 symbolic execution으로 볼 수 있나?</li>
 </ul>
 <h1 id="개요">개요</h1>
 <p>2024 다중 지향성 퍼징 중국 논문.
 타깃간 상관 고려</p>
 <h1 id="배경">배경</h1>
-<h2 id="paflpafl-extend-fuzzing-optimizations-of-single-mode-to-industrial-parallel-mode">[[PAFL|PAFL]]: Extend fuzzing optimizations of single mode to industrial parallel mode</h2>
+<h2 id="pafl-extend-fuzzing-optimizations-of-single-mode-to-industrial-parallel-mode">PAFL: Extend fuzzing optimizations of single mode to industrial parallel mode</h2>
 <ul>
-<li>deploying multiple [[동시성 퍼징|concurrent fuzzer]] instances</li>
+<li>deploying multiple concurrent fuzzer instances</li>
 <li>여러 타깃을 위해 이걸 쓰는건 impractical</li>
 <li>Most other directed fuzzers [2], [10]–[14] do not support reproducing multiple targets simultaneously anyway</li>
 </ul>
@@ -298,13 +298,13 @@
 <ul>
 <li>[15]–[18] have endeavored to address multiple targets simultaneously using general feedback, e.g., average control-flow distance,</li>
 <li>their effectiveness significantly diminishes when tackling multiple target</li>
-<li>\(\S\) 5.1 : [[AFLGo|AFLGo]]는 멀티타깃 지원하니 멀티로 한번에 넣은 걸 -Multi, 하나씩 넣고 병렬 돌리는 걸 -Single이라고 말하자.</li>
+<li>\(\S\) 5.1 : AFLGo는 멀티타깃 지원하니 멀티로 한번에 넣은 걸 -Multi, 하나씩 넣고 병렬 돌리는 걸 -Single이라고 말하자.</li>
 <li>AFLGo-Multi [15] 에 넣어보니, 그냥 AFLGo-Single 병렬로 한 뻐저보다 3.2x 느림, 각 타깃 reproduce하는 데 든 평균시간이. AFLGo-Single 병렬뻐저가 쓴 시간을 다 더하면, AFLGO-Multi보다 3.6x 느림.</li>
 <li>문제의식 → 좀 나아져야 한다</li>
 </ul>
 <h1 id="문제">문제</h1>
 <h2 id="synergy-ignorance-problem">synergy ignorance problem</h2>
-<p>[[타깃간 상관(correlation)|타깃간 상관(correlation)]]을 이용치 못함</p>
+<p>타깃간 상관(correlation)을 이용치 못함</p>
 <ul>
 <li>bias (avoid hard-to-reach), lowering prob. of exploring</li>
 <li>massive redundant executions
@@ -348,7 +348,7 @@ eg_ We can use the correlation, \(conflict(b, l_5, t_1, t_2)=true\), to know tha
 <p><img src="/Pasted%20image%2020240205221859.png" alt="Pasted image 20240205221859.png"/>
 B_ti를, 직접 바꾸고 돌려봐서 구하긴 하지만, 모든 B_ti를 2^n개 다 하진 않는다.</p>
 <ol>
-<li>dynamically infer the input bytes that can influence the values of the variables in the independent correlations using <strong>inference-based [[taint analysis|taint analysis]]</strong> [22FairFuzz], [25RedQueen], [26GreyOne].</li>
+<li>dynamically infer the input bytes that can influence the values of the variables in the independent correlations using <strong>inference-based taint analysis</strong> [22FairFuzz], [25RedQueen], [26GreyOne].</li>
 <li>mutate the bytes that influence the independent variables respectively</li>
 </ol>
 <p>그래서 구현은?</p>
@@ -360,13 +360,13 @@ B_ti를, 직접 바꾸고 돌려봐서 구하긴 하지만, 모든 B_ti를 2^n�
 ㅅㅇ. 생각보다 많을거 같은데..</p>
 <h2 id="벤치마크">벤치마크</h2>
 <ul>
-<li>[[MAGMA|MAGMA]] : CVEs chosen from nine programs (that are freq’ly used for evaluating fuzzers). 이 중 6개만 쓴다.
+<li>MAGMA : CVEs chosen from nine programs (that are freq’ly used for evaluating fuzzers). 이 중 6개만 쓴다.
 <ul>
 <li>최근에 추가된 lua는 어떤 state-of-the-art fuzzer도 제대로 안돌아가므로 않으므로 뺀다.</li>
 <li>sqlite3와 PhP는 파마산이 안돌아가므로 뺀다.</li>
 </ul>
 </li>
-<li>[[MAGMA|MAGMA]]와 state-of-the-art directed fuzzer가 쓴 프로그램의 최신버전의 CVE들.
+<li>MAGMA와 state-of-the-art directed fuzzer가 쓴 프로그램의 최신버전의 CVE들.
 <ul>
 <li>for reproducing ‘real vulnerabilities’ and detecting incomplete fixes of the previously reported bugs in the newest version of the programs.</li>
 </ul>
@@ -374,12 +374,12 @@ B_ti를, 직접 바꾸고 돌려봐서 구하긴 하지만, 모든 B_ti를 2^n�
 </ul>
 <h2 id="통계">통계</h2>
 <ul>
-<li>We use the [[Mann-Whitney U|Mann-Whitney U Test]] to demonstrate the statistical significance of our framework’s contribution</li>
+<li>We use the Mann-Whitney U Test to demonstrate the statistical significance of our framework’s contribution</li>
 </ul>
 <h1 id="결과">결과</h1>
 <ul>
-<li>Titan may require longer [[pre-analysis|pre-analysis]] for larger programs, e.g., <code>openssl</code> and <code>php</code>, it is acceptable because the analysis time could be spent offline, and Titan saves more time during the fuzzing period.</li>
-<li>결과는 Table 4에 있는데, 버그찾는 시간 ([[TTE|reproduction time]])을 비교했다. Ratio (Titan보다 몇배 걸렸는지) 보니 Titan이 전반적으로 우수하다 (멀티타깃으로 실험해서 그런걸지도). 근데 Table5보니까 Ratio를 산술평균 낸거같은데.. 기하평균이나 [[조화평균|조화평균]]이 낫지 않으려나 싶다. pvalue가 &lt;0.01인게 많으니, 확실히 나아졌다고 보인다.</li>
+<li>Titan may require longer pre-analysis for larger programs, e.g., <code>openssl</code> and <code>php</code>, it is acceptable because the analysis time could be spent offline, and Titan saves more time during the fuzzing period.</li>
+<li>결과는 Table 4에 있는데, 버그찾는 시간 (reproduction time)을 비교했다. Ratio (Titan보다 몇배 걸렸는지) 보니 Titan이 전반적으로 우수하다 (멀티타깃으로 실험해서 그런걸지도). 근데 Table5보니까 Ratio를 산술평균 낸거같은데.. 기하평균이나 조화평균이 낫지 않으려나 싶다. pvalue가 &lt;0.01인게 많으니, 확실히 나아졌다고 보인다.</li>
 </ul>
 <h1 id="감상">감상</h1>
 <p>멀티타깃은 역시 정적분석인데, 그걸 Beacon을 그대로 끌어서 내다니 부러운 연구다. 성능이 너무 많이 좋아졌는데, 자신들이 ‘멀티 타깃에서 타깃간의 관계를 고려한 첫 사람들’이라는 점을 강조하니, 납득이 일견 가면서도, 정적분석으로 구간이 이렇게 명확히까지 나뉘나? 라는 게 의구심이 든다. 또한, 타깃으로 갈 가능성이 있는 input bit flip까지 체크하면서도 깃헙코드가 짧아서, 어떻게 돌아가는지 볼 이유가 있다. 즉 테크니컬한 면이 궁금하다.</p>

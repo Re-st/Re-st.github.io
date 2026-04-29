@@ -20,7 +20,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="research">
     <meta property="article:published_time" content="2023-09-01T12:00:00+09:00">
-    <meta property="article:modified_time" content="2026-04-30T08:33:54+09:00">
+    <meta property="article:modified_time" content="2026-04-30T08:37:10+09:00">
     <meta property="article:tag" content="Explanation">
     <meta property="og:image" content="https://re-st.github.io/images/share.png">
 
@@ -38,7 +38,7 @@
   <meta itemprop="name" content="퍼징에서의 큐 컬링 (인풋 줄세우기)">
   <meta itemprop="description" content="퍼징에서 다음 시드를 선택하는 알고리즘">
   <meta itemprop="datePublished" content="2023-09-01T12:00:00+09:00">
-  <meta itemprop="dateModified" content="2026-04-30T08:33:54+09:00">
+  <meta itemprop="dateModified" content="2026-04-30T08:37:10+09:00">
   <meta itemprop="wordCount" content="135">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Explanation">
@@ -273,17 +273,17 @@
 <p>choose the favored test cases in the queue to mutate and fuzz</p>
 <h1 id="afl">AFL</h1>
 <p>목적 : 커버리지 늘리기
-[[top_rated|top_rated]] 맵 기반해서, [[cull_queue|cull_queue]]에서 [[favored|favored]] 플래그 사용해 매김.</p>
+top_rated 맵 기반해서, cull_queue에서 favored 플래그 사용해 매김.</p>
 <h2 id="0x03-queue-culling">0x03 Queue Culling</h2>
 <p><a href="https://mem2019.github.io/jekyll/update/2019/08/26/AFL-Fuzzer-Notes-2.html">https://mem2019.github.io/jekyll/update/2019/08/26/AFL-Fuzzer-Notes-2.html</a>
 퍼징이 진행됨에 따라 queue의 총 테스트 사례 수가 증가합니다. 그러나 이러한 queue에 포함된 모든 경로를 적중하려면 이러한 테스트 사례의 하위 집합만 필요합니다. AFL은 queue을 선별하여 파일 실행 시간과 파일 크기가 최소화되는 최적의 하위 집합을 선택하려고 합니다.</p>
 <p>특정 경로(예: array의 인덱스)를 포괄할 수 있는 최적의 테스트 사례를 기록하는 데 사용되는 전역 변수 <code>struct queue_entry* top_rated[MAP_SIZE]</code>가 있습니다. 이 <code>top_rated</code>은 <code>update_bitmap_score</code> 함수로 업데이트됩니다.
-[[top_rated|top_rated]] 업데이트.</p>
+top_rated 업데이트.</p>
 <p>AFL에서 큐컬링은, 전체 queue에서 좀 중요한 작은 집합으로 top_rated를 고르고, 거기서 더 중요한 작은 집합인 favored 를 만드는 거.</p>
 <h2 id="기타">기타</h2>
-<p>[[cull_queue|cull_queue]]
-[[add_to_queue|add_to_queue]]</p>
-<h2 id="angoraangora-afl-sensitiveafl-sensitive">[[angora|angora]], [[AFL-Sensitive|AFL-Sensitive]]</h2>
+<p>cull_queue
+add_to_queue</p>
+<h2 id="angora-afl-sensitive">angora, AFL-Sensitive</h2>
 <p>include additional information, such as the calling stack, the memory access address, and the n basic blocks execution path.</p>
 
   </content>
