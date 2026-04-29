@@ -1,15 +1,346 @@
-<!doctype html><html lang=ko-kr><head><meta http-equiv=X-Clacks-Overhead content="GNU Terry Pratchett"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=https://re-st.github.io/images/github.png><title>지향성 퍼징을 위해 정적분석기를 고친다면 (흐름 둔감 정적 분석) | Park, Geon (re-st)</title><meta name=title content="지향성 퍼징을 위해 정적분석기를 고친다면 (흐름 둔감 정적 분석)"><meta name=description content="Abstract
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>지향성 퍼징을 위해 정적분석기를 고친다면 (흐름 둔감 정적 분석) | Park, Geon (re-st)</title>
+<meta name="title" content="지향성 퍼징을 위해 정적분석기를 고친다면 (흐름 둔감 정적 분석)" />
+<meta name="description" content="Abstract
 코드는 빠르게 변하며, 이를 효과적으로 검증하기 위해서는 둔감 (insensitive) 분석이 필수적이다. 이 글에서는 흐름 둔감 분석의 정의와 사용례를 소개하고, 이를 다중 지향성 퍼징을 위한 정적 분석기의 정의-사용 그래프 생성 작업에 어떻게 적용할지 논한다.
 본문
-둔감한 (insensitive) 분석은 코드의 빠른 변화를 효과적으로 검증하는 데 필수적이며, 대표적으로 흐름 (flow) 둔감 분석이 있다. 이는 코드의 실행 순서를 고려하지 않고, 모든 라벨의 값을 동시에 계산하여 코드의 복잡한 흐름을 단순화한다. 흐름 둔감 분석은 여러 사례에서 사용된다. 예를 들어, GCC 컴파일러의 변수 초기화 경고 (Wmaybe-uninitialized)가 초기화되지 않은 변수를 탐지할 때, 그리고 정적 분석기 &rsquo;&rsquo; 스패로우&rsquo;&lsquo;가 시공간적 듬성함 (sparsity)을 파악하기 위해 애벌 분석 (pre-analysis)을 수행할 때 등이다."><meta name=keywords content="Essay,weekly-writing,"><meta property="og:url" content="https://re-st.github.io/essay/%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95%EC%9D%84-%EC%9C%84%ED%95%B4-%EC%A0%95%EC%A0%81%EB%B6%84%EC%84%9D%EA%B8%B0%EB%A5%BC-%EA%B3%A0%EC%B9%9C%EB%8B%A4%EB%A9%B4-%ED%9D%90%EB%A6%84-%EB%91%94%EA%B0%90-%EC%A0%95%EC%A0%81-%EB%B6%84%EC%84%9D/"><meta property="og:site_name" content="Park, Geon (re-st)"><meta property="og:title" content="지향성 퍼징을 위해 정적분석기를 고친다면 (흐름 둔감 정적 분석)"><meta property="og:description" content="Abstract 코드는 빠르게 변하며, 이를 효과적으로 검증하기 위해서는 둔감 (insensitive) 분석이 필수적이다. 이 글에서는 흐름 둔감 분석의 정의와 사용례를 소개하고, 이를 다중 지향성 퍼징을 위한 정적 분석기의 정의-사용 그래프 생성 작업에 어떻게 적용할지 논한다.
-본문 둔감한 (insensitive) 분석은 코드의 빠른 변화를 효과적으로 검증하는 데 필수적이며, 대표적으로 흐름 (flow) 둔감 분석이 있다. 이는 코드의 실행 순서를 고려하지 않고, 모든 라벨의 값을 동시에 계산하여 코드의 복잡한 흐름을 단순화한다. 흐름 둔감 분석은 여러 사례에서 사용된다. 예를 들어, GCC 컴파일러의 변수 초기화 경고 (Wmaybe-uninitialized)가 초기화되지 않은 변수를 탐지할 때, 그리고 정적 분석기 ’’ 스패로우’‘가 시공간적 듬성함 (sparsity)을 파악하기 위해 애벌 분석 (pre-analysis)을 수행할 때 등이다."><meta property="og:locale" content="ko_kr"><meta property="og:type" content="article"><meta property="article:section" content="essay"><meta property="article:published_time" content="2024-08-16T00:00:00+09:00"><meta property="article:modified_time" content="2026-04-29T14:28:04+09:00"><meta property="article:tag" content="Essay"><meta property="article:tag" content="Weekly-Writing"><meta property="og:image" content="https://re-st.github.io/images/share.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://re-st.github.io/images/share.png"><meta name=twitter:title content="지향성 퍼징을 위해 정적분석기를 고친다면 (흐름 둔감 정적 분석)"><meta name=twitter:description content="Abstract 코드는 빠르게 변하며, 이를 효과적으로 검증하기 위해서는 둔감 (insensitive) 분석이 필수적이다. 이 글에서는 흐름 둔감 분석의 정의와 사용례를 소개하고, 이를 다중 지향성 퍼징을 위한 정적 분석기의 정의-사용 그래프 생성 작업에 어떻게 적용할지 논한다.
-본문 둔감한 (insensitive) 분석은 코드의 빠른 변화를 효과적으로 검증하는 데 필수적이며, 대표적으로 흐름 (flow) 둔감 분석이 있다. 이는 코드의 실행 순서를 고려하지 않고, 모든 라벨의 값을 동시에 계산하여 코드의 복잡한 흐름을 단순화한다. 흐름 둔감 분석은 여러 사례에서 사용된다. 예를 들어, GCC 컴파일러의 변수 초기화 경고 (Wmaybe-uninitialized)가 초기화되지 않은 변수를 탐지할 때, 그리고 정적 분석기 ’’ 스패로우’‘가 시공간적 듬성함 (sparsity)을 파악하기 위해 애벌 분석 (pre-analysis)을 수행할 때 등이다."><meta itemprop=name content="지향성 퍼징을 위해 정적분석기를 고친다면 (흐름 둔감 정적 분석)"><meta itemprop=description content="Abstract 코드는 빠르게 변하며, 이를 효과적으로 검증하기 위해서는 둔감 (insensitive) 분석이 필수적이다. 이 글에서는 흐름 둔감 분석의 정의와 사용례를 소개하고, 이를 다중 지향성 퍼징을 위한 정적 분석기의 정의-사용 그래프 생성 작업에 어떻게 적용할지 논한다.
-본문 둔감한 (insensitive) 분석은 코드의 빠른 변화를 효과적으로 검증하는 데 필수적이며, 대표적으로 흐름 (flow) 둔감 분석이 있다. 이는 코드의 실행 순서를 고려하지 않고, 모든 라벨의 값을 동시에 계산하여 코드의 복잡한 흐름을 단순화한다. 흐름 둔감 분석은 여러 사례에서 사용된다. 예를 들어, GCC 컴파일러의 변수 초기화 경고 (Wmaybe-uninitialized)가 초기화되지 않은 변수를 탐지할 때, 그리고 정적 분석기 ’’ 스패로우’‘가 시공간적 듬성함 (sparsity)을 파악하기 위해 애벌 분석 (pre-analysis)을 수행할 때 등이다."><meta itemprop=datePublished content="2024-08-16T00:00:00+09:00"><meta itemprop=dateModified content="2026-04-29T14:28:04+09:00"><meta itemprop=wordCount content="349"><meta itemprop=image content="https://re-st.github.io/images/share.png"><meta itemprop=keywords content="Essay,Weekly-Writing"><meta name=referrer content="no-referrer-when-downgrade"><style>:root{--width:720px;--font-main:Verdana, sans-serif;--font-secondary:Verdana, sans-serif;--font-scale:1em;--background-color:#fff;--heading-color:#222;--text-color:#444;--link-color:#3273dc;--visited-color:#8b6fcb;--blockquote-color:#222}@media(prefers-color-scheme:dark){:root{--background-color:#01242e;--heading-color:#eee;--text-color:#ddd;--link-color:#8cc2dd;--visited-color:#8b6fcb;--blockquote-color:#ccc}}body{font-family:var(--font-secondary);font-size:var(--font-scale);margin:auto;padding:20px;max-width:var(--width);text-align:left;background-color:var(--background-color);word-wrap:break-word;overflow-wrap:break-word;line-height:1.5;color:var(--text-color)}h1,h2,h3,h4,h5,h6{font-family:var(--font-main);color:var(--heading-color)}a{color:var(--link-color);cursor:pointer;text-decoration:none}a:hover{text-decoration:underline}nav a{margin-right:8px}strong,b{color:var(--heading-color)}button{margin:0;cursor:pointer}time{font-family:monospace;font-style:normal;font-size:15px}main{line-height:1.6}table{width:100%}hr{border:0;border-top:1px dashed}img{max-width:100%}code{font-family:monospace;padding:2px;border-radius:3px}blockquote{border-left:1px solid #999;color:var(--blockquote-color);padding-left:20px;font-style:italic}footer{padding:25px 0;text-align:center}.title:hover{text-decoration:none}.title h1{font-size:1.5em}.inline{width:auto!important}.highlight,.code{border-radius:3px;margin-block-start:1em;margin-block-end:1em;overflow-x:auto}ul.blog-posts{list-style-type:none;padding:unset}ul.blog-posts li{display:flex}ul.blog-posts li span{flex:0 0 130px}ul.blog-posts li a:visited{color:var(--visited-color)}</style><style>[data-theme=light]{--background-color:#fff;--heading-color:#222;--text-color:#444;--link-color:#3273dc;--visited-color:#8b6fcb;--blockquote-color:#222}[data-theme=dark]{--background-color:#01242e;--heading-color:#eee;--text-color:#ddd;--link-color:#8cc2dd;--visited-color:#8b6fcb;--blockquote-color:#ccc}</style></head><body><header><a href=/ class=title><h2>Park, Geon (re-st)</h2></a><nav><a href=/pages/about/>[Whoami]</a>
-<a href=/cv/>[CV]</a>
-<button id=theme-toggle onclick=toggleTheme() title="Toggle light/dark mode" style="background:0 0;border:none;cursor:pointer;font-size:1.2em;padding:0 .3em">🌙</button></nav><script>(function(){var e=localStorage.getItem("theme");e==="light"?document.documentElement.setAttribute("data-theme","light"):e==="dark"&&document.documentElement.setAttribute("data-theme","dark")})();function toggleTheme(){var t=document.documentElement.getAttribute("data-theme"),e=t==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",e),localStorage.setItem("theme",e),document.getElementById("theme-toggle").textContent=e==="dark"?"☀️":"🌙"}window.addEventListener("DOMContentLoaded",function(){var e=localStorage.getItem("theme");document.getElementById("theme-toggle").textContent=e==="dark"?"☀️":"🌙"})</script></header><main><article><h1>지향성 퍼징을 위해 정적분석기를 고친다면 (흐름 둔감 정적 분석)</h1><p style=display:flex;gap:1rem;align-items:center;flex-wrap:wrap><i><time datetime=2024-08-16>16 Aug, 2024
-</time></i><span style=font-weight:700;font-size:.95em;color:var(--link-color)>[essay]</span>
-<span style=opacity:.6;font-size:.85em>2 min read</span></p><content><h1 id=abstract>Abstract</h1><p>코드는 빠르게 변하며, 이를 효과적으로 검증하기 위해서는 둔감 (insensitive) 분석이 필수적이다. 이 글에서는 흐름 둔감 분석의 정의와 사용례를 소개하고, 이를 다중 지향성 퍼징을 위한 정적 분석기의 정의-사용 그래프 생성 작업에 어떻게 적용할지 논한다.</p><h1 id=본문>본문</h1><p>둔감한 (insensitive) 분석은 코드의 빠른 변화를 효과적으로 검증하는 데 필수적이며, 대표적으로 흐름 (flow) 둔감 분석이 있다. 이는 코드의 실행 순서를 고려하지 않고, 모든 라벨의 값을 동시에 계산하여 코드의 복잡한 흐름을 단순화한다. 흐름 둔감 분석은 여러 사례에서 사용된다. 예를 들어, GCC 컴파일러의 변수 초기화 경고 (Wmaybe-uninitialized)가 초기화되지 않은 변수를 탐지할 때, 그리고 정적 분석기 &rsquo;&rsquo; 스패로우&rsquo;&lsquo;가 시공간적 듬성함 (sparsity)을 파악하기 위해 애벌 분석 (pre-analysis)을 수행할 때 등이다.</p><blockquote><p>한편, 맥락 둔감 분석은 함수 호출 시 호출자 문맥을 무시하고, 모든 호출을 동일한 맥락으로 분석해 속도를 높이지만, 성능 저하의 단점이 있다. 이를 보완하기 위해 \(k\)단계 제어 흐름 분석(\(k\)-CFA)이 존재하며, 함수 호출의 깊이를 적절히 분석한다.</p></blockquote><p>&rsquo;&rsquo; 스패로우&rsquo;&lsquo;의 애벌 분석의 산물인 데이터 정의-사용 그래프가 지향성 퍼징 도구에서 중요한 역할을 맡으며, 조금 다른 정확도를 요구받고 있다. 퍼징에 적합한 슬라이스는 오류가 예상되는 목표 지점에 정확한 정의-사용 관계를 제공해야 된다. 예로, 동적 할당 지점이 힙 버퍼 오버플로를 일으킬 수 있으므로 이를 정확히 추적해야 한다. 또한, 목표 지점의 데이터에 선택적 민감도(selective sensitivity)를 도입하는 것도 고려해볼 만하다. 현재, 이러한 접근의 필요성을 확인하기 위해 기존 슬라이스가 부적합했던 벤치마크를 찾는 중이다.</p><p>지향성 퍼징에 연관 없는 지점의 데이터 흐름 추적을 억제하기 위해 플래그 관련 변수값을 고려할 수도 있다. 퍼징의 커맨드라인에서 쓰지 않는 플래그는 관련 분기와 코드 상당수가 실행이 아예 안 되지만, 정적 분석기는 이를 인식하지 못한다. 따라서 직접 해당 코드를 제거한 후 분석하는 실험을 진행 중이다. 또한, 코드 제거를 자동화하기 위해 변수 값을 상수로 초기화하고 상수 전파 최적화를 적용한 정적 분석 실험도 구상 중이다.</p><p>추가로, &rsquo;&rsquo; 스패로우&rsquo;&lsquo;가 왜 데이터 정의-사용 그래프를 추출하기 전에 구간 듬성 분석을 거치는지 등 그 구조를 공부하려 한다. 최근 동료가 내놓는 혁신적인 결과들로 분석기 수정이 퍼징 성능을 끌어올릴 수 있단 걸 알고 나선, 기존 분석기 무지랭이였던 나도 분발하고픈 열의가 생긴다.</p><h1 id=기승전결>기승전결</h1><p>% 기 - 코드는 빠르게 변하며 이를 제때 검증하려면 insensitive하지 않은 분석이 필요하다.
+둔감한 (insensitive) 분석은 코드의 빠른 변화를 효과적으로 검증하는 데 필수적이며, 대표적으로 흐름 (flow) 둔감 분석이 있다. 이는 코드의 실행 순서를 고려하지 않고, 모든 라벨의 값을 동시에 계산하여 코드의 복잡한 흐름을 단순화한다. 흐름 둔감 분석은 여러 사례에서 사용된다. 예를 들어, GCC 컴파일러의 변수 초기화 경고 (Wmaybe-uninitialized)가 초기화되지 않은 변수를 탐지할 때, 그리고 정적 분석기 &rsquo;&rsquo; 스패로우&rsquo;&lsquo;가 시공간적 듬성함 (sparsity)을 파악하기 위해 애벌 분석 (pre-analysis)을 수행할 때 등이다." />
+<meta name="keywords" content="Essay,weekly-writing," />
+
+
+<meta property="og:url" content="https://re-st.github.io/essay/%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95%EC%9D%84-%EC%9C%84%ED%95%B4-%EC%A0%95%EC%A0%81%EB%B6%84%EC%84%9D%EA%B8%B0%EB%A5%BC-%EA%B3%A0%EC%B9%9C%EB%8B%A4%EB%A9%B4-%ED%9D%90%EB%A6%84-%EB%91%94%EA%B0%90-%EC%A0%95%EC%A0%81-%EB%B6%84%EC%84%9D/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="지향성 퍼징을 위해 정적분석기를 고친다면 (흐름 둔감 정적 분석)">
+  <meta property="og:description" content="Abstract 코드는 빠르게 변하며, 이를 효과적으로 검증하기 위해서는 둔감 (insensitive) 분석이 필수적이다. 이 글에서는 흐름 둔감 분석의 정의와 사용례를 소개하고, 이를 다중 지향성 퍼징을 위한 정적 분석기의 정의-사용 그래프 생성 작업에 어떻게 적용할지 논한다.
+본문 둔감한 (insensitive) 분석은 코드의 빠른 변화를 효과적으로 검증하는 데 필수적이며, 대표적으로 흐름 (flow) 둔감 분석이 있다. 이는 코드의 실행 순서를 고려하지 않고, 모든 라벨의 값을 동시에 계산하여 코드의 복잡한 흐름을 단순화한다. 흐름 둔감 분석은 여러 사례에서 사용된다. 예를 들어, GCC 컴파일러의 변수 초기화 경고 (Wmaybe-uninitialized)가 초기화되지 않은 변수를 탐지할 때, 그리고 정적 분석기 ’’ 스패로우’‘가 시공간적 듬성함 (sparsity)을 파악하기 위해 애벌 분석 (pre-analysis)을 수행할 때 등이다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="essay">
+    <meta property="article:published_time" content="2024-08-16T00:00:00+09:00">
+    <meta property="article:modified_time" content="2026-04-29T21:45:02+09:00">
+    <meta property="article:tag" content="Essay">
+    <meta property="article:tag" content="Weekly-Writing">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="지향성 퍼징을 위해 정적분석기를 고친다면 (흐름 둔감 정적 분석)">
+  <meta name="twitter:description" content="Abstract 코드는 빠르게 변하며, 이를 효과적으로 검증하기 위해서는 둔감 (insensitive) 분석이 필수적이다. 이 글에서는 흐름 둔감 분석의 정의와 사용례를 소개하고, 이를 다중 지향성 퍼징을 위한 정적 분석기의 정의-사용 그래프 생성 작업에 어떻게 적용할지 논한다.
+본문 둔감한 (insensitive) 분석은 코드의 빠른 변화를 효과적으로 검증하는 데 필수적이며, 대표적으로 흐름 (flow) 둔감 분석이 있다. 이는 코드의 실행 순서를 고려하지 않고, 모든 라벨의 값을 동시에 계산하여 코드의 복잡한 흐름을 단순화한다. 흐름 둔감 분석은 여러 사례에서 사용된다. 예를 들어, GCC 컴파일러의 변수 초기화 경고 (Wmaybe-uninitialized)가 초기화되지 않은 변수를 탐지할 때, 그리고 정적 분석기 ’’ 스패로우’‘가 시공간적 듬성함 (sparsity)을 파악하기 위해 애벌 분석 (pre-analysis)을 수행할 때 등이다.">
+
+
+
+
+  <meta itemprop="name" content="지향성 퍼징을 위해 정적분석기를 고친다면 (흐름 둔감 정적 분석)">
+  <meta itemprop="description" content="Abstract 코드는 빠르게 변하며, 이를 효과적으로 검증하기 위해서는 둔감 (insensitive) 분석이 필수적이다. 이 글에서는 흐름 둔감 분석의 정의와 사용례를 소개하고, 이를 다중 지향성 퍼징을 위한 정적 분석기의 정의-사용 그래프 생성 작업에 어떻게 적용할지 논한다.
+본문 둔감한 (insensitive) 분석은 코드의 빠른 변화를 효과적으로 검증하는 데 필수적이며, 대표적으로 흐름 (flow) 둔감 분석이 있다. 이는 코드의 실행 순서를 고려하지 않고, 모든 라벨의 값을 동시에 계산하여 코드의 복잡한 흐름을 단순화한다. 흐름 둔감 분석은 여러 사례에서 사용된다. 예를 들어, GCC 컴파일러의 변수 초기화 경고 (Wmaybe-uninitialized)가 초기화되지 않은 변수를 탐지할 때, 그리고 정적 분석기 ’’ 스패로우’‘가 시공간적 듬성함 (sparsity)을 파악하기 위해 애벌 분석 (pre-analysis)을 수행할 때 등이다.">
+  <meta itemprop="datePublished" content="2024-08-16T00:00:00+09:00">
+  <meta itemprop="dateModified" content="2026-04-29T21:45:02+09:00">
+  <meta itemprop="wordCount" content="349">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+  <meta itemprop="keywords" content="Essay,Weekly-Writing">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+<style>
+  [data-theme="light"] {
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+  [data-theme="dark"] {
+    --background-color: #01242e;
+    --heading-color: #eee;
+    --text-color: #ddd;
+    --link-color: #8cc2dd;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #ccc;
+  }
+</style>
+
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+<a href="/pages/about/">[Whoami]</a>
+
+<a href="/cv/">[CV]</a>
+
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode" style="background:none;border:none;cursor:pointer;font-size:1.2em;padding:0 0.3em;">🌙</button>
+</nav>
+<script>
+  (function() {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else if (stored === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = (current === 'dark') ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    document.getElementById('theme-toggle').textContent = (next === 'dark') ? '☀️' : '🌙';
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var stored = localStorage.getItem('theme');
+    document.getElementById('theme-toggle').textContent = (stored === 'dark') ? '☀️' : '🌙';
+  });
+</script>
+</header>
+  <main>
+<article>
+  <h1>지향성 퍼징을 위해 정적분석기를 고친다면 (흐름 둔감 정적 분석)</h1>
+  <p style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+    <i>
+      <time datetime='2024-08-16'>
+        16 Aug, 2024
+      </time>
+    </i>
+    <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[essay]</span>
+    
+    <span style="opacity:0.6; font-size:0.85em;">2 min read</span>
+    
+  </p>
+  <content>
+    <h1 id="abstract">Abstract</h1>
+<p>코드는 빠르게 변하며, 이를 효과적으로 검증하기 위해서는 둔감 (insensitive) 분석이 필수적이다. 이 글에서는 흐름 둔감 분석의 정의와 사용례를 소개하고, 이를 다중 지향성 퍼징을 위한 정적 분석기의 정의-사용 그래프 생성 작업에 어떻게 적용할지 논한다.</p>
+<h1 id="본문">본문</h1>
+<p>둔감한 (insensitive) 분석은 코드의 빠른 변화를 효과적으로 검증하는 데 필수적이며, 대표적으로 흐름 (flow) 둔감 분석이 있다. 이는 코드의 실행 순서를 고려하지 않고, 모든 라벨의 값을 동시에 계산하여 코드의 복잡한 흐름을 단순화한다. 흐름 둔감 분석은 여러 사례에서 사용된다. 예를 들어, GCC 컴파일러의 변수 초기화 경고 (Wmaybe-uninitialized)가 초기화되지 않은 변수를 탐지할 때, 그리고 정적 분석기 &rsquo;&rsquo; 스패로우&rsquo;&lsquo;가 시공간적 듬성함 (sparsity)을 파악하기 위해 애벌 분석 (pre-analysis)을 수행할 때 등이다.</p>
+<blockquote>
+<p>한편, 맥락 둔감 분석은 함수 호출 시 호출자 문맥을 무시하고, 모든 호출을 동일한 맥락으로 분석해 속도를 높이지만, 성능 저하의 단점이 있다. 이를 보완하기 위해 \(k\)단계 제어 흐름 분석(\(k\)-CFA)이 존재하며, 함수 호출의 깊이를 적절히 분석한다.</p>
+</blockquote>
+<p>&rsquo;&rsquo; 스패로우&rsquo;&lsquo;의 애벌 분석의 산물인 데이터 정의-사용 그래프가 지향성 퍼징 도구에서 중요한 역할을 맡으며, 조금 다른 정확도를 요구받고 있다. 퍼징에 적합한 슬라이스는 오류가 예상되는 목표 지점에 정확한 정의-사용 관계를 제공해야 된다. 예로, 동적 할당 지점이 힙 버퍼 오버플로를 일으킬 수 있으므로 이를 정확히 추적해야 한다. 또한, 목표 지점의 데이터에 선택적 민감도(selective sensitivity)를 도입하는 것도 고려해볼 만하다. 현재, 이러한 접근의 필요성을 확인하기 위해 기존 슬라이스가 부적합했던 벤치마크를 찾는 중이다.</p>
+<p>지향성 퍼징에 연관 없는 지점의 데이터 흐름 추적을 억제하기 위해 플래그 관련 변수값을 고려할 수도 있다. 퍼징의 커맨드라인에서 쓰지 않는 플래그는 관련 분기와 코드 상당수가 실행이 아예 안 되지만, 정적 분석기는 이를 인식하지 못한다. 따라서 직접 해당 코드를 제거한 후 분석하는 실험을 진행 중이다. 또한, 코드 제거를 자동화하기 위해 변수 값을 상수로 초기화하고 상수 전파 최적화를 적용한 정적 분석 실험도 구상 중이다.</p>
+<p>추가로, &rsquo;&rsquo; 스패로우&rsquo;&lsquo;가 왜 데이터 정의-사용 그래프를 추출하기 전에 구간 듬성 분석을 거치는지 등 그 구조를 공부하려 한다. 최근 동료가 내놓는 혁신적인 결과들로 분석기 수정이 퍼징 성능을 끌어올릴 수 있단 걸 알고 나선, 기존 분석기 무지랭이였던 나도 분발하고픈 열의가 생긴다.</p>
+<h1 id="기승전결">기승전결</h1>
+<p>% 기 - 코드는 빠르게 변하며 이를 제때 검증하려면 insensitive하지 않은 분석이 필요하다.
 % 승 - 다음의 flow-, context-, 등의 insensitive 분석이 있다.
 % 전 - 쓰이는 실예는 다음과 같이 있다.
-% 결 - 이러한 접근법으로 def-use graph program slicing을 어떻게 빠르게 할까</p></content><p><a href=https://re-st.github.io/blog/essay/>#Essay</a>&nbsp;
-<a href=https://re-st.github.io/blog/weekly-writing/>#Weekly-Writing</a>&nbsp;</p><div style=font-size:.8em;display:flex;gap:16px;justify-content:center><p><a href=https://re-st.github.io/essay/%EC%9A%B0%EC%88%98%ED%95%9C-%EC%97%B0%EA%B5%AC%EB%A5%BC-%EB%A7%8C%EB%93%9C%EB%8A%94-%EA%B2%83%EB%8F%84-%EC%88%99%EB%8B%AC%EB%90%98%EA%B3%A0-%EC%9D%B5%EC%88%99%ED%95%B4%EC%A7%88%EA%B9%8C/>&lt;&lt; Previous Post</a></p><p>|</p><p><a href=https://re-st.github.io/essay/afl%EC%9D%98-%ED%9C%B4%EB%A6%AC%EC%8A%A4%ED%8B%B1-%EC%95%8C%EA%B3%A0-%EC%93%B0%EA%B8%B0/>Next Post >></a></p></div><p style=margin-top:2rem><a href=javascript:history.back() style=font-size:.9em>← 뒤로</a></p><script src=https://utteranc.es/client.js repo=re-st/re-st.github.io issue-term=pathname label=blog-comment theme=github-light crossorigin=anonymous async></script></article></main><footer>Made with <a href=https://github.com/janraasch/hugo-bearblog/>Hugo ʕ•ᴥ•ʔ Bear</a></footer></body></html>
+% 결 - 이러한 접근법으로 def-use graph program slicing을 어떻게 빠르게 할까</p>
+
+  </content>
+
+  
+
+  <p>
+    
+    <a href="https://re-st.github.io/blog/essay/">#Essay</a>&nbsp;
+    
+    <a href="https://re-st.github.io/blog/weekly-writing/">#Weekly-Writing</a>&nbsp;
+    
+  </p>
+
+  <div style="font-size:0.8em;display:flex;gap:16px;justify-content:center;">
+  <p>
+    
+    <a href="https://re-st.github.io/essay/%EC%9A%B0%EC%88%98%ED%95%9C-%EC%97%B0%EA%B5%AC%EB%A5%BC-%EB%A7%8C%EB%93%9C%EB%8A%94-%EA%B2%83%EB%8F%84-%EC%88%99%EB%8B%AC%EB%90%98%EA%B3%A0-%EC%9D%B5%EC%88%99%ED%95%B4%EC%A7%88%EA%B9%8C/">
+      &lt;&lt; Previous Post</a>
+        
+  </p>
+  <p>|</p>
+  <p>
+    
+    <a href="https://re-st.github.io/essay/afl%EC%9D%98-%ED%9C%B4%EB%A6%AC%EC%8A%A4%ED%8B%B1-%EC%95%8C%EA%B3%A0-%EC%93%B0%EA%B8%B0/">Next Post >></a>
+    
+  </p>
+</div>
+
+
+  <p style="margin-top:2rem;">
+    <a href="javascript:history.back()" style="font-size:0.9em;">← 뒤로</a>
+  </p>
+
+  
+  <script src="https://utteranc.es/client.js"
+    repo="re-st/re-st.github.io"
+    issue-term="pathname"
+    label="blog-comment"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</article>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

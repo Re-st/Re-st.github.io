@@ -1,8 +1,314 @@
-<!doctype html><html lang=ko-kr><head><meta http-equiv=X-Clacks-Overhead content="GNU Terry Pratchett"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=https://re-st.github.io/images/github.png><title>슬랙으로, 원격 서버의 도커(Docker) 빌드 완료 알림 받기 | Park, Geon (re-st)</title><meta name=title content="슬랙으로, 원격 서버의 도커(Docker) 빌드 완료 알림 받기"><meta name=description content="(Method) Notify via Slack, if a docker build had succeeded"><meta name=keywords content="How-to,"><meta property="og:url" content="https://re-st.github.io/log/%EC%8A%AC%EB%9E%99%EC%9C%BC%EB%A1%9C-%EC%9B%90%EA%B2%A9-%EC%84%9C%EB%B2%84%EC%9D%98-%EB%8F%84%EC%BB%A4docker-%EB%B9%8C%EB%93%9C-%EC%99%84%EB%A3%8C-%EC%95%8C%EB%A6%BC-%EB%B0%9B%EA%B8%B0/"><meta property="og:site_name" content="Park, Geon (re-st)"><meta property="og:title" content="슬랙으로, 원격 서버의 도커(Docker) 빌드 완료 알림 받기"><meta property="og:description" content="(Method) Notify via Slack, if a docker build had succeeded"><meta property="og:locale" content="ko_kr"><meta property="og:type" content="article"><meta property="article:section" content="log"><meta property="article:published_time" content="2024-05-15T12:00:00+09:00"><meta property="article:modified_time" content="2026-04-29T14:28:04+09:00"><meta property="article:tag" content="How-To"><meta property="og:image" content="https://re-st.github.io/images/share.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://re-st.github.io/images/share.png"><meta name=twitter:title content="슬랙으로, 원격 서버의 도커(Docker) 빌드 완료 알림 받기"><meta name=twitter:description content="(Method) Notify via Slack, if a docker build had succeeded"><meta itemprop=name content="슬랙으로, 원격 서버의 도커(Docker) 빌드 완료 알림 받기"><meta itemprop=description content="(Method) Notify via Slack, if a docker build had succeeded"><meta itemprop=datePublished content="2024-05-15T12:00:00+09:00"><meta itemprop=dateModified content="2026-04-29T14:28:04+09:00"><meta itemprop=wordCount content="464"><meta itemprop=image content="https://re-st.github.io/images/share.png"><meta itemprop=keywords content="How-To"><meta name=referrer content="no-referrer-when-downgrade"><style>:root{--width:720px;--font-main:Verdana, sans-serif;--font-secondary:Verdana, sans-serif;--font-scale:1em;--background-color:#fff;--heading-color:#222;--text-color:#444;--link-color:#3273dc;--visited-color:#8b6fcb;--blockquote-color:#222}@media(prefers-color-scheme:dark){:root{--background-color:#01242e;--heading-color:#eee;--text-color:#ddd;--link-color:#8cc2dd;--visited-color:#8b6fcb;--blockquote-color:#ccc}}body{font-family:var(--font-secondary);font-size:var(--font-scale);margin:auto;padding:20px;max-width:var(--width);text-align:left;background-color:var(--background-color);word-wrap:break-word;overflow-wrap:break-word;line-height:1.5;color:var(--text-color)}h1,h2,h3,h4,h5,h6{font-family:var(--font-main);color:var(--heading-color)}a{color:var(--link-color);cursor:pointer;text-decoration:none}a:hover{text-decoration:underline}nav a{margin-right:8px}strong,b{color:var(--heading-color)}button{margin:0;cursor:pointer}time{font-family:monospace;font-style:normal;font-size:15px}main{line-height:1.6}table{width:100%}hr{border:0;border-top:1px dashed}img{max-width:100%}code{font-family:monospace;padding:2px;border-radius:3px}blockquote{border-left:1px solid #999;color:var(--blockquote-color);padding-left:20px;font-style:italic}footer{padding:25px 0;text-align:center}.title:hover{text-decoration:none}.title h1{font-size:1.5em}.inline{width:auto!important}.highlight,.code{border-radius:3px;margin-block-start:1em;margin-block-end:1em;overflow-x:auto}ul.blog-posts{list-style-type:none;padding:unset}ul.blog-posts li{display:flex}ul.blog-posts li span{flex:0 0 130px}ul.blog-posts li a:visited{color:var(--visited-color)}</style><style>[data-theme=light]{--background-color:#fff;--heading-color:#222;--text-color:#444;--link-color:#3273dc;--visited-color:#8b6fcb;--blockquote-color:#222}[data-theme=dark]{--background-color:#01242e;--heading-color:#eee;--text-color:#ddd;--link-color:#8cc2dd;--visited-color:#8b6fcb;--blockquote-color:#ccc}</style></head><body><header><a href=/ class=title><h2>Park, Geon (re-st)</h2></a><nav><a href=/pages/about/>[Whoami]</a>
-<a href=/cv/>[CV]</a>
-<button id=theme-toggle onclick=toggleTheme() title="Toggle light/dark mode" style="background:0 0;border:none;cursor:pointer;font-size:1.2em;padding:0 .3em">🌙</button></nav><script>(function(){var e=localStorage.getItem("theme");e==="light"?document.documentElement.setAttribute("data-theme","light"):e==="dark"&&document.documentElement.setAttribute("data-theme","dark")})();function toggleTheme(){var t=document.documentElement.getAttribute("data-theme"),e=t==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",e),localStorage.setItem("theme",e),document.getElementById("theme-toggle").textContent=e==="dark"?"☀️":"🌙"}window.addEventListener("DOMContentLoaded",function(){var e=localStorage.getItem("theme");document.getElementById("theme-toggle").textContent=e==="dark"?"☀️":"🌙"})</script></header><main><article><h1>슬랙으로, 원격 서버의 도커(Docker) 빌드 완료 알림 받기</h1><p style=display:flex;gap:1rem;align-items:center;flex-wrap:wrap><i><time datetime=2024-05-15>15 May, 2024
-</time></i><span style=font-weight:700;font-size:.95em;color:var(--link-color)>[log]</span>
-<span style=opacity:.6;font-size:.85em>3 min read</span></p><content><h1 id=1-문제-원격-서버-빌드-모니터링>1. 문제: 원격 서버 빌드 모니터링</h1><p>원격 서버에서 도커 빌드를 실행할 때, 터미널 화면을 계속 쳐다보지 않고도 빌드 성공/실패 여부를 알고 싶습니다. Slack 알림, 이메일, 또는 VSCode가 켜져 있는 윈도우 PC에서의 알림 등을 원합니다.</p><h1 id=2-해결-방안-1-cicd-도구-활용-jenkins--github-actions>2. 해결 방안 1: CI/CD 도구 활용 (Jenkins / GitHub Actions)</h1><p>일반적으로 Jenkins나 GitHub Actions 같은 CI/CD 도구를 사용하면 빌드 파이프라인의 &lsquo;Post-build Action&rsquo;을 통해 Slack이나 이메일 알림을 쉽게 설정할 수 있습니다.</p><ul><li><p><strong>Jenkins:</strong> Slack Notification Plugin, Email Extension Plugin 등을 설치하여 설정합니다.</p></li><li><p><strong>GitHub Actions:</strong> 워크플로우(.yml) 파일 내에 <code>if: \({{ success() }}</code> 또는 <code>if: \){{ failure() }}</code> 조건을 사용하여, <code>curl</code>로 Slack Webhook을 호출하거나 SendGrid 같은 이메일 서비스를 이용해 알림을 보냅니다.</p></li></ul><h1 id=3-해결-방안-2-vs-code-task와-webhook-활용-jenkins-불필요-채택>3. 해결 방안 2: VS Code Task와 Webhook 활용 (Jenkins 불필요) (채택)</h1><p>Jenkins 같은 별도 도구 설치가 번거롭다면, VS Code의 <strong>Task 기능</strong>을 사용하여 빌드 완료 시 원하는 스크립트를 실행(예: Slack 알림)하도록 설정할 수 있습니다.</p><h2 id=31-slack-webhook-설정-단계>3.1. Slack Webhook 설정 단계</h2><p>먼저 알림을 받을 Slack 채널의 Webhook URL이 필요합니다.</p><ol><li><p><a href=https://api.slack.com/apps>Slack API</a> 페이지로 이동하여 &ldquo;Create New App"을 클릭합니다.</p></li><li><p>&ldquo;From scratch&rdquo; 옵션을 선택하고, 앱 이름과 워크스페이스를 지정하여 앱을 생성합니다.</p></li><li><p>좌측 메뉴에서 &ldquo;Incoming Webhooks"를 선택하고 &ldquo;Activate Incoming Webhooks"를 켭니다.</p></li><li><p>하단의 &ldquo;Add New Webhook to Workspace&rdquo; 버튼을 클릭합니다.</p></li><li><p>메시지를 보낼 채널을 선택하고 &ldquo;Allow"를 클릭합니다.</p></li><li><p>생성된 <strong>Webhook URL</strong> (예: <code>https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK</code>)을 복사합니다.</p></li></ol><h2 id=32-vs-code-tasksjson-설정>3.2. VS Code tasks.json 설정</h2><p>VS Code에서 열어둔 프로젝트 폴더 내에 <code>.vscode/tasks.json</code> 파일을 생성하고, 빌드 작업(Build Project)과 알림 작업(Notify Slack)을 연동합니다.</p><p>JSON</p><pre tabindex=0><code>{
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>슬랙으로, 원격 서버의 도커(Docker) 빌드 완료 알림 받기 | Park, Geon (re-st)</title>
+<meta name="title" content="슬랙으로, 원격 서버의 도커(Docker) 빌드 완료 알림 받기" />
+<meta name="description" content="(Method) Notify via Slack, if a docker build had succeeded" />
+<meta name="keywords" content="How-to," />
+
+
+<meta property="og:url" content="https://re-st.github.io/log/%EC%8A%AC%EB%9E%99%EC%9C%BC%EB%A1%9C-%EC%9B%90%EA%B2%A9-%EC%84%9C%EB%B2%84%EC%9D%98-%EB%8F%84%EC%BB%A4docker-%EB%B9%8C%EB%93%9C-%EC%99%84%EB%A3%8C-%EC%95%8C%EB%A6%BC-%EB%B0%9B%EA%B8%B0/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="슬랙으로, 원격 서버의 도커(Docker) 빌드 완료 알림 받기">
+  <meta property="og:description" content="(Method) Notify via Slack, if a docker build had succeeded">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="log">
+    <meta property="article:published_time" content="2024-05-15T12:00:00+09:00">
+    <meta property="article:modified_time" content="2026-04-29T21:45:03+09:00">
+    <meta property="article:tag" content="How-To">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="슬랙으로, 원격 서버의 도커(Docker) 빌드 완료 알림 받기">
+  <meta name="twitter:description" content="(Method) Notify via Slack, if a docker build had succeeded">
+
+
+
+
+  <meta itemprop="name" content="슬랙으로, 원격 서버의 도커(Docker) 빌드 완료 알림 받기">
+  <meta itemprop="description" content="(Method) Notify via Slack, if a docker build had succeeded">
+  <meta itemprop="datePublished" content="2024-05-15T12:00:00+09:00">
+  <meta itemprop="dateModified" content="2026-04-29T21:45:03+09:00">
+  <meta itemprop="wordCount" content="464">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+  <meta itemprop="keywords" content="How-To">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+<style>
+  [data-theme="light"] {
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+  [data-theme="dark"] {
+    --background-color: #01242e;
+    --heading-color: #eee;
+    --text-color: #ddd;
+    --link-color: #8cc2dd;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #ccc;
+  }
+</style>
+
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+<a href="/pages/about/">[Whoami]</a>
+
+<a href="/cv/">[CV]</a>
+
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode" style="background:none;border:none;cursor:pointer;font-size:1.2em;padding:0 0.3em;">🌙</button>
+</nav>
+<script>
+  (function() {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else if (stored === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = (current === 'dark') ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    document.getElementById('theme-toggle').textContent = (next === 'dark') ? '☀️' : '🌙';
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var stored = localStorage.getItem('theme');
+    document.getElementById('theme-toggle').textContent = (stored === 'dark') ? '☀️' : '🌙';
+  });
+</script>
+</header>
+  <main>
+<article>
+  <h1>슬랙으로, 원격 서버의 도커(Docker) 빌드 완료 알림 받기</h1>
+  <p style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+    <i>
+      <time datetime='2024-05-15'>
+        15 May, 2024
+      </time>
+    </i>
+    <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[log]</span>
+    
+    <span style="opacity:0.6; font-size:0.85em;">3 min read</span>
+    
+  </p>
+  <content>
+    <h1 id="1-문제-원격-서버-빌드-모니터링">1. 문제: 원격 서버 빌드 모니터링</h1>
+<p>원격 서버에서 도커 빌드를 실행할 때, 터미널 화면을 계속 쳐다보지 않고도 빌드 성공/실패 여부를 알고 싶습니다. Slack 알림, 이메일, 또는 VSCode가 켜져 있는 윈도우 PC에서의 알림 등을 원합니다.</p>
+<h1 id="2-해결-방안-1-cicd-도구-활용-jenkins--github-actions">2. 해결 방안 1: CI/CD 도구 활용 (Jenkins / GitHub Actions)</h1>
+<p>일반적으로 Jenkins나 GitHub Actions 같은 CI/CD 도구를 사용하면 빌드 파이프라인의 &lsquo;Post-build Action&rsquo;을 통해 Slack이나 이메일 알림을 쉽게 설정할 수 있습니다.</p>
+<ul>
+<li>
+<p><strong>Jenkins:</strong> Slack Notification Plugin, Email Extension Plugin 등을 설치하여 설정합니다.</p>
+</li>
+<li>
+<p><strong>GitHub Actions:</strong> 워크플로우(.yml) 파일 내에 <code>if: \({{ success() }}</code> 또는 <code>if: \){{ failure() }}</code> 조건을 사용하여, <code>curl</code>로 Slack Webhook을 호출하거나 SendGrid 같은 이메일 서비스를 이용해 알림을 보냅니다.</p>
+</li>
+</ul>
+<h1 id="3-해결-방안-2-vs-code-task와-webhook-활용-jenkins-불필요-채택">3. 해결 방안 2: VS Code Task와 Webhook 활용 (Jenkins 불필요) (채택)</h1>
+<p>Jenkins 같은 별도 도구 설치가 번거롭다면, VS Code의 <strong>Task 기능</strong>을 사용하여 빌드 완료 시 원하는 스크립트를 실행(예: Slack 알림)하도록 설정할 수 있습니다.</p>
+<h2 id="31-slack-webhook-설정-단계">3.1. Slack Webhook 설정 단계</h2>
+<p>먼저 알림을 받을 Slack 채널의 Webhook URL이 필요합니다.</p>
+<ol>
+<li>
+<p><a href="https://api.slack.com/apps">Slack API</a> 페이지로 이동하여 &ldquo;Create New App&quot;을 클릭합니다.</p>
+</li>
+<li>
+<p>&ldquo;From scratch&rdquo; 옵션을 선택하고, 앱 이름과 워크스페이스를 지정하여 앱을 생성합니다.</p>
+</li>
+<li>
+<p>좌측 메뉴에서 &ldquo;Incoming Webhooks&quot;를 선택하고 &ldquo;Activate Incoming Webhooks&quot;를 켭니다.</p>
+</li>
+<li>
+<p>하단의 &ldquo;Add New Webhook to Workspace&rdquo; 버튼을 클릭합니다.</p>
+</li>
+<li>
+<p>메시지를 보낼 채널을 선택하고 &ldquo;Allow&quot;를 클릭합니다.</p>
+</li>
+<li>
+<p>생성된 <strong>Webhook URL</strong> (예: <code>https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK</code>)을 복사합니다.</p>
+</li>
+</ol>
+<h2 id="32-vs-code-tasksjson-설정">3.2. VS Code tasks.json 설정</h2>
+<p>VS Code에서 열어둔 프로젝트 폴더 내에 <code>.vscode/tasks.json</code> 파일을 생성하고, 빌드 작업(Build Project)과 알림 작업(Notify Slack)을 연동합니다.</p>
+<p>JSON</p>
+<pre tabindex="0"><code>{
   &#34;version&#34;: &#34;2.0.0&#34;,
   &#34;tasks&#34;: [
     {
@@ -24,8 +330,79 @@
     // 실패 시 알림도 별도로 구성할 수 있습니다.
   ]
 }
-</code></pre><ul><li><strong>참고 (이메일):</strong> Slack 대신 <code>sendemail</code> 같은 커맨드라인 이메일 도구를 설치하여 <code>command</code>에 해당 명령어를 입력하는 방식으로 이메일 알림도 구현할 수 있습니다.</li></ul><h1 id=4-문제-해결-debugging-tasksjson이-vs-code에-뜨지-않을-때>4. 문제 해결 (Debugging): &ldquo;tasks.json"이 VS Code에 뜨지 않을 때</h1><p><code>tasks.json</code> 파일을 분명히 만들었는데도 <code>F1</code> > &ldquo;Tasks: Run Task&rdquo; 목록에 작업이 나타나지 않는 경우가 있습니다.</p><h2 id=41-파일-내용-확인>4.1. 파일 내용 확인</h2><p>먼저 <code>tasks.json</code> 파일의 JSON 구문이 올바른지 확인합니다. 특히, 기본 빌드 작업을 지정하는 <code>"isDefault": true</code> 속성이 올바르게 설정되었는지 확인해 볼 수 있습니다.</p><p>JSON</p><pre tabindex=0><code>      &#34;group&#34;: {
+</code></pre><ul>
+<li><strong>참고 (이메일):</strong> Slack 대신 <code>sendemail</code> 같은 커맨드라인 이메일 도구를 설치하여 <code>command</code>에 해당 명령어를 입력하는 방식으로 이메일 알림도 구현할 수 있습니다.</li>
+</ul>
+<h1 id="4-문제-해결-debugging-tasksjson이-vs-code에-뜨지-않을-때">4. 문제 해결 (Debugging): &ldquo;tasks.json&quot;이 VS Code에 뜨지 않을 때</h1>
+<p><code>tasks.json</code> 파일을 분명히 만들었는데도 <code>F1</code> &gt; &ldquo;Tasks: Run Task&rdquo; 목록에 작업이 나타나지 않는 경우가 있습니다.</p>
+<h2 id="41-파일-내용-확인">4.1. 파일 내용 확인</h2>
+<p>먼저 <code>tasks.json</code> 파일의 JSON 구문이 올바른지 확인합니다. 특히, 기본 빌드 작업을 지정하는 <code>&quot;isDefault&quot;: true</code> 속성이 올바르게 설정되었는지 확인해 볼 수 있습니다.</p>
+<p>JSON</p>
+<pre tabindex="0"><code>      &#34;group&#34;: {
         &#34;kind&#34;: &#34;build&#34;,
         &#34;isDefault&#34;: true // 이 작업을 Ctrl+Shift+B의 기본 빌드로 설정
       },
-</code></pre><h2 id=42-중요-파일-위치-확인>4.2. [중요] 파일 위치 확인</h2><p>Task가 보이지 않는 가장 결정적인 원인은 <code>.vscode</code> 폴더의 위치일 수 있습니다.</p><p><code>tasks.json</code> 파일은 <strong>사용자 홈 디렉토리(<code>~</code>)가 아닌, 현재 VSCode에서 열어둔 프로젝트 폴더의 최상위 루트(Workspace Root)에</strong> 위치해야 합니다.</p><ul><li><p><strong>잘못된 위치:</strong> <code>~/.vscode/tasks.json</code></p></li><li><p><strong>올바른 위치:</strong> <code>~/현재-작업-폴더/.vscode/tasks.json</code></p></li></ul><h1 id=5-결론>5. 결론</h1><p>프로젝트 폴더 위치에 <code>.vscode/tasks.json</code> 파일을 올바르게 배치한 후, VS Code에서 &ldquo;Tasks: Run Task"를 실행하면 &ldquo;Build Project"와 &ldquo;Notify Slack on Success"가 목록에 정상적으로 나타나는 것을 확인할 수 있습니다.</p></content><p><a href=https://re-st.github.io/blog/how-to/>#How-To</a>&nbsp;</p><div style=font-size:.8em;display:flex;gap:16px;justify-content:center><p><a href=https://re-st.github.io/log/%EB%8B%A8%EC%B6%95%ED%82%A4/>&lt;&lt; Previous Post</a></p><p>|</p><p><a href=https://re-st.github.io/log/vi-%ED%8E%B8%EC%A7%91%EA%B8%B0%EC%9D%98-shell%EB%A1%9C-zsh-%EC%93%B0%EA%B8%B0/>Next Post >></a></p></div><p style=margin-top:2rem><a href=javascript:history.back() style=font-size:.9em>← 뒤로</a></p><script src=https://utteranc.es/client.js repo=re-st/re-st.github.io issue-term=pathname label=blog-comment theme=github-light crossorigin=anonymous async></script></article></main><footer>Made with <a href=https://github.com/janraasch/hugo-bearblog/>Hugo ʕ•ᴥ•ʔ Bear</a></footer></body></html>
+</code></pre><h2 id="42-중요-파일-위치-확인">4.2. [중요] 파일 위치 확인</h2>
+<p>Task가 보이지 않는 가장 결정적인 원인은 <code>.vscode</code> 폴더의 위치일 수 있습니다.</p>
+<p><code>tasks.json</code> 파일은 <strong>사용자 홈 디렉토리(<code>~</code>)가 아닌, 현재 VSCode에서 열어둔 프로젝트 폴더의 최상위 루트(Workspace Root)에</strong> 위치해야 합니다.</p>
+<ul>
+<li>
+<p><strong>잘못된 위치:</strong> <code>~/.vscode/tasks.json</code></p>
+</li>
+<li>
+<p><strong>올바른 위치:</strong> <code>~/현재-작업-폴더/.vscode/tasks.json</code></p>
+</li>
+</ul>
+<h1 id="5-결론">5. 결론</h1>
+<p>프로젝트 폴더 위치에 <code>.vscode/tasks.json</code> 파일을 올바르게 배치한 후, VS Code에서 &ldquo;Tasks: Run Task&quot;를 실행하면 &ldquo;Build Project&quot;와 &ldquo;Notify Slack on Success&quot;가 목록에 정상적으로 나타나는 것을 확인할 수 있습니다.</p>
+
+  </content>
+
+  
+
+  <p>
+    
+    <a href="https://re-st.github.io/blog/how-to/">#How-To</a>&nbsp;
+    
+  </p>
+
+  <div style="font-size:0.8em;display:flex;gap:16px;justify-content:center;">
+  <p>
+    
+    <a href="https://re-st.github.io/log/%EB%8B%A8%EC%B6%95%ED%82%A4/">
+      &lt;&lt; Previous Post</a>
+        
+  </p>
+  <p>|</p>
+  <p>
+    
+    <a href="https://re-st.github.io/log/vi-%ED%8E%B8%EC%A7%91%EA%B8%B0%EC%9D%98-shell%EB%A1%9C-zsh-%EC%93%B0%EA%B8%B0/">Next Post >></a>
+    
+  </p>
+</div>
+
+
+  <p style="margin-top:2rem;">
+    <a href="javascript:history.back()" style="font-size:0.9em;">← 뒤로</a>
+  </p>
+
+  
+  <script src="https://utteranc.es/client.js"
+    repo="re-st/re-st.github.io"
+    issue-term="pathname"
+    label="blog-comment"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</article>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

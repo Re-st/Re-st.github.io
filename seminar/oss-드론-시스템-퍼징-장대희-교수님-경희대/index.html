@@ -1,22 +1,364 @@
-<!doctype html><html lang=ko-kr><head><meta http-equiv=X-Clacks-Overhead content="GNU Terry Pratchett"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=https://re-st.github.io/images/github.png><title>OSS 드론 시스템 퍼징 - 장대희 교수님 (경희대) | Park, Geon (re-st)</title><meta name=title content="OSS 드론 시스템 퍼징 - 장대희 교수님 (경희대)"><meta name=description content="
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>OSS 드론 시스템 퍼징 - 장대희 교수님 (경희대) | Park, Geon (re-st)</title>
+<meta name="title" content="OSS 드론 시스템 퍼징 - 장대희 교수님 (경희대)" />
+<meta name="description" content="
 [!WARNING]
 강연을 듣고 쓴 메모를 바탕으로 후에 재구성한 내용이라, 어느 정도의 오류가 있을 수 있습니다.
 
 퍼징 환경의 고려사항
 퍼징 (Fuzzing) 환경을 구축할 때, 바이너리 실행 속도 자체를 최우선으로 고려하지는 않습니다.
 예를 들어 ASan (AddressSanitizer) 같은 도구를 사용하면 속도가 2~3배 정도 느려지지만, 버그 탐지 능력이 향상되므로 감수할 만합니다.
-퍼징은 블록 커버리지 (Block Coverage), 엣지 커버리지 (Edge Coverage) 등을 측정하며, 유전 알고리즘 (Genetic Algorithm)과 같은 기법을 사용해 효율적인 테스트 케이스를 생성합니다. (이때 LibFuzzer 같은 도구가 활용됩니다.)"><meta name=keywords content="Invited-Lecture,"><meta property="og:url" content="https://re-st.github.io/seminar/oss-%EB%93%9C%EB%A1%A0-%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%8D%BC%EC%A7%95-%EC%9E%A5%EB%8C%80%ED%9D%AC-%EA%B5%90%EC%88%98%EB%8B%98-%EA%B2%BD%ED%9D%AC%EB%8C%80/"><meta property="og:site_name" content="Park, Geon (re-st)"><meta property="og:title" content="OSS 드론 시스템 퍼징 - 장대희 교수님 (경희대)"><meta property="og:description" content="[!WARNING] 강연을 듣고 쓴 메모를 바탕으로 후에 재구성한 내용이라, 어느 정도의 오류가 있을 수 있습니다.
+퍼징은 블록 커버리지 (Block Coverage), 엣지 커버리지 (Edge Coverage) 등을 측정하며, 유전 알고리즘 (Genetic Algorithm)과 같은 기법을 사용해 효율적인 테스트 케이스를 생성합니다. (이때 LibFuzzer 같은 도구가 활용됩니다.)" />
+<meta name="keywords" content="Invited-Lecture," />
+
+
+<meta property="og:url" content="https://re-st.github.io/seminar/oss-%EB%93%9C%EB%A1%A0-%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%8D%BC%EC%A7%95-%EC%9E%A5%EB%8C%80%ED%9D%AC-%EA%B5%90%EC%88%98%EB%8B%98-%EA%B2%BD%ED%9D%AC%EB%8C%80/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="OSS 드론 시스템 퍼징 - 장대희 교수님 (경희대)">
+  <meta property="og:description" content="[!WARNING] 강연을 듣고 쓴 메모를 바탕으로 후에 재구성한 내용이라, 어느 정도의 오류가 있을 수 있습니다.
 퍼징 환경의 고려사항 퍼징 (Fuzzing) 환경을 구축할 때, 바이너리 실행 속도 자체를 최우선으로 고려하지는 않습니다.
 예를 들어 ASan (AddressSanitizer) 같은 도구를 사용하면 속도가 2~3배 정도 느려지지만, 버그 탐지 능력이 향상되므로 감수할 만합니다.
-퍼징은 블록 커버리지 (Block Coverage), 엣지 커버리지 (Edge Coverage) 등을 측정하며, 유전 알고리즘 (Genetic Algorithm)과 같은 기법을 사용해 효율적인 테스트 케이스를 생성합니다. (이때 LibFuzzer 같은 도구가 활용됩니다.)"><meta property="og:locale" content="ko_kr"><meta property="og:type" content="article"><meta property="article:section" content="seminar"><meta property="article:published_time" content="2024-07-09T10:00:00+09:00"><meta property="article:modified_time" content="2026-04-29T14:28:04+09:00"><meta property="article:tag" content="Invited-Lecture"><meta property="og:image" content="https://re-st.github.io/images/share.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://re-st.github.io/images/share.png"><meta name=twitter:title content="OSS 드론 시스템 퍼징 - 장대희 교수님 (경희대)"><meta name=twitter:description content="[!WARNING] 강연을 듣고 쓴 메모를 바탕으로 후에 재구성한 내용이라, 어느 정도의 오류가 있을 수 있습니다.
+퍼징은 블록 커버리지 (Block Coverage), 엣지 커버리지 (Edge Coverage) 등을 측정하며, 유전 알고리즘 (Genetic Algorithm)과 같은 기법을 사용해 효율적인 테스트 케이스를 생성합니다. (이때 LibFuzzer 같은 도구가 활용됩니다.)">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="seminar">
+    <meta property="article:published_time" content="2024-07-09T10:00:00+09:00">
+    <meta property="article:modified_time" content="2026-04-29T21:45:03+09:00">
+    <meta property="article:tag" content="Invited-Lecture">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="OSS 드론 시스템 퍼징 - 장대희 교수님 (경희대)">
+  <meta name="twitter:description" content="[!WARNING] 강연을 듣고 쓴 메모를 바탕으로 후에 재구성한 내용이라, 어느 정도의 오류가 있을 수 있습니다.
 퍼징 환경의 고려사항 퍼징 (Fuzzing) 환경을 구축할 때, 바이너리 실행 속도 자체를 최우선으로 고려하지는 않습니다.
 예를 들어 ASan (AddressSanitizer) 같은 도구를 사용하면 속도가 2~3배 정도 느려지지만, 버그 탐지 능력이 향상되므로 감수할 만합니다.
-퍼징은 블록 커버리지 (Block Coverage), 엣지 커버리지 (Edge Coverage) 등을 측정하며, 유전 알고리즘 (Genetic Algorithm)과 같은 기법을 사용해 효율적인 테스트 케이스를 생성합니다. (이때 LibFuzzer 같은 도구가 활용됩니다.)"><meta itemprop=name content="OSS 드론 시스템 퍼징 - 장대희 교수님 (경희대)"><meta itemprop=description content="[!WARNING] 강연을 듣고 쓴 메모를 바탕으로 후에 재구성한 내용이라, 어느 정도의 오류가 있을 수 있습니다.
+퍼징은 블록 커버리지 (Block Coverage), 엣지 커버리지 (Edge Coverage) 등을 측정하며, 유전 알고리즘 (Genetic Algorithm)과 같은 기법을 사용해 효율적인 테스트 케이스를 생성합니다. (이때 LibFuzzer 같은 도구가 활용됩니다.)">
+
+
+
+
+  <meta itemprop="name" content="OSS 드론 시스템 퍼징 - 장대희 교수님 (경희대)">
+  <meta itemprop="description" content="[!WARNING] 강연을 듣고 쓴 메모를 바탕으로 후에 재구성한 내용이라, 어느 정도의 오류가 있을 수 있습니다.
 퍼징 환경의 고려사항 퍼징 (Fuzzing) 환경을 구축할 때, 바이너리 실행 속도 자체를 최우선으로 고려하지는 않습니다.
 예를 들어 ASan (AddressSanitizer) 같은 도구를 사용하면 속도가 2~3배 정도 느려지지만, 버그 탐지 능력이 향상되므로 감수할 만합니다.
-퍼징은 블록 커버리지 (Block Coverage), 엣지 커버리지 (Edge Coverage) 등을 측정하며, 유전 알고리즘 (Genetic Algorithm)과 같은 기법을 사용해 효율적인 테스트 케이스를 생성합니다. (이때 LibFuzzer 같은 도구가 활용됩니다.)"><meta itemprop=datePublished content="2024-07-09T10:00:00+09:00"><meta itemprop=dateModified content="2026-04-29T14:28:04+09:00"><meta itemprop=wordCount content="255"><meta itemprop=image content="https://re-st.github.io/images/share.png"><meta itemprop=keywords content="Invited-Lecture"><meta name=referrer content="no-referrer-when-downgrade"><style>:root{--width:720px;--font-main:Verdana, sans-serif;--font-secondary:Verdana, sans-serif;--font-scale:1em;--background-color:#fff;--heading-color:#222;--text-color:#444;--link-color:#3273dc;--visited-color:#8b6fcb;--blockquote-color:#222}@media(prefers-color-scheme:dark){:root{--background-color:#01242e;--heading-color:#eee;--text-color:#ddd;--link-color:#8cc2dd;--visited-color:#8b6fcb;--blockquote-color:#ccc}}body{font-family:var(--font-secondary);font-size:var(--font-scale);margin:auto;padding:20px;max-width:var(--width);text-align:left;background-color:var(--background-color);word-wrap:break-word;overflow-wrap:break-word;line-height:1.5;color:var(--text-color)}h1,h2,h3,h4,h5,h6{font-family:var(--font-main);color:var(--heading-color)}a{color:var(--link-color);cursor:pointer;text-decoration:none}a:hover{text-decoration:underline}nav a{margin-right:8px}strong,b{color:var(--heading-color)}button{margin:0;cursor:pointer}time{font-family:monospace;font-style:normal;font-size:15px}main{line-height:1.6}table{width:100%}hr{border:0;border-top:1px dashed}img{max-width:100%}code{font-family:monospace;padding:2px;border-radius:3px}blockquote{border-left:1px solid #999;color:var(--blockquote-color);padding-left:20px;font-style:italic}footer{padding:25px 0;text-align:center}.title:hover{text-decoration:none}.title h1{font-size:1.5em}.inline{width:auto!important}.highlight,.code{border-radius:3px;margin-block-start:1em;margin-block-end:1em;overflow-x:auto}ul.blog-posts{list-style-type:none;padding:unset}ul.blog-posts li{display:flex}ul.blog-posts li span{flex:0 0 130px}ul.blog-posts li a:visited{color:var(--visited-color)}</style><style>[data-theme=light]{--background-color:#fff;--heading-color:#222;--text-color:#444;--link-color:#3273dc;--visited-color:#8b6fcb;--blockquote-color:#222}[data-theme=dark]{--background-color:#01242e;--heading-color:#eee;--text-color:#ddd;--link-color:#8cc2dd;--visited-color:#8b6fcb;--blockquote-color:#ccc}</style></head><body><header><a href=/ class=title><h2>Park, Geon (re-st)</h2></a><nav><a href=/pages/about/>[Whoami]</a>
-<a href=/cv/>[CV]</a>
-<button id=theme-toggle onclick=toggleTheme() title="Toggle light/dark mode" style="background:0 0;border:none;cursor:pointer;font-size:1.2em;padding:0 .3em">🌙</button></nav><script>(function(){var e=localStorage.getItem("theme");e==="light"?document.documentElement.setAttribute("data-theme","light"):e==="dark"&&document.documentElement.setAttribute("data-theme","dark")})();function toggleTheme(){var t=document.documentElement.getAttribute("data-theme"),e=t==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",e),localStorage.setItem("theme",e),document.getElementById("theme-toggle").textContent=e==="dark"?"☀️":"🌙"}window.addEventListener("DOMContentLoaded",function(){var e=localStorage.getItem("theme");document.getElementById("theme-toggle").textContent=e==="dark"?"☀️":"🌙"})</script></header><main><article><h1>OSS 드론 시스템 퍼징 - 장대희 교수님 (경희대)</h1><p style=display:flex;gap:1rem;align-items:center;flex-wrap:wrap><i><time datetime=2024-07-09>09 Jul, 2024
-</time></i><span style=font-weight:700;font-size:.95em;color:var(--link-color)>[seminar]</span>
-<span style=opacity:.6;font-size:.85em>2 min read</span></p><content><blockquote><p>[!WARNING]
-강연을 듣고 쓴 메모를 바탕으로 후에 재구성한 내용이라, 어느 정도의 오류가 있을 수 있습니다.</p></blockquote><h1 id=퍼징-환경의-고려사항>퍼징 환경의 고려사항</h1><p>퍼징 (Fuzzing) 환경을 구축할 때, 바이너리 실행 속도 자체를 최우선으로 고려하지는 않습니다.</p><p>예를 들어 ASan (AddressSanitizer) 같은 도구를 사용하면 속도가 2~3배 정도 느려지지만, 버그 탐지 능력이 향상되므로 감수할 만합니다.</p><p>퍼징은 블록 커버리지 (Block Coverage), 엣지 커버리지 (Edge Coverage) 등을 측정하며, 유전 알고리즘 (Genetic Algorithm)과 같은 기법을 사용해 효율적인 테스트 케이스를 생성합니다. (이때 LibFuzzer 같은 도구가 활용됩니다.)</p><p>(이러한 접근법을 통해 CVE-2020-29664와 같은 실제 취약점을 발견한 사례가 있습니다.)</p><blockquote><p>A command injection issue in dji_sys in DJI Mavic 2 Remote Controller before firmware version 01.00.0510 allows for code execution via a malicious firmware upgrade packet.</p></blockquote><p>해당 오류는 메모리만 보고서는 알 수 없으므로, LibFuzzer만으로는 어려웠을 것입니다.</p><h1 id=사례-연구-px4-드론-시스템-분석>사례 연구: PX4 드론 시스템 분석</h1><p>오픈소스 드론 시스템인 PX4의 소스 코드 (C/C++)를 분석 대상으로 삼았습니다.</p><ul><li><strong>과제 1 (파싱)</strong></li><li><strong>과제 2 (포팅):</strong> 데몬 (daemon) 실행 기능부터 요구되었습니다. LibFuzzer stub (스텁)을 드론 시스템에 맞게 포팅해야 합니다.</li></ul><h1 id=qa-방법론>Q&amp;A (방법론)</h1><p><strong>Q:</strong> LibFuzzer에 입력을 줄 지점 (퍼징 타겟)은 어떻게 선정했습니까? 그리고 그 과정에서 문제점은 없었나요?</p><p><strong>A:</strong> <strong>정적 분석</strong>을 사용했습니다. (이에 대해 &ldquo;그럴 거면 왜 퍼징을 돌렸냐"는 반문이 있을 수 있지만, 정적 분석은 버그가 아닌 &lsquo;퍼징 지점&rsquo;을 찾는 데 사용되었습니다.)</p><p>드론 시스템은 여러 컴포넌트로 구성되는데, 외부 센서와만 상호작용하는 부분은 퍼징이 어렵습니다. 따라서 정적 분석을 통해 <strong>MAVLink 메시지를 직접 수신하는 컴포넌트</strong>들을 선별적으로 식별할 필요가 있었습니다.</p><p>또한, 단순히 프로그램 가동 여부 (했다/안 했다)뿐만 아니라, 구체적인 실행 방법 (예: command line 인수)까지 분석해야 했습니다.</p><p><strong>Q:</strong> 정적 분석을 구체적으로 어떻게 활용했습니까?</p><p><strong>A:</strong> <strong>수동 분석</strong> 이었습니다. 소스 코드는 물론, 바이너리 디컴파일 코드를 직접 검토하며 분석했습니다.</p></content><p><a href=https://re-st.github.io/blog/invited-lecture/>#Invited-Lecture</a>&nbsp;</p><div style=font-size:.8em;display:flex;gap:16px;justify-content:center><p><a href=https://re-st.github.io/seminar/%EA%B2%B0%ED%95%A8-%EC%9C%84%EC%B9%98-%EC%B6%94%EC%A0%95-%EC%97%B0%EA%B5%AC%EB%A5%BC-10%EB%85%84%EA%B0%84-%ED%95%B4%EC%98%A8-%EC%9D%B4%EC%95%BC%EA%B8%B0-%EA%B9%80%EB%AC%B8%EC%A3%BC-kaist-%EA%B9%80%EC%9C%A4%ED%98%B8-%ED%95%9C%EC%96%91%EB%8C%80-%EC%9C%A0%EC%8B%A0-%EA%B5%90%EC%88%98%EB%8B%98-kaist/>&lt;&lt; Previous Post</a></p><p>|</p><p><a href=https://re-st.github.io/seminar/%EC%84%9D/%EB%B0%95%EC%82%AC-%EC%A7%84%ED%95%99%EA%B3%BC-%EC%A3%BC%EB%8F%84%EC%A0%81%EC%9D%B8-%EC%82%B6%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%83%90%EC%83%89-%EA%B9%80%EC%A7%80%EC%9D%91-%EA%B5%90%EC%88%98%EB%8B%98-%EC%97%B0%EC%84%B8%EB%8C%80/>Next Post >></a></p></div><p style=margin-top:2rem><a href=javascript:history.back() style=font-size:.9em>← 뒤로</a></p><script src=https://utteranc.es/client.js repo=re-st/re-st.github.io issue-term=pathname label=blog-comment theme=github-light crossorigin=anonymous async></script></article></main><footer>Made with <a href=https://github.com/janraasch/hugo-bearblog/>Hugo ʕ•ᴥ•ʔ Bear</a></footer></body></html>
+퍼징은 블록 커버리지 (Block Coverage), 엣지 커버리지 (Edge Coverage) 등을 측정하며, 유전 알고리즘 (Genetic Algorithm)과 같은 기법을 사용해 효율적인 테스트 케이스를 생성합니다. (이때 LibFuzzer 같은 도구가 활용됩니다.)">
+  <meta itemprop="datePublished" content="2024-07-09T10:00:00+09:00">
+  <meta itemprop="dateModified" content="2026-04-29T21:45:03+09:00">
+  <meta itemprop="wordCount" content="255">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+  <meta itemprop="keywords" content="Invited-Lecture">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+<style>
+  [data-theme="light"] {
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+  [data-theme="dark"] {
+    --background-color: #01242e;
+    --heading-color: #eee;
+    --text-color: #ddd;
+    --link-color: #8cc2dd;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #ccc;
+  }
+</style>
+
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+<a href="/pages/about/">[Whoami]</a>
+
+<a href="/cv/">[CV]</a>
+
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode" style="background:none;border:none;cursor:pointer;font-size:1.2em;padding:0 0.3em;">🌙</button>
+</nav>
+<script>
+  (function() {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else if (stored === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = (current === 'dark') ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    document.getElementById('theme-toggle').textContent = (next === 'dark') ? '☀️' : '🌙';
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var stored = localStorage.getItem('theme');
+    document.getElementById('theme-toggle').textContent = (stored === 'dark') ? '☀️' : '🌙';
+  });
+</script>
+</header>
+  <main>
+<article>
+  <h1>OSS 드론 시스템 퍼징 - 장대희 교수님 (경희대)</h1>
+  <p style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+    <i>
+      <time datetime='2024-07-09'>
+        09 Jul, 2024
+      </time>
+    </i>
+    <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[seminar]</span>
+    
+    <span style="opacity:0.6; font-size:0.85em;">2 min read</span>
+    
+  </p>
+  <content>
+    <blockquote>
+<p>[!WARNING]
+강연을 듣고 쓴 메모를 바탕으로 후에 재구성한 내용이라, 어느 정도의 오류가 있을 수 있습니다.</p>
+</blockquote>
+<h1 id="퍼징-환경의-고려사항">퍼징 환경의 고려사항</h1>
+<p>퍼징 (Fuzzing) 환경을 구축할 때, 바이너리 실행 속도 자체를 최우선으로 고려하지는 않습니다.</p>
+<p>예를 들어 ASan (AddressSanitizer) 같은 도구를 사용하면 속도가 2~3배 정도 느려지지만, 버그 탐지 능력이 향상되므로 감수할 만합니다.</p>
+<p>퍼징은 블록 커버리지 (Block Coverage), 엣지 커버리지 (Edge Coverage) 등을 측정하며, 유전 알고리즘 (Genetic Algorithm)과 같은 기법을 사용해 효율적인 테스트 케이스를 생성합니다. (이때 LibFuzzer 같은 도구가 활용됩니다.)</p>
+<p>(이러한 접근법을 통해 CVE-2020-29664와 같은 실제 취약점을 발견한 사례가 있습니다.)</p>
+<blockquote>
+<p>A command injection issue in dji_sys in DJI Mavic 2 Remote Controller before firmware version 01.00.0510 allows for code execution via a malicious firmware upgrade packet.</p>
+</blockquote>
+<p>해당 오류는 메모리만 보고서는 알 수 없으므로, LibFuzzer만으로는 어려웠을 것입니다.</p>
+<h1 id="사례-연구-px4-드론-시스템-분석">사례 연구: PX4 드론 시스템 분석</h1>
+<p>오픈소스 드론 시스템인 PX4의 소스 코드 (C/C++)를 분석 대상으로 삼았습니다.</p>
+<ul>
+<li><strong>과제 1 (파싱)</strong></li>
+<li><strong>과제 2 (포팅):</strong> 데몬 (daemon) 실행 기능부터 요구되었습니다. LibFuzzer stub (스텁)을 드론 시스템에 맞게 포팅해야 합니다.</li>
+</ul>
+<h1 id="qa-방법론">Q&amp;A (방법론)</h1>
+<p><strong>Q:</strong> LibFuzzer에 입력을 줄 지점 (퍼징 타겟)은 어떻게 선정했습니까? 그리고 그 과정에서 문제점은 없었나요?</p>
+<p><strong>A:</strong> <strong>정적 분석</strong>을 사용했습니다. (이에 대해 &ldquo;그럴 거면 왜 퍼징을 돌렸냐&quot;는 반문이 있을 수 있지만, 정적 분석은 버그가 아닌 &lsquo;퍼징 지점&rsquo;을 찾는 데 사용되었습니다.)</p>
+<p>드론 시스템은 여러 컴포넌트로 구성되는데, 외부 센서와만 상호작용하는 부분은 퍼징이 어렵습니다. 따라서 정적 분석을 통해 <strong>MAVLink 메시지를 직접 수신하는 컴포넌트</strong>들을 선별적으로 식별할 필요가 있었습니다.</p>
+<p>또한, 단순히 프로그램 가동 여부 (했다/안 했다)뿐만 아니라, 구체적인 실행 방법 (예: command line 인수)까지 분석해야 했습니다.</p>
+<p><strong>Q:</strong> 정적 분석을 구체적으로 어떻게 활용했습니까?</p>
+<p><strong>A:</strong> <strong>수동 분석</strong> 이었습니다. 소스 코드는 물론, 바이너리 디컴파일 코드를 직접 검토하며 분석했습니다.</p>
+
+  </content>
+
+  
+
+  <p>
+    
+    <a href="https://re-st.github.io/blog/invited-lecture/">#Invited-Lecture</a>&nbsp;
+    
+  </p>
+
+  <div style="font-size:0.8em;display:flex;gap:16px;justify-content:center;">
+  <p>
+    
+    <a href="https://re-st.github.io/seminar/%EA%B2%B0%ED%95%A8-%EC%9C%84%EC%B9%98-%EC%B6%94%EC%A0%95-%EC%97%B0%EA%B5%AC%EB%A5%BC-10%EB%85%84%EA%B0%84-%ED%95%B4%EC%98%A8-%EC%9D%B4%EC%95%BC%EA%B8%B0-%EA%B9%80%EB%AC%B8%EC%A3%BC-kaist-%EA%B9%80%EC%9C%A4%ED%98%B8-%ED%95%9C%EC%96%91%EB%8C%80-%EC%9C%A0%EC%8B%A0-%EA%B5%90%EC%88%98%EB%8B%98-kaist/">
+      &lt;&lt; Previous Post</a>
+        
+  </p>
+  <p>|</p>
+  <p>
+    
+    <a href="https://re-st.github.io/seminar/%EC%84%9D/%EB%B0%95%EC%82%AC-%EC%A7%84%ED%95%99%EA%B3%BC-%EC%A3%BC%EB%8F%84%EC%A0%81%EC%9D%B8-%EC%82%B6%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%83%90%EC%83%89-%EA%B9%80%EC%A7%80%EC%9D%91-%EA%B5%90%EC%88%98%EB%8B%98-%EC%97%B0%EC%84%B8%EB%8C%80/">Next Post >></a>
+    
+  </p>
+</div>
+
+
+  <p style="margin-top:2rem;">
+    <a href="javascript:history.back()" style="font-size:0.9em;">← 뒤로</a>
+  </p>
+
+  
+  <script src="https://utteranc.es/client.js"
+    repo="re-st/re-st.github.io"
+    issue-term="pathname"
+    label="blog-comment"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</article>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

@@ -1,4 +1,317 @@
-<!doctype html><html lang=ko-kr><head><meta http-equiv=X-Clacks-Overhead content="GNU Terry Pratchett"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=https://re-st.github.io/images/github.png><title>Building High-performant, Energy Efficient and Programmable Inference Chips for ChatGPT | Park, Geon (re-st)</title><meta name=title content="Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT"><meta name=description content="Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT"><meta name=keywords content><meta property="og:url" content="https://re-st.github.io/seminar/building-high-performant-energy-efficient-and-programmable-inference-chips-for-chatgpt/"><meta property="og:site_name" content="Park, Geon (re-st)"><meta property="og:title" content="Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT"><meta property="og:description" content="Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT"><meta property="og:locale" content="ko_kr"><meta property="og:type" content="article"><meta property="article:section" content="seminar"><meta property="article:published_time" content="2026-04-05T10:38:41+09:00"><meta property="article:modified_time" content="2026-04-29T14:24:39+09:00"><meta property="og:image" content="https://re-st.github.io/images/share.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://re-st.github.io/images/share.png"><meta name=twitter:title content="Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT"><meta name=twitter:description content="Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT"><meta itemprop=name content="Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT"><meta itemprop=description content="Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT"><meta itemprop=datePublished content="2026-04-05T10:38:41+09:00"><meta itemprop=dateModified content="2026-04-29T14:24:39+09:00"><meta itemprop=image content="https://re-st.github.io/images/share.png"><meta name=referrer content="no-referrer-when-downgrade"><style>:root{--width:720px;--font-main:Verdana, sans-serif;--font-secondary:Verdana, sans-serif;--font-scale:1em;--background-color:#fff;--heading-color:#222;--text-color:#444;--link-color:#3273dc;--visited-color:#8b6fcb;--blockquote-color:#222}@media(prefers-color-scheme:dark){:root{--background-color:#01242e;--heading-color:#eee;--text-color:#ddd;--link-color:#8cc2dd;--visited-color:#8b6fcb;--blockquote-color:#ccc}}body{font-family:var(--font-secondary);font-size:var(--font-scale);margin:auto;padding:20px;max-width:var(--width);text-align:left;background-color:var(--background-color);word-wrap:break-word;overflow-wrap:break-word;line-height:1.5;color:var(--text-color)}h1,h2,h3,h4,h5,h6{font-family:var(--font-main);color:var(--heading-color)}a{color:var(--link-color);cursor:pointer;text-decoration:none}a:hover{text-decoration:underline}nav a{margin-right:8px}strong,b{color:var(--heading-color)}button{margin:0;cursor:pointer}time{font-family:monospace;font-style:normal;font-size:15px}main{line-height:1.6}table{width:100%}hr{border:0;border-top:1px dashed}img{max-width:100%}code{font-family:monospace;padding:2px;border-radius:3px}blockquote{border-left:1px solid #999;color:var(--blockquote-color);padding-left:20px;font-style:italic}footer{padding:25px 0;text-align:center}.title:hover{text-decoration:none}.title h1{font-size:1.5em}.inline{width:auto!important}.highlight,.code{border-radius:3px;margin-block-start:1em;margin-block-end:1em;overflow-x:auto}ul.blog-posts{list-style-type:none;padding:unset}ul.blog-posts li{display:flex}ul.blog-posts li span{flex:0 0 130px}ul.blog-posts li a:visited{color:var(--visited-color)}</style><style>[data-theme=light]{--background-color:#fff;--heading-color:#222;--text-color:#444;--link-color:#3273dc;--visited-color:#8b6fcb;--blockquote-color:#222}[data-theme=dark]{--background-color:#01242e;--heading-color:#eee;--text-color:#ddd;--link-color:#8cc2dd;--visited-color:#8b6fcb;--blockquote-color:#ccc}</style></head><body><header><a href=/ class=title><h2>Park, Geon (re-st)</h2></a><nav><a href=/pages/about/>[Whoami]</a>
-<a href=/cv/>[CV]</a>
-<button id=theme-toggle onclick=toggleTheme() title="Toggle light/dark mode" style="background:0 0;border:none;cursor:pointer;font-size:1.2em;padding:0 .3em">🌙</button></nav><script>(function(){var e=localStorage.getItem("theme");e==="light"?document.documentElement.setAttribute("data-theme","light"):e==="dark"&&document.documentElement.setAttribute("data-theme","dark")})();function toggleTheme(){var t=document.documentElement.getAttribute("data-theme"),e=t==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",e),localStorage.setItem("theme",e),document.getElementById("theme-toggle").textContent=e==="dark"?"☀️":"🌙"}window.addEventListener("DOMContentLoaded",function(){var e=localStorage.getItem("theme");document.getElementById("theme-toggle").textContent=e==="dark"?"☀️":"🌙"})</script></header><main><article><h1>Building High-performant, Energy Efficient and Programmable Inference Chips for ChatGPT</h1><p style=display:flex;gap:1rem;align-items:center;flex-wrap:wrap><i><time datetime=2026-04-05>05 Apr, 2026
-</time></i><span style=font-weight:700;font-size:.95em;color:var(--link-color)>[seminar]</span></p><content></content><p style=font-size:.85em;opacity:.7>Source: <a href="https://www.notion.so/parkgeon/Building-High-performant-Energy-Efficient-and-Programmable-Inference-Chips-for-ChatGPT-797cc28c9d6d460e9577456fe04f3cb5?source=copy_link">https://www.notion.so/parkgeon/Building-High-performant-Energy-Efficient-and-Programmable-Inference-Chips-for-ChatGPT-797cc28c9d6d460e9577456fe04f3cb5?source=copy_link</a></p><p></p><div style=font-size:.8em;display:flex;gap:16px;justify-content:center><p><a href=https://re-st.github.io/seminar/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B4%EC%95%88-%EC%97%B0%EA%B5%AC%EC%9E%90%EB%A1%9C-%EC%8B%9C%EC%9E%91%ED%95%B4-%EC%9D%B8%EB%8D%94%EC%8A%A4%ED%8A%B8%EB%A6%AC%EC%97%90%EC%84%9C-5%EB%85%84%EC%9D%84-%EB%B3%B4%EB%82%B4%EB%A9%B0-%EB%B0%B0%EC%9A%B4-%EA%B5%90%ED%9B%88/>&lt;&lt; Previous Post</a></p><p>|</p><p><a href=https://re-st.github.io/seminar/%ED%8A%B8%EB%9E%98%ED%94%BD-%EB%B6%84%EC%84%9D-%EA%B3%B5%EA%B2%A9-%EB%B0%8F-%EB%B0%A9%EC%96%B4-marc-juarez-university-of-edinburgh-%EA%B5%90%EC%88%98/>Next Post >></a></p></div><p style=margin-top:2rem><a href=javascript:history.back() style=font-size:.9em>← 뒤로</a></p><script src=https://utteranc.es/client.js repo=re-st/re-st.github.io issue-term=pathname label=blog-comment theme=github-light crossorigin=anonymous async></script></article></main><footer>Made with <a href=https://github.com/janraasch/hugo-bearblog/>Hugo ʕ•ᴥ•ʔ Bear</a></footer></body></html>
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT | Park, Geon (re-st)</title>
+<meta name="title" content="Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT" />
+<meta name="description" content="Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT" />
+<meta name="keywords" content="" />
+
+
+<meta property="og:url" content="https://re-st.github.io/seminar/building-high-performant-energy-efficient-and-programmable-inference-chips-for-chatgpt/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT">
+  <meta property="og:description" content="Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="seminar">
+    <meta property="article:published_time" content="2026-04-05T10:38:41+09:00">
+    <meta property="article:modified_time" content="2026-04-29T14:24:39+09:00">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT">
+  <meta name="twitter:description" content="Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT">
+
+
+
+
+  <meta itemprop="name" content="Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT">
+  <meta itemprop="description" content="Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT">
+  <meta itemprop="datePublished" content="2026-04-05T10:38:41+09:00">
+  <meta itemprop="dateModified" content="2026-04-29T14:24:39+09:00">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+<style>
+  [data-theme="light"] {
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+  [data-theme="dark"] {
+    --background-color: #01242e;
+    --heading-color: #eee;
+    --text-color: #ddd;
+    --link-color: #8cc2dd;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #ccc;
+  }
+</style>
+
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+<a href="/pages/about/">[Whoami]</a>
+
+<a href="/cv/">[CV]</a>
+
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode" style="background:none;border:none;cursor:pointer;font-size:1.2em;padding:0 0.3em;">🌙</button>
+</nav>
+<script>
+  (function() {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else if (stored === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = (current === 'dark') ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    document.getElementById('theme-toggle').textContent = (next === 'dark') ? '☀️' : '🌙';
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var stored = localStorage.getItem('theme');
+    document.getElementById('theme-toggle').textContent = (stored === 'dark') ? '☀️' : '🌙';
+  });
+</script>
+</header>
+  <main>
+<article>
+  <h1>Building High-performant, Energy Efficient and  Programmable Inference Chips for ChatGPT</h1>
+  <p style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+    <i>
+      <time datetime='2026-04-05'>
+        05 Apr, 2026
+      </time>
+    </i>
+    <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[seminar]</span>
+    
+  </p>
+  <content>
+    
+  </content>
+
+  
+  <p style="font-size:0.85em; opacity:0.7;">Source: <a href="https://www.notion.so/parkgeon/Building-High-performant-Energy-Efficient-and-Programmable-Inference-Chips-for-ChatGPT-797cc28c9d6d460e9577456fe04f3cb5?source=copy_link">https://www.notion.so/parkgeon/Building-High-performant-Energy-Efficient-and-Programmable-Inference-Chips-for-ChatGPT-797cc28c9d6d460e9577456fe04f3cb5?source=copy_link</a></p>
+  
+
+  <p>
+    
+  </p>
+
+  <div style="font-size:0.8em;display:flex;gap:16px;justify-content:center;">
+  <p>
+    
+    <a href="https://re-st.github.io/seminar/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B4%EC%95%88-%EC%97%B0%EA%B5%AC%EC%9E%90%EB%A1%9C-%EC%8B%9C%EC%9E%91%ED%95%B4-%EC%9D%B8%EB%8D%94%EC%8A%A4%ED%8A%B8%EB%A6%AC%EC%97%90%EC%84%9C-5%EB%85%84%EC%9D%84-%EB%B3%B4%EB%82%B4%EB%A9%B0-%EB%B0%B0%EC%9A%B4-%EA%B5%90%ED%9B%88/">
+      &lt;&lt; Previous Post</a>
+        
+  </p>
+  <p>|</p>
+  <p>
+    
+    <a href="https://re-st.github.io/seminar/%ED%8A%B8%EB%9E%98%ED%94%BD-%EB%B6%84%EC%84%9D-%EA%B3%B5%EA%B2%A9-%EB%B0%8F-%EB%B0%A9%EC%96%B4-marc-juarez-university-of-edinburgh-%EA%B5%90%EC%88%98/">Next Post >></a>
+    
+  </p>
+</div>
+
+
+  <p style="margin-top:2rem;">
+    <a href="javascript:history.back()" style="font-size:0.9em;">← 뒤로</a>
+  </p>
+
+  
+  <script src="https://utteranc.es/client.js"
+    repo="re-st/re-st.github.io"
+    issue-term="pathname"
+    label="blog-comment"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</article>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

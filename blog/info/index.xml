@@ -1,95 +1,69 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Info on Park, Geon (re-st)</title><link>https://re-st.github.io/blog/info/</link><description>Recent content in Info on Park, Geon (re-st)</description><generator>Hugo</generator><language>ko-kr</language><copyright>Copyright © 2026, Geon Park.</copyright><lastBuildDate>Wed, 29 Apr 2026 14:28:04 +0900</lastBuildDate><atom:link href="https://re-st.github.io/blog/info/index.xml" rel="self" type="application/rss+xml"/><item><title>Lean</title><link>https://re-st.github.io/category/lean/</link><pubDate>Fri, 12 Sep 2025 15:14:57 +0900</pubDate><guid>https://re-st.github.io/category/lean/</guid><description>&lt;ul&gt;
-&lt;li&gt;[[Lean 게임 서버|Lean 게임 서버]]&lt;/li&gt;
-&lt;li&gt;[[Why Lean 4 replaced OCaml as my Primary Language|Why Lean 4 replaced OCaml as my Primary Language]]&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>수치해석 라이브러리의 정확성을 각잡고 증명할 DSL의 필요성 - 이원열 교수님 (포항공대)</title><link>https://re-st.github.io/seminar/%EC%88%98%EC%B9%98%ED%95%B4%EC%84%9D-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%98-%EC%A0%95%ED%99%95%EC%84%B1%EC%9D%84-%EA%B0%81%EC%9E%A1%EA%B3%A0-%EC%A6%9D%EB%AA%85%ED%95%A0-dsl%EC%9D%98-%ED%95%84%EC%9A%94%EC%84%B1-%EC%9D%B4%EC%9B%90%EC%97%B4-%EA%B5%90%EC%88%98%EB%8B%98-%ED%8F%AC%ED%95%AD%EA%B3%B5%EB%8C%80/</link><pubDate>Thu, 06 Feb 2025 16:10:00 +0900</pubDate><guid>https://re-st.github.io/seminar/%EC%88%98%EC%B9%98%ED%95%B4%EC%84%9D-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%98-%EC%A0%95%ED%99%95%EC%84%B1%EC%9D%84-%EA%B0%81%EC%9E%A1%EA%B3%A0-%EC%A6%9D%EB%AA%85%ED%95%A0-dsl%EC%9D%98-%ED%95%84%EC%9A%94%EC%84%B1-%EC%9D%B4%EC%9B%90%EC%97%B4-%EA%B5%90%EC%88%98%EB%8B%98-%ED%8F%AC%ED%95%AD%EA%B3%B5%EB%8C%80/</guid><description>&lt;p&gt;&lt;a href=""&gt;[분류] SRC-ERC STAAR (소프트웨어재난연구센터) 계절학교 강연&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id="연구-소개-연속적인-값-continuous-computation의-정확성"&gt;연구 소개: 연속적인 값 (Continuous Computation)의 정확성&lt;/h1&gt;
-&lt;p&gt;저는 프로그램과 계산의 &lt;strong&gt;수학적인 성질&lt;/strong&gt;에 관심이 많습니다. 특히 프로그램이 수학적으로 &lt;strong&gt;정확한지 (Correctness)&lt;/strong&gt;, 그리고 효율적인지, 이론적 한계는 무엇인지 등을 연구합니다.&lt;/p&gt;
-&lt;p&gt;제가 주로 다루는 프로그램은 여기 계신 많은 분들과 달리, &lt;strong&gt;연속적인 (continuous) 값&lt;/strong&gt;을 다룹니다. (예: 2.8, 3/7, \(\sqrt{5}\)) 이런 값들에 더하기, 곱하기, \(\sin\) 등의 연산을 적용하는 계산이죠.&lt;/p&gt;
-&lt;p&gt;이러한 연속적인 계산은 머신러닝, 최적화, 컴퓨터 그래픽스, 과학 컴퓨팅 등 사실상 CS 전반에서 엄청나게 많이 사용되고 있습니다.&lt;/p&gt;</description></item><item><title>AI 연구의 문제: '요구공학적 프로세스'의 부재 - 이석원 교수님 (아주대)</title><link>https://re-st.github.io/seminar/ai-%EC%97%B0%EA%B5%AC%EC%9D%98-%EB%AC%B8%EC%A0%9C-%EC%9A%94%EA%B5%AC%EA%B3%B5%ED%95%99%EC%A0%81-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%9D%98-%EB%B6%80%EC%9E%AC-%EC%9D%B4%EC%84%9D%EC%9B%90-%EA%B5%90%EC%88%98%EB%8B%98-%EC%95%84%EC%A3%BC%EB%8C%80/</link><pubDate>Wed, 05 Feb 2025 23:00:00 +0900</pubDate><guid>https://re-st.github.io/seminar/ai-%EC%97%B0%EA%B5%AC%EC%9D%98-%EB%AC%B8%EC%A0%9C-%EC%9A%94%EA%B5%AC%EA%B3%B5%ED%95%99%EC%A0%81-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%9D%98-%EB%B6%80%EC%9E%AC-%EC%9D%B4%EC%84%9D%EC%9B%90-%EA%B5%90%EC%88%98%EB%8B%98-%EC%95%84%EC%A3%BC%EB%8C%80/</guid><description>&lt;h1 id="requirements-engineering-요구학-요구공학의-정의"&gt;Requirements Engineering (요구학, 요구공학)의 정의&lt;/h1&gt;
-&lt;p&gt;요구공학은 두 가지 핵심 목표를 가집니다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;목적 (Fitness Quality)에 맞는 시스템 개발&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;유지보수 되는 시스템 개발&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;최근 시대상에 따라, 시스템이 &amp;lsquo;어떻게&amp;rsquo; 개발되는가 (개발 과정)에 대한 요구 또한 커지고 있습니다.&lt;/p&gt;
-&lt;h1 id="ai-연구의-문제-요구공학적-프로세스의-부재"&gt;AI 연구의 문제: &amp;lsquo;요구공학적 프로세스&amp;rsquo;의 부재&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;AI 모델의 학습 데이터 (training data)를 수집할 때, 명확한 &lt;strong&gt;&amp;lsquo;요구조건&amp;rsquo;&lt;/strong&gt; 을 가지고 모으는 사람이 없습니다.&lt;/li&gt;
-&lt;li&gt;그 데이터가 어떤 이해관계자 (state holder)의 어떤 책임 (responsibility)에 기반한 것인지, 혹은 그 데이터를 제공한 &amp;lsquo;전문가&amp;rsquo; (expert)가 누구인지에 대해 관심이 없습니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="collective-intelligence-ci와-데이터-품질"&gt;Collective Intelligence (CI)와 데이터 품질&lt;/h1&gt;
-&lt;p&gt;데이터의 요구조건에 대한 개념이 바로 &lt;strong&gt;Collective Intelligence (CI)&lt;/strong&gt; 입니다.&lt;/p&gt;</description></item><item><title>Linux 명령어</title><link>https://re-st.github.io/log/linux-%EB%AA%85%EB%A0%B9%EC%96%B4/</link><pubDate>Tue, 25 Jun 2024 20:07:05 +0900</pubDate><guid>https://re-st.github.io/log/linux-%EB%AA%85%EB%A0%B9%EC%96%B4/</guid><description>&lt;h1 id="공부하기"&gt;공부하기&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;[[(북마크) Bandit 게임 서버|(북마크) Bandit 게임 서버]]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="의-사용"&gt;!의 사용&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;!echo:p&lt;/code&gt; 명령어는 Bash 히스토리 확장에서 특정 패턴과 일치하는 마지막 명령어를 찾고, 해당 명령어를 출력하는 데 사용된다.&lt;/li&gt;
-&lt;li&gt;만약 이를 실행하고 싶다면, &lt;code&gt;!echo&lt;/code&gt;를 사용하면 된다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;!3&lt;/code&gt;은 히스토리에서 3번째 명령어가 실행된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="heading"&gt;$!&lt;/h1&gt;
-&lt;p&gt;가장 최근에 백그라운드에서 실행한 작업의 프로세스 ID를 나타냅니다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1&lt;/span&gt;&lt;span&gt;python your_script.py &amp;amp; sleep 10; &lt;span style="color:#007020"&gt;kill&lt;/span&gt; &lt;span style="color:#bb60d5"&gt;$!&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id="htop"&gt;htop&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;htop -u&lt;/code&gt; : 내 프로세스만 보기&lt;/li&gt;
-&lt;li&gt;TIME+: 프로세스가 &lt;strong&gt;프로세서를 사용한&lt;/strong&gt; 시간 (그래서 1h이상이면 긴 거여서 빨개짐)&lt;/li&gt;
-&lt;li&gt;COMMAND: 프로세스 시작에 사용한 명령어&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="cd의-사용"&gt;cd의 사용&lt;/h1&gt;
-&lt;p&gt;&lt;code&gt;cd -&lt;/code&gt;: 이전 폴더로&lt;/p&gt;</description></item><item><title>단축키</title><link>https://re-st.github.io/log/%EB%8B%A8%EC%B6%95%ED%82%A4/</link><pubDate>Fri, 10 May 2024 20:47:11 +0900</pubDate><guid>https://re-st.github.io/log/%EB%8B%A8%EC%B6%95%ED%82%A4/</guid><description>&lt;h1 id="윈도"&gt;윈도&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;캡처하기 &lt;strong&gt;Win + Shift + S&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;터미널 창 나누기 &lt;code&gt;Alt Shift +&lt;/code&gt; (우) - (하)&lt;/li&gt;
-&lt;li&gt;터미널 커서 &lt;code&gt;Alt&lt;/code&gt; 상하좌우&lt;/li&gt;
-&lt;li&gt;터미널 크기 &lt;code&gt;Alt Shift&lt;/code&gt; 상하좌우&lt;/li&gt;
-&lt;li&gt;터미널 모두 닫기 &lt;code&gt;Ctrl Shift w&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;터미널에서 우분투 열기 &lt;code&gt;Ctrl Shift 5&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="vscode"&gt;VSCode&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;[[copilot|copilot]] &lt;code&gt;Ctrl Enter&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;최근 창 보기 &lt;code&gt;Alt f + r&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;폴더 클릭 후 폴더 내 검색 &lt;code&gt;Shift Alt f&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;새 탭 &lt;code&gt;Ctrl Shift space&lt;/code&gt;로 선택. &lt;code&gt;Ctrl Shift tab&lt;/code&gt;로 기본창&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="정보-obsidianobsidian"&gt;[[(정보) Obsidian|Obsidian]]&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;옵시디언 단축키 &lt;img src="https://re-st.github.io/%ed%8e%8c%20-%20%ec%98%b5%ec%8b%9c%eb%94%94%ec%96%b8%20%eb%8b%a8%ec%b6%95%ed%82%a4.png" alt="../펌 - 옵시디언 단축키.png"/&gt;&lt;/li&gt;
-&lt;li&gt;링크 이동 - Ctrl Enter : 새창. Alt Enter : 같은창. Ctrl Alt &amp;lt;- 뒤로. -&amp;gt; 앞으로.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="내-단축키-설정"&gt;내 단축키 설정&lt;/h1&gt;
-&lt;h2 id="윈도-1"&gt;윈도&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;캡처폴더 &lt;strong&gt;Ctrl + Alt + S&lt;/strong&gt; (내가 지정)&lt;/li&gt;
-&lt;li&gt;Welcome-KAIST CA(num7)&lt;/li&gt;
-&lt;li&gt;procorn (num8)&lt;/li&gt;
-&lt;li&gt;내 핫스팟 (num9)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="옵시디언"&gt;옵시디언&lt;/h2&gt;
-&lt;p&gt;템플릿 삽입 단축키 &lt;img src="https://re-st.github.io/%ed%85%9c%ed%94%8c%eb%a6%bf%20%ec%82%bd%ec%9e%85%20%eb%8b%a8%ec%b6%95%ed%82%a4.png" alt="../템플릿 삽입 단축키.png"/&gt;
-데일리 노트 단축키 &lt;img src="https://re-st.github.io/%eb%8d%b0%ec%9d%bc%eb%a6%ac%20%eb%85%b8%ed%8a%b8%20%eb%8b%a8%ec%b6%95%ed%82%a4.png" alt="../데일리 노트 단축키.png"/&gt;&lt;/p&gt;</description></item><item><title>Obsidian</title><link>https://re-st.github.io/log/obsidian/</link><pubDate>Mon, 22 Apr 2024 20:47:59 +0900</pubDate><guid>https://re-st.github.io/log/obsidian/</guid><description>&lt;h1 id="템플릿"&gt;템플릿&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;설정 &amp;gt; Community plugins &amp;gt; browse &amp;gt; Templates 설치&lt;/li&gt;
-&lt;li&gt;설정 &amp;gt; Templates &amp;gt; Template folder location 지정&lt;/li&gt;
-&lt;li&gt;방금 설정한 폴더에 템플릿 파일 생성&lt;/li&gt;
-&lt;li&gt;앞으로 아무 노트에서나, &lt;code&gt;Ctrl P&lt;/code&gt; &amp;gt; Templates: Insert template&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="템플릿-예시"&gt;템플릿 예시&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span style="display:flex;"&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;1&lt;/span&gt;&lt;span&gt;&lt;span style="color:#000080;font-weight:bold"&gt;# {{date:YYYY-MM-DD}}
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;2&lt;/span&gt;&lt;span&gt;&lt;span style="color:#800080;font-weight:bold"&gt;## 할 일
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"&gt;3&lt;/span&gt;&lt;span&gt;&lt;span style="color:#007020;font-weight:bold"&gt;- [ ]&lt;/span&gt; 출근
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id="바탕화면에-obsidian-바로가기-만들기"&gt;바탕화면에 Obsidian 바로가기 만들기&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://help.obsidian.md/Extending&amp;#43;Obsidian/Obsidian&amp;#43;URI"&gt;https://help.obsidian.md/Extending+Obsidian/Obsidian+URI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.reddit.com/r/ObsidianMD/comments/zb28m7/how_can_i_set_up_multiple_desktop_shortcuts_for/"&gt;https://www.reddit.com/r/ObsidianMD/comments/zb28m7/how_can_i_set_up_multiple_desktop_shortcuts_for/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="내-obsidian-플러그인"&gt;내 Obsidian 플러그인&lt;/h1&gt;
-&lt;p&gt;&lt;img src="https://re-st.github.io/%eb%82%b4%20Obsidian%20%ed%94%8c%eb%9f%ac%ea%b7%b8%ec%9d%b8%202025-08-20.png" alt="../내 Obsidian 플러그인 2025-08-20.png"/&gt;&lt;/p&gt;
-&lt;h1 id="헤더-색상"&gt;헤더 색상&lt;/h1&gt;
-&lt;h6 id="ㅁㄴㅇㄹ"&gt;ㅁㄴㅇㄹ&lt;/h6&gt;
-&lt;h5 id="ㅁㄴㅇㄹ-1"&gt;ㅁㄴㅇㄹ&lt;/h5&gt;
-&lt;h4 id="ㅁㄴㅇㄹ-2"&gt;ㅁㄴㅇㄹ&lt;/h4&gt;
-&lt;h3 id="ㅁㄴㅇㄹ-3"&gt;ㅁㄴㅇㄹ&lt;/h3&gt;
-&lt;p&gt;ㅁㄴㅇㄹ&lt;/p&gt;</description></item><item><title>내 스케쥴</title><link>https://re-st.github.io/log/%EB%82%B4-%EC%8A%A4%EC%BC%80%EC%A5%B4/</link><pubDate>Fri, 02 Feb 2024 20:32:36 +0900</pubDate><guid>https://re-st.github.io/log/%EB%82%B4-%EC%8A%A4%EC%BC%80%EC%A5%B4/</guid><description>My worktime schedule</description></item><item><title>내 CV (자기소개서)</title><link>https://re-st.github.io/log/%EB%82%B4-cv-%EC%9E%90%EA%B8%B0%EC%86%8C%EA%B0%9C%EC%84%9C/</link><pubDate>Wed, 27 Oct 1999 23:59:59 +0900</pubDate><guid>https://re-st.github.io/log/%EB%82%B4-cv-%EC%9E%90%EA%B8%B0%EC%86%8C%EA%B0%9C%EC%84%9C/</guid><description>My Curriculum Vitae</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Info on Park, Geon (re-st)</title>
+    <link>https://re-st.github.io/blog/info/</link>
+    <description>Recent content in Info on Park, Geon (re-st)</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>Copyright © 2026, Geon Park.</copyright>
+    <lastBuildDate>Wed, 29 Apr 2026 21:45:03 +0900</lastBuildDate>
+    <atom:link href="https://re-st.github.io/blog/info/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lean</title>
+      <link>https://re-st.github.io/category/lean/</link>
+      <pubDate>Fri, 12 Sep 2025 15:14:57 +0900</pubDate>
+      <guid>https://re-st.github.io/category/lean/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;[[Lean 게임 서버|Lean 게임 서버]]&lt;/li&gt;&#xA;&lt;li&gt;[[Why Lean 4 replaced OCaml as my Primary Language|Why Lean 4 replaced OCaml as my Primary Language]]&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>수치해석 라이브러리의 정확성을 각잡고 증명할 DSL의 필요성 - 이원열 교수님 (포항공대)</title>
+      <link>https://re-st.github.io/seminar/%EC%88%98%EC%B9%98%ED%95%B4%EC%84%9D-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%98-%EC%A0%95%ED%99%95%EC%84%B1%EC%9D%84-%EA%B0%81%EC%9E%A1%EA%B3%A0-%EC%A6%9D%EB%AA%85%ED%95%A0-dsl%EC%9D%98-%ED%95%84%EC%9A%94%EC%84%B1-%EC%9D%B4%EC%9B%90%EC%97%B4-%EA%B5%90%EC%88%98%EB%8B%98-%ED%8F%AC%ED%95%AD%EA%B3%B5%EB%8C%80/</link>
+      <pubDate>Thu, 06 Feb 2025 16:10:00 +0900</pubDate>
+      <guid>https://re-st.github.io/seminar/%EC%88%98%EC%B9%98%ED%95%B4%EC%84%9D-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%98-%EC%A0%95%ED%99%95%EC%84%B1%EC%9D%84-%EA%B0%81%EC%9E%A1%EA%B3%A0-%EC%A6%9D%EB%AA%85%ED%95%A0-dsl%EC%9D%98-%ED%95%84%EC%9A%94%EC%84%B1-%EC%9D%B4%EC%9B%90%EC%97%B4-%EA%B5%90%EC%88%98%EB%8B%98-%ED%8F%AC%ED%95%AD%EA%B3%B5%EB%8C%80/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;&#34;&gt;[분류] SRC-ERC STAAR (소프트웨어재난연구센터) 계절학교 강연&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;연구-소개-연속적인-값-continuous-computation의-정확성&#34;&gt;연구 소개: 연속적인 값 (Continuous Computation)의 정확성&lt;/h1&gt;&#xA;&lt;p&gt;저는 프로그램과 계산의 &lt;strong&gt;수학적인 성질&lt;/strong&gt;에 관심이 많습니다. 특히 프로그램이 수학적으로 &lt;strong&gt;정확한지 (Correctness)&lt;/strong&gt;, 그리고 효율적인지, 이론적 한계는 무엇인지 등을 연구합니다.&lt;/p&gt;&#xA;&lt;p&gt;제가 주로 다루는 프로그램은 여기 계신 많은 분들과 달리, &lt;strong&gt;연속적인 (continuous) 값&lt;/strong&gt;을 다룹니다. (예: 2.8, 3/7, \(\sqrt{5}\)) 이런 값들에 더하기, 곱하기, \(\sin\) 등의 연산을 적용하는 계산이죠.&lt;/p&gt;&#xA;&lt;p&gt;이러한 연속적인 계산은 머신러닝, 최적화, 컴퓨터 그래픽스, 과학 컴퓨팅 등 사실상 CS 전반에서 엄청나게 많이 사용되고 있습니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI 연구의 문제: &#39;요구공학적 프로세스&#39;의 부재 - 이석원 교수님 (아주대)</title>
+      <link>https://re-st.github.io/seminar/ai-%EC%97%B0%EA%B5%AC%EC%9D%98-%EB%AC%B8%EC%A0%9C-%EC%9A%94%EA%B5%AC%EA%B3%B5%ED%95%99%EC%A0%81-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%9D%98-%EB%B6%80%EC%9E%AC-%EC%9D%B4%EC%84%9D%EC%9B%90-%EA%B5%90%EC%88%98%EB%8B%98-%EC%95%84%EC%A3%BC%EB%8C%80/</link>
+      <pubDate>Wed, 05 Feb 2025 23:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/seminar/ai-%EC%97%B0%EA%B5%AC%EC%9D%98-%EB%AC%B8%EC%A0%9C-%EC%9A%94%EA%B5%AC%EA%B3%B5%ED%95%99%EC%A0%81-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%9D%98-%EB%B6%80%EC%9E%AC-%EC%9D%B4%EC%84%9D%EC%9B%90-%EA%B5%90%EC%88%98%EB%8B%98-%EC%95%84%EC%A3%BC%EB%8C%80/</guid>
+      <description>&lt;h1 id=&#34;requirements-engineering-요구학-요구공학의-정의&#34;&gt;Requirements Engineering (요구학, 요구공학)의 정의&lt;/h1&gt;&#xA;&lt;p&gt;요구공학은 두 가지 핵심 목표를 가집니다.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;목적 (Fitness Quality)에 맞는 시스템 개발&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;유지보수 되는 시스템 개발&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;최근 시대상에 따라, 시스템이 &amp;lsquo;어떻게&amp;rsquo; 개발되는가 (개발 과정)에 대한 요구 또한 커지고 있습니다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;ai-연구의-문제-요구공학적-프로세스의-부재&#34;&gt;AI 연구의 문제: &amp;lsquo;요구공학적 프로세스&amp;rsquo;의 부재&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AI 모델의 학습 데이터 (training data)를 수집할 때, 명확한 &lt;strong&gt;&amp;lsquo;요구조건&amp;rsquo;&lt;/strong&gt; 을 가지고 모으는 사람이 없습니다.&lt;/li&gt;&#xA;&lt;li&gt;그 데이터가 어떤 이해관계자 (state holder)의 어떤 책임 (responsibility)에 기반한 것인지, 혹은 그 데이터를 제공한 &amp;lsquo;전문가&amp;rsquo; (expert)가 누구인지에 대해 관심이 없습니다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;collective-intelligence-ci와-데이터-품질&#34;&gt;Collective Intelligence (CI)와 데이터 품질&lt;/h1&gt;&#xA;&lt;p&gt;데이터의 요구조건에 대한 개념이 바로 &lt;strong&gt;Collective Intelligence (CI)&lt;/strong&gt; 입니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Linux 명령어</title>
+      <link>https://re-st.github.io/log/linux-%EB%AA%85%EB%A0%B9%EC%96%B4/</link>
+      <pubDate>Tue, 25 Jun 2024 20:07:05 +0900</pubDate>
+      <guid>https://re-st.github.io/log/linux-%EB%AA%85%EB%A0%B9%EC%96%B4/</guid>
+      <description>&lt;h1 id=&#34;공부하기&#34;&gt;공부하기&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;[[(북마크) Bandit 게임 서버|(북마크) Bandit 게임 서버]]&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;의-사용&#34;&gt;!의 사용&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;!echo:p&lt;/code&gt; 명령어는 Bash 히스토리 확장에서 특정 패턴과 일치하는 마지막 명령어를 찾고, 해당 명령어를 출력하는 데 사용된다.&lt;/li&gt;&#xA;&lt;li&gt;만약 이를 실행하고 싶다면, &lt;code&gt;!echo&lt;/code&gt;를 사용하면 된다.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;!3&lt;/code&gt;은 히스토리에서 3번째 명령어가 실행된다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;heading&#34;&gt;$!&lt;/h1&gt;&#xA;&lt;p&gt;가장 최근에 백그라운드에서 실행한 작업의 프로세스 ID를 나타냅니다.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&lt;/span&gt;&lt;span&gt;python your_script.py &amp;amp; sleep 10; &lt;span style=&#34;color:#007020&#34;&gt;kill&lt;/span&gt; &lt;span style=&#34;color:#bb60d5&#34;&gt;$!&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;htop&#34;&gt;htop&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;htop -u&lt;/code&gt; : 내 프로세스만 보기&lt;/li&gt;&#xA;&lt;li&gt;TIME+: 프로세스가 &lt;strong&gt;프로세서를 사용한&lt;/strong&gt; 시간 (그래서 1h이상이면 긴 거여서 빨개짐)&lt;/li&gt;&#xA;&lt;li&gt;COMMAND: 프로세스 시작에 사용한 명령어&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;cd의-사용&#34;&gt;cd의 사용&lt;/h1&gt;&#xA;&lt;p&gt;&lt;code&gt;cd -&lt;/code&gt;: 이전 폴더로&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>단축키</title>
+      <link>https://re-st.github.io/log/%EB%8B%A8%EC%B6%95%ED%82%A4/</link>
+      <pubDate>Fri, 10 May 2024 20:47:11 +0900</pubDate>
+      <guid>https://re-st.github.io/log/%EB%8B%A8%EC%B6%95%ED%82%A4/</guid>
+      <description>&lt;h1 id=&#34;윈도&#34;&gt;윈도&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;캡처하기 &lt;strong&gt;Win + Shift + S&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;터미널 창 나누기 &lt;code&gt;Alt Shift +&lt;/code&gt; (우) - (하)&lt;/li&gt;&#xA;&lt;li&gt;터미널 커서 &lt;code&gt;Alt&lt;/code&gt; 상하좌우&lt;/li&gt;&#xA;&lt;li&gt;터미널 크기 &lt;code&gt;Alt Shift&lt;/code&gt; 상하좌우&lt;/li&gt;&#xA;&lt;li&gt;터미널 모두 닫기 &lt;code&gt;Ctrl Shift w&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;터미널에서 우분투 열기 &lt;code&gt;Ctrl Shift 5&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;vscode&#34;&gt;VSCode&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;[[copilot|copilot]] &lt;code&gt;Ctrl Enter&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;최근 창 보기 &lt;code&gt;Alt f + r&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;폴더 클릭 후 폴더 내 검색 &lt;code&gt;Shift Alt f&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;새 탭 &lt;code&gt;Ctrl Shift space&lt;/code&gt;로 선택. &lt;code&gt;Ctrl Shift tab&lt;/code&gt;로 기본창&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;정보-obsidianobsidian&#34;&gt;[[(정보) Obsidian|Obsidian]]&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;옵시디언 단축키 &lt;img src=&#34;https://re-st.github.io/%ed%8e%8c%20-%20%ec%98%b5%ec%8b%9c%eb%94%94%ec%96%b8%20%eb%8b%a8%ec%b6%95%ed%82%a4.png&#34; alt=&#34;../펌 - 옵시디언 단축키.png&#34;/&gt;&lt;/li&gt;&#xA;&lt;li&gt;링크 이동 - Ctrl Enter :  새창. Alt Enter : 같은창. Ctrl Alt &amp;lt;- 뒤로. -&amp;gt; 앞으로.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;내-단축키-설정&#34;&gt;내 단축키 설정&lt;/h1&gt;&#xA;&lt;h2 id=&#34;윈도-1&#34;&gt;윈도&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;캡처폴더 &lt;strong&gt;Ctrl + Alt + S&lt;/strong&gt; (내가 지정)&lt;/li&gt;&#xA;&lt;li&gt;Welcome-KAIST CA(num7)&lt;/li&gt;&#xA;&lt;li&gt;procorn (num8)&lt;/li&gt;&#xA;&lt;li&gt;내 핫스팟 (num9)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;옵시디언&#34;&gt;옵시디언&lt;/h2&gt;&#xA;&lt;p&gt;템플릿 삽입 단축키 &lt;img src=&#34;https://re-st.github.io/%ed%85%9c%ed%94%8c%eb%a6%bf%20%ec%82%bd%ec%9e%85%20%eb%8b%a8%ec%b6%95%ed%82%a4.png&#34; alt=&#34;../템플릿 삽입 단축키.png&#34;/&gt;&#xA;데일리 노트 단축키 &lt;img src=&#34;https://re-st.github.io/%eb%8d%b0%ec%9d%bc%eb%a6%ac%20%eb%85%b8%ed%8a%b8%20%eb%8b%a8%ec%b6%95%ed%82%a4.png&#34; alt=&#34;../데일리 노트 단축키.png&#34;/&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Obsidian</title>
+      <link>https://re-st.github.io/log/obsidian/</link>
+      <pubDate>Mon, 22 Apr 2024 20:47:59 +0900</pubDate>
+      <guid>https://re-st.github.io/log/obsidian/</guid>
+      <description>&lt;h1 id=&#34;템플릿&#34;&gt;템플릿&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;설정 &amp;gt; Community plugins &amp;gt; browse &amp;gt; Templates 설치&lt;/li&gt;&#xA;&lt;li&gt;설정 &amp;gt; Templates &amp;gt; Template folder location 지정&lt;/li&gt;&#xA;&lt;li&gt;방금 설정한 폴더에 템플릿 파일 생성&lt;/li&gt;&#xA;&lt;li&gt;앞으로 아무 노트에서나, &lt;code&gt;Ctrl P&lt;/code&gt; &amp;gt; Templates: Insert template&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;템플릿-예시&#34;&gt;템플릿 예시&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#000080;font-weight:bold&#34;&gt;# {{date:YYYY-MM-DD}}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#800080;font-weight:bold&#34;&gt;## 할 일&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3&lt;/span&gt;&lt;span&gt;&lt;span style=&#34;color:#007020;font-weight:bold&#34;&gt;- [ ]&lt;/span&gt; 출근&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;바탕화면에-obsidian-바로가기-만들기&#34;&gt;바탕화면에 Obsidian 바로가기 만들기&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://help.obsidian.md/Extending&amp;#43;Obsidian/Obsidian&amp;#43;URI&#34;&gt;https://help.obsidian.md/Extending+Obsidian/Obsidian+URI&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/ObsidianMD/comments/zb28m7/how_can_i_set_up_multiple_desktop_shortcuts_for/&#34;&gt;https://www.reddit.com/r/ObsidianMD/comments/zb28m7/how_can_i_set_up_multiple_desktop_shortcuts_for/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;내-obsidian-플러그인&#34;&gt;내 Obsidian 플러그인&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://re-st.github.io/%eb%82%b4%20Obsidian%20%ed%94%8c%eb%9f%ac%ea%b7%b8%ec%9d%b8%202025-08-20.png&#34; alt=&#34;../내 Obsidian 플러그인 2025-08-20.png&#34;/&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;헤더-색상&#34;&gt;헤더 색상&lt;/h1&gt;&#xA;&lt;h6 id=&#34;ㅁㄴㅇㄹ&#34;&gt;ㅁㄴㅇㄹ&lt;/h6&gt;&#xA;&lt;h5 id=&#34;ㅁㄴㅇㄹ-1&#34;&gt;ㅁㄴㅇㄹ&lt;/h5&gt;&#xA;&lt;h4 id=&#34;ㅁㄴㅇㄹ-2&#34;&gt;ㅁㄴㅇㄹ&lt;/h4&gt;&#xA;&lt;h3 id=&#34;ㅁㄴㅇㄹ-3&#34;&gt;ㅁㄴㅇㄹ&lt;/h3&gt;&#xA;&lt;p&gt;ㅁㄴㅇㄹ&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>내 스케쥴</title>
+      <link>https://re-st.github.io/log/%EB%82%B4-%EC%8A%A4%EC%BC%80%EC%A5%B4/</link>
+      <pubDate>Fri, 02 Feb 2024 20:32:36 +0900</pubDate>
+      <guid>https://re-st.github.io/log/%EB%82%B4-%EC%8A%A4%EC%BC%80%EC%A5%B4/</guid>
+      <description>My worktime schedule</description>
+    </item>
+    <item>
+      <title>내 CV (자기소개서)</title>
+      <link>https://re-st.github.io/log/%EB%82%B4-cv-%EC%9E%90%EA%B8%B0%EC%86%8C%EA%B0%9C%EC%84%9C/</link>
+      <pubDate>Wed, 27 Oct 1999 23:59:59 +0900</pubDate>
+      <guid>https://re-st.github.io/log/%EB%82%B4-cv-%EC%9E%90%EA%B8%B0%EC%86%8C%EA%B0%9C%EC%84%9C/</guid>
+      <description>My Curriculum Vitae</description>
+    </item>
+  </channel>
+</rss>

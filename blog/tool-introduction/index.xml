@@ -1,12 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tool-Introduction on Park, Geon (re-st)</title><link>https://re-st.github.io/blog/tool-introduction/</link><description>Recent content in Tool-Introduction on Park, Geon (re-st)</description><generator>Hugo</generator><language>ko-kr</language><copyright>Copyright © 2026, Geon Park.</copyright><lastBuildDate>Wed, 29 Apr 2026 14:24:39 +0900</lastBuildDate><atom:link href="https://re-st.github.io/blog/tool-introduction/index.xml" rel="self" type="application/rss+xml"/><item><title>vimium</title><link>https://re-st.github.io/log/vimium/</link><pubDate>Thu, 25 Jul 2024 20:29:34 +0900</pubDate><guid>https://re-st.github.io/log/vimium/</guid><description>&lt;p&gt;chrome 단축키 어플리케이션&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;?&lt;/code&gt; : 단축키 도움말
-&lt;code&gt;yf&lt;/code&gt; : 링크 복사&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;기본단축키 &lt;a href="https://keycombiner.com/collections/vimium/"&gt;https://keycombiner.com/collections/vimium/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;웹서핑 단축키 (한국어) &lt;a href="https://www.clien.net/service/board/lecture/15948566"&gt;https://www.clien.net/service/board/lecture/15948566&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;직접설정 chrome-extension://dbepggeogbaibhgnhhndojpepiihcmeb/pages/options.html&lt;/li&gt;
-&lt;li&gt;관련 문서 [[Vimium Search Completion|Vimium Search Completion]]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="vimium-art---calendar-사그라지는-분포도"&gt;Vimium art - calendar. 사그라지는 분포도.&lt;/h1&gt;
-&lt;p&gt;&lt;img src="https://re-st.github.io/Vimium%20art%20-%20calendar%20-%20Pasted%20image%2020240725144639.png" alt="../Vimium art - calendar - Pasted image 20240725144639.png"/&gt;
-&lt;img src="https://re-st.github.io/Vimium%20art%20-%20calendar%20-%20Pasted%20image%2020240725144745.png" alt="../Vimium art - calendar - Pasted image 20240725144745.png"/&gt;&lt;img src="https://re-st.github.io/Vimium%20art%20-%20calendar%20-%20Pasted%20image%2020240725144756.png" alt="../Vimium art - calendar - Pasted image 20240725144756.png"/&gt;&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tool-Introduction on Park, Geon (re-st)</title>
+    <link>https://re-st.github.io/blog/tool-introduction/</link>
+    <description>Recent content in Tool-Introduction on Park, Geon (re-st)</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>Copyright © 2026, Geon Park.</copyright>
+    <lastBuildDate>Wed, 29 Apr 2026 14:24:39 +0900</lastBuildDate>
+    <atom:link href="https://re-st.github.io/blog/tool-introduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vimium</title>
+      <link>https://re-st.github.io/log/vimium/</link>
+      <pubDate>Thu, 25 Jul 2024 20:29:34 +0900</pubDate>
+      <guid>https://re-st.github.io/log/vimium/</guid>
+      <description>&lt;p&gt;chrome 단축키 어플리케이션&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;?&lt;/code&gt; : 단축키 도움말&#xA;&lt;code&gt;yf&lt;/code&gt; : 링크 복사&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;기본단축키 &lt;a href=&#34;https://keycombiner.com/collections/vimium/&#34;&gt;https://keycombiner.com/collections/vimium/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;웹서핑 단축키 (한국어) &lt;a href=&#34;https://www.clien.net/service/board/lecture/15948566&#34;&gt;https://www.clien.net/service/board/lecture/15948566&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;직접설정 chrome-extension://dbepggeogbaibhgnhhndojpepiihcmeb/pages/options.html&lt;/li&gt;&#xA;&lt;li&gt;관련 문서 [[Vimium Search Completion|Vimium Search Completion]]&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;vimium-art---calendar-사그라지는-분포도&#34;&gt;Vimium art - calendar. 사그라지는 분포도.&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://re-st.github.io/Vimium%20art%20-%20calendar%20-%20Pasted%20image%2020240725144639.png&#34; alt=&#34;../Vimium art - calendar - Pasted image 20240725144639.png&#34;/&gt;&#xA;&lt;img src=&#34;https://re-st.github.io/Vimium%20art%20-%20calendar%20-%20Pasted%20image%2020240725144745.png&#34; alt=&#34;../Vimium art - calendar - Pasted image 20240725144745.png&#34;/&gt;&lt;img src=&#34;https://re-st.github.io/Vimium%20art%20-%20calendar%20-%20Pasted%20image%2020240725144756.png&#34; alt=&#34;../Vimium art - calendar - Pasted image 20240725144756.png&#34;/&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

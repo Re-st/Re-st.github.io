@@ -1,4 +1,14 @@
-<!doctype html><html lang=ko-kr><head><meta http-equiv=X-Clacks-Overhead content="GNU Terry Pratchett"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=https://re-st.github.io/images/github.png><title>결함 위치 추정 연구를 10년간 해온 이야기 - 김문주 (KAIST), 김윤호 (한양대), 유신 교수님 (KAIST) | Park, Geon (re-st)</title><meta name=title content="결함 위치 추정 연구를 10년간 해온 이야기 - 김문주 (KAIST), 김윤호 (한양대), 유신 교수님 (KAIST)"><meta name=description content='[분류] SRC-ERC STAAR (소프트웨어재난연구센터) 계절학교 강연
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>결함 위치 추정 연구를 10년간 해온 이야기 - 김문주 (KAIST), 김윤호 (한양대), 유신 교수님 (KAIST) | Park, Geon (re-st)</title>
+<meta name="title" content="결함 위치 추정 연구를 10년간 해온 이야기 - 김문주 (KAIST), 김윤호 (한양대), 유신 교수님 (KAIST)" />
+<meta name="description" content="[분류] SRC-ERC STAAR (소프트웨어재난연구센터) 계절학교 강연
 
 [!WARNING] 공사중입니다.
 좀 더 정리가 필요한 문서입니다.
@@ -10,25 +20,381 @@
 결함 위치 추정 (FL)의 전통적인 접근법은 Spectrum-Based FL (SBFL) 입니다. 이는 프로그램의 실행 &lsquo;스펙트럼&rsquo; (커버리지)을 분석하는 방식입니다.
 
 
-이론: passing test (통과하는 테스트)에서 실행되는 코드 라인과 failing test (실패하는 테스트)에서 실행되는 코드 라인을 비교합니다. &ldquo;실패하는 테스트에서는 많이 실행되지만, 통과하는 테스트에서는 적게 실행되는 라인"이 버그일 확률이 높다고 추정합니다.'><meta name=keywords content="Lecture-Summary,"><meta property="og:url" content="https://re-st.github.io/seminar/%EA%B2%B0%ED%95%A8-%EC%9C%84%EC%B9%98-%EC%B6%94%EC%A0%95-%EC%97%B0%EA%B5%AC%EB%A5%BC-10%EB%85%84%EA%B0%84-%ED%95%B4%EC%98%A8-%EC%9D%B4%EC%95%BC%EA%B8%B0-%EA%B9%80%EB%AC%B8%EC%A3%BC-kaist-%EA%B9%80%EC%9C%A4%ED%98%B8-%ED%95%9C%EC%96%91%EB%8C%80-%EC%9C%A0%EC%8B%A0-%EA%B5%90%EC%88%98%EB%8B%98-kaist/"><meta property="og:site_name" content="Park, Geon (re-st)"><meta property="og:title" content="결함 위치 추정 연구를 10년간 해온 이야기 - 김문주 (KAIST), 김윤호 (한양대), 유신 교수님 (KAIST)"><meta property="og:description" content='[분류] SRC-ERC STAAR (소프트웨어재난연구센터) 계절학교 강연
+이론: passing test (통과하는 테스트)에서 실행되는 코드 라인과 failing test (실패하는 테스트)에서 실행되는 코드 라인을 비교합니다. &ldquo;실패하는 테스트에서는 많이 실행되지만, 통과하는 테스트에서는 적게 실행되는 라인&quot;이 버그일 확률이 높다고 추정합니다." />
+<meta name="keywords" content="Lecture-Summary," />
+
+
+<meta property="og:url" content="https://re-st.github.io/seminar/%EA%B2%B0%ED%95%A8-%EC%9C%84%EC%B9%98-%EC%B6%94%EC%A0%95-%EC%97%B0%EA%B5%AC%EB%A5%BC-10%EB%85%84%EA%B0%84-%ED%95%B4%EC%98%A8-%EC%9D%B4%EC%95%BC%EA%B8%B0-%EA%B9%80%EB%AC%B8%EC%A3%BC-kaist-%EA%B9%80%EC%9C%A4%ED%98%B8-%ED%95%9C%EC%96%91%EB%8C%80-%EC%9C%A0%EC%8B%A0-%EA%B5%90%EC%88%98%EB%8B%98-kaist/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="결함 위치 추정 연구를 10년간 해온 이야기 - 김문주 (KAIST), 김윤호 (한양대), 유신 교수님 (KAIST)">
+  <meta property="og:description" content="[분류] SRC-ERC STAAR (소프트웨어재난연구센터) 계절학교 강연
 [!WARNING] 공사중입니다. 좀 더 정리가 필요한 문서입니다.
 연구 생활이란 (연사: 김문주) 오늘 강연은 기술적인 내용보다는 ‘연구 생활이란 어떤 것인가’에 대한 기술 외적인 (non-technical) 이야기입니다. (이 연구에는 홍신 교수님의 기여가 많습니다.)
 연사 (김문주)는 이번 주에 50세, 즉 ‘지천명’ (知天命)을 맞았습니다.
 기존 접근법의 한계: Spectrum-Based FL (연사: 김윤호) 결함 위치 추정 (FL)의 전통적인 접근법은 Spectrum-Based FL (SBFL) 입니다. 이는 프로그램의 실행 ‘스펙트럼’ (커버리지)을 분석하는 방식입니다.
-이론: passing test (통과하는 테스트)에서 실행되는 코드 라인과 failing test (실패하는 테스트)에서 실행되는 코드 라인을 비교합니다. “실패하는 테스트에서는 많이 실행되지만, 통과하는 테스트에서는 적게 실행되는 라인"이 버그일 확률이 높다고 추정합니다.'><meta property="og:locale" content="ko_kr"><meta property="og:type" content="article"><meta property="article:section" content="seminar"><meta property="article:published_time" content="2024-07-08T14:30:48+09:00"><meta property="article:modified_time" content="2026-04-29T14:28:04+09:00"><meta property="article:tag" content="Lecture-Summary"><meta property="og:image" content="https://re-st.github.io/images/share.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://re-st.github.io/images/share.png"><meta name=twitter:title content="결함 위치 추정 연구를 10년간 해온 이야기 - 김문주 (KAIST), 김윤호 (한양대), 유신 교수님 (KAIST)"><meta name=twitter:description content='[분류] SRC-ERC STAAR (소프트웨어재난연구센터) 계절학교 강연
+이론: passing test (통과하는 테스트)에서 실행되는 코드 라인과 failing test (실패하는 테스트)에서 실행되는 코드 라인을 비교합니다. “실패하는 테스트에서는 많이 실행되지만, 통과하는 테스트에서는 적게 실행되는 라인&#34;이 버그일 확률이 높다고 추정합니다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="seminar">
+    <meta property="article:published_time" content="2024-07-08T14:30:48+09:00">
+    <meta property="article:modified_time" content="2026-04-29T21:45:03+09:00">
+    <meta property="article:tag" content="Lecture-Summary">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="결함 위치 추정 연구를 10년간 해온 이야기 - 김문주 (KAIST), 김윤호 (한양대), 유신 교수님 (KAIST)">
+  <meta name="twitter:description" content="[분류] SRC-ERC STAAR (소프트웨어재난연구센터) 계절학교 강연
 [!WARNING] 공사중입니다. 좀 더 정리가 필요한 문서입니다.
 연구 생활이란 (연사: 김문주) 오늘 강연은 기술적인 내용보다는 ‘연구 생활이란 어떤 것인가’에 대한 기술 외적인 (non-technical) 이야기입니다. (이 연구에는 홍신 교수님의 기여가 많습니다.)
 연사 (김문주)는 이번 주에 50세, 즉 ‘지천명’ (知天命)을 맞았습니다.
 기존 접근법의 한계: Spectrum-Based FL (연사: 김윤호) 결함 위치 추정 (FL)의 전통적인 접근법은 Spectrum-Based FL (SBFL) 입니다. 이는 프로그램의 실행 ‘스펙트럼’ (커버리지)을 분석하는 방식입니다.
-이론: passing test (통과하는 테스트)에서 실행되는 코드 라인과 failing test (실패하는 테스트)에서 실행되는 코드 라인을 비교합니다. “실패하는 테스트에서는 많이 실행되지만, 통과하는 테스트에서는 적게 실행되는 라인"이 버그일 확률이 높다고 추정합니다.'><meta itemprop=name content="결함 위치 추정 연구를 10년간 해온 이야기 - 김문주 (KAIST), 김윤호 (한양대), 유신 교수님 (KAIST)"><meta itemprop=description content='[분류] SRC-ERC STAAR (소프트웨어재난연구센터) 계절학교 강연
+이론: passing test (통과하는 테스트)에서 실행되는 코드 라인과 failing test (실패하는 테스트)에서 실행되는 코드 라인을 비교합니다. “실패하는 테스트에서는 많이 실행되지만, 통과하는 테스트에서는 적게 실행되는 라인&#34;이 버그일 확률이 높다고 추정합니다.">
+
+
+
+
+  <meta itemprop="name" content="결함 위치 추정 연구를 10년간 해온 이야기 - 김문주 (KAIST), 김윤호 (한양대), 유신 교수님 (KAIST)">
+  <meta itemprop="description" content="[분류] SRC-ERC STAAR (소프트웨어재난연구센터) 계절학교 강연
 [!WARNING] 공사중입니다. 좀 더 정리가 필요한 문서입니다.
 연구 생활이란 (연사: 김문주) 오늘 강연은 기술적인 내용보다는 ‘연구 생활이란 어떤 것인가’에 대한 기술 외적인 (non-technical) 이야기입니다. (이 연구에는 홍신 교수님의 기여가 많습니다.)
 연사 (김문주)는 이번 주에 50세, 즉 ‘지천명’ (知天命)을 맞았습니다.
 기존 접근법의 한계: Spectrum-Based FL (연사: 김윤호) 결함 위치 추정 (FL)의 전통적인 접근법은 Spectrum-Based FL (SBFL) 입니다. 이는 프로그램의 실행 ‘스펙트럼’ (커버리지)을 분석하는 방식입니다.
-이론: passing test (통과하는 테스트)에서 실행되는 코드 라인과 failing test (실패하는 테스트)에서 실행되는 코드 라인을 비교합니다. “실패하는 테스트에서는 많이 실행되지만, 통과하는 테스트에서는 적게 실행되는 라인"이 버그일 확률이 높다고 추정합니다.'><meta itemprop=datePublished content="2024-07-08T14:30:48+09:00"><meta itemprop=dateModified content="2026-04-29T14:28:04+09:00"><meta itemprop=wordCount content="370"><meta itemprop=image content="https://re-st.github.io/images/share.png"><meta itemprop=keywords content="Lecture-Summary"><meta name=referrer content="no-referrer-when-downgrade"><style>:root{--width:720px;--font-main:Verdana, sans-serif;--font-secondary:Verdana, sans-serif;--font-scale:1em;--background-color:#fff;--heading-color:#222;--text-color:#444;--link-color:#3273dc;--visited-color:#8b6fcb;--blockquote-color:#222}@media(prefers-color-scheme:dark){:root{--background-color:#01242e;--heading-color:#eee;--text-color:#ddd;--link-color:#8cc2dd;--visited-color:#8b6fcb;--blockquote-color:#ccc}}body{font-family:var(--font-secondary);font-size:var(--font-scale);margin:auto;padding:20px;max-width:var(--width);text-align:left;background-color:var(--background-color);word-wrap:break-word;overflow-wrap:break-word;line-height:1.5;color:var(--text-color)}h1,h2,h3,h4,h5,h6{font-family:var(--font-main);color:var(--heading-color)}a{color:var(--link-color);cursor:pointer;text-decoration:none}a:hover{text-decoration:underline}nav a{margin-right:8px}strong,b{color:var(--heading-color)}button{margin:0;cursor:pointer}time{font-family:monospace;font-style:normal;font-size:15px}main{line-height:1.6}table{width:100%}hr{border:0;border-top:1px dashed}img{max-width:100%}code{font-family:monospace;padding:2px;border-radius:3px}blockquote{border-left:1px solid #999;color:var(--blockquote-color);padding-left:20px;font-style:italic}footer{padding:25px 0;text-align:center}.title:hover{text-decoration:none}.title h1{font-size:1.5em}.inline{width:auto!important}.highlight,.code{border-radius:3px;margin-block-start:1em;margin-block-end:1em;overflow-x:auto}ul.blog-posts{list-style-type:none;padding:unset}ul.blog-posts li{display:flex}ul.blog-posts li span{flex:0 0 130px}ul.blog-posts li a:visited{color:var(--visited-color)}</style><style>[data-theme=light]{--background-color:#fff;--heading-color:#222;--text-color:#444;--link-color:#3273dc;--visited-color:#8b6fcb;--blockquote-color:#222}[data-theme=dark]{--background-color:#01242e;--heading-color:#eee;--text-color:#ddd;--link-color:#8cc2dd;--visited-color:#8b6fcb;--blockquote-color:#ccc}</style></head><body><header><a href=/ class=title><h2>Park, Geon (re-st)</h2></a><nav><a href=/pages/about/>[Whoami]</a>
-<a href=/cv/>[CV]</a>
-<button id=theme-toggle onclick=toggleTheme() title="Toggle light/dark mode" style="background:0 0;border:none;cursor:pointer;font-size:1.2em;padding:0 .3em">🌙</button></nav><script>(function(){var e=localStorage.getItem("theme");e==="light"?document.documentElement.setAttribute("data-theme","light"):e==="dark"&&document.documentElement.setAttribute("data-theme","dark")})();function toggleTheme(){var t=document.documentElement.getAttribute("data-theme"),e=t==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",e),localStorage.setItem("theme",e),document.getElementById("theme-toggle").textContent=e==="dark"?"☀️":"🌙"}window.addEventListener("DOMContentLoaded",function(){var e=localStorage.getItem("theme");document.getElementById("theme-toggle").textContent=e==="dark"?"☀️":"🌙"})</script></header><main><article><h1>결함 위치 추정 연구를 10년간 해온 이야기 - 김문주 (KAIST), 김윤호 (한양대), 유신 교수님 (KAIST)</h1><p style=display:flex;gap:1rem;align-items:center;flex-wrap:wrap><i><time datetime=2024-07-08>08 Jul, 2024
-</time></i><span style=font-weight:700;font-size:.95em;color:var(--link-color)>[seminar]</span>
-<span style=opacity:.6;font-size:.85em>2 min read</span></p><content><p><a href>[분류] SRC-ERC STAAR (소프트웨어재난연구센터) 계절학교 강연</a></p><blockquote><p>[!WARNING] 공사중입니다.
-좀 더 정리가 필요한 문서입니다.</p></blockquote><h1 id=연구-생활이란-연사-김문주>연구 생활이란 (연사: 김문주)</h1><p>오늘 강연은 기술적인 내용보다는 &lsquo;연구 생활이란 어떤 것인가&rsquo;에 대한 기술 외적인 (non-technical) 이야기입니다. (이 연구에는 홍신 교수님의 기여가 많습니다.)</p><p>연사 (김문주)는 이번 주에 50세, 즉 &lsquo;지천명&rsquo; (知天命)을 맞았습니다.</p><h1 id=기존-접근법의-한계-spectrum-based-fl-연사-김윤호>기존 접근법의 한계: Spectrum-Based FL (연사: 김윤호)</h1><p>결함 위치 추정 (FL)의 전통적인 접근법은 <strong>Spectrum-Based FL (SBFL)</strong> 입니다. 이는 프로그램의 실행 &lsquo;스펙트럼&rsquo; (커버리지)을 분석하는 방식입니다.</p><ul><li><p><strong>이론:</strong> passing test (통과하는 테스트)에서 실행되는 코드 라인과 failing test (실패하는 테스트)에서 실행되는 코드 라인을 비교합니다. &ldquo;실패하는 테스트에서는 많이 실행되지만, 통과하는 테스트에서는 적게 실행되는 라인"이 버그일 확률이 높다고 추정합니다.</p></li><li><p><strong>비판:</strong> 하지만 이 방식은 치명적인 한계가 있었습니다. &ldquo;오류 확률이 높은 상위 1%를 걸러낸다 쳐도, 그 양이 여전히 수없이 많다. 이걸 개발자가 언제 다 보냐?&ldquo;는 것이었죠.</p></li><li><p><strong>결과:</strong> 이 때문에 2010년대 초반, SBFL은 &lsquo;막다른 길&rsquo; (dead end)이라는 비난을 받기도 했습니다.</p></li></ul><h1 id=연구의-진화-1-비용-절감과-실전-투입-hybridmuse--museum>연구의 진화 1: 비용 절감과 실전 투입 (HybridMUSE & MUSEUM)</h1><p>MUSE의 강력함에도 불구, &lsquo;mutant&rsquo; (변이)를 하나하나 실행하는 것은 시간이 너무 많이 소모되는 비싼 작업이었습니다.</p><ul><li><p><strong>HybridMUSE:</strong> 이 문제를 해결하기 위해, 빠른 SBFL 방식과 강력한 MBFL 방식을 결합했습니다. SBFL로 후보군을 빠르게 줄이고, 유망한 후보에 대해서만 변이를 수행하여 mutant 개수를 획기적으로 줄였습니다.</p></li><li><p><strong>MUSEUM (실전 적용):</strong> 이 기술을 <strong>Java</strong>처럼 인터페이스가 많아 분석이 까다로운 실제 프로그램에 적용했습니다.
-(참고: MUSEUM은 1년 반 동안 개발자들이 해결하지 못하고 헛방 패치만 내놓았던 <strong>Eclipse bug 322222</strong>의 원인을 쉽게 찾아내는 데 성공)</p><ul><li>[[MUSEUM (프로그램)|MUSEUM (프로그램)]]</li></ul></li></ul><h1 id=현재와-미래-비용-문제와-llm-연사-유신>현재와 미래: 비용 문제와 LLM (연사: 유신)</h1><p>하지만 mutation은 (MUSE든 어떤 방식이든) 근본적으로 비싼 작업입니다.</p><ul><li><p><strong>비용 절감 1 ([[Ahead-of-Time MBFL|Ahead-of-Time MBFL]]):</strong> 미리 변이를 계산해두는 방식입니다.</p></li><li><p><strong>비용 절감 2 ([Predictive Mutation Analysis]):</strong> <code>test_user_login_fail</code> 같은 테스트 케이스의 &lsquo;이름&rsquo;과 <code>user.password</code> 같은 소스 코드의 &lsquo;identifier&rsquo; (식별자)를 엮는, 이른바 **[[natural language channel|natural language channel]]**을 이용합니다. 이를 통해 <strong>실제로 돌려보지 않고도</strong> 유용할 것 같은 변이를 &lsquo;예측&rsquo; (predict)합니다.</p></li></ul><p>현재 이 연구는 [[SBFL|SBFL]], [[MBFL|MBFL]], [[APR|APR]] (자동 버그 수정), LLM 등을 모두 합치는 방향 (예: [[defect prediction|defect prediction]], [[unified debugging|unified debugging]])으로 진화하고 있습니다. (유신 교수 등 여러 사람과 협업)</p><hr><h1 id=결론-하나의-문제와-협력의-가치>결론: 하나의 문제와 협력의 가치</h1><p><strong>&ldquo;Sticking to a single problem can be fun, if the problem is important.&rdquo;</strong></p><p>(FL에 무슨 큰 뜻이 있어서 시작한 게 아니라) 하나의 중요한 문제를 계속 파고드는 것은 재미있을 수 있습니다. 10년 전만 해도 FL은 발전이 없다고 보는 등 인식이 크게 좋지 않았는데, 계속하다 보니 사람들의 인식이 바뀌는 것이 보였습니다.</p><p><strong>콜라보 (Collaboration)는 성공적인 연구의 핵심 (key)입니다.</strong></p></content><p><a href=https://re-st.github.io/blog/lecture-summary/>#Lecture-Summary</a>&nbsp;</p><div style=font-size:.8em;display:flex;gap:16px;justify-content:center><p><strike>&lt;&lt; Previous Post</strike></p><p>|</p><p><a href=https://re-st.github.io/seminar/oss-%EB%93%9C%EB%A1%A0-%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%8D%BC%EC%A7%95-%EC%9E%A5%EB%8C%80%ED%9D%AC-%EA%B5%90%EC%88%98%EB%8B%98-%EA%B2%BD%ED%9D%AC%EB%8C%80/>Next Post >></a></p></div><p style=margin-top:2rem><a href=javascript:history.back() style=font-size:.9em>← 뒤로</a></p><script src=https://utteranc.es/client.js repo=re-st/re-st.github.io issue-term=pathname label=blog-comment theme=github-light crossorigin=anonymous async></script></article></main><footer>Made with <a href=https://github.com/janraasch/hugo-bearblog/>Hugo ʕ•ᴥ•ʔ Bear</a></footer></body></html>
+이론: passing test (통과하는 테스트)에서 실행되는 코드 라인과 failing test (실패하는 테스트)에서 실행되는 코드 라인을 비교합니다. “실패하는 테스트에서는 많이 실행되지만, 통과하는 테스트에서는 적게 실행되는 라인&#34;이 버그일 확률이 높다고 추정합니다.">
+  <meta itemprop="datePublished" content="2024-07-08T14:30:48+09:00">
+  <meta itemprop="dateModified" content="2026-04-29T21:45:03+09:00">
+  <meta itemprop="wordCount" content="370">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+  <meta itemprop="keywords" content="Lecture-Summary">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+<style>
+  [data-theme="light"] {
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+  [data-theme="dark"] {
+    --background-color: #01242e;
+    --heading-color: #eee;
+    --text-color: #ddd;
+    --link-color: #8cc2dd;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #ccc;
+  }
+</style>
+
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+<a href="/pages/about/">[Whoami]</a>
+
+<a href="/cv/">[CV]</a>
+
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode" style="background:none;border:none;cursor:pointer;font-size:1.2em;padding:0 0.3em;">🌙</button>
+</nav>
+<script>
+  (function() {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else if (stored === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = (current === 'dark') ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    document.getElementById('theme-toggle').textContent = (next === 'dark') ? '☀️' : '🌙';
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var stored = localStorage.getItem('theme');
+    document.getElementById('theme-toggle').textContent = (stored === 'dark') ? '☀️' : '🌙';
+  });
+</script>
+</header>
+  <main>
+<article>
+  <h1>결함 위치 추정 연구를 10년간 해온 이야기 - 김문주 (KAIST), 김윤호 (한양대), 유신 교수님 (KAIST)</h1>
+  <p style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+    <i>
+      <time datetime='2024-07-08'>
+        08 Jul, 2024
+      </time>
+    </i>
+    <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[seminar]</span>
+    
+    <span style="opacity:0.6; font-size:0.85em;">2 min read</span>
+    
+  </p>
+  <content>
+    <p><a href="">[분류] SRC-ERC STAAR (소프트웨어재난연구센터) 계절학교 강연</a></p>
+<blockquote>
+<p>[!WARNING] 공사중입니다.
+좀 더 정리가 필요한 문서입니다.</p>
+</blockquote>
+<h1 id="연구-생활이란-연사-김문주">연구 생활이란 (연사: 김문주)</h1>
+<p>오늘 강연은 기술적인 내용보다는 &lsquo;연구 생활이란 어떤 것인가&rsquo;에 대한 기술 외적인 (non-technical) 이야기입니다. (이 연구에는 홍신 교수님의 기여가 많습니다.)</p>
+<p>연사 (김문주)는 이번 주에 50세, 즉 &lsquo;지천명&rsquo; (知天命)을 맞았습니다.</p>
+<h1 id="기존-접근법의-한계-spectrum-based-fl-연사-김윤호">기존 접근법의 한계: Spectrum-Based FL (연사: 김윤호)</h1>
+<p>결함 위치 추정 (FL)의 전통적인 접근법은 <strong>Spectrum-Based FL (SBFL)</strong> 입니다. 이는 프로그램의 실행 &lsquo;스펙트럼&rsquo; (커버리지)을 분석하는 방식입니다.</p>
+<ul>
+<li>
+<p><strong>이론:</strong> passing test (통과하는 테스트)에서 실행되는 코드 라인과 failing test (실패하는 테스트)에서 실행되는 코드 라인을 비교합니다. &ldquo;실패하는 테스트에서는 많이 실행되지만, 통과하는 테스트에서는 적게 실행되는 라인&quot;이 버그일 확률이 높다고 추정합니다.</p>
+</li>
+<li>
+<p><strong>비판:</strong> 하지만 이 방식은 치명적인 한계가 있었습니다. &ldquo;오류 확률이 높은 상위 1%를 걸러낸다 쳐도, 그 양이 여전히 수없이 많다. 이걸 개발자가 언제 다 보냐?&ldquo;는 것이었죠.</p>
+</li>
+<li>
+<p><strong>결과:</strong> 이 때문에 2010년대 초반, SBFL은 &lsquo;막다른 길&rsquo; (dead end)이라는 비난을 받기도 했습니다.</p>
+</li>
+</ul>
+<h1 id="연구의-진화-1-비용-절감과-실전-투입-hybridmuse--museum">연구의 진화 1: 비용 절감과 실전 투입 (HybridMUSE &amp; MUSEUM)</h1>
+<p>MUSE의 강력함에도 불구, &lsquo;mutant&rsquo; (변이)를 하나하나 실행하는 것은 시간이 너무 많이 소모되는 비싼 작업이었습니다.</p>
+<ul>
+<li>
+<p><strong>HybridMUSE:</strong> 이 문제를 해결하기 위해, 빠른 SBFL 방식과 강력한 MBFL 방식을 결합했습니다. SBFL로 후보군을 빠르게 줄이고, 유망한 후보에 대해서만 변이를 수행하여 mutant 개수를 획기적으로 줄였습니다.</p>
+</li>
+<li>
+<p><strong>MUSEUM (실전 적용):</strong> 이 기술을 <strong>Java</strong>처럼 인터페이스가 많아 분석이 까다로운 실제 프로그램에 적용했습니다.
+(참고: MUSEUM은 1년 반 동안 개발자들이 해결하지 못하고 헛방 패치만 내놓았던 <strong>Eclipse bug 322222</strong>의 원인을 쉽게 찾아내는 데 성공)</p>
+<ul>
+<li>[[MUSEUM (프로그램)|MUSEUM (프로그램)]]</li>
+</ul>
+</li>
+</ul>
+<h1 id="현재와-미래-비용-문제와-llm-연사-유신">현재와 미래: 비용 문제와 LLM (연사: 유신)</h1>
+<p>하지만 mutation은 (MUSE든 어떤 방식이든) 근본적으로 비싼 작업입니다.</p>
+<ul>
+<li>
+<p><strong>비용 절감 1 ([[Ahead-of-Time MBFL|Ahead-of-Time MBFL]]):</strong> 미리 변이를 계산해두는 방식입니다.</p>
+</li>
+<li>
+<p><strong>비용 절감 2 ([Predictive Mutation Analysis]):</strong> <code>test_user_login_fail</code> 같은 테스트 케이스의 &lsquo;이름&rsquo;과 <code>user.password</code> 같은 소스 코드의 &lsquo;identifier&rsquo; (식별자)를 엮는, 이른바 **[[natural language channel|natural language channel]]**을 이용합니다. 이를 통해 <strong>실제로 돌려보지 않고도</strong> 유용할 것 같은 변이를 &lsquo;예측&rsquo; (predict)합니다.</p>
+</li>
+</ul>
+<p>현재 이 연구는 [[SBFL|SBFL]], [[MBFL|MBFL]], [[APR|APR]] (자동 버그 수정), LLM 등을 모두 합치는 방향 (예: [[defect prediction|defect prediction]], [[unified debugging|unified debugging]])으로 진화하고 있습니다. (유신 교수 등 여러 사람과 협업)</p>
+<hr>
+<h1 id="결론-하나의-문제와-협력의-가치">결론: 하나의 문제와 협력의 가치</h1>
+<p><strong>&ldquo;Sticking to a single problem can be fun, if the problem is important.&rdquo;</strong></p>
+<p>(FL에 무슨 큰 뜻이 있어서 시작한 게 아니라) 하나의 중요한 문제를 계속 파고드는 것은 재미있을 수 있습니다. 10년 전만 해도 FL은 발전이 없다고 보는 등 인식이 크게 좋지 않았는데, 계속하다 보니 사람들의 인식이 바뀌는 것이 보였습니다.</p>
+<p><strong>콜라보 (Collaboration)는 성공적인 연구의 핵심 (key)입니다.</strong></p>
+
+  </content>
+
+  
+
+  <p>
+    
+    <a href="https://re-st.github.io/blog/lecture-summary/">#Lecture-Summary</a>&nbsp;
+    
+  </p>
+
+  <div style="font-size:0.8em;display:flex;gap:16px;justify-content:center;">
+  <p>
+    
+        <strike>
+          &lt;&lt; Previous Post</strike>
+            
+  </p>
+  <p>|</p>
+  <p>
+    
+    <a href="https://re-st.github.io/seminar/oss-%EB%93%9C%EB%A1%A0-%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%8D%BC%EC%A7%95-%EC%9E%A5%EB%8C%80%ED%9D%AC-%EA%B5%90%EC%88%98%EB%8B%98-%EA%B2%BD%ED%9D%AC%EB%8C%80/">Next Post >></a>
+    
+  </p>
+</div>
+
+
+  <p style="margin-top:2rem;">
+    <a href="javascript:history.back()" style="font-size:0.9em;">← 뒤로</a>
+  </p>
+
+  
+  <script src="https://utteranc.es/client.js"
+    repo="re-st/re-st.github.io"
+    issue-term="pathname"
+    label="blog-comment"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</article>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

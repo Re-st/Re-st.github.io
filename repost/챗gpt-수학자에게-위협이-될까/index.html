@@ -1,16 +1,358 @@
-<!doctype html><html lang=ko-kr><head><meta http-equiv=X-Clacks-Overhead content="GNU Terry Pratchett"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=https://re-st.github.io/images/github.png><title>챗GPT, 수학자에게 위협이 될까 | Park, Geon (re-st)</title><meta name=title content="챗GPT, 수학자에게 위협이 될까"><meta name=description content='2023년 6월의 글이다. 당시는 ChatGPT 자체가 언어모델, 내지는 일반인이 쉬이 사용 가능한 AI모델의 대명사로 불리던 시기라는 점이 주목된다. 지금처럼 형식 검증기를 뒤에 붙여 쓰는 모델이 거론되지 않았고, 단순히 ChatGPT의 역량이 얼마나 되는지 가늠되지 않아 무언가를 계속 시켜 보던 시절이었다.
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>챗GPT, 수학자에게 위협이 될까 | Park, Geon (re-st)</title>
+<meta name="title" content="챗GPT, 수학자에게 위협이 될까" />
+<meta name="description" content="2023년 6월의 글이다. 당시는 ChatGPT 자체가 언어모델, 내지는 일반인이 쉬이 사용 가능한 AI모델의 대명사로 불리던 시기라는 점이 주목된다. 지금처럼 형식 검증기를 뒤에 붙여 쓰는 모델이 거론되지 않았고, 단순히 ChatGPT의 역량이 얼마나 되는지 가늠되지 않아 무언가를 계속 시켜 보던 시절이었다.
 2025년 9월 현재에 읽으니 다음 구절들이 인상깊다.
 
-고등학생이나 대학생, 심지어는 일부 대학원생에게는 좋은 멘토가 될 수 있다고 생각해요. 교과서 수준의 수학 문제에는 어느 정도 괜찮게 답변하니까요. 물론 사람이 더 낫겠지만요. 사람은 일주일에 몇 시간만 만날 수 있지만, AI는 원하면 언제든지 이용할 수 있다는 장점도 있지요."'><meta name=keywords content="Essay,math-and-AI,Repost,"><meta property="og:url" content="https://re-st.github.io/repost/%EC%B1%97gpt-%EC%88%98%ED%95%99%EC%9E%90%EC%97%90%EA%B2%8C-%EC%9C%84%ED%98%91%EC%9D%B4-%EB%90%A0%EA%B9%8C/"><meta property="og:site_name" content="Park, Geon (re-st)"><meta property="og:title" content="챗GPT, 수학자에게 위협이 될까"><meta property="og:description" content='2023년 6월의 글이다. 당시는 ChatGPT 자체가 언어모델, 내지는 일반인이 쉬이 사용 가능한 AI모델의 대명사로 불리던 시기라는 점이 주목된다. 지금처럼 형식 검증기를 뒤에 붙여 쓰는 모델이 거론되지 않았고, 단순히 ChatGPT의 역량이 얼마나 되는지 가늠되지 않아 무언가를 계속 시켜 보던 시절이었다.
+고등학생이나 대학생, 심지어는 일부 대학원생에게는 좋은 멘토가 될 수 있다고 생각해요. 교과서 수준의 수학 문제에는 어느 정도 괜찮게 답변하니까요. 물론 사람이 더 낫겠지만요. 사람은 일주일에 몇 시간만 만날 수 있지만, AI는 원하면 언제든지 이용할 수 있다는 장점도 있지요.&quot;" />
+<meta name="keywords" content="Essay,math-and-AI,Repost," />
+
+
+<meta property="og:url" content="https://re-st.github.io/repost/%EC%B1%97gpt-%EC%88%98%ED%95%99%EC%9E%90%EC%97%90%EA%B2%8C-%EC%9C%84%ED%98%91%EC%9D%B4-%EB%90%A0%EA%B9%8C/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="챗GPT, 수학자에게 위협이 될까">
+  <meta property="og:description" content="2023년 6월의 글이다. 당시는 ChatGPT 자체가 언어모델, 내지는 일반인이 쉬이 사용 가능한 AI모델의 대명사로 불리던 시기라는 점이 주목된다. 지금처럼 형식 검증기를 뒤에 붙여 쓰는 모델이 거론되지 않았고, 단순히 ChatGPT의 역량이 얼마나 되는지 가늠되지 않아 무언가를 계속 시켜 보던 시절이었다.
 2025년 9월 현재에 읽으니 다음 구절들이 인상깊다.
-고등학생이나 대학생, 심지어는 일부 대학원생에게는 좋은 멘토가 될 수 있다고 생각해요. 교과서 수준의 수학 문제에는 어느 정도 괜찮게 답변하니까요. 물론 사람이 더 낫겠지만요. 사람은 일주일에 몇 시간만 만날 수 있지만, AI는 원하면 언제든지 이용할 수 있다는 장점도 있지요."'><meta property="og:locale" content="ko_kr"><meta property="og:type" content="article"><meta property="article:section" content="repost"><meta property="article:published_time" content="2025-09-26T13:48:30+09:00"><meta property="article:modified_time" content="2026-04-29T14:28:04+09:00"><meta property="article:tag" content="Essay"><meta property="article:tag" content="Math-and-AI"><meta property="article:tag" content="Repost"><meta property="og:image" content="https://re-st.github.io/images/share.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://re-st.github.io/images/share.png"><meta name=twitter:title content="챗GPT, 수학자에게 위협이 될까"><meta name=twitter:description content='2023년 6월의 글이다. 당시는 ChatGPT 자체가 언어모델, 내지는 일반인이 쉬이 사용 가능한 AI모델의 대명사로 불리던 시기라는 점이 주목된다. 지금처럼 형식 검증기를 뒤에 붙여 쓰는 모델이 거론되지 않았고, 단순히 ChatGPT의 역량이 얼마나 되는지 가늠되지 않아 무언가를 계속 시켜 보던 시절이었다.
+고등학생이나 대학생, 심지어는 일부 대학원생에게는 좋은 멘토가 될 수 있다고 생각해요. 교과서 수준의 수학 문제에는 어느 정도 괜찮게 답변하니까요. 물론 사람이 더 낫겠지만요. 사람은 일주일에 몇 시간만 만날 수 있지만, AI는 원하면 언제든지 이용할 수 있다는 장점도 있지요.&#34;">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="repost">
+    <meta property="article:published_time" content="2025-09-26T13:48:30+09:00">
+    <meta property="article:modified_time" content="2026-04-29T21:45:03+09:00">
+    <meta property="article:tag" content="Essay">
+    <meta property="article:tag" content="Math-and-AI">
+    <meta property="article:tag" content="Repost">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="챗GPT, 수학자에게 위협이 될까">
+  <meta name="twitter:description" content="2023년 6월의 글이다. 당시는 ChatGPT 자체가 언어모델, 내지는 일반인이 쉬이 사용 가능한 AI모델의 대명사로 불리던 시기라는 점이 주목된다. 지금처럼 형식 검증기를 뒤에 붙여 쓰는 모델이 거론되지 않았고, 단순히 ChatGPT의 역량이 얼마나 되는지 가늠되지 않아 무언가를 계속 시켜 보던 시절이었다.
 2025년 9월 현재에 읽으니 다음 구절들이 인상깊다.
-고등학생이나 대학생, 심지어는 일부 대학원생에게는 좋은 멘토가 될 수 있다고 생각해요. 교과서 수준의 수학 문제에는 어느 정도 괜찮게 답변하니까요. 물론 사람이 더 낫겠지만요. 사람은 일주일에 몇 시간만 만날 수 있지만, AI는 원하면 언제든지 이용할 수 있다는 장점도 있지요."'><meta itemprop=name content="챗GPT, 수학자에게 위협이 될까"><meta itemprop=description content='2023년 6월의 글이다. 당시는 ChatGPT 자체가 언어모델, 내지는 일반인이 쉬이 사용 가능한 AI모델의 대명사로 불리던 시기라는 점이 주목된다. 지금처럼 형식 검증기를 뒤에 붙여 쓰는 모델이 거론되지 않았고, 단순히 ChatGPT의 역량이 얼마나 되는지 가늠되지 않아 무언가를 계속 시켜 보던 시절이었다.
+고등학생이나 대학생, 심지어는 일부 대학원생에게는 좋은 멘토가 될 수 있다고 생각해요. 교과서 수준의 수학 문제에는 어느 정도 괜찮게 답변하니까요. 물론 사람이 더 낫겠지만요. 사람은 일주일에 몇 시간만 만날 수 있지만, AI는 원하면 언제든지 이용할 수 있다는 장점도 있지요.&#34;">
+
+
+
+
+  <meta itemprop="name" content="챗GPT, 수학자에게 위협이 될까">
+  <meta itemprop="description" content="2023년 6월의 글이다. 당시는 ChatGPT 자체가 언어모델, 내지는 일반인이 쉬이 사용 가능한 AI모델의 대명사로 불리던 시기라는 점이 주목된다. 지금처럼 형식 검증기를 뒤에 붙여 쓰는 모델이 거론되지 않았고, 단순히 ChatGPT의 역량이 얼마나 되는지 가늠되지 않아 무언가를 계속 시켜 보던 시절이었다.
 2025년 9월 현재에 읽으니 다음 구절들이 인상깊다.
-고등학생이나 대학생, 심지어는 일부 대학원생에게는 좋은 멘토가 될 수 있다고 생각해요. 교과서 수준의 수학 문제에는 어느 정도 괜찮게 답변하니까요. 물론 사람이 더 낫겠지만요. 사람은 일주일에 몇 시간만 만날 수 있지만, AI는 원하면 언제든지 이용할 수 있다는 장점도 있지요."'><meta itemprop=datePublished content="2025-09-26T13:48:30+09:00"><meta itemprop=dateModified content="2026-04-29T14:28:04+09:00"><meta itemprop=wordCount content="229"><meta itemprop=image content="https://re-st.github.io/images/share.png"><meta itemprop=keywords content="Essay,Math-and-AI,Repost"><meta name=referrer content="no-referrer-when-downgrade"><style>:root{--width:720px;--font-main:Verdana, sans-serif;--font-secondary:Verdana, sans-serif;--font-scale:1em;--background-color:#fff;--heading-color:#222;--text-color:#444;--link-color:#3273dc;--visited-color:#8b6fcb;--blockquote-color:#222}@media(prefers-color-scheme:dark){:root{--background-color:#01242e;--heading-color:#eee;--text-color:#ddd;--link-color:#8cc2dd;--visited-color:#8b6fcb;--blockquote-color:#ccc}}body{font-family:var(--font-secondary);font-size:var(--font-scale);margin:auto;padding:20px;max-width:var(--width);text-align:left;background-color:var(--background-color);word-wrap:break-word;overflow-wrap:break-word;line-height:1.5;color:var(--text-color)}h1,h2,h3,h4,h5,h6{font-family:var(--font-main);color:var(--heading-color)}a{color:var(--link-color);cursor:pointer;text-decoration:none}a:hover{text-decoration:underline}nav a{margin-right:8px}strong,b{color:var(--heading-color)}button{margin:0;cursor:pointer}time{font-family:monospace;font-style:normal;font-size:15px}main{line-height:1.6}table{width:100%}hr{border:0;border-top:1px dashed}img{max-width:100%}code{font-family:monospace;padding:2px;border-radius:3px}blockquote{border-left:1px solid #999;color:var(--blockquote-color);padding-left:20px;font-style:italic}footer{padding:25px 0;text-align:center}.title:hover{text-decoration:none}.title h1{font-size:1.5em}.inline{width:auto!important}.highlight,.code{border-radius:3px;margin-block-start:1em;margin-block-end:1em;overflow-x:auto}ul.blog-posts{list-style-type:none;padding:unset}ul.blog-posts li{display:flex}ul.blog-posts li span{flex:0 0 130px}ul.blog-posts li a:visited{color:var(--visited-color)}</style><style>[data-theme=light]{--background-color:#fff;--heading-color:#222;--text-color:#444;--link-color:#3273dc;--visited-color:#8b6fcb;--blockquote-color:#222}[data-theme=dark]{--background-color:#01242e;--heading-color:#eee;--text-color:#ddd;--link-color:#8cc2dd;--visited-color:#8b6fcb;--blockquote-color:#ccc}</style></head><body><header><a href=/ class=title><h2>Park, Geon (re-st)</h2></a><nav><a href=/pages/about/>[Whoami]</a>
-<a href=/cv/>[CV]</a>
-<button id=theme-toggle onclick=toggleTheme() title="Toggle light/dark mode" style="background:0 0;border:none;cursor:pointer;font-size:1.2em;padding:0 .3em">🌙</button></nav><script>(function(){var e=localStorage.getItem("theme");e==="light"?document.documentElement.setAttribute("data-theme","light"):e==="dark"&&document.documentElement.setAttribute("data-theme","dark")})();function toggleTheme(){var t=document.documentElement.getAttribute("data-theme"),e=t==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",e),localStorage.setItem("theme",e),document.getElementById("theme-toggle").textContent=e==="dark"?"☀️":"🌙"}window.addEventListener("DOMContentLoaded",function(){var e=localStorage.getItem("theme");document.getElementById("theme-toggle").textContent=e==="dark"?"☀️":"🌙"})</script></header><main><article><h1>챗GPT, 수학자에게 위협이 될까</h1><p style=display:flex;gap:1rem;align-items:center;flex-wrap:wrap><i><time datetime=2025-09-26>26 Sep, 2025
-</time></i><span style=font-weight:700;font-size:.95em;color:var(--link-color)>[repost]</span>
-<span style=opacity:.6;font-size:.85em>2 min read</span></p><content><p>2023년 6월의 글이다. 당시는 ChatGPT 자체가 언어모델, 내지는 일반인이 쉬이 사용 가능한 AI모델의 대명사로 불리던 시기라는 점이 주목된다. 지금처럼 형식 검증기를 뒤에 붙여 쓰는 모델이 거론되지 않았고, 단순히 ChatGPT의 역량이 얼마나 되는지 가늠되지 않아 무언가를 계속 시켜 보던 시절이었다.</p><p>2025년 9월 현재에 읽으니 다음 구절들이 인상깊다.</p><blockquote><p>고등학생이나 대학생, 심지어는 일부 대학원생에게는 좋은 멘토가 될 수 있다고 생각해요. 교과서 수준의 수학 문제에는 어느 정도 괜찮게 답변하니까요. 물론 사람이 더 낫겠지만요. 사람은 일주일에 몇 시간만 만날 수 있지만, AI는 원하면 언제든지 이용할 수 있다는 장점도 있지요."</p><ul><li>테렌스 타오 교수님</li></ul></blockquote><blockquote><p>이세돌과 알파고가 대국하기 전에 바둑 기사들은 알파고가 이세돌을 절대 이길 수 없다고 이야기했어요. 결국 알파고는 보통 바둑 기사가 떠올릴 수 없는 창의적인 수를 둬서 압승했어요. 바둑과 마찬가지로 수학 문제도 없던 걸 만들어내는 게 아니라 있는 것을 이용해서 창의력을 발휘하는 거예요. 그렇다면 장기적으로 봤을 때 AI가 수학 연구도 충분히 해낼 수 있을 거예요.</p><ul><li>김재훈 교수님</li></ul></blockquote><p>그리고 이런 대목도 있었다.</p><blockquote><p>챗GPT 플러스는 수학 검색엔진 ‘울프럼 알파’와 플러그인으로 연결하는 기능이 추가됐습니다. 플러그인은 다른 웹사이트와 상호작용할 수 있는 확장 프로그램을 말합니다. 울프럼 알파를 연결한 챗GPT 플러스는 기존보다 수학 문제를 정확하게 계산해낼 뿐만 아니라 답을 그래프와 도표로 시각화할 수 있지요. “이는 챗GPT에게 문제 해결을 도울 계산기를 쥐여준 것과 같다”고 말한 서민준 KAIST 김재철AI대학원 교수는 “덕분에 수학에서는 새로운 시대가 찾아올 것”이라고 기대했습니다.</p></blockquote><p>당시 울프럼 알파는 자연어를 파싱해 질의응답을 처리할 수 있었다. 구글 검색과 유사한 성격을 지녔다고 볼 수 있다. 그러나 오늘날의 형식 검증기를 통합한 모델과는 전혀 다른 접근이다.</p></content><p style=font-size:.85em;opacity:.7>Source: <a href="https://m.dongascience.com/news.php?idx=60085">https://m.dongascience.com/news.php?idx=60085</a></p><p><a href=https://re-st.github.io/blog/essay/>#Essay</a>&nbsp;
-<a href=https://re-st.github.io/blog/math-and-ai/>#Math-and-AI</a>&nbsp;
-<a href=https://re-st.github.io/blog/repost/>#Repost</a>&nbsp;</p><div style=font-size:.8em;display:flex;gap:16px;justify-content:center><p><a href=https://re-st.github.io/repost/why-lean-4-replaced-ocaml-as-my-primary-language/>&lt;&lt; Previous Post</a></p><p>|</p><p><strike>Next Post >></strike></p></div><p style=margin-top:2rem><a href=javascript:history.back() style=font-size:.9em>← 뒤로</a></p><script src=https://utteranc.es/client.js repo=re-st/re-st.github.io issue-term=pathname label=blog-comment theme=github-light crossorigin=anonymous async></script></article></main><footer>Made with <a href=https://github.com/janraasch/hugo-bearblog/>Hugo ʕ•ᴥ•ʔ Bear</a></footer></body></html>
+고등학생이나 대학생, 심지어는 일부 대학원생에게는 좋은 멘토가 될 수 있다고 생각해요. 교과서 수준의 수학 문제에는 어느 정도 괜찮게 답변하니까요. 물론 사람이 더 낫겠지만요. 사람은 일주일에 몇 시간만 만날 수 있지만, AI는 원하면 언제든지 이용할 수 있다는 장점도 있지요.&#34;">
+  <meta itemprop="datePublished" content="2025-09-26T13:48:30+09:00">
+  <meta itemprop="dateModified" content="2026-04-29T21:45:03+09:00">
+  <meta itemprop="wordCount" content="229">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+  <meta itemprop="keywords" content="Essay,Math-and-AI,Repost">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+<style>
+  [data-theme="light"] {
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+  [data-theme="dark"] {
+    --background-color: #01242e;
+    --heading-color: #eee;
+    --text-color: #ddd;
+    --link-color: #8cc2dd;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #ccc;
+  }
+</style>
+
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+<a href="/pages/about/">[Whoami]</a>
+
+<a href="/cv/">[CV]</a>
+
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode" style="background:none;border:none;cursor:pointer;font-size:1.2em;padding:0 0.3em;">🌙</button>
+</nav>
+<script>
+  (function() {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else if (stored === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = (current === 'dark') ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    document.getElementById('theme-toggle').textContent = (next === 'dark') ? '☀️' : '🌙';
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var stored = localStorage.getItem('theme');
+    document.getElementById('theme-toggle').textContent = (stored === 'dark') ? '☀️' : '🌙';
+  });
+</script>
+</header>
+  <main>
+<article>
+  <h1>챗GPT, 수학자에게 위협이 될까</h1>
+  <p style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+    <i>
+      <time datetime='2025-09-26'>
+        26 Sep, 2025
+      </time>
+    </i>
+    <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[repost]</span>
+    
+    <span style="opacity:0.6; font-size:0.85em;">2 min read</span>
+    
+  </p>
+  <content>
+    <p>2023년 6월의 글이다. 당시는 ChatGPT 자체가 언어모델, 내지는 일반인이 쉬이 사용 가능한 AI모델의 대명사로 불리던 시기라는 점이 주목된다. 지금처럼 형식 검증기를 뒤에 붙여 쓰는 모델이 거론되지 않았고, 단순히 ChatGPT의 역량이 얼마나 되는지 가늠되지 않아 무언가를 계속 시켜 보던 시절이었다.</p>
+<p>2025년 9월 현재에 읽으니 다음 구절들이 인상깊다.</p>
+<blockquote>
+<p>고등학생이나 대학생, 심지어는 일부 대학원생에게는 좋은 멘토가 될 수 있다고 생각해요. 교과서 수준의 수학 문제에는 어느 정도 괜찮게 답변하니까요. 물론 사람이 더 낫겠지만요. 사람은 일주일에 몇 시간만 만날 수 있지만, AI는 원하면 언제든지 이용할 수 있다는 장점도 있지요.&quot;</p>
+<ul>
+<li>테렌스 타오 교수님</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>이세돌과 알파고가 대국하기 전에 바둑 기사들은 알파고가 이세돌을 절대 이길 수 없다고 이야기했어요. 결국 알파고는 보통 바둑 기사가 떠올릴 수 없는 창의적인 수를 둬서 압승했어요. 바둑과 마찬가지로 수학 문제도 없던 걸 만들어내는 게 아니라 있는 것을 이용해서 창의력을 발휘하는 거예요. 그렇다면 장기적으로 봤을 때 AI가 수학 연구도 충분히 해낼 수 있을 거예요.</p>
+<ul>
+<li>김재훈 교수님</li>
+</ul>
+</blockquote>
+<p>그리고 이런 대목도 있었다.</p>
+<blockquote>
+<p>챗GPT 플러스는 수학 검색엔진 ‘울프럼 알파’와 플러그인으로 연결하는 기능이 추가됐습니다. 플러그인은 다른 웹사이트와 상호작용할 수 있는 확장 프로그램을 말합니다. 울프럼 알파를 연결한 챗GPT 플러스는 기존보다 수학 문제를 정확하게 계산해낼 뿐만 아니라 답을 그래프와 도표로 시각화할 수 있지요. “이는 챗GPT에게 문제 해결을 도울 계산기를 쥐여준 것과 같다”고 말한 서민준 KAIST 김재철AI대학원 교수는 “덕분에 수학에서는 새로운 시대가 찾아올 것”이라고 기대했습니다.</p>
+</blockquote>
+<p>당시 울프럼 알파는 자연어를 파싱해 질의응답을 처리할 수 있었다. 구글 검색과 유사한 성격을 지녔다고 볼 수 있다. 그러나 오늘날의 형식 검증기를 통합한 모델과는 전혀 다른 접근이다.</p>
+
+  </content>
+
+  
+  <p style="font-size:0.85em; opacity:0.7;">Source: <a href="https://m.dongascience.com/news.php?idx=60085">https://m.dongascience.com/news.php?idx=60085</a></p>
+  
+
+  <p>
+    
+    <a href="https://re-st.github.io/blog/essay/">#Essay</a>&nbsp;
+    
+    <a href="https://re-st.github.io/blog/math-and-ai/">#Math-and-AI</a>&nbsp;
+    
+    <a href="https://re-st.github.io/blog/repost/">#Repost</a>&nbsp;
+    
+  </p>
+
+  <div style="font-size:0.8em;display:flex;gap:16px;justify-content:center;">
+  <p>
+    
+    <a href="https://re-st.github.io/repost/why-lean-4-replaced-ocaml-as-my-primary-language/">
+      &lt;&lt; Previous Post</a>
+        
+  </p>
+  <p>|</p>
+  <p>
+    
+    <strike>Next Post >></strike>
+    
+  </p>
+</div>
+
+
+  <p style="margin-top:2rem;">
+    <a href="javascript:history.back()" style="font-size:0.9em;">← 뒤로</a>
+  </p>
+
+  
+  <script src="https://utteranc.es/client.js"
+    repo="re-st/re-st.github.io"
+    issue-term="pathname"
+    label="blog-comment"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</article>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>
