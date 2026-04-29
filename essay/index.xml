@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 08:00:34 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 08:06:29 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/essay/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>한국의 능묘 조각(문인석 및 동자석) 심층 분석: 도상학적 기원과 디아스포라의 역사</title>
@@ -106,6 +106,13 @@
       <pubDate>Sun, 29 Jun 2025 21:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/pldi-2025%EC%97%90-%EA%B0%80%EC%84%9C/</guid>
       <description>(Essay) My trip to PLDI 2025</description>
+    </item>
+    <item>
+      <title>(에세이) PLDI 2025에 가서 (백업)</title>
+      <link>https://re-st.github.io/essay/%EC%97%90%EC%84%B8%EC%9D%B4-pldi-2025%EC%97%90-%EA%B0%80%EC%84%9C-%EB%B0%B1%EC%97%85/</link>
+      <pubDate>Sun, 29 Jun 2025 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/essay/%EC%97%90%EC%84%B8%EC%9D%B4-pldi-2025%EC%97%90-%EA%B0%80%EC%84%9C-%EB%B0%B1%EC%97%85/</guid>
+      <description>(에세이) PLDI 2025에 가서 (백업)</description>
     </item>
     <item>
       <title>Effective Target Grouping for Our work</title>

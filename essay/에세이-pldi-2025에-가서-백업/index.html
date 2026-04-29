@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>(에세이) PLDI 2025에 가서 (백업) | Park, Geon (re-st)</title>
+<meta name="title" content="(에세이) PLDI 2025에 가서 (백업)" />
+<meta name="description" content="(에세이) PLDI 2025에 가서 (백업)" />
+<meta name="keywords" content="Trip,PLDI2025," />
+
+
+<meta property="og:url" content="https://re-st.github.io/essay/%EC%97%90%EC%84%B8%EC%9D%B4-pldi-2025%EC%97%90-%EA%B0%80%EC%84%9C-%EB%B0%B1%EC%97%85/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="(에세이) PLDI 2025에 가서 (백업)">
+  <meta property="og:description" content="(에세이) PLDI 2025에 가서 (백업)">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="essay">
+    <meta property="article:published_time" content="2025-06-29T00:00:00+09:00">
+    <meta property="article:modified_time" content="2026-04-30T08:06:28+09:00">
+    <meta property="article:tag" content="Trip">
+    <meta property="article:tag" content="PLDI2025">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="(에세이) PLDI 2025에 가서 (백업)">
+  <meta name="twitter:description" content="(에세이) PLDI 2025에 가서 (백업)">
+
+
+
+
+  <meta itemprop="name" content="(에세이) PLDI 2025에 가서 (백업)">
+  <meta itemprop="description" content="(에세이) PLDI 2025에 가서 (백업)">
+  <meta itemprop="datePublished" content="2025-06-29T00:00:00+09:00">
+  <meta itemprop="dateModified" content="2026-04-30T08:06:28+09:00">
+  <meta itemprop="wordCount" content="3138">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+  <meta itemprop="keywords" content="Trip,PLDI2025">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+<style>
+  [data-theme="light"] {
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+  [data-theme="dark"] {
+    --background-color: #01242e;
+    --heading-color: #eee;
+    --text-color: #ddd;
+    --link-color: #8cc2dd;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #ccc;
+  }
+</style>
+
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+<a href="/pages/about/">[Whoami]</a>
+
+<a href="/cv/">[CV]</a>
+
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode" style="background:none;border:none;cursor:pointer;font-size:1.2em;padding:0 0.3em;">🌙</button>
+</nav>
+<script>
+  (function() {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else if (stored === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = (current === 'dark') ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    document.getElementById('theme-toggle').textContent = (next === 'dark') ? '☀️' : '🌙';
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var stored = localStorage.getItem('theme');
+    document.getElementById('theme-toggle').textContent = (stored === 'dark') ? '☀️' : '🌙';
+  });
+</script>
+</header>
+  <main>
+<article>
+  <h1>(에세이) PLDI 2025에 가서 (백업)</h1>
+  <p style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+    <i>
+      <time datetime='2025-06-29'>
+        29 Jun, 2025
+      </time>
+    </i>
+    <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[essay]</span>
+    
+    <span style="opacity:0.6; font-size:0.85em;">15 min read</span>
+    
+  </p>
+  <content>
+    <h1 id="들어가며">들어가며</h1>
+<p>그간 유튜브로만 접하던 학회. 발표는 몇 명이 듣는 걸까? 식사 시간에는 어떻게 대화가 오갈까? 어떤 분위기에서 진행될까? 카메라 밖의 세계가 궁금했다.</p>
+<p>꼭 가보고 싶었던 [[PLDI|PLDI]]에, 그것도 워크샵까지 포함해 5일이나 참석할 수 있었다는 건 더할 나위 없는 행운이었다. 논문을 내고 가는 게 아니었기에, 내 참석은 순전히 교수님께서 경험의 기회를 주셨기 때문이었다. 참석 전 영수증을 받으며, 이 금액이 과연 나에게 투자해도 될 만큼의 가치가 있는지 고민이 들 만큼 큰 비용이 들었다. 그 사실을 잊지 않기 위해, 매 순간 존재의 의미를 되새기고 더 많은 사람을 만나기 위해 애썼다. 학회가 끝날 무렵엔 진이 빠졌지만 돌이켜보면 그만큼 얻은 것도 많았고 다양한 목소리를 들을 수 있었던 값진 기회였다.</p>
+<p>이 글에서는 이번 학회의 특별했던 점, 학회를 관통하는 기술적 흐름, 우리 [[연구|연구]] 분야와의 접점, 인상 깊었던 주제, 그리고 피부로 느낀 치열한 노력과 준비에 관해 이야기하고자 한다.</p>
+<h1 id="서울에서-학회가-열릴-때의-좋은-점">서울에서 학회가 열릴 때의 좋은 점</h1>
+<p>학회가 서울에서 열렸다는 점 자체가 홈그라운드 어드벤티지를 안겨주었다.</p>
+<p>우선, 한국인 연구자를 많이 볼 수 있었다. 비록 [[ERC 계절학교 2024-2025|ERC]]나 [[SIGPL 계절학교 2023-2025|SIGPL]] 같은 PL 분야 행사에서 [[422_대학원생|422_대학원생]]들을 자주 만나지만, 이번 PLDI에서는 거기서 보기 어려웠던 순수이론 분야 연구자들도 많이 볼 수 있었고, 그들의 연구 사정과 주제를 더 깊이 알 수 있었다. 연사 중에도 한국인 비율이 높았고, 어떤 주제로 세계에 진출해 연구하고 있는지를 직접 확인하며 자부심을 느낄 수 있는 계기가 되었다. 특히, 증명 보조기 <a href="https://re-st.github.io/category/lean/">Lean</a>의 초기 개발자 중 한 명인 공순호 박사님이 한국인이라는 사실은 한국인 연구자의 저력을 다시금 실감하게 했다.</p>
+<p>또 외국인 친구를 사귈 때 쓸 대화 소재가 풍부했다. 한국 문화와 드라마에 관심이 많던 [[Md Amit Hasan Arovi|Md Amit Hasan Arovi]]님과는 한국에 관한 생각, 음식, 생활 등에 대해 진솔하게 이야기를 나눴다. 지하철 입구까지 길을 안내해 주는 사소한 행동만으로도 자연스레 대화를 이어갈 수 있었고, 주제가 생겼고, 친밀감이 형성되었다. Md님은 긴 연구 경력을 가진 분이었기에, 연구자의 삶, 워라밸, 적극성 등에 대해 많은 조언을 해주었고, 나중에 커피를 사주며 &ldquo;아주 각별한 친구를 만들어 기쁘다&quot;라는 말로 깊은 감동을 주었다.</p>
+<p>또한, 서울이라는 익숙한 공간을 색다르게 조망할 수 있었다는 점도 좋았다. 환구단이 보이는 세미나실에서 발표를 듣거나, 경복궁의 야경을 배경으로 뛰는 경험은 오래 기억에 남을 것이다. 통근 거리가 짧으니 첫 일정을 상쾌하게 시작할 수 있었다는 점도 큰 장점이었다.</p>
+<h1 id="pldi-2025를-관통한-핵심-기술-테마">PLDI 2025를 관통한 핵심 기술 테마</h1>
+<p>이번 [[PLDI 2025|PLDI 2025]]에서 가장 두드러졌던 기술 테마는 <a href="https://re-st.github.io/category/lean/">Lean</a>이었다. 안전한 AI를 위한 Lean의 활용은 다양한 세션에서 반복적으로 등장할 정도로 중심 주제였다. 또한 올해의 소프트웨어상도 Lean이 가져갔다.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="https://lh3.googleusercontent.com/pw/AP1GczNp0_QmuknAd-4GkKKILTvToXJiav2SlX3rRA1191X7K34LW51XaprOMd1adPluJA1_6L_aZaQWrw79CGn7ke1BPlgvNHpF6fqL2vONSZc4-95Xukkn_3ldrgOkqrlatv8XwHxtEsU22ZKNtArVw6qk=w2520-h1890-s-no-gm"/></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><b> 올해의 소프트웨어상도 Lean이 가져갔다 </b></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="lean">Lean</h2>
+<p>보안과 신뢰성을 위한 증명 보조기로 큰 인기를 얻고 있는 Lean의 최초 개발자 Leonardo de Moura와 공순호 박사님이 각각 연사로 참여하셨다.<sup><a href="#moura">1</a></sup> <sup><a href="#kong">2</a></sup></p>
+<p>Lean은 Z3와 같은 [[SMT solver|SMT 검사기]] (solver)를 증명 과정에 통합할 수 있는 상호작용형 증명 보조기이다.
+[[Z3|Z3]]에선 코드가 조금만 수정되어도 재검증에 오랜 시간이 소요되는 문제가 있었지만, Lean은 뛰어난 재사용성을 기반으로 유연한 개발 환경을 제공한다.</p>
+<p>Lean에서는 타입과 시스템 ([[모나드|모나드]], 재작성 규칙 등)을 일반 프로그램 값처럼 다룰 수 있다. 즉, 함수 인자로 넘기거나 리스트에 담는 식으로 조작할 수 있으며, 실행시간 (runtime)에 생성 및 조작도 가능해 메타프로그래밍과 도메인 특정 언어 ([[Domain-specific language|domain specific language]]) 확장에 매우 유리하다. Lean의 뛰어난 확장성과 이에 따른 공동 작업 용이성 덕에, 500명 이상의 기여자가 참여한 거대 수학 라이브러리 [[Mathlib|Mathlib]]가 탄생할 수 있었다. Mathlib은 대수학, 해석학, 위상수학 등 광범위한 분야의 검증된 수학적 지식을 담고 있어, AI 모델을 위한 고품질 학습 데이터의 원천이 되거나 새로운 연구의 기반이 된다.</p>
+<p>한편, Lean은 Rocq의 핵심 사상 중 하나였던 종속 타입 이론 (dependent type theory)을 그대로 계승한다. 이는 값에 따라 타입이 달라지는 시스템으로, 예를 들어 길이가 0인 리스트와 양수인 리스트가 서로 다른 타입을 가질 수 있게 하는 방식이다. 이러한 특성 덕분에, 타입이 그 자체로 논리를 내포하게 되며, 타입을 만족하는 프로그램은 곧 해당 명제의 증명이 되는 커리-하워드 대응관계를 만족한다.</p>
+<h2 id="lean과-뉴로심볼릭-ai">Lean과 뉴로심볼릭 AI</h2>
+<p>Lean은 [[뉴로심볼릭 AI|뉴로심볼릭 AI]] 개발의 핵심 도구로도 활용되고 있다. 예를 들어, AlphaProof는 자연어로 서술된 수학 명제를 AI가 각잡힌 언어 (formal language)로 변환한 뒤 Lean으로 검증하는 방식으로, 국제 수학 올림피아드 은메달 수준의 문제 해결 능력을 보였다. 또 [[AWS|아마존 웹 서비스]]에서는 AI 훈련을 위한 데이터셋을 인공적으로 합성할 때, 명세에 맞게 생성되었는지를 Lean으로 검증하는 연구를 진행 중이다.</p>
+<h2 id="lean을-어떻게-활용할-것인가-나의-관점에서">Lean을 어떻게 활용할 것인가: 나의 관점에서</h2>
+<p>발표에서는 Lean을 AI 시스템의 입출력에 대한 검증 도구로 활용하는 방향을 중점적으로 다루었다. 연구자의 자리에 AI를 두고 그 보조 도구로 Lean이 온다. 연구자가 좋은 시스템을 만들고선 그 안전성을 증명 보조기를 통해 입증하듯이, AI의 판단이나 출력 역시 Lean을 통해 검증된다. 실제로 Lean은 뛰어난 확장성 덕분에, 수학 증명과 데이터 검증이라는 전혀 다른 도메인 모두에 사용될 수 있는 거의 범용 도구로 자리 잡고 있다는 인상을 주었다.</p>
+<p>반대로, Lean을 중심에 두고 AI를 보조 도구로 활용하는 방향도 상상해 볼 수 있다. Lean에는 복잡하거나 자동화가 어려운 증명을 SMT 검사기에 위임하는 “hammer” 기능이 있는데, 이 역할을 AI가 대체하거나 보완할 수도 있다. 예컨대 방대한 데이터에서 어떤 사건의 원인을 찾고자 할 때, AI가 의미 있는 사실들을 구조화해 제시해 준다면, Lean이 이를 바탕으로 전체 논증을 구성하거나 반례를 도출할 수 있을 것이다.</p>
+<p>연구에서 주로 다루는 주제는 귀납적 관찰로부터 연역적 설명을 도출하는 것인데, 현재 AI는 이 설명 능력에 취약하다. AI가 어떤 가설을 세운다 해도, 그것이 형식화되어 Lean에서 다룰 수 있는 형태가 아니면 검증은 불가능하다. 그러나 만약 AI가 추론 가능한 관계들을 정형화된 구조로 정리해 낼 수 있다면, Lean은 그 위에서 증명의 타당성을 판별하거나 가능한 [[시나리오|시나리오]]를 체계적으로 탐색할 수 있을 것이다.</p>
+<h1 id="우리-연구의-최전선-434_정적분석정적-분석static-analysis-분야-탐구">우리 연구의 최전선: [[434_정적분석|정적 분석]](Static Analysis) 분야 탐구</h1>
+<p>정적 분석의 이론과 응용의 대가들이 한자리에 모인 SOAP (State Of the Art in Program Analysis) 워크샵에 간 건 큰 행운이었다. 개중 인공신경망의 안전성을 따지기 위한 정적 분석 (?)과, 실용적 정적 분석을 위한 기술 개발이 특히 인상적이었다.</p>
+<h2 id="static-analysis-from-code-graphs-to-neural-networks---experiences-and-opportunities3">Static Analysis from Code Graphs to Neural Networks - Experiences and Opportunities<sup><a href="#static">3</a></sup></h2>
+<p>신경망이 작은 입력 변화 (perturbation)에도 예기치 않게 반응하는 취약성을 해결하기 위한 수학적 검증 기법을 소개했다. 핵심은 주어진 입력 </p>
+$$x$$<p>에 대해, 그 근방 </p>
+$$||x'-x||\le \epsilon$$<p>의 모든 입력 </p>
+$$x'$$<p>에서도 출력 레이블이 항상 같음을 보장하고자 하는 것이다.</p>
+<p>여기에는 전체 입력 공간을 잘게 나누는 branch-and-bound 방식이 사용되었다. 입력 공간을 나눈 (branch) 뒤, 각 부분공간의 출력 범위를 근사치로 계산 (bound)해, 이 범위가 모두 같은 라벨을 가리키면 해당 영역은 안전하다고 판정한다. 그렇지 않으면 반례를 찾거나 더 세분화해 더 정밀한 검사를 반복한다. 최근 발표에서는 이때 반례가 존재할 가능성이 높은 순서대로 공간을 탐색해 효율성을 높이는 전략도 제시되었다.</p>
+<p>이미 알던 정적분석, 즉 [[abstract interpretation|요약 해석]] (abstract interpretation)을 기반으로 하고 갈루아 연결 (Galois connection)을 이론적 바탕으로 가지던 정적분석이 아니라서 흥미를 끌었다. 반례의 위치를 찾아내는 기술은 실수 집합 내에서 유계 수열은 [[수렴|수렴]]하는 부분 수열을 가진다는 Bolzano-Weierstrass 정리의 증명 과정과 유사했다.</p>
+<h2 id="building-x-ray-for-enterprise-scale-softwarebuilding-x-ray-for-enterprise-scale-software4">[[Building X-Ray for enterprise-scale software|Building X-Ray for enterprise-scale software]]<sup><a href="#xray">4</a></sup></h2>
+<p>[[Beacon|Beacon]]을 개발한 [[Hong Kong University of Science and Technology|홍콩과기대]] [[Charles Zhang|Charles Zhang]] 교수님의 발표는, 대규모 기업용 (엔터프라이즈) 소프트웨어에 정적 분석을 적용하려는 다년간의 연구 성과를 집약한 세션이었다. 교수님은 안전성 ([[soundness|soundness]])은 현실 환경에선 지나치게 보수적이고, 정확도 ([[precision|precision]])는 높이기 어려운 상황에서, [[경량화|경량화]]된 경로 민감 ([[path-sensitive|path-sensitive]]) 분석을 효율적으로 수행하는 방법을 모색해 왔다.</p>
+<p>특히 인상 깊었던 개념은 &lsquo;경계 문제 (boundary problem)&lsquo;였다. 이는 정적 분석이나 대형 언어 모델(LLM) 단독으로는 다루기 어려운, 불완전한 코드, 깊은 반복문, 불명확한 API 사용 등을 말한다. 교수님 연구팀은 이러한 문제를 정적 분석과 LLM의 역할 분담을 통해 해결하려고 한다. 예를 들어, 제어/데이터 흐름 추적과 도달성 분석은 정적 분석이 맡고, API 별명 ([[alias|alias]]) 관계 추론이나 의미 기반 함수 해석은 LLM이 담당하는 식이다.</p>
+<p>사례로는, 공식 문서를 바탕으로 클래스 계층, 모듈타입 ([[signature|signature]]), 설명, 값 이름 등을 비교해 API 간의 별명 관계를 추론하는 연구, 정적 분석으로 인터럽트 핸들러 (ISR) 함수를 식별한 뒤 LLM이 데드락 가능성을 검토하는 연구, 그리고 메모리 할당/해제 함수를 감싸 기능을 추가하는 메모리 감쌈 (wrapper) 함수를 찾는 구조가 소개되었다. 이 중 마지막은 함수 이름을 통한 추론을 LLM이, 도달성 분석 등을 정적 분석이 맡는 방식이다.</p>
+<p>우리 연구실에서도 메모리 감쌈 함수를 찾거나, 공식 문서를 참고하는 유사한 주제를 생각하고 있었기에,
+연사님께 해당 연구의 연구 목적을 여쭤보았다. 메모리 감쌈 함수를 찾는 이유는, sanitizing 과정에서 일어나는 실수나 double free 같은 결함이 자주 발생하는 지점이기 때문에 분석 우선순위를 높이기 위함이라고 한다.
+우리 연구실의 접근 목적과는 다르지만, 연구 자체는 유사하며, 우리가 진행하는 논의가 세계적인 수준과 맞닿아 있다는 사실을 실감할 수 있었다.</p>
+<p>연사님은 또한 LLM이 테스트 목표 설정부터 입력 생성, 실행 결과 평가까지 수행해 오류 입력을 자동 생성하는 주체적 (agentic) 접근도 실험 중이라고 하셨다. [[Beacon|Beacon]]이 퍼징과 정적 분석의 융합이라면, 이제는 퍼징을 넘어서 (LLM을 활용하는) 오류 입력 생성 기술 전반으로 확장하는 진화의 궤적이 보였다.</p>
+<h1 id="새로-알게-된-연구-주제들">새로 알게 된 연구 주제들</h1>
+<h2 id="kat-kleene-algebra-with-testskat-kleene-algebra-with-tests">[[KAT (Kleene Algebra with Tests)|KAT (Kleene Algebra with Tests)]]</h2>
+<p>조건 검사를 지원하는 클리니 대수 (KAT)는 프로그램의 제어 흐름을 수학적으로 모델링하기 위한 대수 체계다. 클리니 대수 (Kleene Algebra)는 유한 오토마타가 인식하는 문자열 집합을 [[regular expression|정규식]]으로 표현하고, 정규식 간 동등성을 대수적으로 증명할 수 있도록 만든 구조다. +, ·, * 같은 정규식 연산자가 이 대수에 대응한다. 하지만 실제 프로그램에는 <code>if</code>, <code>while</code> 같은 조건 분기가 있어 정규식만으로는 부족하며, 이를 위해 조건 검사 (test)를 대수에 추가한 것이 KAT다. 조건 <code>b</code>에 대한 검사는 <code>[b]</code>, 그 부정은 <code>[¬b]</code>로 표현하며, 예컨대 <code>if b then p else q</code>는 <code>[b]·p + [¬b]·q</code>, <code>while b do p</code>는 <code>([b]·p)*·[¬b]</code>로 나타낸다.</p>
+<p>KAT 세션이 따로 있을 만큼 이번 PLDI에서 주목받았지만, 세션 내용은 KAT의 이론적 확장이 많아 따라가기가 쉽지 않았다. 여기에는 [[확률적 프로그래밍|확률적 프로그래밍]]을 다루기 위해 KAT을 확장한 발표를, 이해한 만큼만 소개하고자 한다.</p>
+<h3 id="probabilistic-kleene-algebra-with-angelic-nondeterminismprobabilistic-kleene-algebra-with-angelic-nondeterminism5">[[Probabilistic Kleene Algebra with Angelic Nondeterminism|Probabilistic Kleene Algebra with Angelic Nondeterminism]]<sup><a href="#kleene">5</a></sup></h3>
+<p>확률적 프로그래밍은 프로그램의 상태를 단일 값이 아니라 확률분포로 표현하고, 비결정론적 유한 오토마타 ([[Nondeterministic Finite Automaton|Nondeterministic Finite Automaton]])는 실행 경로가 고정되지 않는 비결정성을 다룬다. 이 발표는 이 둘을 동시에 포함하는 시스템을 수학적으로 정형화하기 위해, 중복집합 (multiset)을 사용하는 확률적 클리니 대수 ([[Probabilistic Kleene Algebra|Probabilistic Kleene Algebra]]) 오토마타를 제안한다.</p>
+<p>이 오토마타의 핵심은 상태를 단순한 집합이 아니라 중복집합으로 표현한다는 점이다. 오토마타 위를 탐험하는 행위자 (agent)들은 확률 상태에서는 무작위로 다음 상태를 선택하고, 비결정 상태에서는 여러 행위자로 분기해 각각 독립적으로 실행되도록 한다. 동일한 확률 상태에 서로 다른 경로로 도달한 여러 행위자가 존재할 수 있는데, 이들을 집합의 한 원소로 표현하면 각각의 확률 선택이 독립적이지 않게 되어 문제가 된다. 중복집합을 사용하면 행위자들을 구분할 수 있어, 각기 다른 난수 (random bit)를 부여해 확률 선택의 독립성을 보장할 수 있다.</p>
+<p>이렇게 가능한 모든 실행 경로를 다 따져볼 수 있는 방식이 ‘천사적 비결정론 ([[angelic nondeterminism|angelic nondeterminism]])’이다. 모든 실행 경로를 다 따져보기 때문에 <code>if</code>, <code>while</code> 같은 조건 분기를 모델링하는 데 적합하다.</p>
+<p>다만 발표에서 아쉬웠던 점은, 천사적 비결정론을 이용해 KAT의 주요 활용 분야인 최적화 검증이나 프로그램 분석이 어떻게 가능한지를 잘 상상하기 어려웠다는 것이다. 또한 천사적 비결정론을 검색해 보면, 비결정론이 항상 원하는 결과에 도달하도록 눈치껏 작동하는 실행이라고 나오는데, 그것과 발표의 정의가 일치하는지도 궁금했다. 발표장에서도 &lsquo;천사적 선택&rsquo;이 위험하지 않은지, 어디에 쓰일 수 있는지 질문이 나왔지만, 아직 활용 분야를 개척하진 않았고 실제 프로그램에 적용하기 위해 개발 중이라는 답이 돌아왔다.</p>
+<p>한편, 이 세션은 구문 중심 코드에 대해 어떤 대수적 접근이 가능한지를 알 수 있게 해주었고, 그 배경에 예상보다 높은 수학적 난도가 있다는 점을 체감할 좋은 기회였다. KAT는 함수 호출이 없는 절차적 프로그램에 적합하므로 일반적인 언어에는 적용이 어렵지만, 제어 흐름을 다루는 새로운 방식이 흥미로웠다.</p>
+<h2 id="pl--human-computer-interactionhci">PL + [[human-computer interaction|HCI]]</h2>
+<p>[[소프트웨어 엔지니어링|소프트웨어 엔지니어링]]의 하위 분야로, PL 연구자를 돕는 HCI 기술이나 HCI 기술을 돕는 PL 기술을 다룬다. 배경민 교수님 연구실의 장혁순 님의 소개로 알게 된 분야였는데, PL을 바라보는 전혀 새로운 시각을 제공해 주었다. 기존에 PL 연구의 목표가 안전한 코드, 자동으로 쓰이고 고쳐지는 코드였다면, 이 분야에서는 그 코드를 시각적으로 요약하거나 인터페이스로 조작할 수 있는 방식으로 바꾸는 데 관심이 있다.</p>
+<h3 id="fast-direct-manipulation-programming-with-patch-reconciliation-correspondence6">Fast Direct Manipulation Programming with Patch-Reconciliation Correspondence<sup><a href="#recon">6</a></sup></h3>
+<p>데이터 시각화나 GUI 인터페이스에서, 사용자 조작이 프로그램에 미치는 영향 (<code>patch</code>)과 출력에 미치는 영향 (<code>recon</code>)을 분리해 빠르게 반영할 수 있도록 하는 연구다. 예를 들어 GUI에서 선의 굵기나 색상처럼 시각적 속성을 바꾸면, 원래는 프로그램에서 해당 속성을 바꾼 뒤 재실행하기 위해 데이터를 다시 불러오고 처리해야 하지만, 이 연구에서는 <code>recon</code>으로 시각적 출력의 변화만 계산해 즉시 반영하고, 프로그램 변경은 <code>patch</code>로 처리해 나중에 동기화할 수 있도록 한다. 이때 원래 출력에 <code>recon</code>을 적용한 결과와, 프로그램을 <code>patch</code>한 뒤 재실행한 결과가 같음을 보장한다. 수식으로는 프로그램 </p>
+$$P$$<p>와 시각화 연산 </p>
+$$eval$$<p>, 가능한 변화 </p>
+$$\delta$$<p>를 아우르는 도메인 특화 언어 (DSL) 위에서, </p>
+$$eval(patch(\delta,P))=recon(\delta,eval(P))$$<p>을 만족하는 <code>recon</code>을 정의한다. 이는 정적 분석에서 요약 해석 (abstract interpretation)을 위해 요약 연산자 (abstract operator)를 정의하는 방식과 유사하다.</p>
+<p>연구는 인구 통계 등 대규모 데이터를 다루는 실무자들이 주로 GUI 기반 프로그램 수정 인터페이스 (direct manipulation interface)를 사용한다는 점을 들어, 사용자 조작에 반응이 빠른 시스템의 중요성을 강조했다. 다만 속도를 높이기 위한 전략으로, 프로그램 변경이 시각화 요소에 끼치는 영향 관계를 분석해 필요한 부분만 갱신하는 방식, 즉 부분 평가 (partial evaluation)로도 충분하지 않을까 하는 의문이 들었다. 출력에 <code>recon</code>을 적용하는 방식이 빠르다면, 원칙적으로는 부분 평가도 마찬가지로 빠를 수 있기 때문이다. 나름대로 해답을 생각해 보면 시각화에 사용된 언어의 특성상 부분 평가가 어려울 수 있으며, 도커 이미지의 층 (layer)처럼 영향 관계 파악이 거의 불가능할 수도 있을 것 같다. 이 질문을 너무 늦게 떠올리는 바람에 연사를 애타게 찾아다녔으나 끝내 못 만난 씁쓸한 기억이 남는다.</p>
+<p>특이한 점은 발표 자료의 완성도였다. 프로그램 흐름을 도식화한 후, 그 사이에 <code>recon</code>이 개입되는 과정을 직접 도식이 변화하는 애니메이션으로 표현했는데, 역시 HCI 팀답게 시각적 전달력이 매우 뛰어났다.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="https://lh3.googleusercontent.com/pw/AP1GczM63h7AYCsvT56jHZgq6qq_BFjSFfJig_whrvJRjQ8IRmNBezDZ5hGSeUcQNOtRFMPd25Qdmd69cvMcLD5-svxV0n5mM3fNpsJfrv6ciWo87PgSXRLuJoK5uo8Q6v3azOka7-NbYEWU9vYJapyF5l7j=w2520-h1890-s-no-gm"/></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><b> 잘 만들었다 </b></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="an-interactive-debugger-for-rust-trait-errors7">An Interactive Debugger for Rust Trait Errors<sup><a href="#debugger">7</a></sup></h3>
+<p>연구는 트레잇 기반 타입 추론 오류를 직관적으로 탐색 및 디버깅하기 위한 도구를 제시한다. 기존 [[번역기|컴파일러]]는 타입 오류 메시지를 구성할 때 타입의 추론 트리를 거꾸로 거슬러 올라가 최초의 문제까지 경로의 모든 지점을 보여준다. 그러나, 트레잇의 연관 타입 (associated type)은 사용자 코드가 아니라 라이브러리 내부의 로직이어서 쓸모없는 경우가 많고, 지나치게 많은 지점 중 정작 사용자가 고쳐야 할 곳이 어디인지를 알아내기가 어렵다.</p>
+<p>이 연구에서 제시하는 Argus는 트레잇 추론 트리와 함께 트레잇 인스턴스 검색 과정의 상향식 (provenance) 및 하향식 탐색을 사용자가 할 수 있도록 지원하고, 오류를 없앨 수 있는 최소한의 수정 지점까지 짚어준다. 사용자 연구 (user study) 결과 문제 해결은 3.3배, 찾아낸 오류는 2.2배가 되었다고 한다.</p>
+<p>흥미로운 점은, 이 연구가 Rust 언어 자체를 바꾸지 않고 Rust 추론 시스템을 대상으로 상호작용적 시각화만을 제공하지만, 학술적 의미를 갖는다는 것이다. 거꾸로 올라가는 과정의 시각적 제시와 인터페이스 중심의 휴리스틱이 기존 컴파일러 진단 도구의 설계 관행을 재고하게 만들 수 있기 때문으로 보인다.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="https://lh3.googleusercontent.com/pw/AP1GczOtbFEDSQk00sn3U_IzRuHk26Um68t9ZwoeNz7QUddOwOAImH94GygroZxUYM204CKe8yq1uor_cYXFgndSZYJwMue1VU3-48xNLvR94GidHlP6VSrxpPJfb0NHrn1VIwBxJfcOJ0BXUueAw6aw-iaP=w2520-h1890-s-no-gm"/></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><b> 역시 잘 만들었다 </b></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="동시성을-고려한-메모리-관리">동시성을 고려한 메모리 관리</h2>
+<p>새로 알게 된 연구 주제들에 넣기가 민망한 게 사실 우리 학교 [[강지훈|강지훈]] 교수님 연구실에서 오랫동안 연구하던 주제이기 때문이다. 다만 그동안 제대로 이해하질 못했다가 이번 기회에 좀 깊게 파고들 기회가 되었다.</p>
+<h3 id="verifying-lock-free-traversals-in-relaxed-memory-separation-logic8">Verifying Lock-Free Traversals in Relaxed Memory Separation Logic<sup><a href="#lockfree">8</a></sup></h3>
+<p>[[weak memory|느슨한 메모리]] (relaxed memory), 다른 말로 약한 메모리 (weak memory)는 컴파일러 및 하드웨어의 최적화로 인해 명령어가 재배열되는 것을 허용하는 메모리 모델로, 동시성 프로그램에서 가능한 다양한 실행 순서를 모두 안전하게 포함해야 한다. 이 모델의 핵심 특징은, 메모리에서 값을 읽을 때 반드시 가장 최근 값이 아니라 예전에 기록된 값을 읽을 수 있다는 가능성을 허용하는 점이다.</p>
+<p>스킵리스트 (skiplist)는 기본적으로 인접 노드만 가리키는 연결 리스트 (linked list)에 여러 층의 도약 포인터를 추가해 탐색 속도를 높인 자료구조다. 특정 노드를 삭제하려면 그 노드를 가리키는 모든 포인터를 비활성화해야 하는데, 여기에 여러 스레드가 동시에 접근하고, 명령어 재배열까지 가능한 환경이라면 어떤 실행이 안전하며 어떤 실행이 오류를 유발할 수 있는지 정형적으로 검증하기가 매우 까다롭다.</p>
+<p>이 연구는 스킵리스트 위에서의 락 안쓰는 (lock-free) 탐색 알고리즘을 약한 메모리 모델 위에서 최초로 각잡힌 검증 ([[formal verification|formal verification]])한 사례이다. 2024년 여름 SIGPL에서 &ldquo;[[약한 메모리에서 동시성 탐색 알고리즘 검증하기|약한 메모리에서 동시성 탐색 알고리즘 검증하기]]&ldquo;라는 이름으로 미리 소개된 바 있었는데, 이렇게 멋진 발표로 다시 볼 수 있어서 매우 좋았다.</p>
+<h3 id="verifying-general-purpose-rcu-for-reclamation-in-relaxed-memory-separation-logicverifying-general-purpose-rcu-for-reclamation-in-relaxed-memory-separation-logic9">[[Verifying General-Purpose RCU for Reclamation in Relaxed Memory Separation Logic|Verifying General-Purpose RCU for Reclamation in Relaxed Memory Separation Logic]]<sup><a href="#rcu">9</a></sup></h3>
+<p>RCU (read-copy-update)는 동시성 환경에서 데이터를 읽을 때 락을 쓰지 않아, 읽기 성능이 최적화된 동기화 방식이다. 읽고 싶으면 그냥 읽으면 되고, 쓰고 싶을 때는 기존 데이터의 복사본을 만들어 수정한 뒤, 포인터만 한 번에 바꿔치면 된다. 다만 원본 데이터를 해제하기 전에, 이전 데이터를 아직 읽고 있는 스레드가 있다면 그게 끝날 때까지 기다려야 한다. 흡사 참조 횟수 (reference counter)처럼 자신을 참조하는 스레드를 추적하는 방식으로 [[메모리 안전|메모리 안전]]성을 보장하는 연구들이 있었지만, 이는 순차적 메모리 (sequential memory) 모델에서만 가능했다.</p>
+<p>이 연구는 [[weak memory|weak memory]]에서 RCU를 각잡힌 검증하기 위해, 다음 두 가지 가정을 도입했다. 첫째, 한 스레드가 메모리의 이전 값과 현재 값을 동시에 참조하고 있을 경우, 이전 값의 참조는 무시할 수 있다. 둘째, 뮤텍스와 같은 공유 자원을 한 스레드에서 쓰고 다른 스레드에서 읽는다면, 그 중간에 메모리 장벽 (fence)을 삽입해 접근 순서를 보장한다. 이 두 가정만으로도 느슨한 메모리에서의 RCU를 각잡힌 검증할 수 있다는 것이 이 연구의 핵심이다.</p>
+<p>간단하고 명쾌한 아이디어처럼 보이지만, 실제로는 복잡한 사례 연구 (case study)에 기반해 가능함을 입증한 점에서 매우 잘 된 연구라고 느꼈다. 발표 중 누군가 &ldquo;왜 이런 간단하고 중요한 아이디어를 그전까지 아무도 하지 않았던 거냐&quot;고 묻자, 발표자는 &ldquo;단순한 아이디어처럼 보이지만 그 아래엔 아주 복잡한 사례 분석이 있었다&quot;고 답했던 게 정말 인상적이었다.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="https://lh3.googleusercontent.com/pw/AP1GczP2l7hezYF7xJjVXYdJWlIhSd0ASzVDNHkJyc9W4aUdjkoTFH8BN-DmkSgP3FzhXr28BKz0AQXxki47b3AR17Bw6wxwpUrJ5OoCfGtuExYxyQ_CnVg5vtyN581YlJg-l2YtL9PN5DXjyvbqNiyP0n6_=w2520-h1890-s-no-gm"/></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><b> PLDI 우수논문상을 수상하는 해당 논문 저자들의 모습 </b></td>
+      </tr>
+  </tbody>
+</table>
+<h1 id="사람들">사람들</h1>
+<p>PL 학회였기 때문일까. 평소에 궁금했지만 멀게 느껴졌던 [[프로그램 검증|프로그램 검증]] 분야 연구자들과 처음 이야기를 나눌 수 있었다. 친구가 [[허충길|허충길]] 교수님 연구실에 있어 인연이 닿았고, 이번 학회에서 해당 연구실 분들과 처음 인사를 나눴다. 수학적으로 굉장히 깊이 있는 대화가 오가, 솔직히 제대로 알아듣진 못하고 옆에서 고개만 끄덕이기 바빴다. PL에 적용되는 수학이 이렇게 심오하구나 실감했고, 다음 날 점심때 반갑게 인사해 주신 게 기억에 남아 감사한 마음이었다.</p>
+<p>뱅큇 전에 오학주 교수님 연구실의 [[변지석|변지석]] 님을 다시 만났다. Rust에서 컴파일러 내부 오류 (ICE)를 잡기 위해, 의심되는 지점을 목표로 하는 다중지향성 퍼징을 만들기를 연구하시는 분이다. 2024년 여름 SIGPL에서 만났을 때도, 집에 돌아가는 길 버스에서 같은 주제로 한참 이야기를 나눴다. 당시도, 지금도 서로 여전히 다중지향성 퍼징을 연구하고 있었고, 각자가 새로 알아낸 점, 다른 연구들과의 비교, 현재 진행 중인 방향에 대한 고민을 나누며 새로운 관점을 얻을 수 있었다. 난 퍼징 주제로만 벌써 24개월, [[다중 지향성 퍼징|다중 지향성]]이라는 테마로도 꽤 길게 연구 중인데, 많은 사람들이 남긴 조언을 머릿속에 담고 있으면서도 어느새 잊고 있었단 사실도 깨달았다. 내 시야가 좁은 구간에 갇혀 있었음을 다시 느끼고, 넓은 시야로 여러 가지를 다시 조사할 필요를 느꼈다.</p>
+<p>또 [[박지혁|박지혁]] 교수님 연구실에 새로 석사과정을 시작하신 [[김현준|김현준]] 님, 학부생 인턴이신 [[최민석|최민석]] 님과도 대화를 나눴다. 김현준 님은 [[Javascript|자바스크립트]] 스펙의 오류를 잡기 위해 퍼징을 고민 중이라고 하셨는데, 신선한 접근이라 흥미로웠다. 하지만 그게 진짜 퍼징으로 풀어야 할 문제인지에 대한 변지석 님의 조언도 설득력 있게 느껴졌다. 최민석 님과 김현준 님은 곧 열릴 [[FSE|FSE]]에서 자신이 만든 자바스크립트 스펙 시각화 도구를 아티팩트 발표하신다고 했는데, 스펙의 항목을 클릭하면 관련 코드 시드를 보여주는 구조였다.<sup><a href="#jsspecvis">10</a></sup> 잠깐 보여주신 도구는 굉장히 직관적이었고, PL과 HCI가 맞닿은 도구로서 개발자들에게 큰 도움이 될 수 있을 것으로 보였다.</p>
+<h1 id="치열한-노력과-준비">치열한 노력과 준비</h1>
+<p>연단에 오른 사람들은 그 분야의 대가, 구체적으로 자신의 선행 연구를 한 연구자들에게 질문을 받게 된다.
+좋은 연구는 대가가 가지 않았던 길을 자신이 간 이유가 타당하고,
+또 그 길이 새로운 연구로 인정받을 수 있을 만큼 중요한 접근을 바꾸어야 한다. 그게 충족되지 못한 경우,
+당신의 연구가 내 연구와 다른 점이 무엇인지 대놓고 질문하는 날카로운 경우도 있었다.
+반면 새로운 연구라고 해도 질문은 날카롭다. 앞서 언급한 &lsquo;천사적 선택&rsquo; 발표도,
+그런 사용법이 너무 새로웠기에 이해를 못 해서 들어온 질문이 있었다. &lsquo;악마적 선택은 뭔지 아는데, 연구에서 굳이 천사적
+선택을 쓸 이유는?&rsquo; 내지는 &lsquo;응용 분야가 있는지&rsquo; 등, 주제가 많이 새로운 발표들에서는 잘 모르겠는 걸 거리낌없이 질문할 수 있는 분위기였다.</p>
+<p>모두들 자신의 분야를 전혀 모르는 남들에게 이해시키기 위해 많은 노력을 기울였다.</p>
+<p>가장 놀랐던 점은 발표에서 나오는 핵심 예제 (motivating example)가 논문과 겹치지 않는 새로운 경우가 많았단 것이다.
+논문에서는 상대적으로 길고 엄밀한 에제를 썼다면
+발표에서는 그다지 엄밀하진 않지만 어떤 분야의 어느 내용을 바꾸었는지 이해하기 좋은 비유를 들고 왔다.</p>
+<p>또한 소프트웨어 엔지니어링처럼 성능을 끌어올린 연구를 하더라도 그 결과를 앞에 놓지 않고, 최대한 자신의 연구 분야와
+현황을 예제 등으로 주지시킨 다음에 결과를 실었다. 이건 아무래도 서로 어떤 연구를 하는지 쉽게 알기 어려운 학회의 특성상,
+얻어갈 핵심 메시지를 어떻게든 가르치려 노력한 산물이었다.
+그런 의미에서 올해 논문 작성, 발표 초안부터 끝까지 고쳐서 멋진 발표를 해내신 봉준님에게 정말 대단하다는 말을 하고 싶다.
+밤늦게까지 LLVM 이슈를 올리던, 또 예비발표의 피드백을 열심히 챙기던 봉준님의 모습이 어렴풋이 기억난다.</p>
+<p>이번에 나는 발표가 없었고, 따라서 연단에 올라갈 일이 없었다.
+하지만 어쨌든 연단에서 사진은 하나 남겼는데, 워크샵 첫날에 일찍 학회장에 도착해 볼 사람이 없는 틈을 타서&hellip;
+워크샵의 운영위원이셨던 교수님의 도움을 받아 사진을 남겼다.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="https://lh3.googleusercontent.com/pw/AP1GczOz_j5B2l6lZiTawvHgTAirNwmYiEW_p2zJWAbm62-BtpdSg6V2HeoLfn9JnzDDXrVo-3XDrb3q6FacG0phOjQc0WbyaV6fzHcQXivDxB-roVcX1CAvI7C_c5Majany23H8roRFiGnH1E9qhzvri6S2bg=w2520-h1890-s-no-gm"/></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><b> 언젠간 연사로 서리라 </b></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="각주">각주</h3>
+<p>[<a name="moura">1</a>] <a href="https://pldi25.sigplan.org/details/pldi-2025-papers/98/Lean-Machine-Checked-Mathematics-and-Verified-Programming-Past-and-Future">https://pldi25.sigplan.org/details/pldi-2025-papers/98/Lean-Machine-Checked-Mathematics-and-Verified-Programming-Past-and-Future</a> <br>
+[<a name="kong">2</a>] <a href="https://pldi25.sigplan.org/details/pldi-2025-pldi-events/3/AI-Lean-NeuroSymbolic-AI">https://pldi25.sigplan.org/details/pldi-2025-pldi-events/3/AI-Lean-NeuroSymbolic-AI</a> <br>
+[<a name="static">3</a>] <a href="https://pldi25.sigplan.org/details/SOAP-2025-papers/9/Static-Analysis-from-Code-Graphs-to-Neural-Networks">https://pldi25.sigplan.org/details/SOAP-2025-papers/9/Static-Analysis-from-Code-Graphs-to-Neural-Networks</a> <br>
+[<a name="xray">4</a>] <a href="https://pldi25.sigplan.org/details/SOAP-2025-papers/10/Building-X-Ray-for-enterprise-scale-software">https://pldi25.sigplan.org/details/SOAP-2025-papers/10/Building-X-Ray-for-enterprise-scale-software</a> <br>
+[<a name="kleene">5</a>] Shawn Ong et al. &ldquo;Probabilistic Kleene Algebra with Angelic Nondeterminism&rdquo; PLDI (2025) <br>
+[<a name="recon">6</a>] Parker Ziegler et al. &ldquo;Fast Direct Manipulation Programming with Patch-Reconciliation Correspondence&rdquo; PLDI (2025) <br>
+[<a name="debugger">7</a>] Gavin Gray et al. &ldquo;An Interactive Debugger for Rust Trait Errors&rdquo; PLDI (2025) <br>
+[<a name="lockfree">8</a>] Sunho Park et al. &ldquo;Verifying Lock-Free Traversals in Relaxed Memory Separation Logic&rdquo; PLDI (2025) <br>
+[<a name="rcu">9</a>] Jaehwang Jung et al. &ldquo;Verifying General-Purpose RCU for Reclamation in Relaxed Memory Separation Logic&rdquo; PLDI (2025) <br>
+[<a name="jsspecvis">10</a>] <a href="https://conf.researchr.org/details/fse-2025/fse-2025-demonstrations/6/JSSpecVis-A-JavaScript-Language-Specification-Visualization-Tool">https://conf.researchr.org/details/fse-2025/fse-2025-demonstrations/6/JSSpecVis-A-JavaScript-Language-Specification-Visualization-Tool</a></p>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </content>
+
+  
+  <p style="font-size:0.85em; opacity:0.7;">Source: <a href="https://prosys.kaist.ac.kr/geon-trip-pldi/">https://prosys.kaist.ac.kr/geon-trip-pldi/</a></p>
+  
+
+  
+  <p style="font-size:0.85em; opacity:0.7;">분류:<a href="">PLDI 2025</a>
+  </p>
+  
+
+  
+
+  <p>
+    
+    <a href="https://re-st.github.io/blog/trip/">#Trip</a>&nbsp;
+    
+    <a href="https://re-st.github.io/blog/pldi2025/">#PLDI2025</a>&nbsp;
+    
+  </p>
+
+  <div style="font-size:0.8em;display:flex;gap:16px;justify-content:center;">
+  <p>
+    
+    <a href="https://re-st.github.io/essay/effective-target-grouping-for-our-work/">
+      &lt;&lt; Previous Post</a>
+        
+  </p>
+  <p>|</p>
+  <p>
+    
+    <a href="https://re-st.github.io/essay/pldi-2025%EC%97%90-%EA%B0%80%EC%84%9C/">Next Post >></a>
+    
+  </p>
+</div>
+
+
+  <p style="margin-top:2rem;">
+    <a href="javascript:history.back()" style="font-size:0.9em;">← 뒤로</a>
+  </p>
+
+  
+  <script src="https://utteranc.es/client.js"
+    repo="re-st/re-st.github.io"
+    issue-term="pathname"
+    label="blog-comment"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</article>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>Lean Machine-Checked Mathematics and Verified Programming, Past and Future (Leonardo de Moura) | Park, Geon (re-st)</title>
+<meta name="title" content="Lean Machine-Checked Mathematics and Verified Programming, Past and Future (Leonardo de Moura)" />
+<meta name="description" content="Lean Machine-Checked Mathematics and Verified Programming, Past and Future (Leonardo de Moura)" />
+<meta name="keywords" content="Lecture-Summary," />
+
+
+<meta property="og:url" content="https://re-st.github.io/seminar/lean-machine-checked-mathematics-and-verified-programming-past-and-future-leonardo-de-moura/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="Lean Machine-Checked Mathematics and Verified Programming, Past and Future (Leonardo de Moura)">
+  <meta property="og:description" content="Lean Machine-Checked Mathematics and Verified Programming, Past and Future (Leonardo de Moura)">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="seminar">
+    <meta property="article:published_time" content="2025-06-19T08:01:33+09:00">
+    <meta property="article:modified_time" content="2026-04-30T08:06:29+09:00">
+    <meta property="article:tag" content="Lecture-Summary">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="Lean Machine-Checked Mathematics and Verified Programming, Past and Future (Leonardo de Moura)">
+  <meta name="twitter:description" content="Lean Machine-Checked Mathematics and Verified Programming, Past and Future (Leonardo de Moura)">
+
+
+
+
+  <meta itemprop="name" content="Lean Machine-Checked Mathematics and Verified Programming, Past and Future (Leonardo de Moura)">
+  <meta itemprop="description" content="Lean Machine-Checked Mathematics and Verified Programming, Past and Future (Leonardo de Moura)">
+  <meta itemprop="datePublished" content="2025-06-19T08:01:33+09:00">
+  <meta itemprop="dateModified" content="2026-04-30T08:06:29+09:00">
+  <meta itemprop="wordCount" content="535">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+  <meta itemprop="keywords" content="Lecture-Summary">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+<style>
+  [data-theme="light"] {
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+  [data-theme="dark"] {
+    --background-color: #01242e;
+    --heading-color: #eee;
+    --text-color: #ddd;
+    --link-color: #8cc2dd;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #ccc;
+  }
+</style>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '\\(', right: '\\)', display: false},
+      {left: '$', right: '$', display: false}
+    ]
+  });"></script>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+<a href="/pages/about/">[Whoami]</a>
+
+<a href="/cv/">[CV]</a>
+
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode" style="background:none;border:none;cursor:pointer;font-size:1.2em;padding:0 0.3em;">🌙</button>
+</nav>
+<script>
+  (function() {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else if (stored === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = (current === 'dark') ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    document.getElementById('theme-toggle').textContent = (next === 'dark') ? '☀️' : '🌙';
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var stored = localStorage.getItem('theme');
+    document.getElementById('theme-toggle').textContent = (stored === 'dark') ? '☀️' : '🌙';
+  });
+</script>
+</header>
+  <main>
+<article>
+  <h1>Lean Machine-Checked Mathematics and Verified Programming, Past and Future (Leonardo de Moura)</h1>
+  <p style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+    <i>
+      <time datetime='2025-06-19'>
+        19 Jun, 2025
+      </time>
+    </i>
+    <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[seminar]</span>
+    
+    <span style="opacity:0.6; font-size:0.85em;">3 min read</span>
+    
+  </p>
+  <content>
+    <p>Leonardo de Moura, [[AWS|AWS]]</p>
+<p>[[Z3|Z3]]에 불평이 많다 - whole-program 할 때, minor code edit이 solver trace를 깨뜨린다</p>
+<p><a href="https://re-st.github.io/category/lean/">Lean</a>은 모르는 사람들끼리도 협업이 가능하게 됐으며,</p>
+<h2 id="extensible하고-own-system을-구현할-수-있다">extensible하고, own system을 구현할 수 있다.</h2>
+<h2 id="types-systems--first-class-objects">types, systems = first-class objects</h2>
+<ul>
+<li>Lean에서는 타입과 시스템(예: 모나드, 리라이트 규칙 등)을 프로그램 값처럼 다룬다. 즉, 함수의 인자로 넘기거나 리스트에 담고, 런타임에 생성·조작할 수 있어 메타프로그램 작성과 도메인 특정 확장이 쉬워진다.</li>
+</ul>
+<h2 id="dependent-type-theory">dependent type theory</h2>
+<ul>
+<li>Lean은 종속 타입 이론(dependent type theory)을 기반으로 하며, X는 “CIC(Calculus of Inductive Constructions)” 같은 구체적 변형을 가리킨다. 종속 타입 덕분에 프로그램과 증명이 같은 언어에서 작성·검증되며, 복잡한 사전 조건·후조건을 타입 수준에서 표현할 수 있다.</li>
+</ul>
+<p>수학자들이 constructive class든지 뭐든지, Lean개발자들도 모르는 것들 때문에 Lean을 좋아하고 있다.</p>
+<h2 id="a-lean-proof-of-fermats-last-theorem">A Lean proof of Fermat’s Last Theorem</h2>
+<p><a href="https://imperialcollegelondon.github.io/FLT/blueprint.pdf">https://imperialcollegelondon.github.io/FLT/blueprint.pdf</a>
+-&gt; <a href="https://pitmonticone.github.io/FLT3/blueprint/dep_graph_document.html">https://pitmonticone.github.io/FLT3/blueprint/dep_graph_document.html</a> (n=3)
+-&gt; <a href="https://pitmonticone.github.io/FLT3/docs/FLT3/FLT3.html#Solution%27.multiplicity_lambda_c_finite">https://pitmonticone.github.io/FLT3/docs/FLT3/FLT3.html#Solution'.multiplicity_lambda_c_finite</a> (specific lemma)</p>
+<h2 id="lean-in-software-verification">Lean in software verification</h2>
+<p>Cedar - <a href="https://aws.amazon.com/ko/blogs/opensource/lean-into-verified-software-development/">https://aws.amazon.com/ko/blogs/opensource/lean-into-verified-software-development/</a>
+Cedar는 개발자가 애플리케이션의 권한을 정의하고 적용하는 데 사용할 수 있는 권한 부여 정책을 작성하는 <a href="https://aws.amazon.com/blogs/security/how-we-designed-cedar-to-be-intuitive-to-use-fast-and-safe/">오픈 소스 언어</a> 입니다 .</p>
+<p>&ldquo;Maintaining the proofs&rdquo; 에서 Lean이 매우 좋음.</p>
+<h2 id="sampcert">SampCert</h2>
+<p>Geometrics가 [[CompCert|CompCert]]에 기여했듯이. Mathlib 덕분에, Lean으로 SampCert를 만들 수 있었다 - 푸리에 분석, 정수론, 위상수학</p>
+<h2 id="lean-is-extensible---can-build-own-proofs">Lean is extensible - can build own proofs</h2>
+<p><a href="https://techcommunity.microsoft.com/blog/microsoft-security-blog/microsofts-quantum-resistant-cryptography-is-here/4238780">https://techcommunity.microsoft.com/blog/microsoft-security-blog/microsofts-quantum-resistant-cryptography-is-here/4238780</a>
+<a href="https://www.microsoft.com/en-us/research/publication/aeneas-rust-verification-by-functional-translation/">https://www.microsoft.com/en-us/research/publication/aeneas-rust-verification-by-functional-translation/</a></p>
+<h2><a href="https://github.com/phlippe/Lean_hammer">https://github.com/phlippe/Lean_hammer</a></h2>
+<ul>
+<li><a href="https://www.themoonlight.io/ko/review/premise-selection-for-a-lean-hammer">https://www.themoonlight.io/ko/review/premise-selection-for-a-lean-hammer</a>
+Lean에서 “hammer”는 복잡한 증명 목표를 자동화된 외부 정리 증명기(예: Z3, Vampire)나 SMT 솔버에 넘겨 대신 증명하도록 한 뒤, 그 결과를 다시 Lean 내부의 증명 체계로 끌어오는 도구입니다.</li>
+</ul>
+<ol>
+<li>
+<p><strong>역할</strong></p>
+<ul>
+<li>
+<p>사용자가 수동으로 작성하기 어려운 복잡한 증명 의무(goal)를 외부 ATP(Automated Theorem Prover)에 맡깁니다.</p>
+</li>
+<li>
+<p>ATP가 찾은 증명 스텝을 Lean의 정리나 전술(tactic) 형태로 재구성하여, 사용자는 단순히 한 줄의 명령으로 강력한 자동 증명 기능을 활용할 수 있습니다. <a href="https://github.com/phlippe/Lean_hammer">[1|1]</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>이름 유래</strong></p>
+<ul>
+<li>Isabelle/HOL에서 제공하는 “Sledgehammer” 전술에서 영향받았습니다. “Sledgehammer”가 못을 박듯, 어렵게 느껴지는 증명 목표를 강력하게 타격(해결)해 준다는 의미를 담고 있습니다. <a href="https://www.themoonlight.io/ko/review/premise-selection-for-a-lean-hammer">[5|5]</a></li>
+</ul>
+</li>
+<li>
+<p><strong>장점</strong></p>
+<ul>
+<li>증명 시간을 크게 단축</li>
+<li>복잡한 논리 구조도 외부 솔버의 탐색 능력으로 처리</li>
+<li>Lean 안팎의 도구를 결합해 증명 자동화 환경을 확장</li>
+</ul>
+</li>
+</ol>
+<p>이처럼 Lean hammer는 “무거운 망치”처럼 강력한 자동 증명 지원을 제공하여, 증명 개발 속도를 높이고 사용자 부담을 줄여 줍니다.</p>
+<h2 id="-sources">🌐 Sources</h2>
+<ol>
+<li>
+<p><a href="https://github.com/phlippe/Lean_hammer">github.com - Development repository of a hammer for Lean.</a></p>
+</li>
+<li>
+<p><a href="https://github.com/phlippe/Lean_hammer/blob/master/leanhammer.lean">github.com - Lean_hammer/leanhammer.lean at master</a></p>
+</li>
+<li>
+<p><a href="https://leanprover-community.github.io/install/project.html">leanprover-community.github.io - Lean projects</a></p>
+</li>
+<li>
+<p><a href="https://leanprover-community.github.io/archive/stream/113488-general/topic/Duper.html">leanprover-community.github.io - Duper</a></p>
+</li>
+<li>
+<p><a href="https://www.themoonlight.io/ko/review/premise-selection-for-a-lean-hammer">themoonlight.io - [논문 리뷰] Premise Selection for a Lean Hammer</a></p>
+</li>
+<li>
+<p><a href="https://openreview.net/forum?id=Uo4EHT4ZZ8">openreview.net - LeanAgent: Lifelong Learning for Formal Theorem Proving</a></p>
+</li>
+</ol>
+<h2 id="grind">grind</h2>
+<p>Grind는 SMT 솔버 구조를 본뜬 자동화 프레임워크다. 다음 네 단계로 동작한다.</p>
+<ol>
+<li>
+<p><strong>제약 수집 및 기재</strong></p>
+<ul>
+<li>
+<p>입력 문제에서 나타나는 등식·부등식을 탐색해 “검사판(board)”에 기록</p>
+</li>
+<li>
+<p>각 제약을 목록화해 전체 컨텍스트를 구성</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>동치류 병합(Equivalence Merging)</strong></p>
+<ul>
+<li>
+<p>기록된 등식들을 통해 변수나 표현식을 동일 클래스에 묶음</p>
+</li>
+<li>
+<p>Congruence closure 기법으로 유도 가능한 모든 동치 관계를 효율적으로 통합</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>협력 엔진(Cooperating Engines)</strong></p>
+<ul>
+<li>
+<p><strong>Case Analysis Engine</strong>: 분기별 가능한 케이스(예: x&gt;0, x≤0)를 나눠 각각 독립 해결</p>
+</li>
+<li>
+<p><strong>E-Analysis Engine</strong>: 등식 및 함수 결합 특성을 사용해 추가 동치·부등식 유도</p>
+</li>
+<li>
+<p><strong>Theory Solvers</strong>: 선형산술, 부동소수점, 배열 등 각 이론 전용 하위 솔버와 연동</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>충돌 탐지 및 해소(Conflict Resolution)</strong></p>
+<ul>
+<li>
+<p>서로 모순되는 제약이 발견되면 간단한 학습(clause learning)으로 원인 기록</p>
+</li>
+<li>
+<p>모순을 일으키는 경로를 차단해 더 깊은 탐색으로 유도</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이 과정을 반복하며, 모든 제약이 만족되거나 모순이 증명될 때까지 자동으로 증명·해결을 수행한다. SMT 솔버의 핵심 요소인 제약 전파(constraint propagation), 분기(case splitting), 동치 추론(equivalence reasoning)을 체계적으로 결합함으로써 매우 확장 가능하고 효율적인 자동화 환경을 제공한다.</p>
+<h2 id="-sources-1">🌐 Sources</h2>
+<ol>
+<li>
+<p><a href="https://arxiv.org/pdf/2307.16761">arxiv.org - SMT-Solving Induction Proofs of Inequalities</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/html/2503.04782v1">arxiv.org - SMT(LIA) Sampling with High Diversity</a></p>
+</li>
+<li>
+<p><a href="https://www.researchgate.net/publication/220806346_Efficient_E-Matching_for_SMT_Solvers">researchgate.net - Efficient E-Matching for SMT Solvers</a></p>
+</li>
+<li>
+<p><a href="https://sat-smt-ar-school.gitlab.io/www/2024/lectures.html">sat-smt-ar-school.gitlab.io - SAT/SMT/AR Summer School 2024</a></p>
+</li>
+</ol>
+<h2 id="verified-ai-generated-proof">Verified AI(-generated proof)</h2>
+<p><a href="https://re-st.github.io/repost/alphaproof-alphageometry-chatgpt-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%8B%A0%EA%B2%BD-%EA%B8%B0%ED%98%B8%EC%A0%81-ai%EC%9D%98-%EB%AF%B8%EB%9E%98/">AlphaProof, AlphaGeometry, ChatGPT 그리고 신경-기호적 AI의 미래</a></p>
+<p>자연어를 formal language로 변환하면서 lean으로 검증</p>
+
+  </content>
+
+  
+
+  
+  <p style="font-size:0.85em; opacity:0.7;">분류:<a href="">PLDI 2025</a>
+  </p>
+  
+
+  
+
+  <p>
+    
+    <a href="https://re-st.github.io/blog/lecture-summary/">#Lecture-Summary</a>&nbsp;
+    
+  </p>
+
+  <div style="font-size:0.8em;display:flex;gap:16px;justify-content:center;">
+  <p>
+    
+    <a href="https://re-st.github.io/seminar/%EC%88%98%EC%B9%98%ED%95%B4%EC%84%9D-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%98-%EC%A0%95%ED%99%95%EC%84%B1%EC%9D%84-%EA%B0%81%EC%9E%A1%EA%B3%A0-%EC%A6%9D%EB%AA%85%ED%95%A0-dsl%EC%9D%98-%ED%95%84%EC%9A%94%EC%84%B1-%EC%9D%B4%EC%9B%90%EC%97%B4-%EA%B5%90%EC%88%98%EB%8B%98-%ED%8F%AC%ED%95%AD%EA%B3%B5%EB%8C%80/">
+      &lt;&lt; Previous Post</a>
+        
+  </p>
+  <p>|</p>
+  <p>
+    
+    <a href="https://re-st.github.io/seminar/path-directed-greybox-fuzzing-for-failure-reproduction-%ED%99%8D%EC%8B%A0-%EA%B5%90%EC%88%98%EB%8B%98-%EC%B6%A9%EB%B6%81%EB%8C%80/">Next Post >></a>
+    
+  </p>
+</div>
+
+
+  <p style="margin-top:2rem;">
+    <a href="javascript:history.back()" style="font-size:0.9em;">← 뒤로</a>
+  </p>
+
+  
+  <script src="https://utteranc.es/client.js"
+    repo="re-st/re-st.github.io"
+    issue-term="pathname"
+    label="blog-comment"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</article>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>
