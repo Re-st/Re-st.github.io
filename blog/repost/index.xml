@@ -1,27 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Repost on Park, Geon (re-st)</title>
-    <link>https://re-st.github.io/blog/repost/</link>
-    <description>Recent content in Repost on Park, Geon (re-st)</description>
-    <generator>Hugo</generator>
-    <language>ko-kr</language>
-    <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Tue, 28 Apr 2026 17:58:08 +0900</lastBuildDate>
-    <atom:link href="https://re-st.github.io/blog/repost/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Why Lean 4 replaced OCaml as my Primary Language.md</title>
-      <link>https://re-st.github.io/logs/why-lean-4-replaced-ocaml-as-my-primary-language.md/</link>
-      <pubDate>Fri, 29 Aug 2025 12:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/logs/why-lean-4-replaced-ocaml-as-my-primary-language.md/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;Ocaml은 보수적 언어로, 안정적이지만 변화가 더디다.&lt;/li&gt;&#xA;&lt;li&gt;Jane Street가 개발한 Dune 같은 도구가 생태계를 발전시켰지만, 언어 자체는 크게 바뀌지 않는다.&lt;/li&gt;&#xA;&lt;li&gt;반면, Lean은 더 자주 바뀌고 매크로 작성이 쉬워 변화에 빠르게 대응할 수 있다.&lt;/li&gt;&#xA;&lt;li&gt;Ocaml 숙련자들은 매크로 변수 이름 충돌 같은 문제는 걱정하지 않지만, Lean은 이러한 걸 직접 해결해주고, 또한 매크로 작성도 훨씬 쉽다.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>당신과 당신의 연구.md</title>
-      <link>https://re-st.github.io/logs/%EB%8B%B9%EC%8B%A0%EA%B3%BC-%EB%8B%B9%EC%8B%A0%EC%9D%98-%EC%97%B0%EA%B5%AC.md/</link>
-      <pubDate>Mon, 26 Feb 2024 00:30:46 +0900</pubDate>
-      <guid>https://re-st.github.io/logs/%EB%8B%B9%EC%8B%A0%EA%B3%BC-%EB%8B%B9%EC%8B%A0%EC%9D%98-%EC%97%B0%EA%B5%AC.md/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;28p &lt;mark&gt;소리 스폰지가 되지 않도록 하자&lt;/mark&gt;&lt;/li&gt;&#xA;&lt;li&gt;29p &lt;img src=&#34;https://re-st.github.io/logs%5c&#34; alt=&#34;내 시간의 반은 발표를 어떻게 잘하느냐에 씁니다.png&#34;/&gt;&lt;/li&gt;&#xA;&lt;li&gt;요약본 &lt;a href=&#34;https://johngrib.github.io/wiki/You-and-Your-Research/&#34;&gt;https://johngrib.github.io/wiki/You-and-Your-Research/&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;img src=&#34;https://re-st.github.io/logs%5c&#34; alt=&#34;10퍼센트 더 공부하면 2배의 연구결과.png&#34;/&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;img src=&#34;https://re-st.github.io/logs%5c&#34; alt=&#34;내 분야가 어디로 갈지를 생갹해야 한다.png&#34;/&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Repost on Park, Geon (re-st)</title><link>https://re-st.github.io/blog/repost/</link><description>Recent content in Repost on Park, Geon (re-st)</description><generator>Hugo</generator><language>ko-kr</language><copyright>Copyright © 2026, Geon Park.</copyright><lastBuildDate>Wed, 29 Apr 2026 14:23:42 +0900</lastBuildDate><atom:link href="https://re-st.github.io/blog/repost/index.xml" rel="self" type="application/rss+xml"/><item><title>챗GPT, 수학자에게 위협이 될까</title><link>https://re-st.github.io/repost/%EC%B1%97gpt-%EC%88%98%ED%95%99%EC%9E%90%EC%97%90%EA%B2%8C-%EC%9C%84%ED%98%91%EC%9D%B4-%EB%90%A0%EA%B9%8C/</link><pubDate>Fri, 26 Sep 2025 13:48:30 +0900</pubDate><guid>https://re-st.github.io/repost/%EC%B1%97gpt-%EC%88%98%ED%95%99%EC%9E%90%EC%97%90%EA%B2%8C-%EC%9C%84%ED%98%91%EC%9D%B4-%EB%90%A0%EA%B9%8C/</guid><description>&lt;p&gt;2023년 6월의 글이다. 당시는 ChatGPT 자체가 언어모델, 내지는 일반인이 쉬이 사용 가능한 AI모델의 대명사로 불리던 시기라는 점이 주목된다. 지금처럼 형식 검증기를 뒤에 붙여 쓰는 모델이 거론되지 않았고, 단순히 ChatGPT의 역량이 얼마나 되는지 가늠되지 않아 무언가를 계속 시켜 보던 시절이었다.&lt;/p&gt;
+&lt;p&gt;2025년 9월 현재에 읽으니 다음 구절들이 인상깊다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;고등학생이나 대학생, 심지어는 일부 대학원생에게는 좋은 멘토가 될 수 있다고 생각해요. 교과서 수준의 수학 문제에는 어느 정도 괜찮게 답변하니까요. 물론 사람이 더 낫겠지만요. 사람은 일주일에 몇 시간만 만날 수 있지만, AI는 원하면 언제든지 이용할 수 있다는 장점도 있지요.&amp;quot;&lt;/p&gt;</description></item><item><title>Why Lean 4 replaced OCaml as my Primary Language</title><link>https://re-st.github.io/repost/why-lean-4-replaced-ocaml-as-my-primary-language/</link><pubDate>Fri, 29 Aug 2025 12:00:00 +0900</pubDate><guid>https://re-st.github.io/repost/why-lean-4-replaced-ocaml-as-my-primary-language/</guid><description>&lt;ul&gt;
+&lt;li&gt;Ocaml은 보수적 언어로, 안정적이지만 변화가 더디다.&lt;/li&gt;
+&lt;li&gt;Jane Street가 개발한 Dune 같은 도구가 생태계를 발전시켰지만, 언어 자체는 크게 바뀌지 않는다.&lt;/li&gt;
+&lt;li&gt;반면, Lean은 더 자주 바뀌고 매크로 작성이 쉬워 변화에 빠르게 대응할 수 있다.&lt;/li&gt;
+&lt;li&gt;Ocaml 숙련자들은 매크로 변수 이름 충돌 같은 문제는 걱정하지 않지만, Lean은 이러한 걸 직접 해결해주고, 또한 매크로 작성도 훨씬 쉽다.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>당신과 당신의 연구</title><link>https://re-st.github.io/repost/%EB%8B%B9%EC%8B%A0%EA%B3%BC-%EB%8B%B9%EC%8B%A0%EC%9D%98-%EC%97%B0%EA%B5%AC/</link><pubDate>Mon, 26 Feb 2024 00:30:46 +0900</pubDate><guid>https://re-st.github.io/repost/%EB%8B%B9%EC%8B%A0%EA%B3%BC-%EB%8B%B9%EC%8B%A0%EC%9D%98-%EC%97%B0%EA%B5%AC/</guid><description>&lt;ul&gt;
+&lt;li&gt;28p &lt;mark&gt;소리 스폰지가 되지 않도록 하자&lt;/mark&gt;&lt;/li&gt;
+&lt;li&gt;29p (이미지 유실)&lt;/li&gt;
+&lt;li&gt;요약본 &lt;a href="https://johngrib.github.io/wiki/You-and-Your-Research/"&gt;https://johngrib.github.io/wiki/You-and-Your-Research/&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src="https://re-st.github.io/10%ed%8d%bc%ec%84%bc%ed%8a%b8%20%eb%8d%94%20%ea%b3%b5%eb%b6%80%ed%95%98%eb%a9%b4%202%eb%b0%b0%ec%9d%98%20%ec%97%b0%ea%b5%ac%ea%b2%b0%ea%b3%bc.png" alt="10퍼센트 더 공부하면 2배의 연구결과.png"/&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src="https://re-st.github.io/%eb%82%b4%20%eb%b6%84%ec%95%bc%ea%b0%80%20%ec%96%b4%eb%94%94%eb%a1%9c%20%ea%b0%88%ec%a7%80%eb%a5%bc%20%ec%83%9d%ea%b0%b9%ed%95%b4%ec%95%bc%20%ed%95%9c%eb%8b%a4.png" alt="내 분야가 어디로 갈지를 생갹해야 한다.png"/&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
