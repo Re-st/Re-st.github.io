@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 08:06:29 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 08:24:03 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/categories/essays/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>한국의 능묘 조각(문인석 및 동자석) 심층 분석: 도상학적 기원과 디아스포라의 역사</title>
@@ -24,11 +24,11 @@
       <description>A Retrospect on My Master&amp;rsquo;s Research</description>
     </item>
     <item>
-      <title>Directed Fuzzing $$</title>
-      <link>https://re-st.github.io/essay/directed-fuzzing/</link>
+      <title>Directed Fuzzing and Correctness</title>
+      <link>https://re-st.github.io/essay/directed-fuzzing-and-correctness/</link>
       <pubDate>Fri, 28 Nov 2025 00:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/essay/directed-fuzzing/</guid>
-      <description>Directed Fuzzing $$</description>
+      <guid>https://re-st.github.io/essay/directed-fuzzing-and-correctness/</guid>
+      <description>Directed Fuzzing and Correctness</description>
     </item>
     <item>
       <title>Multi-Targeted Fuzzing&#39;s semantic blindness</title>
@@ -154,7 +154,7 @@
       <link>https://re-st.github.io/essay/debugging-custom-fuzzing-development-on-afl/</link>
       <pubDate>Fri, 21 Mar 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/debugging-custom-fuzzing-development-on-afl/</guid>
-      <description>&lt;h1 id=&#34;원고-없음&#34;&gt;원고 없음&lt;/h1&gt;&#xA;&lt;p&gt;LaTeX 원고 없음. 2025-03-21.tex는 Related Work on Multi-Target Fuzzing의 이전 초안으로 내용 상이.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;&#xA;&lt;p&gt;Effective debugging is crucial in fuzzing engine development.&#xA;Compilation and fuzzing phases introduce recurring errors that can be systematically addressed.&#xA;Identifying execution flow issues and tracking key metrics ensures robust fuzzing performance.&lt;/p&gt;&#xA;&lt;h1 id=&#34;본문&#34;&gt;본문&lt;/h1&gt;&#xA;&lt;p&gt;Developing a fuzzing engine requires effective debugging strategies to ensure stability.&#xA;Both the compilation phase and the fuzzing phase may introduce fatal errors.&#xA;They mostly have a recurring pattern, so when getting used to it once,&#xA;it becomes not hard to catch-and-patch the errors.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Related Work on Multi-Target Fuzzing</title>

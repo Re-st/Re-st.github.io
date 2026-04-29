@@ -23,7 +23,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
     <meta property="article:published_time" content="2024-10-03T00:00:00+09:00">
-    <meta property="article:modified_time" content="2026-04-30T08:06:29+09:00">
+    <meta property="article:modified_time" content="2026-04-30T08:24:03+09:00">
     <meta property="article:tag" content="Essay">
     <meta property="article:tag" content="Weekly-Writing">
     <meta property="og:image" content="https://re-st.github.io/images/share.png">
@@ -42,7 +42,7 @@
   <meta itemprop="name" content="퍼징의 성능을 분석하는 두 가지 방법">
   <meta itemprop="description" content="퍼징은 대량의 데이터를 생성하는 작업이며, 이를 통해 테스트 효율성을 평가할 방법을 연구자는 늘 생각해야 한다. 현재 우리는 AFL 기반의 퍼징 도구에 고유의 전략을 넣어 확장하고 있으며, 그 과정에서 성능 분석에 두 가지 방법을 활용하고 있다. 첫째는 퍼징 도구의 상태를 바탕으로 하는 관측이다. 시드 생성 속도, 탐색 속도, 덮이 등을 시간 단위로 기록하여, 우리가 적용한 전략이 프로그램 탐색에 미치는 영향을 평가할 수 있다. 퍼징 도구의 상태는 반투명 퍼징인 AFL에서 가장 의미 있는 관찰거리이기 때문에, 이미 성능의 하락 없이 결과를 출력하고 또 실시간으로 볼 수 있도록 코드가 구성되어 있으므로 간편하다. 둘째는 프로그램의 각 부분이 얼마나 탐색되었는지를 분석하는 것이다. 이 방법은 목표하는 오류 재현의 지연 원인을 파악하는 데 유용하며, 성능 개선을 위한 아이디어 구상에 큰 도움이 된다. 그러나 AFL의 덮이 관리법상 실행 경로를 바로 확인할 수 없으므로, 퍼징에 사용된 입력들은 대상 프로그램에 실행 경로를 출력하는 장치 매달기(instrumentation) 를 한 채로 다시 돌려야 하고, 이 속도가 느리기 때문에 퍼징에 영향을 주지 않도록 따로 이뤄져야 한다. 더욱이, 대상 프로그램의 코드에 대한 상세한 이해가 없다면 이 관측만으로 퍼징이 어디에서 막히는지를 파악하긴 어렵다. 따라서, 대상 프로그램들을 하나하나 이해하고 섬세한 전략으로 격파해 나간다는 느낌으로 일을 진행해야 한다. 퍼징 연구자는 퍼징 도구의 성능을 지속적으로 분석하고 개선하기 위해 대상 프로그램에 대한 심층적 이해와, 퍼징 상태를 기록하는 방법론에 신경써야 한다. 특히 벤치마크의 특성을 깊이 이해하고 창의적으로 접근하는 것이 중요하다. 그러나 최근 단순히 퍼징에 넣을 좋은 사전데이터와 에너지를 분배하는 하나의 휴리스틱을 발견하기만 하면 될 것이라는 생각에 매여 있었음을 반성한다. 연구자로써 벤치마크를 잘 이해하고, 어떤 변수를 기록하고 무엇을 통찰할지 창의성을 발휘해야 한다.">
   <meta itemprop="datePublished" content="2024-10-03T00:00:00+09:00">
-  <meta itemprop="dateModified" content="2026-04-30T08:06:29+09:00">
+  <meta itemprop="dateModified" content="2026-04-30T08:24:03+09:00">
   <meta itemprop="wordCount" content="239">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Essay,Weekly-Writing">

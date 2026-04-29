@@ -8,15 +8,23 @@
 <link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
 <title>Debugging Custom Fuzzing Development on AFL | Park, Geon (re-st)</title>
 <meta name="title" content="Debugging Custom Fuzzing Development on AFL" />
-<meta name="description" content="원고 없음
-LaTeX 원고 없음. 2025-03-21.tex는 Related Work on Multi-Target Fuzzing의 이전 초안으로 내용 상이." />
+<meta name="description" content="Abstract
+Effective debugging is crucial in fuzzing engine development.
+Compilation and fuzzing phases introduce recurring errors that can be systematically addressed.
+Identifying execution flow issues and tracking key metrics ensures robust fuzzing performance.
+본문
+Developing a fuzzing engine requires effective debugging strategies to ensure stability.
+Both the compilation phase and the fuzzing phase may introduce fatal errors.
+They mostly have a recurring pattern, so when getting used to it once,
+it becomes not hard to catch-and-patch the errors." />
 <meta name="keywords" content="Essay,weekly-writing," />
 
 
 <meta property="og:url" content="https://re-st.github.io/essay/debugging-custom-fuzzing-development-on-afl/">
   <meta property="og:site_name" content="Park, Geon (re-st)">
   <meta property="og:title" content="Debugging Custom Fuzzing Development on AFL">
-  <meta property="og:description" content="원고 없음 LaTeX 원고 없음. 2025-03-21.tex는 Related Work on Multi-Target Fuzzing의 이전 초안으로 내용 상이.">
+  <meta property="og:description" content="Abstract Effective debugging is crucial in fuzzing engine development. Compilation and fuzzing phases introduce recurring errors that can be systematically addressed. Identifying execution flow issues and tracking key metrics ensures robust fuzzing performance.
+본문 Developing a fuzzing engine requires effective debugging strategies to ensure stability. Both the compilation phase and the fuzzing phase may introduce fatal errors. They mostly have a recurring pattern, so when getting used to it once, it becomes not hard to catch-and-patch the errors.">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
@@ -32,16 +40,18 @@ LaTeX 원고 없음. 2025-03-21.tex는 Related Work on Multi-Target Fuzzing의 �
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
   <meta name="twitter:title" content="Debugging Custom Fuzzing Development on AFL">
-  <meta name="twitter:description" content="원고 없음 LaTeX 원고 없음. 2025-03-21.tex는 Related Work on Multi-Target Fuzzing의 이전 초안으로 내용 상이.">
+  <meta name="twitter:description" content="Abstract Effective debugging is crucial in fuzzing engine development. Compilation and fuzzing phases introduce recurring errors that can be systematically addressed. Identifying execution flow issues and tracking key metrics ensures robust fuzzing performance.
+본문 Developing a fuzzing engine requires effective debugging strategies to ensure stability. Both the compilation phase and the fuzzing phase may introduce fatal errors. They mostly have a recurring pattern, so when getting used to it once, it becomes not hard to catch-and-patch the errors.">
 
 
 
 
   <meta itemprop="name" content="Debugging Custom Fuzzing Development on AFL">
-  <meta itemprop="description" content="원고 없음 LaTeX 원고 없음. 2025-03-21.tex는 Related Work on Multi-Target Fuzzing의 이전 초안으로 내용 상이.">
+  <meta itemprop="description" content="Abstract Effective debugging is crucial in fuzzing engine development. Compilation and fuzzing phases introduce recurring errors that can be systematically addressed. Identifying execution flow issues and tracking key metrics ensures robust fuzzing performance.
+본문 Developing a fuzzing engine requires effective debugging strategies to ensure stability. Both the compilation phase and the fuzzing phase may introduce fatal errors. They mostly have a recurring pattern, so when getting used to it once, it becomes not hard to catch-and-patch the errors.">
   <meta itemprop="datePublished" content="2025-03-21T00:00:00+09:00">
   <meta itemprop="dateModified" content="2026-04-29T22:06:32+09:00">
-  <meta itemprop="wordCount" content="15">
+  <meta itemprop="wordCount" content="415">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Essay,Weekly-Writing">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -267,12 +277,49 @@ LaTeX 원고 없음. 2025-03-21.tex는 Related Work on Multi-Target Fuzzing의 �
     </i>
     <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[essay]</span>
     
-    <span style="opacity:0.6; font-size:0.85em;">1 min read</span>
+    <span style="opacity:0.6; font-size:0.85em;">2 min read</span>
     
   </p>
   <content>
-    <h1 id="원고-없음">원고 없음</h1>
-<p>LaTeX 원고 없음. 2025-03-21.tex는 Related Work on Multi-Target Fuzzing의 이전 초안으로 내용 상이.</p>
+    <h1 id="abstract">Abstract</h1>
+<p>Effective debugging is crucial in fuzzing engine development.
+Compilation and fuzzing phases introduce recurring errors that can be systematically addressed.
+Identifying execution flow issues and tracking key metrics ensures robust fuzzing performance.</p>
+<h1 id="본문">본문</h1>
+<p>Developing a fuzzing engine requires effective debugging strategies to ensure stability.
+Both the compilation phase and the fuzzing phase may introduce fatal errors.
+They mostly have a recurring pattern, so when getting used to it once,
+it becomes not hard to catch-and-patch the errors.</p>
+<p>Fatal errors during compilation are split into two categories:
+during the initial configuration, and during the actual compilation.
+AFL uses clang compiler and loads the custom instrumentation maker as a plugin.
+If the code for custom instrumentation maker fails to be compiled,
+the specific information is logged in the <code>config.log</code> file, created inside
+the folder of the target benchmark code.
+On the other hand, errors during the actual compilation mostly comes from wrong handling
+of the target-related information files. Checking if the whole file is read as intended
+mainly solves all issues.</p>
+<p>Fatal errors during the fuzzing phase have another way of being debugged.
+AFL allows debugging with gdb, and setting the <code>AFL_DEBUG</code> environment variable enables detailed execution logging at each step.
+Hence, finding out the error stack trace and the problematic variable values is easy.
+These methods helped a lot recently when integrating our fuzzing technique into AFL++.
+The hard part lies in understanding the wrong point of the mechanism that is
+overlooked in the development.
+From personal experience, the error lies mostly on the wrong order of multiple initialization
+functions.
+Hence, checking which initialization function is handled at what time is important.
+Since initialization happens only once, it is not costly to log and print out the
+execution of each steps.
+The rest of the errors lies mostly when the fuzzer changes its mode of working.
+Like all two-stage (exploration + exploitation) fuzzers, our one also switches
+between multiple modes, a potential source of coding mistake. For debugging,
+shortening the time interval between mode switches is helpful.</p>
+<p>In summary, there are stereotypical error types encountered during the development of a fuzzing engine.
+Experience helps shortening the debugging process too.
+However, there are still tricky errors, that are not fatal hence just undergoes like
+if the fuzzer has no bugs. To discover such potential errors, tracking execution speed, seed count,
+and replaying the seed queue between similar fuzzers to check the quality of seeds is crucial.
+The comparative approach ensures the reliability of new fuzzing implementations.</p>
 
   </content>
 
