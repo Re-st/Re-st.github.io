@@ -20,7 +20,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
     <meta property="article:published_time" content="2025-06-29T21:00:00+09:00">
-    <meta property="article:modified_time" content="2026-04-30T09:03:32+09:00">
+    <meta property="article:modified_time" content="2026-04-30T11:45:05+09:00">
     <meta property="article:tag" content="Essay">
     <meta property="og:image" content="https://re-st.github.io/images/share.png">
 
@@ -38,7 +38,7 @@
   <meta itemprop="name" content="PLDI 2025에 가서">
   <meta itemprop="description" content="(Essay) My trip to PLDI 2025">
   <meta itemprop="datePublished" content="2025-06-29T21:00:00+09:00">
-  <meta itemprop="dateModified" content="2026-04-30T09:03:32+09:00">
+  <meta itemprop="dateModified" content="2026-04-30T11:45:05+09:00">
   <meta itemprop="wordCount" content="3085">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Essay">
@@ -308,7 +308,7 @@ Z3에선 코드가 조금만 수정되어도 재검증에 오랜 시간이 소�
 <p>발표에서는 Lean을 AI 시스템의 입출력에 대한 검증 도구로 활용하는 방향을 중점적으로 다루었다. 연구자의 자리에 AI를 두고 그 보조 도구로 Lean이 온다. 연구자가 좋은 시스템을 만들고선 그 안전성을 증명 보조기를 통해 입증하듯이, AI의 판단이나 출력 역시 Lean을 통해 검증된다. 실제로 Lean은 뛰어난 확장성 덕분에, 수학 증명과 데이터 검증이라는 전혀 다른 도메인 모두에 사용될 수 있는 거의 범용 도구로 자리 잡고 있다는 인상을 주었다.</p>
 <p>반대로, Lean을 중심에 두고 AI를 보조 도구로 활용하는 방향도 상상해 볼 수 있다. Lean에는 복잡하거나 자동화가 어려운 증명을 SMT 검사기에 위임하는 “hammer” 기능이 있는데, 이 역할을 AI가 대체하거나 보완할 수도 있다. 예컨대 방대한 데이터에서 어떤 사건의 원인을 찾고자 할 때, AI가 의미 있는 사실들을 구조화해 제시해 준다면, Lean이 이를 바탕으로 전체 논증을 구성하거나 반례를 도출할 수 있을 것이다.</p>
 <p>연구에서 주로 다루는 주제는 귀납적 관찰로부터 연역적 설명을 도출하는 것인데, 현재 AI는 이 설명 능력에 취약하다. AI가 어떤 가설을 세운다 해도, 그것이 형식화되어 Lean에서 다룰 수 있는 형태가 아니면 검증은 불가능하다. 그러나 만약 AI가 추론 가능한 관계들을 정형화된 구조로 정리해 낼 수 있다면, Lean은 그 위에서 증명의 타당성을 판별하거나 가능한 시나리오를 체계적으로 탐색할 수 있을 것이다.</p>
-<h2 id="우리-연구의-최전선-정적-분석static-analysis-분야-탐구">우리 연구의 최전선: 정적 분석(Static Analysis) 분야 탐구</h2>
+<h2 id="우리-연구의-최전선-정적-분석static-analysis-분야-탐구">우리 연구의 최전선: <a href="https://re-st.github.io/%EC%A0%95%EC%A0%81%EB%B6%84%EC%84%9D/">정적 분석</a>(Static Analysis) 분야 탐구</h2>
 <p>정적 분석의 이론과 응용의 대가들이 한자리에 모인 SOAP (State Of the Art in Program Analysis) 워크샵에 간 건 큰 행운이었다. 개중 인공신경망의 안전성을 따지기 위한 정적 분석 (?)과, 실용적 정적 분석을 위한 기술 개발이 특히 인상적이었다.</p>
 <h3 id="static-analysis-from-code-graphs-to-neural-networks---experiences-and-opportunities3">Static Analysis from Code Graphs to Neural Networks - Experiences and Opportunities<sup><a href="#static">3</a></sup></h3>
 <p>신경망이 작은 입력 변화 (perturbation)에도 예기치 않게 반응하는 취약성을 해결하기 위한 수학적 검증 기법을 소개했다. 핵심은 주어진 입력 </p>

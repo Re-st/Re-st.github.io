@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 09:03:33 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 11:45:06 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/repost/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GPT, 에르되시 문제 한 번에 증명 2026-04</title>
@@ -36,6 +36,13 @@
       <pubDate>Mon, 17 Feb 2025 08:00:42 +0900</pubDate>
       <guid>https://re-st.github.io/repost/alphaproof-alphageometry-chatgpt-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%8B%A0%EA%B2%BD-%EA%B8%B0%ED%98%B8%EC%A0%81-ai%EC%9D%98-%EB%AF%B8%EB%9E%98-2024-07/</guid>
       <description>AlphaProof, AlphaGeometry, ChatGPT 그리고 신경-기호적 AI의 미래 2024-07</description>
+    </item>
+    <item>
+      <title>AFL이 동시성을 관리하는 방식</title>
+      <link>https://re-st.github.io/repost/afl%EC%9D%B4-%EB%8F%99%EC%8B%9C%EC%84%B1%EC%9D%84-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EC%8B%9D/</link>
+      <pubDate>Sat, 01 Jun 2024 09:00:19 +0900</pubDate>
+      <guid>https://re-st.github.io/repost/afl%EC%9D%B4-%EB%8F%99%EC%8B%9C%EC%84%B1%EC%9D%84-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EC%8B%9D/</guid>
+      <description>AFL이 동시성을 관리하는 방식</description>
     </item>
     <item>
       <title>당신과 당신의 연구</title>
