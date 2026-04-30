@@ -7,13 +7,20 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 12:38:29 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 12:55:37 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Repost</title>
       <link>https://re-st.github.io/blog/repost/</link>
       <pubDate>Mon, 27 Apr 2026 07:58:39 +0900</pubDate>
       <guid>https://re-st.github.io/blog/repost/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI-Answer</title>
+      <link>https://re-st.github.io/blog/ai-answer/</link>
+      <pubDate>Sat, 17 Jan 2026 10:22:31 +0900</pubDate>
+      <guid>https://re-st.github.io/blog/ai-answer/</guid>
       <description></description>
     </item>
     <item>
@@ -105,13 +112,6 @@
       <link>https://re-st.github.io/blog/afl/</link>
       <pubDate>Thu, 24 Jul 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/blog/afl/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI-Answer</title>
-      <link>https://re-st.github.io/blog/ai-answer/</link>
-      <pubDate>Sun, 15 Jun 2025 02:25:02 +0900</pubDate>
-      <guid>https://re-st.github.io/blog/ai-answer/</guid>
       <description></description>
     </item>
     <item>

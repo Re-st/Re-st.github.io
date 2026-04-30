@@ -39,7 +39,7 @@
   <meta itemprop="description" content="Lean Machine-Checked Mathematics and Verified Programming, Past and Future (Leonardo de Moura)">
   <meta itemprop="datePublished" content="2025-06-19T08:01:33+09:00">
   <meta itemprop="dateModified" content="2026-04-30T09:03:40+09:00">
-  <meta itemprop="wordCount" content="536">
+  <meta itemprop="wordCount" content="535">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Lecture-Summary">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -281,9 +281,15 @@
   </p>
   <content>
     <p>Leonardo de Moura, AWS</p>
-<p>Z3에 불평이 많다 - whole-program 할 때, minor code edit이 solver trace를 깨뜨린다</p>
-<p><a href="https://re-st.github.io/category/lean/">Lean</a>은 모르는 사람들끼리도 협업이 가능하게 됐으며,</p>
-<h2 id="extensible하고-own-system을-구현할-수-있다">extensible하고, own system을 구현할 수 있다.</h2>
+<p>Z3에 불평이 많다</p>
+<ul>
+<li>whole-program 할 때, minor code edit이 solver trace를 깨뜨린다</li>
+</ul>
+<p><a href="https://re-st.github.io/category/lean/">Lean</a>은</p>
+<ul>
+<li>모르는 사람들끼리도 협업이 가능하다</li>
+<li><mark>extensible하고, own system을 구현할 수 있다.</mark></li>
+</ul>
 <h2 id="types-systems--first-class-objects">types, systems = first-class objects</h2>
 <ul>
 <li>Lean에서는 타입과 시스템(예: 모나드, 리라이트 규칙 등)을 프로그램 값처럼 다룬다. 즉, 함수의 인자로 넘기거나 리스트에 담고, 런타임에 생성·조작할 수 있어 메타프로그램 작성과 도메인 특정 확장이 쉬워진다.</li>
@@ -306,11 +312,11 @@ Cedar는 개발자가 애플리케이션의 권한을 정의하고 적용하는 
 <h2 id="lean-is-extensible---can-build-own-proofs">Lean is extensible - can build own proofs</h2>
 <p><a href="https://techcommunity.microsoft.com/blog/microsoft-security-blog/microsofts-quantum-resistant-cryptography-is-here/4238780">https://techcommunity.microsoft.com/blog/microsoft-security-blog/microsofts-quantum-resistant-cryptography-is-here/4238780</a>
 <a href="https://www.microsoft.com/en-us/research/publication/aeneas-rust-verification-by-functional-translation/">https://www.microsoft.com/en-us/research/publication/aeneas-rust-verification-by-functional-translation/</a></p>
-<h2><a href="https://github.com/phlippe/Lean_hammer">https://github.com/phlippe/Lean_hammer</a></h2>
+<h2 id="lean-hammer"><a href="https://github.com/phlippe/Lean_hammer">Lean Hammer</a></h2>
 <ul>
-<li><a href="https://www.themoonlight.io/ko/review/premise-selection-for-a-lean-hammer">https://www.themoonlight.io/ko/review/premise-selection-for-a-lean-hammer</a>
-Lean에서 “hammer”는 복잡한 증명 목표를 자동화된 외부 정리 증명기(예: Z3, Vampire)나 SMT 솔버에 넘겨 대신 증명하도록 한 뒤, 그 결과를 다시 Lean 내부의 증명 체계로 끌어오는 도구입니다.</li>
+<li><a href="https://www.themoonlight.io/ko/review/premise-selection-for-a-lean-hammer">https://www.themoonlight.io/ko/review/premise-selection-for-a-lean-hammer</a></li>
 </ul>
+<p>Lean에서 “hammer”는 <strong>복잡한 증명 목표를 자동화된 외부 정리 증명기(예: Z3, Vampire)나 SMT 솔버에 넘겨 대신 증명하도록 한 뒤, 그 결과를 다시 Lean 내부의 증명 체계로 끌어오는 도구</strong></p>
 <ol>
 <li>
 <p><strong>역할</strong></p>

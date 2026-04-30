@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 12:38:28 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 12:55:36 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/blog/ai-answer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>한국의 능묘 조각(문인석 및 동자석) 심층 분석: 도상학적 기원과 디아스포라의 역사</title>
+      <link>https://re-st.github.io/essay/%ED%95%9C%EA%B5%AD%EC%9D%98-%EB%8A%A5%EB%AC%98-%EC%A1%B0%EA%B0%81%EB%AC%B8%EC%9D%B8%EC%84%9D-%EB%B0%8F-%EB%8F%99%EC%9E%90%EC%84%9D-%EC%8B%AC%EC%B8%B5-%EB%B6%84%EC%84%9D-%EB%8F%84%EC%83%81%ED%95%99%EC%A0%81-%EA%B8%B0%EC%9B%90%EA%B3%BC-%EB%94%94%EC%95%84%EC%8A%A4%ED%8F%AC%EB%9D%BC%EC%9D%98-%EC%97%AD%EC%82%AC/</link>
+      <pubDate>Sat, 17 Jan 2026 10:22:31 +0900</pubDate>
+      <guid>https://re-st.github.io/essay/%ED%95%9C%EA%B5%AD%EC%9D%98-%EB%8A%A5%EB%AC%98-%EC%A1%B0%EA%B0%81%EB%AC%B8%EC%9D%B8%EC%84%9D-%EB%B0%8F-%EB%8F%99%EC%9E%90%EC%84%9D-%EC%8B%AC%EC%B8%B5-%EB%B6%84%EC%84%9D-%EB%8F%84%EC%83%81%ED%95%99%EC%A0%81-%EA%B8%B0%EC%9B%90%EA%B3%BC-%EB%94%94%EC%95%84%EC%8A%A4%ED%8F%AC%EB%9D%BC%EC%9D%98-%EC%97%AD%EC%82%AC/</guid>
+      <description>&lt;h1 id=&#34;1-서론-사진-속-석상들의-정체&#34;&gt;1. 서론: 사진 속 석상들의 정체&lt;/h1&gt;&#xA;&lt;p&gt;예전에 용산 미군부대와 일본 도쿄 국립박물관을 방문했을 때 찍어두었던 석상 사진들을 다시 꺼내 보았다. 얼핏 보면 검게 그을리고 마모된 얼굴이 마치 서양의 &amp;lsquo;그림 리퍼 (Grim Reaper)&amp;lsquo;나 무속 신앙의 저승사자처럼 보여 섬뜩한 느낌을 주기도 한다. 과연 이들은 죽음을 부르는 사신일까, 아니면 무언가를 지키는 수호신일까?&lt;/p&gt;&#xA;&lt;p&gt;이들의 정체는 망자를 영원히 보필하고 능묘를 수호하기 위해 세워진 &lt;strong&gt;문인석(文人石)&lt;/strong&gt; 과 &lt;strong&gt;동자석(童子石)&lt;/strong&gt; 이었다. 이들은 단순한 정원 장식이나 공포의 대상이 아니라, 조선시대 유교적 세계관이 투영된 &amp;lsquo;효(孝)&amp;lsquo;와 &amp;lsquo;충(忠)&amp;lsquo;의 결정체이자, 당시의 복식사와 조각 미학을 보여주는 중요한 역사적 사료다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>MkDocs, Hugo, Jekyll (정적 사이트 생성기) 용도 비교</title>
       <link>https://re-st.github.io/log/mkdocs-hugo-jekyll-%EC%A0%95%EC%A0%81-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%83%9D%EC%84%B1%EA%B8%B0-%EC%9A%A9%EB%8F%84-%EB%B9%84%EA%B5%90/</link>
