@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 15:43:49 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 17:41:16 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Diary</title>
@@ -154,6 +154,13 @@
       <link>https://re-st.github.io/blog/outdated/</link>
       <pubDate>Fri, 02 Feb 2024 20:32:36 +0900</pubDate>
       <guid>https://re-st.github.io/blog/outdated/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>독후감</title>
+      <link>https://re-st.github.io/blog/%EB%8F%85%ED%9B%84%EA%B0%90/</link>
+      <pubDate>Sat, 16 Dec 2017 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/blog/%EB%8F%85%ED%9B%84%EA%B0%90/</guid>
       <description></description>
     </item>
   </channel>

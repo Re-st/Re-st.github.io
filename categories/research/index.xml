@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 15:43:49 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 17:41:15 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/categories/research/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AFL</title>
@@ -63,7 +63,7 @@
       <link>https://re-st.github.io/category/%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/category/%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/&#34;&gt;다중 지향성 퍼징&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/prosyslab/pl-wiki/blob/main/%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95%28Directed-Fuzzing%29.md#%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-%EB%B6%84%EC%95%BC%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90&#34;&gt;(펌) 지향성 퍼징 - PL Wiki&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/essay/modfuzz-%EB%8B%A4%EB%A5%B8-%EA%B4%80%EC%A0%90%EC%9D%98-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/&#34;&gt;MODFuzz - 다른 관점의 지향성 퍼징&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/seminar/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B3%B5%EA%B8%89%EB%A7%9D-%EB%B3%B4%EC%95%88-%EC%97%B0%EA%B5%AC%EC%9D%98-%EA%B3%BC%EA%B1%B0-%ED%98%84%EC%9E%AC%EC%99%80-%EB%AF%B8%EB%9E%98-%EC%9A%B0%EC%8A%B9%ED%9B%88-%EA%B5%90%EC%88%98%EB%8B%98-%EA%B3%A0%EB%A0%A4%EB%8C%80/&#34;&gt;소프트웨어 공급망 보안 연구의 과거 현재와 미래 - 우승훈 교수님 (고려대)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://prosys.kaist.ac.kr/what-is-left/&#34;&gt;(펌) 그래서 남은 것은 무엇인가? - 허기홍 교수님&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/category/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/&#34;&gt;다중 지향성 퍼징&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/prosyslab/pl-wiki/blob/main/%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95%28Directed-Fuzzing%29.md#%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-%EB%B6%84%EC%95%BC%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90&#34;&gt;(외부링크) 지향성 퍼징 - PL Wiki&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/essay/modfuzz-%EB%8B%A4%EB%A5%B8-%EA%B4%80%EC%A0%90%EC%9D%98-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/&#34;&gt;MODFuzz - 다른 관점의 지향성 퍼징&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/seminar/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B3%B5%EA%B8%89%EB%A7%9D-%EB%B3%B4%EC%95%88-%EC%97%B0%EA%B5%AC%EC%9D%98-%EA%B3%BC%EA%B1%B0-%ED%98%84%EC%9E%AC%EC%99%80-%EB%AF%B8%EB%9E%98-%EC%9A%B0%EC%8A%B9%ED%9B%88-%EA%B5%90%EC%88%98%EB%8B%98-%EA%B3%A0%EB%A0%A4%EB%8C%80/&#34;&gt;소프트웨어 공급망 보안 연구의 과거 현재와 미래 - 우승훈 교수님 (고려대)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://prosys.kaist.ac.kr/what-is-left/&#34;&gt;(외부링크) 그래서 남은 것은 무엇인가? - 허기홍 교수님&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>(극다중 지향성 퍼징) FishFuzz</title>
