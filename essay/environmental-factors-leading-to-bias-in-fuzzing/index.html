@@ -55,7 +55,7 @@ First is the difference in default settings among fuzzers. AFL&#43;&#43; provide
 First is the difference in default settings among fuzzers. AFL&#43;&#43; provides an option to apply a bespoke dictionary consisting of keyword suggestions derived from code analysis. However, among AFL&#43;&#43; and its derivative AFLRun, only AFLRun enables this feature by default. If the researcher does not set an environment variable to disable it, the dictionary will help generate seeds that satisfy conditions involving hardcoded text comparisons, leading to faster bug reproduction.">
   <meta itemprop="datePublished" content="2025-04-25T00:00:00+09:00">
   <meta itemprop="dateModified" content="2026-04-29T22:06:32+09:00">
-  <meta itemprop="wordCount" content="369">
+  <meta itemprop="wordCount" content="366">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Essay,Weekly-Writing">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -299,23 +299,15 @@ If the researcher does not set an environment variable to disable it, the dictio
 EPS means the number of test cases completed each second, and a higher EPS allows faster seed generation and increases the likelihood of triggering bugs earlier.
 Such environmental factors include the number of parallel sessions running and the core locations they are distributed on.
 High number of parallel sessions leads to lower EPS, probably because of higher temperature or memory bus congestion.
-The stark increase of EPS from 90 to 130 in Figure fig:eps-temporal when 20 of 40 sessions complete is a good example.
-Moreover, on our server arranged in rows of 8 cores, sessions assigned to outer rows showed lower EPS, as clearly shown in Figure fig:eps-spatial.
+The stark increase of EPS from 90 to 130 in Figure 1 when 20 of 40 sessions complete is a good example.
+Moreover, on our server arranged in rows of 8 cores, sessions assigned to outer rows showed lower EPS, as clearly shown in Figure 2.
 To mitigate this unexplained bias, we now assign cores evenly between inner and outer rows for each experiment.</p>
 <p>Distorted experimental results from unintended factors can lead to false conclusions, particularly in comparative fuzzing research.
-Hence researchers must understand fuzzer settings and hardware, and maintain it consistent.
-figure[h!]
-[width=0.7]{2025-04-25/rise-in-eps.png}
-Change in EPS (executions per second) during experiment.
-A sharp increase is observed around 16:40, when 20 of the 40 sessions completed.
-This rise is reflected in the sky-blue filled area, which represents the EPS values over time.
-fig:eps-temporal
-1em
-[width=0.7]{2025-04-25/eps-in-mujs.png}
-EPS during fuzzing of the {mujs program, depending on core placement.
-Sessions with mid-range iteration numbers, corresponding to cores near the center, show higher EPS.}
-fig:eps-spatial
-figure</p>
+Hence researchers must understand fuzzer settings and hardware, and maintain it consistent.</p>
+<p><img src="/2025-04-25-rise-in-eps.png" alt="../2025-04-25-rise-in-eps.png"/></p>
+<p><em>Figure 1: Change in EPS (executions per second) during experiment. A sharp increase is observed around 16:40, when 20 of the 40 sessions completed. This rise is reflected in the sky-blue filled area, which represents the EPS values over time.</em></p>
+<p><img src="/2025-04-25-eps-in-mujs.png" alt="../2025-04-25-eps-in-mujs.png"/></p>
+<p><em>Figure 2: EPS during fuzzing of the <code>mujs</code> program, depending on core placement. Sessions with mid-range iteration numbers, corresponding to cores near the center, show higher EPS.</em></p>
 
   </content>
 

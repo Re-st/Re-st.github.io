@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 12:09:26 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 12:38:29 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Repost</title>
@@ -147,6 +147,13 @@
       <link>https://re-st.github.io/blog/solution/</link>
       <pubDate>Sun, 31 Mar 2024 23:59:59 +0900</pubDate>
       <guid>https://re-st.github.io/blog/solution/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Outdated</title>
+      <link>https://re-st.github.io/blog/outdated/</link>
+      <pubDate>Fri, 02 Feb 2024 20:32:36 +0900</pubDate>
+      <guid>https://re-st.github.io/blog/outdated/</guid>
       <description></description>
     </item>
   </channel>
