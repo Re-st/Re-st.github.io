@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대) | Park, Geon (re-st)</title>
+<meta name="title" content="2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)" />
+<meta name="description" content="2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)" />
+<meta name="keywords" content="" />
+
+
+<meta property="og:url" content="https://re-st.github.io/seminar/2025-%EC%97%AC%EB%A6%84-sigpl-%EB%82%9C%EC%83%81-%ED%86%A0%EB%A1%A0-ai%EA%B0%80-%EB%B0%94%EA%BE%B8%EB%8A%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98-%EB%AF%B8%EB%9E%98-%EC%A7%80%ED%98%95-%EB%B0%95%EC%A7%80%ED%98%81-%EA%B3%A0%EB%A0%A4%EB%8C%80/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)">
+  <meta property="og:description" content="2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="seminar">
+    <meta property="article:published_time" content="2025-08-20T18:56:15+09:00">
+    <meta property="article:modified_time" content="2026-04-30T12:00:27+09:00">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)">
+  <meta name="twitter:description" content="2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)">
+
+
+
+
+  <meta itemprop="name" content="2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)">
+  <meta itemprop="description" content="2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)">
+  <meta itemprop="datePublished" content="2025-08-20T18:56:15+09:00">
+  <meta itemprop="dateModified" content="2026-04-30T12:00:27+09:00">
+  <meta itemprop="wordCount" content="52">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+<style>
+  [data-theme="light"] {
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+  [data-theme="dark"] {
+    --background-color: #01242e;
+    --heading-color: #eee;
+    --text-color: #ddd;
+    --link-color: #8cc2dd;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #ccc;
+  }
+</style>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '\\(', right: '\\)', display: false},
+      {left: '$', right: '$', display: false}
+    ]
+  });"></script>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+<a href="/pages/about/">[Whoami]</a>
+
+<a href="/cv/">[CV]</a>
+
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode" style="background:none;border:none;cursor:pointer;font-size:1.2em;padding:0 0.3em;">🌙</button>
+</nav>
+<script>
+  (function() {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else if (stored === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = (current === 'dark') ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    document.getElementById('theme-toggle').textContent = (next === 'dark') ? '☀️' : '🌙';
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var stored = localStorage.getItem('theme');
+    document.getElementById('theme-toggle').textContent = (stored === 'dark') ? '☀️' : '🌙';
+  });
+</script>
+</header>
+  <main>
+<article>
+  <h1>2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)</h1>
+  <p style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+    <i>
+      <time datetime='2025-08-20'>
+        20 Aug, 2025
+      </time>
+    </i>
+    <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[seminar]</span>
+    
+    <span style="opacity:0.6; font-size:0.85em;">1 min read</span>
+    
+  </p>
+  <content>
+    <p>시작전 이광근 교수님, 허충길 교수님 잠깐동안 발표.
+<a href="https://kwangkeunyi.snu.ac.kr/talk/ai-we-sigpl25.pdf">https://kwangkeunyi.snu.ac.kr/talk/ai-we-sigpl25.pdf</a>
+이광근 교수님은 결국 easyword.kr. 병신체 쓰지 말자며. 한편 이제 사람이 책을 안읽고 AI한테 물어보는, 마치 고대의 사제관계처럼 다시 되니까. 지금 교수도 책을 써 사람을 읽힐 게 아니라, AI를 읽힐 걸 염두두고 해야 한다.고.
+허충길 교수님은 deepseek가 인간처럼 추론해보고 안되면 무르고 반복하는게 참 인상깊으셨던 듯.</p>
+
+  </content>
+
+  
+
+  
+
+  
+  <p style="font-size:0.85em; opacity:0.7;">도보시오:<a href="https://re-st.github.io/category/%EC%88%98%ED%95%99%EA%B3%BC-ai/">수학과 AI</a>
+  </p>
+  
+
+  <p>
+    
+  </p>
+
+  <div style="font-size:0.8em;display:flex;gap:16px;justify-content:center;">
+  <p>
+    
+    <a href="https://re-st.github.io/seminar/path-directed-greybox-fuzzing-for-failure-reproduction-%ED%99%8D%EC%8B%A0-%EA%B5%90%EC%88%98%EB%8B%98-%EC%B6%A9%EB%B6%81%EB%8C%80/">
+      &lt;&lt; Previous Post</a>
+        
+  </p>
+  <p>|</p>
+  <p>
+    
+    <a href="https://re-st.github.io/seminar/%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8-%ED%84%B0%EB%84%90%EB%A7%81-%EA%B3%A0%EC%A0%95%EA%B4%80%EB%85%90%EC%97%90-%EB%8F%84%EC%A0%84%ED%95%98%EA%B8%B0-%EC%A0%84%EB%AF%BC%EC%84%9D-%EA%B5%90%EC%88%98%EB%8B%98-dgist/">Next Post >></a>
+    
+  </p>
+</div>
+
+
+  <p style="margin-top:2rem;">
+    <a href="javascript:history.back()" style="font-size:0.9em;">← 뒤로</a>
+  </p>
+
+  
+  <script src="https://utteranc.es/client.js"
+    repo="re-st/re-st.github.io"
+    issue-term="pathname"
+    label="blog-comment"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</article>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

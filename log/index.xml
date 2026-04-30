@@ -7,15 +7,8 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 11:45:06 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 12:00:27 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/log/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Short HowTo Tips</title>
-      <link>https://re-st.github.io/log/short-howto-tips/</link>
-      <pubDate>Thu, 25 Dec 2025 00:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/log/short-howto-tips/</guid>
-      <description>&lt;h1 id=&#34;unsubscribe-from-caml-list&#34;&gt;Unsubscribe from caml-list&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Date: 2025-12-25&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Goto sympa.inria.fr&lt;/li&gt;&#xA;&lt;li&gt;Click the big blue search button like in &lt;strong&gt;Fig. Unsub-1&lt;/strong&gt;, then enter caml-list&lt;/li&gt;&#xA;&lt;li&gt;Do unsubscribe&lt;/li&gt;&#xA;&lt;li&gt;Enter email address&lt;/li&gt;&#xA;&lt;li&gt;Goto email like in &lt;strong&gt;Fig. Unsub-2&lt;/strong&gt;, then click the link&lt;/li&gt;&#xA;&lt;li&gt;Confirm un-subscription&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;strong&gt;Fig. Unsub-1&lt;/strong&gt;&#xA;&lt;img src=&#34;https://re-st.github.io/Unsubscribe%20from%20caml-list%202.png&#34; alt=&#34;../Unsubscribe from caml-list 2.png&#34;/&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Fig. Unsub-2&lt;/strong&gt;&#xA;&lt;img src=&#34;https://re-st.github.io/Unsubscribe%20from%20caml-list%205.png.png&#34; alt=&#34;../Unsubscribe from caml-list 5.png.png&#34;/&gt;&lt;/p&gt;</description>
-    </item>
     <item>
       <title>블로그 wrapper 디렉토리의 의미없는 github action 지우기</title>
       <link>https://re-st.github.io/log/%EB%B8%94%EB%A1%9C%EA%B7%B8-wrapper-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC%EC%9D%98-%EC%9D%98%EB%AF%B8%EC%97%86%EB%8A%94-github-action-%EC%A7%80%EC%9A%B0%EA%B8%B0/</link>

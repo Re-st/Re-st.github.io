@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 11:45:07 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 12:00:27 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Essays</title>
@@ -17,17 +17,17 @@
       <description></description>
     </item>
     <item>
-      <title>Logs</title>
-      <link>https://re-st.github.io/categories/logs/</link>
-      <pubDate>Thu, 25 Dec 2025 00:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/categories/logs/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Seminars</title>
       <link>https://re-st.github.io/categories/seminars/</link>
       <pubDate>Tue, 09 Dec 2025 16:01:26 +0900</pubDate>
       <guid>https://re-st.github.io/categories/seminars/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Logs</title>
+      <link>https://re-st.github.io/categories/logs/</link>
+      <pubDate>Mon, 13 Oct 2025 08:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/categories/logs/</guid>
       <description></description>
     </item>
     <item>

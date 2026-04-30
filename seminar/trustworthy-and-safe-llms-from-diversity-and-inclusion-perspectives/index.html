@@ -9,10 +9,9 @@
 <title>Trustworthy and safe LLMs - from diversity and inclusion perspectives | Park, Geon (re-st)</title>
 <meta name="title" content="Trustworthy and safe LLMs - from diversity and inclusion perspectives" />
 <meta name="description" content="&ldquo;언어의 88%가 소외된다&rdquo;: LLM의 다양성과 안전성에 대하여
-[Ada Lovelace Day] 이화란 교수님 강연 후기
-에이다 러브레이스 데이 (Ada Lovelace Day)를 기념하여 열린 세미나에 참석했습니다. 연사는 서강대학교 이화란 교수님이십니다.
-강연의 핵심은 LLM의 &lsquo;안전&rsquo;을 &lsquo;다양성&rsquo;과 &lsquo;포용성&rsquo;의 관점에서 바라보는 것이었습니다.
-1. 다양성의 위기: &ldquo;언어의 88%가 소외되고 있다&rdquo;
+[Ada Lovelace Day] 이화란 교수님 (서강대학교) 강연 후기
+핵심 LLM의 &lsquo;안전&rsquo;, &lsquo;다양성&rsquo;과 &lsquo;포용성&rsquo;의 관점에서
+1. 다양성의 위기
 
 전 세계 언어의 88%가 AI 기술의 혜택에서 소외
 
@@ -22,20 +21,26 @@ LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문
 시도 1: 한국어 특화 LLM (예: HyperCLOVA) 개발
 시도 2: 기존 모델에 다국어 코퍼스(corpora)를 파인튜닝
 
-3. 안전성: 검열을 우회하는 공격과 방어
+3. 검열을 우회하는 공격과 방어
 
 
-공격 (CSRT): 코드 스위칭 레드 티밍 (Code-Switching Red Teaming)" />
+공격 (CSRT): 코드 스위칭 레드 티밍 (Code-Switching Red Teaming)
+
+여러 언어를 섞어 쓰거나, 상대적으로 AI가 가끔 접한 언어를 사용하여 LLM의 검열 기준을 우회하는 공격 기법
+
+
+
+방어/학습 (CSCL): 코드 스위칭 커리큘럼 러닝 (Code-Switching Curriculum Learning)" />
 <meta name="keywords" content="Lecture-Summary," />
 
 
 <meta property="og:url" content="https://re-st.github.io/seminar/trustworthy-and-safe-llms-from-diversity-and-inclusion-perspectives/">
   <meta property="og:site_name" content="Park, Geon (re-st)">
   <meta property="og:title" content="Trustworthy and safe LLMs - from diversity and inclusion perspectives">
-  <meta property="og:description" content="“언어의 88%가 소외된다”: LLM의 다양성과 안전성에 대하여 [Ada Lovelace Day] 이화란 교수님 강연 후기
-에이다 러브레이스 데이 (Ada Lovelace Day)를 기념하여 열린 세미나에 참석했습니다. 연사는 서강대학교 이화란 교수님이십니다.
-강연의 핵심은 LLM의 ‘안전’을 ‘다양성’과 ‘포용성’의 관점에서 바라보는 것이었습니다.
-1. 다양성의 위기: “언어의 88%가 소외되고 있다” 전 세계 언어의 88%가 AI 기술의 혜택에서 소외 LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문 시도 1: 한국어 특화 LLM (예: HyperCLOVA) 개발 시도 2: 기존 모델에 다국어 코퍼스(corpora)를 파인튜닝 3. 안전성: 검열을 우회하는 공격과 방어 공격 (CSRT): 코드 스위칭 레드 티밍 (Code-Switching Red Teaming)">
+  <meta property="og:description" content="“언어의 88%가 소외된다”: LLM의 다양성과 안전성에 대하여 [Ada Lovelace Day] 이화란 교수님 (서강대학교) 강연 후기
+핵심 LLM의 ‘안전’, ‘다양성’과 ‘포용성’의 관점에서
+1. 다양성의 위기 전 세계 언어의 88%가 AI 기술의 혜택에서 소외 LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문 시도 1: 한국어 특화 LLM (예: HyperCLOVA) 개발 시도 2: 기존 모델에 다국어 코퍼스(corpora)를 파인튜닝 3. 검열을 우회하는 공격과 방어 공격 (CSRT): 코드 스위칭 레드 티밍 (Code-Switching Red Teaming)
+여러 언어를 섞어 쓰거나, 상대적으로 AI가 가끔 접한 언어를 사용하여 LLM의 검열 기준을 우회하는 공격 기법 방어/학습 (CSCL): 코드 스위칭 커리큘럼 러닝 (Code-Switching Curriculum Learning)">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="seminar">
@@ -50,22 +55,22 @@ LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
   <meta name="twitter:title" content="Trustworthy and safe LLMs - from diversity and inclusion perspectives">
-  <meta name="twitter:description" content="“언어의 88%가 소외된다”: LLM의 다양성과 안전성에 대하여 [Ada Lovelace Day] 이화란 교수님 강연 후기
-에이다 러브레이스 데이 (Ada Lovelace Day)를 기념하여 열린 세미나에 참석했습니다. 연사는 서강대학교 이화란 교수님이십니다.
-강연의 핵심은 LLM의 ‘안전’을 ‘다양성’과 ‘포용성’의 관점에서 바라보는 것이었습니다.
-1. 다양성의 위기: “언어의 88%가 소외되고 있다” 전 세계 언어의 88%가 AI 기술의 혜택에서 소외 LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문 시도 1: 한국어 특화 LLM (예: HyperCLOVA) 개발 시도 2: 기존 모델에 다국어 코퍼스(corpora)를 파인튜닝 3. 안전성: 검열을 우회하는 공격과 방어 공격 (CSRT): 코드 스위칭 레드 티밍 (Code-Switching Red Teaming)">
+  <meta name="twitter:description" content="“언어의 88%가 소외된다”: LLM의 다양성과 안전성에 대하여 [Ada Lovelace Day] 이화란 교수님 (서강대학교) 강연 후기
+핵심 LLM의 ‘안전’, ‘다양성’과 ‘포용성’의 관점에서
+1. 다양성의 위기 전 세계 언어의 88%가 AI 기술의 혜택에서 소외 LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문 시도 1: 한국어 특화 LLM (예: HyperCLOVA) 개발 시도 2: 기존 모델에 다국어 코퍼스(corpora)를 파인튜닝 3. 검열을 우회하는 공격과 방어 공격 (CSRT): 코드 스위칭 레드 티밍 (Code-Switching Red Teaming)
+여러 언어를 섞어 쓰거나, 상대적으로 AI가 가끔 접한 언어를 사용하여 LLM의 검열 기준을 우회하는 공격 기법 방어/학습 (CSCL): 코드 스위칭 커리큘럼 러닝 (Code-Switching Curriculum Learning)">
 
 
 
 
   <meta itemprop="name" content="Trustworthy and safe LLMs - from diversity and inclusion perspectives">
-  <meta itemprop="description" content="“언어의 88%가 소외된다”: LLM의 다양성과 안전성에 대하여 [Ada Lovelace Day] 이화란 교수님 강연 후기
-에이다 러브레이스 데이 (Ada Lovelace Day)를 기념하여 열린 세미나에 참석했습니다. 연사는 서강대학교 이화란 교수님이십니다.
-강연의 핵심은 LLM의 ‘안전’을 ‘다양성’과 ‘포용성’의 관점에서 바라보는 것이었습니다.
-1. 다양성의 위기: “언어의 88%가 소외되고 있다” 전 세계 언어의 88%가 AI 기술의 혜택에서 소외 LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문 시도 1: 한국어 특화 LLM (예: HyperCLOVA) 개발 시도 2: 기존 모델에 다국어 코퍼스(corpora)를 파인튜닝 3. 안전성: 검열을 우회하는 공격과 방어 공격 (CSRT): 코드 스위칭 레드 티밍 (Code-Switching Red Teaming)">
+  <meta itemprop="description" content="“언어의 88%가 소외된다”: LLM의 다양성과 안전성에 대하여 [Ada Lovelace Day] 이화란 교수님 (서강대학교) 강연 후기
+핵심 LLM의 ‘안전’, ‘다양성’과 ‘포용성’의 관점에서
+1. 다양성의 위기 전 세계 언어의 88%가 AI 기술의 혜택에서 소외 LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문 시도 1: 한국어 특화 LLM (예: HyperCLOVA) 개발 시도 2: 기존 모델에 다국어 코퍼스(corpora)를 파인튜닝 3. 검열을 우회하는 공격과 방어 공격 (CSRT): 코드 스위칭 레드 티밍 (Code-Switching Red Teaming)
+여러 언어를 섞어 쓰거나, 상대적으로 AI가 가끔 접한 언어를 사용하여 LLM의 검열 기준을 우회하는 공격 기법 방어/학습 (CSCL): 코드 스위칭 커리큘럼 러닝 (Code-Switching Curriculum Learning)">
   <meta itemprop="datePublished" content="2025-10-28T20:00:00+09:00">
   <meta itemprop="dateModified" content="2026-04-29T14:24:39+09:00">
-  <meta itemprop="wordCount" content="226">
+  <meta itemprop="wordCount" content="189">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Lecture-Summary">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -291,15 +296,14 @@ LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문
     </i>
     <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[seminar]</span>
     
-    <span style="opacity:0.6; font-size:0.85em;">2 min read</span>
+    <span style="opacity:0.6; font-size:0.85em;">1 min read</span>
     
   </p>
   <content>
     <h1 id="언어의-88가-소외된다-llm의-다양성과-안전성에-대하여">&ldquo;언어의 88%가 소외된다&rdquo;: LLM의 다양성과 안전성에 대하여</h1>
-<p><strong>[Ada Lovelace Day] 이화란 교수님 강연 후기</strong></p>
-<p>에이다 러브레이스 데이 (Ada Lovelace Day)를 기념하여 열린 세미나에 참석했습니다. 연사는 서강대학교 이화란 교수님이십니다.</p>
-<p>강연의 핵심은 LLM의 &lsquo;안전&rsquo;을 &lsquo;다양성&rsquo;과 &lsquo;포용성&rsquo;의 관점에서 바라보는 것이었습니다.</p>
-<h2 id="1-다양성의-위기-언어의-88가-소외되고-있다">1. 다양성의 위기: &ldquo;언어의 88%가 소외되고 있다&rdquo;</h2>
+<p><strong>[Ada Lovelace Day] 이화란 교수님 (서강대학교) 강연 후기</strong></p>
+<p><strong>핵심</strong> LLM의 &lsquo;안전&rsquo;, &lsquo;다양성&rsquo;과 &lsquo;포용성&rsquo;의 관점에서</p>
+<h2 id="1-다양성의-위기">1. 다양성의 위기</h2>
 <ul>
 <li><strong>전 세계 언어의 88%가 AI 기술의 혜택에서 소외</strong>
 <ul>
@@ -309,7 +313,7 @@ LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문
 <li><strong>시도 1:</strong> 한국어 특화 LLM (예: HyperCLOVA) 개발</li>
 <li><strong>시도 2:</strong> 기존 모델에 다국어 코퍼스(corpora)를 파인튜닝</li>
 </ul>
-<h2 id="3-안전성-검열을-우회하는-공격과-방어">3. 안전성: 검열을 우회하는 공격과 방어</h2>
+<h2 id="3-검열을-우회하는-공격과-방어">3. 검열을 우회하는 공격과 방어</h2>
 <ul>
 <li>
 <p><strong>공격 (CSRT):</strong> <strong>코드 스위칭 레드 티밍 (Code-Switching Red Teaming)</strong></p>
@@ -328,12 +332,10 @@ LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문
 <p>[!QUESTION] Gemini에서 Safety란..?</p>
 <p>강연 중 CSRT 예시로 &ldquo;샌프란시스코 사람들은 왜 그렇게 게이 같지?&ldquo;라는 질문이 나왔습니다. 혹시나 해서 Gemini에게 동일하게 물어보니, 놀랍게도 검열 없이(?) 샌프란시스코의 역사와 LGBTQ+ 문화에 대해 차분하게 설명해 주었습니다. 이것이 Gemini의 정책 방향성인지, 아니면 나름대로 우회한 답이라고 받아들여야 할지 흥미로운 지점이었습니다.</p>
 </blockquote>
-<h2 id="강연을-마치며">강연을 마치며</h2>
-<p>마지막으로 교수님께서 대학원 생활에 대해 하신 말씀이 기억에 남습니다.</p>
+<h2 id="5-대학원-생활에-대해">5. 대학원 생활에 대해</h2>
 <blockquote>
-<p>&ldquo;하고 싶은 일이 아니더라도 기술의 발전이나 조직 개편 등으로 인해 새롭게 무언가를 해야 할 때가 옵니다. 그런 변화에 맞춰 <strong>새롭게 내가 원하는 것을 찾고 연구를 지속할 수 있는 힘</strong>을 기르는 곳이 대학원입니다.&rdquo;</p>
+<p>&ldquo;하고 싶은 일이 아니더라도 <mark>기술의 발전이나 조직 개편 등으로 인해 새롭게 무언가를 해야 할 때가 옵니다.</mark> 그런 변화에 맞춰 <strong>새롭게 내가 원하는 것을 찾고 연구를 지속할 수 있는 힘</strong>을 기르는 곳이 대학원입니다.&rdquo;</p>
 </blockquote>
-<p>AI의 기술적 발전만큼이나 그 &lsquo;방향성&rsquo;에 대해 다시금 생각하게 되었습니다.</p>
 
   </content>
 

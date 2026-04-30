@@ -7,15 +7,8 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 11:45:07 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 12:00:27 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/research/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>2025-08-22 무지향성 퍼징 성능 향상 위한 Topuzz의 활용</title>
-      <link>https://re-st.github.io/research/2025-08-22-%EB%AC%B4%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-%EC%84%B1%EB%8A%A5-%ED%96%A5%EC%83%81-%EC%9C%84%ED%95%9C-topuzz%EC%9D%98-%ED%99%9C%EC%9A%A9/</link>
-      <pubDate>Thu, 30 Apr 2026 09:42:30 +0900</pubDate>
-      <guid>https://re-st.github.io/research/2025-08-22-%EB%AC%B4%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-%EC%84%B1%EB%8A%A5-%ED%96%A5%EC%83%81-%EC%9C%84%ED%95%9C-topuzz%EC%9D%98-%ED%99%9C%EC%9A%A9/</guid>
-      <description>2025-08-22 무지향성 퍼징 성능 향상 위한 Topuzz의 활용</description>
-    </item>
     <item>
       <title>Seed-Prover</title>
       <link>https://re-st.github.io/research/seed-prover/</link>

@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 11:45:07 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 12:00:27 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/seminar/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>네트워크 보안 연구자로 시작해 인더스트리에서 5년을 보내며 배운 교훈</title>
@@ -49,7 +49,7 @@
       <link>https://re-st.github.io/seminar/trustworthy-and-safe-llms-from-diversity-and-inclusion-perspectives/</link>
       <pubDate>Tue, 28 Oct 2025 20:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/seminar/trustworthy-and-safe-llms-from-diversity-and-inclusion-perspectives/</guid>
-      <description>&lt;h1 id=&#34;언어의-88가-소외된다-llm의-다양성과-안전성에-대하여&#34;&gt;&amp;ldquo;언어의 88%가 소외된다&amp;rdquo;: LLM의 다양성과 안전성에 대하여&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;[Ada Lovelace Day] 이화란 교수님 강연 후기&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;에이다 러브레이스 데이 (Ada Lovelace Day)를 기념하여 열린 세미나에 참석했습니다. 연사는 서강대학교 이화란 교수님이십니다.&lt;/p&gt;&#xA;&lt;p&gt;강연의 핵심은 LLM의 &amp;lsquo;안전&amp;rsquo;을 &amp;lsquo;다양성&amp;rsquo;과 &amp;lsquo;포용성&amp;rsquo;의 관점에서 바라보는 것이었습니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-다양성의-위기-언어의-88가-소외되고-있다&#34;&gt;1. 다양성의 위기: &amp;ldquo;언어의 88%가 소외되고 있다&amp;rdquo;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;전 세계 언어의 88%가 AI 기술의 혜택에서 소외&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;시도 1:&lt;/strong&gt; 한국어 특화 LLM (예: HyperCLOVA) 개발&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;시도 2:&lt;/strong&gt; 기존 모델에 다국어 코퍼스(corpora)를 파인튜닝&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;3-안전성-검열을-우회하는-공격과-방어&#34;&gt;3. 안전성: 검열을 우회하는 공격과 방어&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;공격 (CSRT):&lt;/strong&gt; &lt;strong&gt;코드 스위칭 레드 티밍 (Code-Switching Red Teaming)&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;언어의-88가-소외된다-llm의-다양성과-안전성에-대하여&#34;&gt;&amp;ldquo;언어의 88%가 소외된다&amp;rdquo;: LLM의 다양성과 안전성에 대하여&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;[Ada Lovelace Day] 이화란 교수님 (서강대학교) 강연 후기&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;핵심&lt;/strong&gt; LLM의 &amp;lsquo;안전&amp;rsquo;, &amp;lsquo;다양성&amp;rsquo;과 &amp;lsquo;포용성&amp;rsquo;의 관점에서&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-다양성의-위기&#34;&gt;1. 다양성의 위기&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;전 세계 언어의 88%가 AI 기술의 혜택에서 소외&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;LLM 개발이 극도로 영어 중심으로 편중되어 있기 때문&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;시도 1:&lt;/strong&gt; 한국어 특화 LLM (예: HyperCLOVA) 개발&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;시도 2:&lt;/strong&gt; 기존 모델에 다국어 코퍼스(corpora)를 파인튜닝&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;3-검열을-우회하는-공격과-방어&#34;&gt;3. 검열을 우회하는 공격과 방어&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;공격 (CSRT):&lt;/strong&gt; &lt;strong&gt;코드 스위칭 레드 티밍 (Code-Switching Red Teaming)&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;여러 언어를 섞어 쓰거나, 상대적으로 AI가 가끔 접한 언어를 사용하여 LLM의 검열 기준을 우회하는 공격 기법&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;방어/학습 (CSCL):&lt;/strong&gt; &lt;strong&gt;코드 스위칭 커리큘럼 러닝 (Code-Switching Curriculum Learning)&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>글로벌 블록체인 사업의 성장과 국내 핀테크 스타트업의 나아갈 방향 - 오종욱 CEO (웨이브릿지)</title>
@@ -78,6 +78,13 @@
       <pubDate>Thu, 21 Aug 2025 09:30:00 +0900</pubDate>
       <guid>https://re-st.github.io/seminar/%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8-%ED%84%B0%EB%84%90%EB%A7%81-%EA%B3%A0%EC%A0%95%EA%B4%80%EB%85%90%EC%97%90-%EB%8F%84%EC%A0%84%ED%95%98%EA%B8%B0-%EC%A0%84%EB%AF%BC%EC%84%9D-%EA%B5%90%EC%88%98%EB%8B%98-dgist/</guid>
       <description>&lt;h1 id=&#34;1-last-k의-한계를-넘어-important-k로&#34;&gt;1. &amp;lsquo;Last k&amp;rsquo;의 한계를 넘어 &amp;lsquo;Important k&amp;rsquo;로&lt;/h1&gt;&#xA;&lt;p&gt;연구는 프로그램 정적 분석에서 널리 쓰이는 컨텍스트 민감도 (context sensitivity)의 전통적인 접근 방식에 도전하며 시작되었습니다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;전통적 방식 (Last k):&lt;/strong&gt; 최근 k개의 호출 스택 (call stack)을 컨텍스트로 사용합니다. (보통 k=2가 많이 사용됨)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;교수님의 제안 (Important k):&lt;/strong&gt; &amp;rsquo;last k&amp;rsquo; (최근 k개) 접근 방식 대신, 분석에 정말로 중요한 &amp;lsquo;important k&amp;rsquo; (주요 k개)의 컨텍스트만 선별하여 사용하자는 것입니다.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;효과:&lt;/strong&gt; 이 &amp;lsquo;Important k&amp;rsquo; 접근법은 &lt;strong&gt;k=1만으로도 기존의 &amp;lsquo;Last k&amp;rsquo; (k=2) 방식과 비슷한 성능&lt;/strong&gt;을 보여주었습니다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)</title>
+      <link>https://re-st.github.io/seminar/2025-%EC%97%AC%EB%A6%84-sigpl-%EB%82%9C%EC%83%81-%ED%86%A0%EB%A1%A0-ai%EA%B0%80-%EB%B0%94%EA%BE%B8%EB%8A%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98-%EB%AF%B8%EB%9E%98-%EC%A7%80%ED%98%95-%EB%B0%95%EC%A7%80%ED%98%81-%EA%B3%A0%EB%A0%A4%EB%8C%80/</link>
+      <pubDate>Wed, 20 Aug 2025 18:56:15 +0900</pubDate>
+      <guid>https://re-st.github.io/seminar/2025-%EC%97%AC%EB%A6%84-sigpl-%EB%82%9C%EC%83%81-%ED%86%A0%EB%A1%A0-ai%EA%B0%80-%EB%B0%94%EA%BE%B8%EB%8A%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98-%EB%AF%B8%EB%9E%98-%EC%A7%80%ED%98%95-%EB%B0%95%EC%A7%80%ED%98%81-%EA%B3%A0%EB%A0%A4%EB%8C%80/</guid>
+      <description>2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)</description>
     </item>
     <item>
       <title>Path-directed Greybox Fuzzing for Failure Reproduction - 홍신 교수님 (충북대)</title>
