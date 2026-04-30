@@ -15,7 +15,7 @@ I explain why WAFLGo can distort such experiments and propose a safer comparison
 Most recent evaluation plans reuse a fixed list of historical bug locations, yet WAFLGo was designed for regression testing on fresh commits.
 This mismatch raises two hidden biases that can mislead reviewers and ourselves.
 WAFLGo first parses the latest diff, builds a write-after-load slice, and labels every block in that slice as a target.
-It then assigns a critical score that gives more energy to seeds covering those blocks[1].
+It then assigns a critical score that gives more energy to seeds covering those blocks.
 If we strip away the diff and hand the tool our legacy list, the critical score collapses to zero and WAFLGo devolves into ordinary AFLGo behaviour.
 Any performance ranking that follows would reward parameter coincidence rather than the commit-aware idea the authors proposed." />
 <meta name="keywords" content="Essay,weekly-writing," />
@@ -26,7 +26,7 @@ Any performance ranking that follows would reward parameter coincidence rather t
   <meta property="og:title" content="WAFLGo as our comparison not a good idea">
   <meta property="og:description" content="Abstract Benchmarking multi-target fuzzers is tricky because some tools exploit commit history while others rely on static locations only. I explain why WAFLGo can distort such experiments and propose a safer comparison strategy.
 본문 Most recent evaluation plans reuse a fixed list of historical bug locations, yet WAFLGo was designed for regression testing on fresh commits. This mismatch raises two hidden biases that can mislead reviewers and ourselves.
-WAFLGo first parses the latest diff, builds a write-after-load slice, and labels every block in that slice as a target. It then assigns a critical score that gives more energy to seeds covering those blocks[1]. If we strip away the diff and hand the tool our legacy list, the critical score collapses to zero and WAFLGo devolves into ordinary AFLGo behaviour. Any performance ranking that follows would reward parameter coincidence rather than the commit-aware idea the authors proposed.">
+WAFLGo first parses the latest diff, builds a write-after-load slice, and labels every block in that slice as a target. It then assigns a critical score that gives more energy to seeds covering those blocks. If we strip away the diff and hand the tool our legacy list, the critical score collapses to zero and WAFLGo devolves into ordinary AFLGo behaviour. Any performance ranking that follows would reward parameter coincidence rather than the commit-aware idea the authors proposed.">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
@@ -44,7 +44,7 @@ WAFLGo first parses the latest diff, builds a write-after-load slice, and labels
   <meta name="twitter:title" content="WAFLGo as our comparison not a good idea">
   <meta name="twitter:description" content="Abstract Benchmarking multi-target fuzzers is tricky because some tools exploit commit history while others rely on static locations only. I explain why WAFLGo can distort such experiments and propose a safer comparison strategy.
 본문 Most recent evaluation plans reuse a fixed list of historical bug locations, yet WAFLGo was designed for regression testing on fresh commits. This mismatch raises two hidden biases that can mislead reviewers and ourselves.
-WAFLGo first parses the latest diff, builds a write-after-load slice, and labels every block in that slice as a target. It then assigns a critical score that gives more energy to seeds covering those blocks[1]. If we strip away the diff and hand the tool our legacy list, the critical score collapses to zero and WAFLGo devolves into ordinary AFLGo behaviour. Any performance ranking that follows would reward parameter coincidence rather than the commit-aware idea the authors proposed.">
+WAFLGo first parses the latest diff, builds a write-after-load slice, and labels every block in that slice as a target. It then assigns a critical score that gives more energy to seeds covering those blocks. If we strip away the diff and hand the tool our legacy list, the critical score collapses to zero and WAFLGo devolves into ordinary AFLGo behaviour. Any performance ranking that follows would reward parameter coincidence rather than the commit-aware idea the authors proposed.">
 
 
 
@@ -52,7 +52,7 @@ WAFLGo first parses the latest diff, builds a write-after-load slice, and labels
   <meta itemprop="name" content="WAFLGo as our comparison not a good idea">
   <meta itemprop="description" content="Abstract Benchmarking multi-target fuzzers is tricky because some tools exploit commit history while others rely on static locations only. I explain why WAFLGo can distort such experiments and propose a safer comparison strategy.
 본문 Most recent evaluation plans reuse a fixed list of historical bug locations, yet WAFLGo was designed for regression testing on fresh commits. This mismatch raises two hidden biases that can mislead reviewers and ourselves.
-WAFLGo first parses the latest diff, builds a write-after-load slice, and labels every block in that slice as a target. It then assigns a critical score that gives more energy to seeds covering those blocks[1]. If we strip away the diff and hand the tool our legacy list, the critical score collapses to zero and WAFLGo devolves into ordinary AFLGo behaviour. Any performance ranking that follows would reward parameter coincidence rather than the commit-aware idea the authors proposed.">
+WAFLGo first parses the latest diff, builds a write-after-load slice, and labels every block in that slice as a target. It then assigns a critical score that gives more energy to seeds covering those blocks. If we strip away the diff and hand the tool our legacy list, the critical score collapses to zero and WAFLGo devolves into ordinary AFLGo behaviour. Any performance ranking that follows would reward parameter coincidence rather than the commit-aware idea the authors proposed.">
   <meta itemprop="datePublished" content="2025-05-15T00:00:00+09:00">
   <meta itemprop="dateModified" content="2026-04-29T22:06:32+09:00">
   <meta itemprop="wordCount" content="262">
@@ -286,13 +286,13 @@ WAFLGo first parses the latest diff, builds a write-after-load slice, and labels
   </p>
   <content>
     <h1 id="abstract">Abstract</h1>
-<p>Benchmarking multi-target fuzzers is tricky because some tools exploit commit history while others rely on static locations only.
+<p>Benchmarking <a href="https://re-st.github.io/category/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95/">multi-target fuzzer</a>s is tricky because some tools exploit commit history while others rely on static locations only.
 I explain why WAFLGo can distort such experiments and propose a safer comparison strategy.</p>
 <h1 id="본문">본문</h1>
-<p>Most recent evaluation plans reuse a fixed list of historical bug locations, yet WAFLGo was designed for regression testing on fresh commits.
-This mismatch raises two hidden biases that can mislead reviewers and ourselves.</p>
+<p>Most recent evaluation plans reuse a fixed list of historical bug locations, yet WAFLGo was <strong>designed for regression testing on fresh commits.</strong>
+This <strong>mismatch raises two hidden biases</strong> that can mislead reviewers and ourselves.</p>
 <p>WAFLGo first parses the latest diff, builds a write-after-load slice, and labels every block in that slice as a target.
-It then assigns a critical score that gives more energy to seeds covering those blocks[1].
+It then assigns a critical score that gives more energy to seeds covering those blocks.
 If we strip away the diff and hand the tool our legacy list, the critical score collapses to zero and WAFLGo devolves into ordinary AFLGo behaviour.
 Any performance ranking that follows would reward parameter coincidence rather than the commit-aware idea the authors proposed.</p>
 <p>Suppose we locate the original commit for each legacy bug and feed those diffs to WAFLGo.
@@ -300,7 +300,7 @@ Now the opposite bias appears.
 WAFLGo receives many extra basic blocks that lie on the slice, whereas other fuzzers see a single coordinate per bug.
 The extra structural context narrows WAFLGo’s search space and increases its apparent precision, so the comparison again becomes unbalanced.</p>
 <p>A cleaner approach is to reserve WAFLGo for genuine commit-level regression studies and to employ a location-oriented baseline such as SelectFuzz.
-SelectFuzz accepts the same multi-target list as Lyso and AFLGo, prunes instrumentation with data-flow analysis, and competes without secret advantages.
+SelectFuzz accepts the same multi-target list as <a href="https://re-st.github.io/research/%EB%8B%A4%EC%A4%91-%EC%A7%80%ED%96%A5%EC%84%B1-%ED%8D%BC%EC%A7%95-lyso/">Lyso</a> and AFLGo, prunes instrumentation with data-flow analysis, and competes without secret advantages.
 Choosing an apples-to-apples line-up keeps the experiment defensible and avoids reviewer objections about hidden guidance.</p>
 
   </content>

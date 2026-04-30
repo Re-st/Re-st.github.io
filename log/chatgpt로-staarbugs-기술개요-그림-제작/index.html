@@ -6,20 +6,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
-<title>2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대) | Park, Geon (re-st)</title>
-<meta name="title" content="2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)" />
-<meta name="description" content="2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)" />
+<title>ChatGPT로 STAARbugs 기술개요 그림 제작 | Park, Geon (re-st)</title>
+<meta name="title" content="ChatGPT로 STAARbugs 기술개요 그림 제작" />
+<meta name="description" content="ChatGPT로 STAARbugs 기술개요 그림 제작" />
 <meta name="keywords" content="" />
 
 
-<meta property="og:url" content="https://re-st.github.io/seminar/2025-%EC%97%AC%EB%A6%84-sigpl-%EB%82%9C%EC%83%81-%ED%86%A0%EB%A1%A0-ai%EA%B0%80-%EB%B0%94%EA%BE%B8%EB%8A%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98-%EB%AF%B8%EB%9E%98-%EC%A7%80%ED%98%95-%EB%B0%95%EC%A7%80%ED%98%81-%EA%B3%A0%EB%A0%A4%EB%8C%80/">
+<meta property="og:url" content="https://re-st.github.io/log/chatgpt%EB%A1%9C-staarbugs-%EA%B8%B0%EC%88%A0%EA%B0%9C%EC%9A%94-%EA%B7%B8%EB%A6%BC-%EC%A0%9C%EC%9E%91/">
   <meta property="og:site_name" content="Park, Geon (re-st)">
-  <meta property="og:title" content="2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)">
-  <meta property="og:description" content="2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)">
+  <meta property="og:title" content="ChatGPT로 STAARbugs 기술개요 그림 제작">
+  <meta property="og:description" content="ChatGPT로 STAARbugs 기술개요 그림 제작">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="seminar">
-    <meta property="article:published_time" content="2025-08-20T18:56:15+09:00">
+    <meta property="article:section" content="log">
+    <meta property="article:published_time" content="2025-04-03T15:21:30+09:00">
     <meta property="article:modified_time" content="2026-04-30T15:43:49+09:00">
     <meta property="og:image" content="https://re-st.github.io/images/share.png">
 
@@ -28,17 +28,17 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
-  <meta name="twitter:title" content="2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)">
-  <meta name="twitter:description" content="2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)">
+  <meta name="twitter:title" content="ChatGPT로 STAARbugs 기술개요 그림 제작">
+  <meta name="twitter:description" content="ChatGPT로 STAARbugs 기술개요 그림 제작">
 
 
 
 
-  <meta itemprop="name" content="2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)">
-  <meta itemprop="description" content="2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)">
-  <meta itemprop="datePublished" content="2025-08-20T18:56:15+09:00">
+  <meta itemprop="name" content="ChatGPT로 STAARbugs 기술개요 그림 제작">
+  <meta itemprop="description" content="ChatGPT로 STAARbugs 기술개요 그림 제작">
+  <meta itemprop="datePublished" content="2025-04-03T15:21:30+09:00">
   <meta itemprop="dateModified" content="2026-04-30T15:43:49+09:00">
-  <meta itemprop="wordCount" content="52">
+  <meta itemprop="wordCount" content="219">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -265,32 +265,68 @@
 </header>
   <main>
 <article>
-  <h1>2025 여름 SIGPL 난상 토론 - AI가 바꾸는 프로그래밍의 미래 지형 박지혁 (고려대)</h1>
+  <h1>ChatGPT로 STAARbugs 기술개요 그림 제작</h1>
   <p style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
     <i>
-      <time datetime='2025-08-20'>
-        20 Aug, 2025
+      <time datetime='2025-04-03'>
+        03 Apr, 2025
       </time>
     </i>
-    <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[seminar]</span>
+    <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[log]</span>
     
-    <span style="opacity:0.6; font-size:0.85em;">1 min read</span>
+    <span style="opacity:0.6; font-size:0.85em;">2 min read</span>
     
   </p>
   <content>
-    <p>시작전 이광근 교수님, 허충길 교수님 잠깐동안 발표.
-<a href="https://kwangkeunyi.snu.ac.kr/talk/ai-we-sigpl25.pdf">https://kwangkeunyi.snu.ac.kr/talk/ai-we-sigpl25.pdf</a>
-이광근 교수님은 결국 easyword.kr. 병신체 쓰지 말자며. 한편 이제 사람이 책을 안읽고 AI한테 물어보는, 마치 고대의 사제관계처럼 다시 되니까. 지금 교수도 책을 써 사람을 읽힐 게 아니라, AI를 읽힐 걸 염두두고 해야 한다.고.
-허충길 교수님은 deepseek가 인간처럼 추론해보고 안되면 무르고 반복하는게 참 인상깊으셨던 듯.</p>
+    <p>ChatGPT로 기술개요 그림을 만들었는데 꽤 깔끔하다. wow!
+<img src="/2025-04-03%20%ea%b3%bc%ed%95%99%ea%b8%b0%ec%88%a0%eb%8c%80%ec%a0%84%20STAARBugs%20%ea%b8%b0%ec%88%a0%ea%b0%9c%ec%9a%94.jpg" alt="2025-04-03 과학기술대전 STAARBugs 기술개요.jpg"/></p>
+<p>처음 시도: 이미 완성된 글1 -&gt; 그림1, 글2 -&gt; 그림2 예시를 보고, 글3을 그림으로 옮겨달라고 부탁.</p>
+<pre tabindex="0"><code>안녕. 그림을 만들고 싶어. 글1에서 그림1을, 글2에서 그림2를 만든것처럼. 글3에서 그림을 만들어줘. 조건 : 한국어일 것.
+</code></pre><p>양끝이 잘린 답을.ㅠ
+<img src="/STAARbugs%20%ea%b8%b0%ec%88%a0%ea%b0%9c%ec%9a%94%20%ec%b2%ab%20%ec%9d%91%eb%8b%b5.png" alt="STAARbugs 기술개요 첫 응답.png"/></p>
+<p>계속 대화..</p>
+<pre tabindex="0"><code>글은 줄이고, 그림을 제대로 넣어줘. 그.. 어차피 너가 만든거에서 구도랑 그림들만 캡쳐해서 갈거니까 말야? 그러니까 좌우가 잘린 현상태로는 안돼. 안잘린 완전한 그림을 그려줘. 내가 캡쳐하게
+
+
+배경을 하얗게 하고, 그 STARBUGS 등의 각 그림들만 표현해 줘. 그리고 좌우 아직도 잘렸어. 그냥 깊은 모서리 여백을 둔다 생각하고 그려
+
+
+여기서 C라고 적힌 그 모니터만 출력해 저.
+
+
+유사오류는 어떻게 표현하는게 좋을까?
+
+
+너가 해줄래? 현재 상태. 뭘 추가하면 좋을지, 추가할 아이콘을 만들고, 어떻게 배치할지 조언좀
+
+
+   각 오류마다 오류리포트, 코드저장소, 패치, 유사오류, 오류 발현 경로 등 SW오류연구에 필요한 유용한 정보를 정리
+인데, 아직 오류 발현 경로가 없네. 사실 입력에서 오류까지 흐르는 data flow를 나타내는 건데, 어떻게 icon으로 표시할까?;;
+
+
+그리고 500개의 오류를 수집하는 연구자 아이콘도 만들어 줄래?
+
+
+그리고 너의 그림에는 소스코드, 오류리포트 등을 적는곳이 없는데, 이것들은 현재의 아래에 배치에서, 오른쪽에 배치로 바꿔서 위아래로 배열할까?
+
+
+아 그리고 staarbugs를 그냥 원통이 아니라 DB느낌으로 수정해줄수 있니? 아니면은, 이게 약간 우주 모양의 website거든. 이거를 기반으로 icon을 만들어도 되고. (사진1 첨부)
+...
+</code></pre><p>AI에는 아이콘과 배치 구상을 부탁하고, 실제 배치는 스스로 했다.
+큰 그림을 주문하면 AI가 양끝을 잘라먹고, 안쪽을 제대로 안 만든다.ㅠㅠ</p>
+<p>[사진1 - STAARbugs 웹사이트 캡쳐]
+<img src="/STAARbugs%20%ec%9b%b9%ec%82%ac%ec%9d%b4%ed%8a%b8%20%ec%ba%a1%ec%b3%90.png" alt="STAARbugs 웹사이트 캡쳐.png"/></p>
 
   </content>
 
   
-
+  <p style="font-size:0.85em; opacity:0.7;">Source: <a href="https://staarbugs.org/">https://staarbugs.org/</a></p>
   
 
   
-  <p style="font-size:0.85em; opacity:0.7;">도보시오:<a href="https://re-st.github.io/category/%EC%88%98%ED%95%99%EA%B3%BC-ai/">수학과 AI</a>
+
+  
+  <p style="font-size:0.85em; opacity:0.7;">도보시오:<a href="">경북대학교 소프트웨어재난연구센터</a>
   </p>
   
 
@@ -301,14 +337,14 @@
   <div style="font-size:0.8em;display:flex;gap:16px;justify-content:center;">
   <p>
     
-    <a href="https://re-st.github.io/seminar/path-directed-greybox-fuzzing-for-failure-reproduction-%ED%99%8D%EC%8B%A0-%EA%B5%90%EC%88%98%EB%8B%98-%EC%B6%A9%EB%B6%81%EB%8C%80/">
+    <a href="https://re-st.github.io/log/2024-%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%8C%80%ED%95%99%EC%9B%90-%EC%84%B8%EB%AF%B8%EB%82%98-qna/">
       &lt;&lt; Previous Post</a>
         
   </p>
   <p>|</p>
   <p>
     
-    <a href="https://re-st.github.io/seminar/%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8-%ED%84%B0%EB%84%90%EB%A7%81-%EA%B3%A0%EC%A0%95%EA%B4%80%EB%85%90%EC%97%90-%EB%8F%84%EC%A0%84%ED%95%98%EA%B8%B0-%EC%A0%84%EB%AF%BC%EC%84%9D-%EA%B5%90%EC%88%98%EB%8B%98-dgist/">Next Post >></a>
+    <a href="https://re-st.github.io/log/mkdocs-hugo-jekyll-%EC%A0%95%EC%A0%81-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%83%9D%EC%84%B1%EA%B8%B0-%EC%9A%A9%EB%8F%84-%EB%B9%84%EA%B5%90/">Next Post >></a>
     
   </p>
 </div>

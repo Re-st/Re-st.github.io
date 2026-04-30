@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 15:20:06 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 15:43:49 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/blog/bookmark/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lean 게임 서버</title>
@@ -21,7 +21,7 @@
       <link>https://re-st.github.io/log/bandit-%EA%B2%8C%EC%9E%84-%EC%84%9C%EB%B2%84/</link>
       <pubDate>Tue, 01 Aug 2023 15:39:34 +0900</pubDate>
       <guid>https://re-st.github.io/log/bandit-%EA%B2%8C%EC%9E%84-%EC%84%9C%EB%B2%84/</guid>
-      <description>&lt;p&gt;(정보) Linux 명령어&lt;/p&gt;&#xA;&lt;h1 id=&#34;checkpoint&#34;&gt;checkpoint&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://overthewire.org/wargames/bandit/bandit23.html&#34;&gt;https://overthewire.org/wargames/bandit/bandit23.html&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;답지&#34;&gt;답지&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://websecurity.tistory.com/114&#34;&gt;https://websecurity.tistory.com/114&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;checkpoint&#34;&gt;checkpoint&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://overthewire.org/wargames/bandit/bandit23.html&#34;&gt;https://overthewire.org/wargames/bandit/bandit23.html&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;답지&#34;&gt;답지&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://websecurity.tistory.com/114&#34;&gt;https://websecurity.tistory.com/114&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
