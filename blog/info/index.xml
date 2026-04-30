@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 08:53:02 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 09:03:33 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/blog/info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>수학과 AI</title>
@@ -21,7 +21,7 @@
       <link>https://re-st.github.io/category/lean/</link>
       <pubDate>Fri, 12 Sep 2025 15:14:57 +0900</pubDate>
       <guid>https://re-st.github.io/category/lean/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/log/lean-%EA%B2%8C%EC%9E%84-%EC%84%9C%EB%B2%84/&#34;&gt;Lean 게임 서버&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/repost/why-lean-4-replaced-ocaml-as-my-primary-language/&#34;&gt;Why Lean 4 replaced OCaml as my Primary Language&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/log/lean-%EA%B2%8C%EC%9E%84-%EC%84%9C%EB%B2%84/&#34;&gt;Lean 게임 서버&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/repost/why-lean-4-replaced-ocaml-as-my-primary-language/&#34;&gt;Why Lean 4 replaced OCaml as my Primary Language&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/seminar/lean-machine-checked-mathematics-and-verified-programming-past-and-future-leonardo-de-moura/&#34;&gt;Lean Machine-Checked Mathematics and Verified Programming, Past and Future (Leonardo de Moura)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>PLDI 2025</title>
