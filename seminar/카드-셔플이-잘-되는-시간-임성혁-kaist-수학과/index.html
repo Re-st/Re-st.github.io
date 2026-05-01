@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://re-st.github.io/images/github.png" />
+<title>카드 셔플이 잘 되는 시간 - 임성혁 (KAIST 수학과) | Park, Geon (re-st)</title>
+<meta name="title" content="카드 셔플이 잘 되는 시간 - 임성혁 (KAIST 수학과)" />
+<meta name="description" content="
+2019-02-27 16:00, KAIST 오픈동방. 발표자: 임성혁 (KAIST 수학분과장)
+참고 논문: Shuffling Cards and Stopping Times (&lsquo;86) — David Aldous, Persi Diaconis
+
+트럼프 카드를 몇 번 섞어야 잘 섞인 것인가
+발표자는 수학과장. Persi Diaconis 교수는 강의하기 전 마술사였음.
+핵심 질문: 트럼프 카드를 몇 번 섞어야 잘 섞였다고 말할 수 있는가?
+정의: Markov Chain
+\((X_n)_{n=0}^{\infty}\)를 Markov chain이라 할 때:
+
+초기: \(N!\) 크기의 확률 vector (모든 배열 동일 확률)
+섞기: 다른 상태로 보내주는 함수 \(f\)
+\(Q^{*k}\): \(k\)번 섞은 후 카드 상태의 분포
+\(U(\pi) = 1/n!\): 균일 분포
+
+거리 측정
+$$\|Q^{*k} - U\| = \frac{1}{2} \sum_{x \in S_n} |Q^{*k}(x) - U(x)| = \max_{A \subseteq S_n} |Q^{*k}(A) - U(A)|$$
+0이면 잘 섞임, 1이면 전혀 안 섞임
+
+Top-in-at-random Shuffle (toy model)
+맨 위 카드를 빼서 랜덤한 위치에 꽂기." />
+<meta name="keywords" content="Talk,이산수학,확률론," />
+
+
+<meta property="og:url" content="https://re-st.github.io/seminar/%EC%B9%B4%EB%93%9C-%EC%85%94%ED%94%8C%EC%9D%B4-%EC%9E%98-%EB%90%98%EB%8A%94-%EC%8B%9C%EA%B0%84-%EC%9E%84%EC%84%B1%ED%98%81-kaist-%EC%88%98%ED%95%99%EA%B3%BC/">
+  <meta property="og:site_name" content="Park, Geon (re-st)">
+  <meta property="og:title" content="카드 셔플이 잘 되는 시간 - 임성혁 (KAIST 수학과)">
+  <meta property="og:description" content="2019-02-27 16:00, KAIST 오픈동방. 발표자: 임성혁 (KAIST 수학분과장) 참고 논문: Shuffling Cards and Stopping Times (‘86) — David Aldous, Persi Diaconis
+트럼프 카드를 몇 번 섞어야 잘 섞인 것인가 발표자는 수학과장. Persi Diaconis 교수는 강의하기 전 마술사였음.
+핵심 질문: 트럼프 카드를 몇 번 섞어야 잘 섞였다고 말할 수 있는가?
+정의: Markov Chain \((X_n)_{n=0}^{\infty}\)를 Markov chain이라 할 때:
+초기: \(N!\) 크기의 확률 vector (모든 배열 동일 확률) 섞기: 다른 상태로 보내주는 함수 \(f\) \(Q^{*k}\): \(k\)번 섞은 후 카드 상태의 분포 \(U(\pi) = 1/n!\): 균일 분포 거리 측정 $$\|Q^{*k} - U\| = \frac{1}{2} \sum_{x \in S_n} |Q^{*k}(x) - U(x)| = \max_{A \subseteq S_n} |Q^{*k}(A) - U(A)|$$ 0이면 잘 섞임, 1이면 전혀 안 섞임 Top-in-at-random Shuffle (toy model) 맨 위 카드를 빼서 랜덤한 위치에 꽂기.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="seminar">
+    <meta property="article:published_time" content="2019-02-27T16:00:00+09:00">
+    <meta property="article:modified_time" content="2026-05-01T18:45:35+09:00">
+    <meta property="article:tag" content="Talk">
+    <meta property="article:tag" content="이산수학">
+    <meta property="article:tag" content="확률론">
+    <meta property="og:image" content="https://re-st.github.io/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://re-st.github.io/images/share.png">
+  <meta name="twitter:title" content="카드 셔플이 잘 되는 시간 - 임성혁 (KAIST 수학과)">
+  <meta name="twitter:description" content="2019-02-27 16:00, KAIST 오픈동방. 발표자: 임성혁 (KAIST 수학분과장) 참고 논문: Shuffling Cards and Stopping Times (‘86) — David Aldous, Persi Diaconis
+트럼프 카드를 몇 번 섞어야 잘 섞인 것인가 발표자는 수학과장. Persi Diaconis 교수는 강의하기 전 마술사였음.
+핵심 질문: 트럼프 카드를 몇 번 섞어야 잘 섞였다고 말할 수 있는가?
+정의: Markov Chain \((X_n)_{n=0}^{\infty}\)를 Markov chain이라 할 때:
+초기: \(N!\) 크기의 확률 vector (모든 배열 동일 확률) 섞기: 다른 상태로 보내주는 함수 \(f\) \(Q^{*k}\): \(k\)번 섞은 후 카드 상태의 분포 \(U(\pi) = 1/n!\): 균일 분포 거리 측정 $$\|Q^{*k} - U\| = \frac{1}{2} \sum_{x \in S_n} |Q^{*k}(x) - U(x)| = \max_{A \subseteq S_n} |Q^{*k}(A) - U(A)|$$ 0이면 잘 섞임, 1이면 전혀 안 섞임 Top-in-at-random Shuffle (toy model) 맨 위 카드를 빼서 랜덤한 위치에 꽂기.">
+
+
+
+
+  <meta itemprop="name" content="카드 셔플이 잘 되는 시간 - 임성혁 (KAIST 수학과)">
+  <meta itemprop="description" content="2019-02-27 16:00, KAIST 오픈동방. 발표자: 임성혁 (KAIST 수학분과장) 참고 논문: Shuffling Cards and Stopping Times (‘86) — David Aldous, Persi Diaconis
+트럼프 카드를 몇 번 섞어야 잘 섞인 것인가 발표자는 수학과장. Persi Diaconis 교수는 강의하기 전 마술사였음.
+핵심 질문: 트럼프 카드를 몇 번 섞어야 잘 섞였다고 말할 수 있는가?
+정의: Markov Chain \((X_n)_{n=0}^{\infty}\)를 Markov chain이라 할 때:
+초기: \(N!\) 크기의 확률 vector (모든 배열 동일 확률) 섞기: 다른 상태로 보내주는 함수 \(f\) \(Q^{*k}\): \(k\)번 섞은 후 카드 상태의 분포 \(U(\pi) = 1/n!\): 균일 분포 거리 측정 $$\|Q^{*k} - U\| = \frac{1}{2} \sum_{x \in S_n} |Q^{*k}(x) - U(x)| = \max_{A \subseteq S_n} |Q^{*k}(A) - U(A)|$$ 0이면 잘 섞임, 1이면 전혀 안 섞임 Top-in-at-random Shuffle (toy model) 맨 위 카드를 빼서 랜덤한 위치에 꽂기.">
+  <meta itemprop="datePublished" content="2019-02-27T16:00:00+09:00">
+  <meta itemprop="dateModified" content="2026-05-01T18:45:35+09:00">
+  <meta itemprop="wordCount" content="246">
+  <meta itemprop="image" content="https://re-st.github.io/images/share.png">
+  <meta itemprop="keywords" content="Talk,이산수학,확률론">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+<style>
+  [data-theme="light"] {
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #222;
+  }
+  [data-theme="dark"] {
+    --background-color: #01242e;
+    --heading-color: #eee;
+    --text-color: #ddd;
+    --link-color: #8cc2dd;
+    --visited-color: #8b6fcb;
+    --blockquote-color: #ccc;
+  }
+</style>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '\\(', right: '\\)', display: false},
+      {left: '$', right: '$', display: false}
+    ]
+  });"></script>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Park, Geon (re-st)</h2>
+</a>
+<nav>
+<a href="/pages/about/">[Whoami]</a>
+
+<a href="/cv/">[CV]</a>
+
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode" style="background:none;border:none;cursor:pointer;font-size:1.2em;padding:0 0.3em;">🌙</button>
+</nav>
+<script>
+  (function() {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else if (stored === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+
+  function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = (current === 'dark') ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    document.getElementById('theme-toggle').textContent = (next === 'dark') ? '☀️' : '🌙';
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    var stored = localStorage.getItem('theme');
+    document.getElementById('theme-toggle').textContent = (stored === 'dark') ? '☀️' : '🌙';
+  });
+</script>
+</header>
+  <main>
+<article>
+  <h1>카드 셔플이 잘 되는 시간 - 임성혁 (KAIST 수학과)</h1>
+  <p style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+    <i>
+      <time datetime='2019-02-27'>
+        27 Feb, 2019
+      </time>
+    </i>
+    <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[seminar]</span>
+    
+    <span style="opacity:0.6; font-size:0.85em;">2 min read</span>
+    
+  </p>
+  <content>
+    <blockquote>
+<p>2019-02-27 16:00, KAIST 오픈동방. 발표자: 임성혁 (KAIST 수학분과장)
+참고 논문: Shuffling Cards and Stopping Times (&lsquo;86) — David Aldous, Persi Diaconis</p>
+</blockquote>
+<h1 id="트럼프-카드를-몇-번-섞어야-잘-섞인-것인가">트럼프 카드를 몇 번 섞어야 잘 섞인 것인가</h1>
+<p>발표자는 수학과장. Persi Diaconis 교수는 강의하기 전 마술사였음.</p>
+<p>핵심 질문: 트럼프 카드를 몇 번 섞어야 잘 섞였다고 말할 수 있는가?</p>
+<h2 id="정의-markov-chain">정의: Markov Chain</h2>
+<p>\((X_n)_{n=0}^{\infty}\)를 Markov chain이라 할 때:</p>
+<ul>
+<li>초기: \(N!\) 크기의 확률 vector (모든 배열 동일 확률)</li>
+<li>섞기: 다른 상태로 보내주는 함수 \(f\)</li>
+<li>\(Q^{*k}\): \(k\)번 섞은 후 카드 상태의 분포</li>
+<li>\(U(\pi) = 1/n!\): 균일 분포</li>
+</ul>
+<h2 id="거리-측정">거리 측정</h2>
+$$\|Q^{*k} - U\| = \frac{1}{2} \sum_{x \in S_n} |Q^{*k}(x) - U(x)| = \max_{A \subseteq S_n} |Q^{*k}(A) - U(A)|$$<ul>
+<li>0이면 잘 섞임, 1이면 전혀 안 섞임</li>
+</ul>
+<h2 id="top-in-at-random-shuffle-toy-model">Top-in-at-random Shuffle (toy model)</h2>
+<p>맨 위 카드를 빼서 랜덤한 위치에 꽂기.</p>
+<h2 id="strong-uniform-time">Strong Uniform Time</h2>
+<p>Random variable \(T\)가 Strong Uniform Time이면: \(T\) 이후에는 무조건 잘 섞임.</p>
+<p><strong>Lemma</strong>: \(P(T > k) \geq \|Q^{*k} - U\|\)</p>
+<h2 id="주요-결과">주요 결과</h2>
+<p>상수 \(c > 0\)에 대해 \(n\log n + cn\) 번 섞으면 잘 섞임.</p>
+$$P(V > k) \leq \sum P(\text{i번째 공 안 뽑힘}) = n\left(1 - \frac{1}{n}\right)^k$$<p>\(\left(1 - \frac{1}{n}\right)^n \to e^{-1}\) (단조증가). \(k = n\log n + cn\) 대입하면 수렴값 존재 (Coupon-collector&rsquo;s problem).</p>
+<h2 id="theorem">Theorem</h2>
+$$\|Q^{*k} - U\| \to 1 \text{ as } n \to \infty$$<p>Markov &amp; Chebyshev inequality 활용.</p>
+<h2 id="힌두-셔플-vs-리플-셔플">힌두 셔플 vs. 리플 셔플</h2>
+<ul>
+<li>힌두 셔플: 연구결과 없음 (open problem)</li>
+<li><strong>리플 셔플</strong>: \(m\)개와 \(n-m\)개로 분할, 확률 \(\binom{n}{m}/2^n\)
+<ul>
+<li>더 높은 쪽 카드를 떨어뜨림</li>
+<li><strong>Reeds의 inversion lemma</strong>로 정리됨</li>
+</ul>
+</li>
+</ul>
+<p><strong>결론: 대충 14번 섞으면 잘 섞임.</strong></p>
+<p><em>논문이 5페이지 반인데 40분이 금방 잡아먹힘. 크누스가 여기서도 나옴.</em></p>
+
+  </content>
+
+  
+
+  
+  <p style="font-size:0.85em; opacity:0.7;">분류:<a href="https://re-st.github.io/category/kaist-%EC%84%B8%EB%AF%B8%EB%82%98/">KAIST 세미나</a>
+  </p>
+  
+
+  
+
+  <p>
+    
+    <a href="https://re-st.github.io/blog/talk/">#Talk</a>&nbsp;
+    
+    <a href="https://re-st.github.io/blog/%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/">#이산수학</a>&nbsp;
+    
+    <a href="https://re-st.github.io/blog/%ED%99%95%EB%A5%A0%EB%A1%A0/">#확률론</a>&nbsp;
+    
+  </p>
+
+  <div style="font-size:0.8em;display:flex;gap:16px;justify-content:center;">
+  <p>
+    
+    <a href="https://re-st.github.io/seminar/%EC%9F%81%EC%A0%90%ED%95%9C%EA%B5%AD%EC%82%AC-%EA%B0%95%EC%9D%98-%EC%9B%90%EB%AC%B8-%EC%95%95%EC%B6%95%EB%B3%B8/">
+      &lt;&lt; Previous Post</a>
+        
+  </p>
+  <p>|</p>
+  <p>
+    
+    <a href="https://re-st.github.io/seminar/kaist-cs-%EB%8C%80%ED%95%99%EC%9B%90-%EC%84%A4%EB%AA%85%ED%9A%8C-%EC%96%91%ED%99%8D%EC%84%9D-%EA%B5%90%EC%88%98%EB%8B%98-%E5%A4%96/">Next Post >></a>
+    
+  </p>
+</div>
+
+
+  <p style="margin-top:2rem;">
+    <a href="javascript:history.back()" style="font-size:0.9em;">← 뒤로</a>
+  </p>
+
+  
+  <script src="https://utteranc.es/client.js"
+    repo="re-st/re-st.github.io"
+    issue-term="pathname"
+    label="blog-comment"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+  
+</article>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

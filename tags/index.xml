@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 17:51:05 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 18:45:36 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Diary</title>
@@ -154,6 +154,90 @@
       <link>https://re-st.github.io/blog/outdated/</link>
       <pubDate>Fri, 02 Feb 2024 20:32:36 +0900</pubDate>
       <guid>https://re-st.github.io/blog/outdated/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>영화감상문</title>
+      <link>https://re-st.github.io/blog/%EC%98%81%ED%99%94%EA%B0%90%EC%83%81%EB%AC%B8/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/blog/%EC%98%81%ED%99%94%EA%B0%90%EC%83%81%EB%AC%B8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>판타지</title>
+      <link>https://re-st.github.io/blog/%ED%8C%90%ED%83%80%EC%A7%80/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/blog/%ED%8C%90%ED%83%80%EC%A7%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Talk</title>
+      <link>https://re-st.github.io/blog/talk/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/blog/talk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>대수학</title>
+      <link>https://re-st.github.io/blog/%EB%8C%80%EC%88%98%ED%95%99/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/blog/%EB%8C%80%EC%88%98%ED%95%99/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>조합론</title>
+      <link>https://re-st.github.io/blog/%EC%A1%B0%ED%95%A9%EB%A1%A0/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/blog/%EC%A1%B0%ED%95%A9%EB%A1%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>대학원</title>
+      <link>https://re-st.github.io/blog/%EB%8C%80%ED%95%99%EC%9B%90/</link>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/blog/%EB%8C%80%ED%95%99%EC%9B%90/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>진로</title>
+      <link>https://re-st.github.io/blog/%EC%A7%84%EB%A1%9C/</link>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/blog/%EC%A7%84%EB%A1%9C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>이산수학</title>
+      <link>https://re-st.github.io/blog/%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/</link>
+      <pubDate>Wed, 27 Feb 2019 16:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/blog/%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>확률론</title>
+      <link>https://re-st.github.io/blog/%ED%99%95%EB%A5%A0%EB%A1%A0/</link>
+      <pubDate>Wed, 27 Feb 2019 16:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/blog/%ED%99%95%EB%A5%A0%EB%A1%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>역사</title>
+      <link>https://re-st.github.io/blog/%EC%97%AD%EC%82%AC/</link>
+      <pubDate>Sat, 05 Jan 2019 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/blog/%EC%97%AD%EC%82%AC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>한국사</title>
+      <link>https://re-st.github.io/blog/%ED%95%9C%EA%B5%AD%EC%82%AC/</link>
+      <pubDate>Sat, 05 Jan 2019 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/blog/%ED%95%9C%EA%B5%AD%EC%82%AC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>최적화</title>
+      <link>https://re-st.github.io/blog/%EC%B5%9C%EC%A0%81%ED%99%94/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/blog/%EC%B5%9C%EC%A0%81%ED%99%94/</guid>
       <description></description>
     </item>
     <item>

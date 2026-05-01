@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>확률론 on Park, Geon (re-st)</title>
+    <link>https://re-st.github.io/blog/%ED%99%95%EB%A5%A0%EB%A1%A0/</link>
+    <description>Recent content in 확률론 on Park, Geon (re-st)</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>Copyright © 2026, Geon Park.</copyright>
+    <lastBuildDate>Fri, 01 May 2026 18:45:35 +0900</lastBuildDate>
+    <atom:link href="https://re-st.github.io/blog/%ED%99%95%EB%A5%A0%EB%A1%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>카드 셔플이 잘 되는 시간 - 임성혁 (KAIST 수학과)</title>
+      <link>https://re-st.github.io/seminar/%EC%B9%B4%EB%93%9C-%EC%85%94%ED%94%8C%EC%9D%B4-%EC%9E%98-%EB%90%98%EB%8A%94-%EC%8B%9C%EA%B0%84-%EC%9E%84%EC%84%B1%ED%98%81-kaist-%EC%88%98%ED%95%99%EA%B3%BC/</link>
+      <pubDate>Wed, 27 Feb 2019 16:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/seminar/%EC%B9%B4%EB%93%9C-%EC%85%94%ED%94%8C%EC%9D%B4-%EC%9E%98-%EB%90%98%EB%8A%94-%EC%8B%9C%EA%B0%84-%EC%9E%84%EC%84%B1%ED%98%81-kaist-%EC%88%98%ED%95%99%EA%B3%BC/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;2019-02-27 16:00, KAIST 오픈동방. 발표자: 임성혁 (KAIST 수학분과장)&#xA;참고 논문: Shuffling Cards and Stopping Times (&amp;lsquo;86) — David Aldous, Persi Diaconis&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h1 id=&#34;트럼프-카드를-몇-번-섞어야-잘-섞인-것인가&#34;&gt;트럼프 카드를 몇 번 섞어야 잘 섞인 것인가&lt;/h1&gt;&#xA;&lt;p&gt;발표자는 수학과장. Persi Diaconis 교수는 강의하기 전 마술사였음.&lt;/p&gt;&#xA;&lt;p&gt;핵심 질문: 트럼프 카드를 몇 번 섞어야 잘 섞였다고 말할 수 있는가?&lt;/p&gt;&#xA;&lt;h2 id=&#34;정의-markov-chain&#34;&gt;정의: Markov Chain&lt;/h2&gt;&#xA;&lt;p&gt;\((X_n)_{n=0}^{\infty}\)를 Markov chain이라 할 때:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;초기: \(N!\) 크기의 확률 vector (모든 배열 동일 확률)&lt;/li&gt;&#xA;&lt;li&gt;섞기: 다른 상태로 보내주는 함수 \(f\)&lt;/li&gt;&#xA;&lt;li&gt;\(Q^{*k}\): \(k\)번 섞은 후 카드 상태의 분포&lt;/li&gt;&#xA;&lt;li&gt;\(U(\pi) = 1/n!\): 균일 분포&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;거리-측정&#34;&gt;거리 측정&lt;/h2&gt;&#xA;$$\|Q^{*k} - U\| = \frac{1}{2} \sum_{x \in S_n} |Q^{*k}(x) - U(x)| = \max_{A \subseteq S_n} |Q^{*k}(A) - U(A)|$$&lt;ul&gt;&#xA;&lt;li&gt;0이면 잘 섞임, 1이면 전혀 안 섞임&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;top-in-at-random-shuffle-toy-model&#34;&gt;Top-in-at-random Shuffle (toy model)&lt;/h2&gt;&#xA;&lt;p&gt;맨 위 카드를 빼서 랜덤한 위치에 꽂기.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

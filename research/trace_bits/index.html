@@ -39,7 +39,7 @@
   <meta itemprop="description" content="AFL 퍼징이 사용하는 매 실행 커버리지 기록 도구">
   <meta itemprop="datePublished" content="2024-07-01T12:00:00+09:00">
   <meta itemprop="dateModified" content="2026-04-30T08:01:22+09:00">
-  <meta itemprop="wordCount" content="477">
+  <meta itemprop="wordCount" content="478">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Explanation">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -283,7 +283,7 @@
 </span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>shm_id <span style="color:#666">=</span> <span style="color:#06287e">shmget</span>(IPC_PRIVATE, MAP_SIZE, IPC_CREAT <span style="color:#666">|</span> IPC_EXCL <span style="color:#666">|</span> <span style="color:#40a070">0600</span>);
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>...
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>trace_bits <span style="color:#666">=</span> <span style="color:#06287e">shmat</span>(shm_id, <span style="color:#007020">NULL</span>, <span style="color:#40a070">0</span>);
-</span></span></code></pre></div><p>그리고 가장 중요한 단계로, 퍼저는 이 <code>shm_id</code>를 **환경 변수(<code>__AFL_SHM_ID</code>)**에 저장한 채로 타겟 프로그램을 실행시킵니다.</p>
+</span></span></code></pre></div><p>그리고 가장 중요한 단계로, 퍼저는 이 <code>shm_id</code>를 환경 변수 (<code>__AFL_SHM_ID</code>)에 저장한 채로 타겟 프로그램을 실행시킵니다.</p>
 </li>
 <li>
 <p>타겟의 응답 (<code>afl-llvm-rt.c</code>)</p>

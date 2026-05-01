@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Thu, 30 Apr 2026 17:51:05 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 18:45:35 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/categories/research/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AFL</title>
@@ -22,13 +22,6 @@
       <pubDate>Wed, 27 Aug 2025 15:30:00 +0900</pubDate>
       <guid>https://re-st.github.io/seminar/introduction-to-razborovs-flag-algebra/</guid>
       <description>&lt;p&gt;Logic-based computational method in extremal combinatorics&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://sites.google.com/view/hongseokyang/home&#34;&gt;양홍석 교수님&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/Re-st/Documents/blob/8679e9e85cf3152a021e0ac686f358f316ddaec3/3.%20Resource%20%28%EB%82%A8%29/KAIST25-flag-algebra.pdf&#34;&gt;발표자료&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;왜-pl커뮤니티에-강연하나&#34;&gt;왜 PL커뮤니티에 강연하나?&lt;/h1&gt;&#xA;&lt;p&gt;Flag algebra는 logic에서 나옴.&#xA;요약 해석등의 개념이, 갈루아 연결도, flag algebra의 증명과정에서 쓰임.&lt;/p&gt;&#xA;&lt;h1 id=&#34;math-to-cs&#34;&gt;Math to CS&lt;/h1&gt;&#xA;&lt;p&gt;Auto-formalization (수학개념-&amp;gt;전산논리)&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Morph社의 Trinity가 ABC 추측의 weak ver. 증명&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;flag-algebra&#34;&gt;Flag algebra&lt;/h1&gt;&#xA;&lt;p&gt;옛날에 유행하던. 10년 동안 open problem을 풀음.&#xA;Stability = opt.sol이 근본적으로 유일한지, 아니면 여러 구조가 비슷한 최적치를 갖는지&#xA;subgraph density 가 중요 개념. \(p (H, G)\) \((\,|\,H\,|\,=m \le \,|\,G\,|\,=n)\)&lt;/p&gt;&#xA;&lt;p&gt;infinite case (\(n\to \infty\))일 때 flag alg. 가 잘 작동.&#xA;e.g. \(\lim_{  n \to \infty }\sup K_{3}\text{-free}\)&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Seed-Prover</title>
-      <link>https://re-st.github.io/research/seed-prover/</link>
-      <pubDate>Wed, 06 Aug 2025 13:47:44 +0900</pubDate>
-      <guid>https://re-st.github.io/research/seed-prover/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;ByteDance 개발 &lt;strong&gt;Seed-Prover&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://re-st.github.io/category/lean/&#34;&gt;Lean&lt;/a&gt; 기반 정리 증명 모델, IMO (올림피아드) 수준 문제 해결 시도&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;lemma-style proving&lt;/strong&gt;: 본 증명 전 레마 생성, 레마의 시드풀 관리, 단계적 접근&lt;/li&gt;&#xA;&lt;li&gt;Lean 컴파일러 피드백으로 증명 수정·보완, 필요 시 새로운 레마 도출&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Seed-Geometry&lt;/strong&gt;: 기하학 문제 전용 추론 엔진 추가, 복잡한 도형 문제 대응&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/pdf/2507.23726&#34;&gt;(논문) Seed-Prover: Deep and Broad Reasoning for Automated Theorem Proving&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.hanbit.co.kr/channel/view.html?cmscode=CMS0397526637&#34;&gt;hanbit.co.kr 논문요약&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/ByteDance-Seed/Seed-Prover/blob/main/SeedProver/imo2025/IMO2025/P1.lean&#34;&gt;IMO 2025의 P1 증명 (P1.lean)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>(다중 지향성 퍼징) Lyso</title>

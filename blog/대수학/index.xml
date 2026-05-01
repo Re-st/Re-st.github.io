@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>대수학 on Park, Geon (re-st)</title>
+    <link>https://re-st.github.io/blog/%EB%8C%80%EC%88%98%ED%95%99/</link>
+    <description>Recent content in 대수학 on Park, Geon (re-st)</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>Copyright © 2026, Geon Park.</copyright>
+    <lastBuildDate>Fri, 01 May 2026 18:45:35 +0900</lastBuildDate>
+    <atom:link href="https://re-st.github.io/blog/%EB%8C%80%EC%88%98%ED%95%99/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hall Algebra of the Category of Matroids - Eppolito &amp; Szczesny</title>
+      <link>https://re-st.github.io/seminar/hall-algebra-of-the-category-of-matroids-eppolito-szczesny/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/seminar/hall-algebra-of-the-category-of-matroids-eppolito-szczesny/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Joint work: Chris Eppolito &amp;amp; Matt Szczesny.&#xA;장소: KAIST E6-1 1401호&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h1 id=&#34;hall-algebra-of-the-category-of-matroids&#34;&gt;Hall Algebra of the Category of Matroids&lt;/h1&gt;&#xA;&lt;h2 id=&#34;1-hopf-algebra-배경&#34;&gt;1. Hopf Algebra 배경&lt;/h2&gt;&#xA;&lt;p&gt;Combinatorial object + 연산 → Hopf algebra \(H\)&lt;/p&gt;&#xA;&lt;p&gt;구성 요소: multiplication \(m\), coproduct \(\Delta\), unit \(I\), counit \(\varepsilon\), antipode \(S\)&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;예시&lt;/strong&gt;: \(G\) = 그래프 동형류의 집합 → monoid&lt;/p&gt;&#xA;$$H = k[G], \quad G \mapsto \sum_{T \subseteq V(G)} G_T \otimes G_{T}$$$$\varepsilon: H \to k, \quad G \mapsto \begin{cases} 1 &amp; |V(G)| = 0 \\ 0 &amp; \text{otherwise} \end{cases}$$&lt;h2 id=&#34;2-combinatorial-results&#34;&gt;2. Combinatorial Results&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;예시 (w/ Miodrag Iovanov)&lt;/strong&gt;:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
