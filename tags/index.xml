@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Sat, 02 May 2026 08:31:08 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 23:56:36 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Diary</title>
@@ -157,20 +157,6 @@
       <description></description>
     </item>
     <item>
-      <title>영화감상문</title>
-      <link>https://re-st.github.io/blog/%EC%98%81%ED%99%94%EA%B0%90%EC%83%81%EB%AC%B8/</link>
-      <pubDate>Mon, 01 Jun 2020 00:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/blog/%EC%98%81%ED%99%94%EA%B0%90%EC%83%81%EB%AC%B8/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>판타지</title>
-      <link>https://re-st.github.io/blog/%ED%8C%90%ED%83%80%EC%A7%80/</link>
-      <pubDate>Mon, 01 Jun 2020 00:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/blog/%ED%8C%90%ED%83%80%EC%A7%80/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Talk</title>
       <link>https://re-st.github.io/blog/talk/</link>
       <pubDate>Thu, 26 Dec 2019 00:00:00 +0900</pubDate>
@@ -220,31 +206,10 @@
       <description></description>
     </item>
     <item>
-      <title>역사</title>
-      <link>https://re-st.github.io/blog/%EC%97%AD%EC%82%AC/</link>
-      <pubDate>Sat, 05 Jan 2019 00:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/blog/%EC%97%AD%EC%82%AC/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>한국사</title>
-      <link>https://re-st.github.io/blog/%ED%95%9C%EA%B5%AD%EC%82%AC/</link>
-      <pubDate>Sat, 05 Jan 2019 00:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/blog/%ED%95%9C%EA%B5%AD%EC%82%AC/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>최적화</title>
       <link>https://re-st.github.io/blog/%EC%B5%9C%EC%A0%81%ED%99%94/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/blog/%EC%B5%9C%EC%A0%81%ED%99%94/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>독후감</title>
-      <link>https://re-st.github.io/blog/%EB%8F%85%ED%9B%84%EA%B0%90/</link>
-      <pubDate>Sat, 16 Dec 2017 00:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/blog/%EB%8F%85%ED%9B%84%EA%B0%90/</guid>
       <description></description>
     </item>
   </channel>

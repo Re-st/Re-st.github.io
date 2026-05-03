@@ -20,7 +20,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="essay">
     <meta property="article:published_time" content="2025-06-29T21:00:00+09:00">
-    <meta property="article:modified_time" content="2026-05-02T08:31:07+09:00">
+    <meta property="article:modified_time" content="2026-05-03T23:56:34+09:00">
     <meta property="article:tag" content="Essay">
     <meta property="og:image" content="https://re-st.github.io/images/share.png">
 
@@ -38,7 +38,7 @@
   <meta itemprop="name" content="PLDI 2025에 가서">
   <meta itemprop="description" content="(Essay) My trip to PLDI 2025">
   <meta itemprop="datePublished" content="2025-06-29T21:00:00+09:00">
-  <meta itemprop="dateModified" content="2026-05-02T08:31:07+09:00">
+  <meta itemprop="dateModified" content="2026-05-03T23:56:34+09:00">
   <meta itemprop="wordCount" content="3085">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Essay">
@@ -311,10 +311,7 @@ Z3에선 코드가 조금만 수정되어도 재검증에 오랜 시간이 소�
 <h2 id="우리-연구의-최전선-정적-분석static-analysis-분야-탐구">우리 연구의 최전선: <a href="https://re-st.github.io/%EC%A0%95%EC%A0%81%EB%B6%84%EC%84%9D/">정적 분석</a>(Static Analysis) 분야 탐구</h2>
 <p>정적 분석의 이론과 응용의 대가들이 한자리에 모인 SOAP (State Of the Art in Program Analysis) 워크샵에 간 건 큰 행운이었다. 개중 인공신경망의 안전성을 따지기 위한 정적 분석 (?)과, 실용적 정적 분석을 위한 기술 개발이 특히 인상적이었다.</p>
 <h3 id="static-analysis-from-code-graphs-to-neural-networks---experiences-and-opportunities3">Static Analysis from Code Graphs to Neural Networks - Experiences and Opportunities<sup><a href="#static">3</a></sup></h3>
-<p>신경망이 작은 입력 변화 (perturbation)에도 예기치 않게 반응하는 취약성을 해결하기 위한 수학적 검증 기법을 소개했다. 핵심은 주어진 입력 </p>
-$$x$$<p>에 대해, 그 근방 </p>
-$$||x'-x||\le \epsilon$$<p>의 모든 입력 </p>
-$$x'$$<p>에서도 출력 레이블이 항상 같음을 보장하고자 하는 것이다.</p>
+<p>신경망이 작은 입력 변화 (perturbation)에도 예기치 않게 반응하는 취약성을 해결하기 위한 수학적 검증 기법을 소개했다. 핵심은 주어진 입력 \(x\)에 대해, 그 근방 \(||x'-x||\le \epsilon\)의 모든 입력 \(x'\)에서도 출력 레이블이 항상 같음을 보장하고자 하는 것이다.</p>
 <p>여기에는 전체 입력 공간을 잘게 나누는 branch-and-bound 방식이 사용되었다. 입력 공간을 나눈 (branch) 뒤, 각 부분공간의 출력 범위를 근사치로 계산 (bound)해, 이 범위가 모두 같은 라벨을 가리키면 해당 영역은 안전하다고 판정한다. 그렇지 않으면 반례를 찾거나 더 세분화해 더 정밀한 검사를 반복한다. 최근 발표에서는 이때 반례가 존재할 가능성이 높은 순서대로 공간을 탐색해 효율성을 높이는 전략도 제시되었다.</p>
 <p>이미 알던 정적분석, 즉 요약 해석 (abstract interpretation)을 기반으로 하고 갈루아 연결 (Galois connection)을 이론적 바탕으로 가지던 정적분석이 아니라서 흥미를 끌었다. 반례의 위치를 찾아내는 기술은 실수 집합 내에서 유계 수열은 수렴하는 부분 수열을 가진다는 Bolzano-Weierstrass 정리의 증명 과정과 유사했다.</p>
 <h3 id="building-x-ray-for-enterprise-scale-software4">Building X-Ray for enterprise-scale software<sup><a href="#xray">4</a></sup></h3>
@@ -338,11 +335,7 @@ $$x'$$<p>에서도 출력 레이블이 항상 같음을 보장하고자 하는 �
 <h3 id="pl--hci">PL + HCI</h3>
 <p>소프트웨어 엔지니어링의 하위 분야로, PL 연구자를 돕는 HCI 기술이나 HCI 기술을 돕는 PL 기술을 다룬다. 배경민 교수님 연구실의 장혁순 님의 소개로 알게 된 분야였는데, PL을 바라보는 전혀 새로운 시각을 제공해 주었다. 기존에 PL 연구의 목표가 안전한 코드, 자동으로 쓰이고 고쳐지는 코드였다면, 이 분야에서는 그 코드를 시각적으로 요약하거나 인터페이스로 조작할 수 있는 방식으로 바꾸는 데 관심이 있다.</p>
 <h4 id="fast-direct-manipulation-programming-with-patch-reconciliation-correspondence6">Fast Direct Manipulation Programming with Patch-Reconciliation Correspondence<sup><a href="#recon">6</a></sup></h4>
-<p>데이터 시각화나 GUI 인터페이스에서, 사용자 조작이 프로그램에 미치는 영향 (<code>patch</code>)과 출력에 미치는 영향 (<code>recon</code>)을 분리해 빠르게 반영할 수 있도록 하는 연구다. 예를 들어 GUI에서 선의 굵기나 색상처럼 시각적 속성을 바꾸면, 원래는 프로그램에서 해당 속성을 바꾼 뒤 재실행하기 위해 데이터를 다시 불러오고 처리해야 하지만, 이 연구에서는 <code>recon</code>으로 시각적 출력의 변화만 계산해 즉시 반영하고, 프로그램 변경은 <code>patch</code>로 처리해 나중에 동기화할 수 있도록 한다. 이때 원래 출력에 <code>recon</code>을 적용한 결과와, 프로그램을 <code>patch</code>한 뒤 재실행한 결과가 같음을 보장한다. 수식으로는 프로그램 </p>
-$$P$$<p>와 시각화 연산 </p>
-$$eval$$<p>, 가능한 변화 </p>
-$$\delta$$<p>를 아우르는 도메인 특화 언어 (DSL) 위에서, </p>
-$$eval(patch(\delta,P))=recon(\delta,eval(P))$$<p>을 만족하는 <code>recon</code>을 정의한다. 이는 정적 분석에서 요약 해석 (abstract interpretation)을 위해 요약 연산자 (abstract operator)를 정의하는 방식과 유사하다.</p>
+<p>데이터 시각화나 GUI 인터페이스에서, 사용자 조작이 프로그램에 미치는 영향 (<code>patch</code>)과 출력에 미치는 영향 (<code>recon</code>)을 분리해 빠르게 반영할 수 있도록 하는 연구다. 예를 들어 GUI에서 선의 굵기나 색상처럼 시각적 속성을 바꾸면, 원래는 프로그램에서 해당 속성을 바꾼 뒤 재실행하기 위해 데이터를 다시 불러오고 처리해야 하지만, 이 연구에서는 <code>recon</code>으로 시각적 출력의 변화만 계산해 즉시 반영하고, 프로그램 변경은 <code>patch</code>로 처리해 나중에 동기화할 수 있도록 한다. 이때 원래 출력에 <code>recon</code>을 적용한 결과와, 프로그램을 <code>patch</code>한 뒤 재실행한 결과가 같음을 보장한다. 수식으로는 프로그램 \(P\)와 시각화 연산 \(eval\), 가능한 변화 \(\delta\)를 아우르는 도메인 특화 언어 (DSL) 위에서, \(eval(patch(\delta,P))=recon(\delta,eval(P))\)을 만족하는 <code>recon</code>을 정의한다. 이는 정적 분석에서 요약 해석 (abstract interpretation)을 위해 요약 연산자 (abstract operator)를 정의하는 방식과 유사하다.</p>
 <p>연구는 인구 통계 등 대규모 데이터를 다루는 실무자들이 주로 GUI 기반 프로그램 수정 인터페이스 (direct manipulation interface)를 사용한다는 점을 들어, 사용자 조작에 반응이 빠른 시스템의 중요성을 강조했다. 다만 속도를 높이기 위한 전략으로, 프로그램 변경이 시각화 요소에 끼치는 영향 관계를 분석해 필요한 부분만 갱신하는 방식, 즉 부분 평가 (partial evaluation)로도 충분하지 않을까 하는 의문이 들었다. 출력에 <code>recon</code>을 적용하는 방식이 빠르다면, 원칙적으로는 부분 평가도 마찬가지로 빠를 수 있기 때문이다. 나름대로 해답을 생각해 보면 시각화에 사용된 언어의 특성상 부분 평가가 어려울 수 있으며, 도커 이미지의 층 (layer)처럼 영향 관계 파악이 거의 불가능할 수도 있을 것 같다. 이 질문을 너무 늦게 떠올리는 바람에 연사를 애타게 찾아다녔으나 끝내 못 만난 씁쓸한 기억이 남는다.</p>
 <p>특이한 점은 발표 자료의 완성도였다. 프로그램 흐름을 도식화한 후, 그 사이에 <code>recon</code>이 개입되는 과정을 직접 도식이 변화하는 애니메이션으로 표현했는데, 역시 HCI 팀답게 시각적 전달력이 매우 뛰어났다.</p>
 <table>
