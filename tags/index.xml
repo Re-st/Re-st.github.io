@@ -7,15 +7,8 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Sat, 23 May 2026 16:21:32 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2026 16:26:37 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Essay</title>
-      <link>https://re-st.github.io/blog/essay/</link>
-      <pubDate>Sat, 23 May 2026 00:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/blog/essay/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Diary</title>
       <link>https://re-st.github.io/blog/diary/</link>
@@ -35,6 +28,13 @@
       <link>https://re-st.github.io/blog/ai-answer/</link>
       <pubDate>Sat, 17 Jan 2026 10:22:31 +0900</pubDate>
       <guid>https://re-st.github.io/blog/ai-answer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Essay</title>
+      <link>https://re-st.github.io/blog/essay/</link>
+      <pubDate>Sat, 17 Jan 2026 10:22:31 +0900</pubDate>
+      <guid>https://re-st.github.io/blog/essay/</guid>
       <description></description>
     </item>
     <item>

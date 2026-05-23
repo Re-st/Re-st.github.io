@@ -7,15 +7,8 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Sat, 23 May 2026 16:21:32 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2026 16:26:37 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>블로그를 다시 설계하며</title>
-      <link>https://re-st.github.io/essay/%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EB%8B%A4%EC%8B%9C-%EC%84%A4%EA%B3%84%ED%95%98%EB%A9%B0/</link>
-      <pubDate>Sat, 23 May 2026 00:00:00 +0900</pubDate>
-      <guid>https://re-st.github.io/essay/%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EB%8B%A4%EC%8B%9C-%EC%84%A4%EA%B3%84%ED%95%98%EB%A9%B0/</guid>
-      <description>에세이 중심, 연결 중심으로 블로그 구조를 바꾼 이유</description>
-    </item>
     <item>
       <title>정적분석</title>
       <link>https://re-st.github.io/%EC%A0%95%EC%A0%81%EB%B6%84%EC%84%9D/</link>
