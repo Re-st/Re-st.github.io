@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Sun, 03 May 2026 23:56:35 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2026 16:21:31 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/howto/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unsubscribe from Caml-list</title>
@@ -15,6 +15,13 @@
       <pubDate>Thu, 25 Dec 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/howto/unsubscribe-from-caml-list/</guid>
       <description>&lt;ol&gt;&#xA;&lt;li&gt;Goto sympa.inria.fr&lt;/li&gt;&#xA;&lt;li&gt;Click the big blue search button like in &lt;strong&gt;Fig. Unsub-1&lt;/strong&gt;, then enter caml-list&lt;/li&gt;&#xA;&lt;li&gt;Do unsubscribe&lt;/li&gt;&#xA;&lt;li&gt;Enter email address&lt;/li&gt;&#xA;&lt;li&gt;Goto email like in &lt;strong&gt;Fig. Unsub-2&lt;/strong&gt;, then click the link&lt;/li&gt;&#xA;&lt;li&gt;Confirm un-subscription&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;strong&gt;Fig. Unsub-1&lt;/strong&gt;&#xA;&lt;img src=&#34;https://re-st.github.io/Unsubscribe%20from%20caml-list%202.png&#34; alt=&#34;../Unsubscribe from caml-list 2.png&#34;/&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Fig. Unsub-2&lt;/strong&gt;&#xA;&lt;img src=&#34;https://re-st.github.io/Unsubscribe%20from%20caml-list%205.png&#34; alt=&#34;../Unsubscribe from caml-list 5.png&#34;/&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>도커 저장해 다른 서버로 옮길 때 특정 파일이 기가바이트 단위로 측정되는 경우</title>
+      <link>https://re-st.github.io/howto/%EB%8F%84%EC%BB%A4-%EC%A0%80%EC%9E%A5%ED%95%B4-%EB%8B%A4%EB%A5%B8-%EC%84%9C%EB%B2%84%EB%A1%9C-%EC%98%AE%EA%B8%B8-%EB%95%8C-%ED%8A%B9%EC%A0%95-%ED%8C%8C%EC%9D%BC%EC%9D%B4-%EA%B8%B0%EA%B0%80%EB%B0%94%EC%9D%B4%ED%8A%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EC%B8%A1%EC%A0%95%EB%90%98%EB%8A%94-%EA%B2%BD%EC%9A%B0/</link>
+      <pubDate>Mon, 03 Nov 2025 02:06:08 +0900</pubDate>
+      <guid>https://re-st.github.io/howto/%EB%8F%84%EC%BB%A4-%EC%A0%80%EC%9E%A5%ED%95%B4-%EB%8B%A4%EB%A5%B8-%EC%84%9C%EB%B2%84%EB%A1%9C-%EC%98%AE%EA%B8%B8-%EB%95%8C-%ED%8A%B9%EC%A0%95-%ED%8C%8C%EC%9D%BC%EC%9D%B4-%EA%B8%B0%EA%B0%80%EB%B0%94%EC%9D%B4%ED%8A%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EC%B8%A1%EC%A0%95%EB%90%98%EB%8A%94-%EA%B2%BD%EC%9A%B0/</guid>
+      <description>도커 저장해 다른 서버로 옮길 때 특정 파일이 기가바이트 단위로 측정되는 경우</description>
     </item>
     <item>
       <title>블로그 wrapper 디렉토리의 의미없는 github action 지우기</title>

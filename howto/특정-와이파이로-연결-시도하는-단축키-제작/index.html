@@ -48,7 +48,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="howto">
     <meta property="article:published_time" content="2024-05-09T20:33:40+09:00">
-    <meta property="article:modified_time" content="2026-05-03T23:56:34+09:00">
+    <meta property="article:modified_time" content="2026-05-23T16:21:31+09:00">
     <meta property="article:tag" content="How-To">
     <meta property="og:image" content="https://re-st.github.io/images/share.png">
 
@@ -68,7 +68,7 @@
   <meta itemprop="description" content="1. 스크립트 작성 1# &#34;Welcome_KAIST&#34; 네트워크에 연결 2$wifiName = &#34;Welcome_KAIST&#34; 3$profileName = &#34;Welcome_KAIST&#34; # 프로필 이름은 네트워크 이름과 동일하게 설정 4 5# 저장된 프로필을 사용하여 네트워크에 연결 시도 6netsh wlan connect name=\(profileName ssid=\)wifiName interface=&#34;Wi-Fi&#34; 위의 스크립트를 메모장에 복사하여 .ps1 확장자로 저장합니다 (예: ConnectToKAIST.ps1).
 2. 단축키 생성 스크립트 파일을 마우스 오른쪽 버튼으로 클릭하고 “바로 가기 만들기“를 선택합니다. 생성된 바로 가기를 마우스 오른쪽 버튼으로 클릭하고 “속성&#34;을 선택합니다. “바로 가기” 탭에서 “단축키” 필드에 원하는 키 조합을 입력합니다 (예: Ctrl&#43;Alt&#43;K). “대상” 필드에 다음과 같이 수정합니다: 1powershell.exe -ExecutionPolicy Bypass -File &#34;경로\ConnectToKAIST.ps1&#34; 여기서 &#34;경로&#34;는 스크립트 파일의 전체 경로를 의미합니다. 3. 실행 정책 변경 이 스크립트가 실행되려면 PowerShell의 실행 정책 변경이 필요할 수 있습니다. 이는 다음 명령어를 관리자 권한으로 실행하여 변경할 수 있습니다: 1Set-ExecutionPolicy RemoteSigned 이 명령은 스크립트가 로컬에서는 실행되지만 인터넷에서 다운로드한 스크립트는 서명이 필요하다는 정책을 설정합니다. 주의 사항 네트워크 보안과 개인 정보 보호를 위해, 알려지지 않은 네트워크에 자동으로 연결하는 스크립트를 사용할 때는 주의가 필요합니다. 이 방법은 네트워크와 프로필 이름이 이미 설정되어 있고, 기기에 저장되어 있어야 합니다.">
   <meta itemprop="datePublished" content="2024-05-09T20:33:40+09:00">
-  <meta itemprop="dateModified" content="2026-05-03T23:56:34+09:00">
+  <meta itemprop="dateModified" content="2026-05-23T16:21:31+09:00">
   <meta itemprop="wordCount" content="160">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="How-To">
@@ -243,6 +243,18 @@
     --link-color: #8cc2dd;
     --visited-color: #8b6fcb;
     --blockquote-color: #ccc;
+  }
+
+   
+  :root {
+    --width: 660px;
+  }
+  main {
+    line-height: 1.75;
+  }
+  ul.blog-posts li span i time {
+    opacity: 0.6;
+    font-size: 0.88em;
   }
 </style>
 

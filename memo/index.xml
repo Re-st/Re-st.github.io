@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Memoes on Park, Geon (re-st)</title>
+    <title>Memos on Park, Geon (re-st)</title>
     <link>https://re-st.github.io/memo/</link>
-    <description>Recent content in Memoes on Park, Geon (re-st)</description>
+    <description>Recent content in Memos on Park, Geon (re-st)</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Sun, 03 May 2026 23:56:35 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2026 16:21:31 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/memo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Usable Fuzzing</title>

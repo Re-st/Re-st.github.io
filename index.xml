@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Sun, 03 May 2026 23:56:36 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2026 16:21:32 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>블로그를 다시 설계하며</title>
+      <link>https://re-st.github.io/essay/%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EB%8B%A4%EC%8B%9C-%EC%84%A4%EA%B3%84%ED%95%98%EB%A9%B0/</link>
+      <pubDate>Sat, 23 May 2026 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/essay/%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EB%8B%A4%EC%8B%9C-%EC%84%A4%EA%B3%84%ED%95%98%EB%A9%B0/</guid>
+      <description>에세이 중심, 연결 중심으로 블로그 구조를 바꾼 이유</description>
+    </item>
     <item>
       <title>정적분석</title>
       <link>https://re-st.github.io/%EC%A0%95%EC%A0%81%EB%B6%84%EC%84%9D/</link>
@@ -120,6 +127,13 @@
       <pubDate>Fri, 14 Nov 2025 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/essay/multi-targeted-fuzzings-semantic-blindness/</guid>
       <description>Multi-Targeted Fuzzing&amp;rsquo;s semantic blindness</description>
+    </item>
+    <item>
+      <title>도커 저장해 다른 서버로 옮길 때 특정 파일이 기가바이트 단위로 측정되는 경우</title>
+      <link>https://re-st.github.io/howto/%EB%8F%84%EC%BB%A4-%EC%A0%80%EC%9E%A5%ED%95%B4-%EB%8B%A4%EB%A5%B8-%EC%84%9C%EB%B2%84%EB%A1%9C-%EC%98%AE%EA%B8%B8-%EB%95%8C-%ED%8A%B9%EC%A0%95-%ED%8C%8C%EC%9D%BC%EC%9D%B4-%EA%B8%B0%EA%B0%80%EB%B0%94%EC%9D%B4%ED%8A%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EC%B8%A1%EC%A0%95%EB%90%98%EB%8A%94-%EA%B2%BD%EC%9A%B0/</link>
+      <pubDate>Mon, 03 Nov 2025 02:06:08 +0900</pubDate>
+      <guid>https://re-st.github.io/howto/%EB%8F%84%EC%BB%A4-%EC%A0%80%EC%9E%A5%ED%95%B4-%EB%8B%A4%EB%A5%B8-%EC%84%9C%EB%B2%84%EB%A1%9C-%EC%98%AE%EA%B8%B8-%EB%95%8C-%ED%8A%B9%EC%A0%95-%ED%8C%8C%EC%9D%BC%EC%9D%B4-%EA%B8%B0%EA%B0%80%EB%B0%94%EC%9D%B4%ED%8A%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EC%B8%A1%EC%A0%95%EB%90%98%EB%8A%94-%EA%B2%BD%EC%9A%B0/</guid>
+      <description>도커 저장해 다른 서버로 옮길 때 특정 파일이 기가바이트 단위로 측정되는 경우</description>
     </item>
     <item>
       <title>내 에세이</title>
