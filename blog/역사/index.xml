@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Sat, 02 May 2026 08:31:08 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 05 Jan 2019 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/blog/%EC%97%AD%EC%82%AC/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>이승만 전 대통령의 서울시탈출과 한강 인도교 폭파의 전략적 필요성 논쟁</title>
@@ -29,6 +29,13 @@
       <pubDate>Mon, 31 Dec 2018 00:00:00 +0900</pubDate>
       <guid>https://re-st.github.io/seminar/%EC%9F%81%EC%A0%90%ED%95%9C%EA%B5%AD%EC%82%AC-%EA%B0%95%EC%9D%98-%ED%95%84%EA%B8%B0-%EA%B0%9C%EA%B4%84-%EC%8B%9D%EB%AF%BC%EC%82%AC%EA%B4%80%EB%B6%80%ED%84%B0-%EB%B0%95%EC%A0%95%ED%9D%AC-%EA%B2%BD%EC%A0%9C%EA%B0%9C%EB%B0%9C%EA%B9%8C%EC%A7%80/</guid>
       <description>KAIST HSS399.02 쟁점한국사 수업 (2018) 필기 정리. 시대 구분과 사관, 삼국통일, 근대화 논쟁, 일제강점기, 독립운동 좌우 분열, 건국절 논쟁, 한미·한일 관계, 박정희 경제개발까지의 한국사 주요 쟁점들.</description>
+    </item>
+    <item>
+      <title>쟁점한국사 강의 필기 원문 (주차별)</title>
+      <link>https://re-st.github.io/seminar/%EC%9F%81%EC%A0%90%ED%95%9C%EA%B5%AD%EC%82%AC-%EA%B0%95%EC%9D%98-%ED%95%84%EA%B8%B0-%EC%9B%90%EB%AC%B8-%EC%A3%BC%EC%B0%A8%EB%B3%84/</link>
+      <pubDate>Mon, 31 Dec 2018 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/seminar/%EC%9F%81%EC%A0%90%ED%95%9C%EA%B5%AD%EC%82%AC-%EA%B0%95%EC%9D%98-%ED%95%84%EA%B8%B0-%EC%9B%90%EB%AC%B8-%EC%A3%BC%EC%B0%A8%EB%B3%84/</guid>
+      <description>KAIST HSSXXX 쟁점한국사 수업(2018) 주차별 강의 필기. Q&amp;amp;A 답변 포함, TMI 개인 메모 포함.</description>
     </item>
   </channel>
 </rss>

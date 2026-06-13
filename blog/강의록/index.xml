@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>강의록 on Park, Geon (re-st)</title>
+    <link>https://re-st.github.io/blog/%EA%B0%95%EC%9D%98%EB%A1%9D/</link>
+    <description>Recent content in 강의록 on Park, Geon (re-st)</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <copyright>Copyright © 2026, Geon Park.</copyright>
+    <lastBuildDate>Mon, 31 Dec 2018 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://re-st.github.io/blog/%EA%B0%95%EC%9D%98%EB%A1%9D/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>쟁점한국사 강의 필기 원문 (주차별)</title>
+      <link>https://re-st.github.io/seminar/%EC%9F%81%EC%A0%90%ED%95%9C%EA%B5%AD%EC%82%AC-%EA%B0%95%EC%9D%98-%ED%95%84%EA%B8%B0-%EC%9B%90%EB%AC%B8-%EC%A3%BC%EC%B0%A8%EB%B3%84/</link>
+      <pubDate>Mon, 31 Dec 2018 00:00:00 +0900</pubDate>
+      <guid>https://re-st.github.io/seminar/%EC%9F%81%EC%A0%90%ED%95%9C%EA%B5%AD%EC%82%AC-%EA%B0%95%EC%9D%98-%ED%95%84%EA%B8%B0-%EC%9B%90%EB%AC%B8-%EC%A3%BC%EC%B0%A8%EB%B3%84/</guid>
+      <description>KAIST HSSXXX 쟁점한국사 수업(2018) 주차별 강의 필기. Q&amp;amp;A 답변 포함, TMI 개인 메모 포함.</description>
+    </item>
+  </channel>
+</rss>
