@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <copyright>Copyright © 2026, Geon Park.</copyright>
-    <lastBuildDate>Fri, 01 May 2026 18:45:47 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 23:56:35 +0900</lastBuildDate>
     <atom:link href="https://re-st.github.io/blog/info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>수학과 AI</title>
@@ -35,7 +35,7 @@
       <link>https://re-st.github.io/seminar/%EC%88%98%EC%B9%98%ED%95%B4%EC%84%9D-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%98-%EC%A0%95%ED%99%95%EC%84%B1%EC%9D%84-%EA%B0%81%EC%9E%A1%EA%B3%A0-%EC%A6%9D%EB%AA%85%ED%95%A0-dsl%EC%9D%98-%ED%95%84%EC%9A%94%EC%84%B1-%EC%9D%B4%EC%9B%90%EC%97%B4-%EA%B5%90%EC%88%98%EB%8B%98-%ED%8F%AC%ED%95%AD%EA%B3%B5%EB%8C%80/</link>
       <pubDate>Thu, 06 Feb 2025 16:10:00 +0900</pubDate>
       <guid>https://re-st.github.io/seminar/%EC%88%98%EC%B9%98%ED%95%B4%EC%84%9D-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%98-%EC%A0%95%ED%99%95%EC%84%B1%EC%9D%84-%EA%B0%81%EC%9E%A1%EA%B3%A0-%EC%A6%9D%EB%AA%85%ED%95%A0-dsl%EC%9D%98-%ED%95%84%EC%9A%94%EC%84%B1-%EC%9D%B4%EC%9B%90%EC%97%B4-%EA%B5%90%EC%88%98%EB%8B%98-%ED%8F%AC%ED%95%AD%EA%B3%B5%EB%8C%80/</guid>
-      <description>&lt;h1 id=&#34;연구-소개-연속적인-값-continuous-computation의-정확성&#34;&gt;연구 소개: 연속적인 값 (Continuous Computation)의 정확성&lt;/h1&gt;&#xA;&lt;p&gt;저는 프로그램과 계산의 &lt;strong&gt;수학적인 성질&lt;/strong&gt;에 관심이 많습니다. 특히 프로그램이 수학적으로 &lt;strong&gt;정확한지 (Correctness)&lt;/strong&gt;, 그리고 효율적인지, 이론적 한계는 무엇인지 등을 연구합니다.&lt;/p&gt;&#xA;&lt;p&gt;제가 주로 다루는 프로그램은 여기 계신 많은 분들과 달리, &lt;strong&gt;연속적인 (continuous) 값&lt;/strong&gt;을 다룹니다. (예: 2.8, 3/7, \(\sqrt{5}\)) 이런 값들에 더하기, 곱하기, \(\sin\) 등의 연산을 적용하는 계산이죠.&lt;/p&gt;&#xA;&lt;p&gt;이러한 연속적인 계산은 머신러닝, 최적화, 컴퓨터 그래픽스, 과학 컴퓨팅 등 사실상 CS 전반에서 엄청나게 많이 사용되고 있습니다.&lt;/p&gt;&#xA;&lt;h1 id=&#34;이론과-실제의-간극-gap&#34;&gt;이론과 실제의 간극 (Gap)&lt;/h1&gt;&#xA;&lt;p&gt;오늘날에는 다양한 수치해석 라이브러리가 있습니다. NumPy, SciPy, TensorFlow, PyTorch, Intel Math Library 등.. 각각의 목적 (함수값 계산, 샘플링, 미분, 적분, 근사.. )에 맞게 존재합니다.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;연구-소개-연속적인-값-continuous-computation의-정확성&#34;&gt;연구 소개: 연속적인 값 (Continuous Computation)의 정확성&lt;/h1&gt;&#xA;&lt;p&gt;저는 프로그램과 계산의 &lt;strong&gt;수학적인 성질&lt;/strong&gt;에 관심이 많습니다. 특히 프로그램이 수학적으로 &lt;strong&gt;정확한지 (Correctness)&lt;/strong&gt;, 그리고 효율적인지, 이론적 한계는 무엇인지 등을 연구합니다.&lt;/p&gt;&#xA;&lt;p&gt;제가 주로 다루는 프로그램은 여기 계신 많은 분들과 달리, &lt;strong&gt;연속적인 (continuous) 값&lt;/strong&gt;을 다룹니다. (예: 2.8, 3/7, \(\sqrt{5}\)) 이런 값들에 더하기, 곱하기, \(\sin\) 등의 연산을 적용하는 계산이죠.&lt;/p&gt;&#xA;&lt;p&gt;이러한 연속적인 계산은 머신러닝, 최적화, 컴퓨터 그래픽스, 과학 컴퓨팅 등 사실상 CS 전반에서 엄청나게 많이 사용되고 있습니다.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;연속적인-계산의-시작-앨런-튜링&#34;&gt;연속적인 계산의 시작: 앨런 튜링&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;앨런 튜링 (Alan Turing)&lt;/strong&gt; 은 1936년 논문 &amp;ldquo;On &lt;strong&gt;Computable Numbers&lt;/strong&gt;&amp;ldquo;을 발표합니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI 연구의 문제: &#39;요구공학적 프로세스&#39;의 부재 - 이석원 교수님 (아주대)</title>

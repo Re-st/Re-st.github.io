@@ -12,8 +12,9 @@
 저는 프로그램과 계산의 수학적인 성질에 관심이 많습니다. 특히 프로그램이 수학적으로 정확한지 (Correctness), 그리고 효율적인지, 이론적 한계는 무엇인지 등을 연구합니다.
 제가 주로 다루는 프로그램은 여기 계신 많은 분들과 달리, 연속적인 (continuous) 값을 다룹니다. (예: 2.8, 3/7, \(\sqrt{5}\)) 이런 값들에 더하기, 곱하기, \(\sin\) 등의 연산을 적용하는 계산이죠.
 이러한 연속적인 계산은 머신러닝, 최적화, 컴퓨터 그래픽스, 과학 컴퓨팅 등 사실상 CS 전반에서 엄청나게 많이 사용되고 있습니다.
-이론과 실제의 간극 (Gap)
-오늘날에는 다양한 수치해석 라이브러리가 있습니다. NumPy, SciPy, TensorFlow, PyTorch, Intel Math Library 등.. 각각의 목적 (함수값 계산, 샘플링, 미분, 적분, 근사.. )에 맞게 존재합니다." />
+
+연속적인 계산의 시작: 앨런 튜링
+앨런 튜링 (Alan Turing) 은 1936년 논문 &ldquo;On Computable Numbers&ldquo;을 발표합니다." />
 <meta name="keywords" content="Info," />
 
 
@@ -23,7 +24,7 @@
   <meta property="og:description" content="연구 소개: 연속적인 값 (Continuous Computation)의 정확성 저는 프로그램과 계산의 수학적인 성질에 관심이 많습니다. 특히 프로그램이 수학적으로 정확한지 (Correctness), 그리고 효율적인지, 이론적 한계는 무엇인지 등을 연구합니다.
 제가 주로 다루는 프로그램은 여기 계신 많은 분들과 달리, 연속적인 (continuous) 값을 다룹니다. (예: 2.8, 3/7, \(\sqrt{5}\)) 이런 값들에 더하기, 곱하기, \(\sin\) 등의 연산을 적용하는 계산이죠.
 이러한 연속적인 계산은 머신러닝, 최적화, 컴퓨터 그래픽스, 과학 컴퓨팅 등 사실상 CS 전반에서 엄청나게 많이 사용되고 있습니다.
-이론과 실제의 간극 (Gap) 오늘날에는 다양한 수치해석 라이브러리가 있습니다. NumPy, SciPy, TensorFlow, PyTorch, Intel Math Library 등.. 각각의 목적 (함수값 계산, 샘플링, 미분, 적분, 근사.. )에 맞게 존재합니다.">
+연속적인 계산의 시작: 앨런 튜링 앨런 튜링 (Alan Turing) 은 1936년 논문 “On Computable Numbers“을 발표합니다.">
   <meta property="og:locale" content="ko_kr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="seminar">
@@ -41,7 +42,7 @@
   <meta name="twitter:description" content="연구 소개: 연속적인 값 (Continuous Computation)의 정확성 저는 프로그램과 계산의 수학적인 성질에 관심이 많습니다. 특히 프로그램이 수학적으로 정확한지 (Correctness), 그리고 효율적인지, 이론적 한계는 무엇인지 등을 연구합니다.
 제가 주로 다루는 프로그램은 여기 계신 많은 분들과 달리, 연속적인 (continuous) 값을 다룹니다. (예: 2.8, 3/7, \(\sqrt{5}\)) 이런 값들에 더하기, 곱하기, \(\sin\) 등의 연산을 적용하는 계산이죠.
 이러한 연속적인 계산은 머신러닝, 최적화, 컴퓨터 그래픽스, 과학 컴퓨팅 등 사실상 CS 전반에서 엄청나게 많이 사용되고 있습니다.
-이론과 실제의 간극 (Gap) 오늘날에는 다양한 수치해석 라이브러리가 있습니다. NumPy, SciPy, TensorFlow, PyTorch, Intel Math Library 등.. 각각의 목적 (함수값 계산, 샘플링, 미분, 적분, 근사.. )에 맞게 존재합니다.">
+연속적인 계산의 시작: 앨런 튜링 앨런 튜링 (Alan Turing) 은 1936년 논문 “On Computable Numbers“을 발표합니다.">
 
 
 
@@ -50,10 +51,10 @@
   <meta itemprop="description" content="연구 소개: 연속적인 값 (Continuous Computation)의 정확성 저는 프로그램과 계산의 수학적인 성질에 관심이 많습니다. 특히 프로그램이 수학적으로 정확한지 (Correctness), 그리고 효율적인지, 이론적 한계는 무엇인지 등을 연구합니다.
 제가 주로 다루는 프로그램은 여기 계신 많은 분들과 달리, 연속적인 (continuous) 값을 다룹니다. (예: 2.8, 3/7, \(\sqrt{5}\)) 이런 값들에 더하기, 곱하기, \(\sin\) 등의 연산을 적용하는 계산이죠.
 이러한 연속적인 계산은 머신러닝, 최적화, 컴퓨터 그래픽스, 과학 컴퓨팅 등 사실상 CS 전반에서 엄청나게 많이 사용되고 있습니다.
-이론과 실제의 간극 (Gap) 오늘날에는 다양한 수치해석 라이브러리가 있습니다. NumPy, SciPy, TensorFlow, PyTorch, Intel Math Library 등.. 각각의 목적 (함수값 계산, 샘플링, 미분, 적분, 근사.. )에 맞게 존재합니다.">
+연속적인 계산의 시작: 앨런 튜링 앨런 튜링 (Alan Turing) 은 1936년 논문 “On Computable Numbers“을 발표합니다.">
   <meta itemprop="datePublished" content="2025-02-06T16:10:00+09:00">
   <meta itemprop="dateModified" content="2025-02-06T16:10:00+09:00">
-  <meta itemprop="wordCount" content="554">
+  <meta itemprop="wordCount" content="938">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Info">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -302,7 +303,7 @@
     </i>
     <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[seminar]</span>
     
-    <span style="opacity:0.6; font-size:0.85em;">3 min read</span>
+    <span style="opacity:0.6; font-size:0.85em;">5 min read</span>
     
   </p>
   <content>
@@ -310,6 +311,15 @@
 <p>저는 프로그램과 계산의 <strong>수학적인 성질</strong>에 관심이 많습니다. 특히 프로그램이 수학적으로 <strong>정확한지 (Correctness)</strong>, 그리고 효율적인지, 이론적 한계는 무엇인지 등을 연구합니다.</p>
 <p>제가 주로 다루는 프로그램은 여기 계신 많은 분들과 달리, <strong>연속적인 (continuous) 값</strong>을 다룹니다. (예: 2.8, 3/7, \(\sqrt{5}\)) 이런 값들에 더하기, 곱하기, \(\sin\) 등의 연산을 적용하는 계산이죠.</p>
 <p>이러한 연속적인 계산은 머신러닝, 최적화, 컴퓨터 그래픽스, 과학 컴퓨팅 등 사실상 CS 전반에서 엄청나게 많이 사용되고 있습니다.</p>
+<hr>
+<h1 id="연속적인-계산의-시작-앨런-튜링">연속적인 계산의 시작: 앨런 튜링</h1>
+<p><strong>앨런 튜링 (Alan Turing)</strong> 은 1936년 논문 &ldquo;On <strong>Computable Numbers</strong>&ldquo;을 발표합니다.</p>
+<ul>
+<li>&lsquo;Computable Number&rsquo; (계산 가능한 수)는 &ldquo;소수점 이하를 유한하게 계산할 수 있는 실수&quot;입니다.</li>
+<li>그는 튜링 머신을 정의한 뒤, 어떤 실수가 계산 가능하고(\(\pi\), \(e\) 등) 어떤 실수가 그렇지 않은지를 증명하는 데 이를 적용했습니다. 즉, <strong>튜링 머신의 주된 애플리케이션은 실수에서 시작</strong>했습니다.</li>
+<li>튜링은 이후에도 아날로그 컴퓨터로 선형 방정식을 풀 때 발생하는 <strong>라운딩 에러</strong> 를 연구했으며 이는 수치 해석에서 중요한 &lsquo;컨디션 넘버&rsquo; 개념의 시초가 되었습니다.</li>
+</ul>
+<hr>
 <h1 id="이론과-실제의-간극-gap">이론과 실제의 간극 (Gap)</h1>
 <p>오늘날에는 다양한 수치해석 라이브러리가 있습니다. NumPy, SciPy, TensorFlow, PyTorch, Intel Math Library 등.. 각각의 목적 (함수값 계산, 샘플링, 미분, 적분, 근사.. )에 맞게 존재합니다.</p>
 <p>하지만 저는 이 라이브러리들이 <strong>&ldquo;수학적으로 정확한가?&rdquo;</strong> 라는 질문을 던집니다.</p>
@@ -318,6 +328,38 @@
 <li><strong>실제:</strong> 하지만 실제 구현은 <strong>&lsquo;부동 소수점 (Floating Point)&rsquo;</strong> 위에서 이루어집니다. 또한 <code>if</code> 문, 브랜치 (branch), ReLU 함수 등 미분 불가능한 지점도 많습니다.</li>
 </ul>
 <p>이론과 실제 사이에 이런 간극이 존재하고, 구현체 자체가 복잡한 상황에서 이 라이브러리들은 과연 정확할까요?</p>
+<hr>
+<h1 id="핵심-질문-함수eg-sin는-어떻게-계산되는가">핵심 질문: 함수(e.g., sin)는 어떻게 계산되는가?</h1>
+<p>64비트 (DOUBLE precision) \(x\)의 \(\sin(x)\) 값은 어떻게 계산할까요?</p>
+<h3 id="1-범위-축소-argument-reduction">1. 범위 축소 (Argument Reduction)</h3>
+<ul>
+<li><strong>주기성:</strong> \(x\)에서 \(2\pi\)의 배수를 빼서 \(r\) (0 ~ \(2\pi\))로 만듭니다. (\(\sin(x) = \sin(r)\))</li>
+<li><strong>대칭성:</strong> \(r\)을 다시 대칭 이동시켜 \(r'\) (0 ~ \(\pi/2\))로 만듭니다. (\(\sin(r) = \pm\sin(r')\))</li>
+</ul>
+<h3 id="2-테일러-급수-아직-아니다">2. 테일러 급수? 아직 아니다</h3>
+<p>\(r'\)의 값을 테일러 급수 (Taylor series)로 계산할 수 있지만, 부동 소수점 환경에서는 항이 많아질수록 에러가 쌓여 오히려 부정확해질 수 있습니다. 그래서 범위를 더 줄입니다.</p>
+<h3 id="3-테이블-참조와-덧셈-정리">3. 테이블 참조와 덧셈 정리</h3>
+<p>(0 ~ \(\pi/2\)) 구간을 \(N\)개의 작은 구간으로 쪼갭니다.</p>
+<ul>
+<li>
+<p>\(r'\)을 가장 가까운 구간의 기준점 (\(i \cdot \pi/N\))과 그 차이값 \(r''\)으로 분리합니다. (\(r' = (i \cdot \pi/N) + r''\))</p>
+</li>
+<li>
+<p>여기서 고등학교 때 배운 삼각함수 <strong>덧셈 정리</strong>가 쓰입니다.</p>
+<ul>
+<li>\(\sin(r') = \sin(i \cdot \pi/N + r'') = \sin(i \cdot \pi/N)\cos(r'') + \cos(i \cdot \pi/N)\sin(r'')\)</li>
+</ul>
+</li>
+<li>
+<p>여기서 \(i\)는 \(0\)부터 \(N\)까지의 정수이므로, \(\sin(i \cdot \pi/N)\)와 \(\cos(i \cdot \pi/N)\) 값은 미리 계산해서 <strong>테이블에 저장</strong>해 둡니다. (메모이제이션)</p>
+</li>
+</ul>
+<h3 id="4-테일러-급수-적용">4. 테일러 급수 적용</h3>
+<p>이제 남은 것은 \(\sin(r'')\)과 \(\cos(r'')\) 뿐입니다. \(r''\)의 범위는 \(0\) ~ \(\pi/(2N)\)로 매우 작아졌기 때문에, 이제서야 <strong>테일러 급수</strong>를 사용합니다. 매우 작은 차수만으로도 정확한 값을 얻을 수 있습니다.</p>
+<blockquote>
+<p>(정리) \(\sin(x)\)의 계산은 <strong>1. 범위 축소 \(\to\) 2. 테이블 조회 (Look-up) \(\to\) 3. 다항식 근사 (테일러 급수) \(\to\) 4. 재조합</strong>의 과정을 거칩니다. (이 정도는 CS 교양 지식으로 알아두면 좋습니다.)</p>
+</blockquote>
+<hr>
 <h1 id="구현의-복잡성과-정확성-correctness-문제">구현의 복잡성과 정확성 (Correctness) 문제</h1>
 <p>이론은 깔끔하지만, 이걸 플로팅 포인트로 구현하는 것은 지옥입니다. (CR-LibM 라이브러리의 <code>sin_fast.c</code> 예시)</p>
 <ul>
@@ -340,6 +382,23 @@
 </li>
 </ul>
 <p><strong>이렇게 복잡한데, 과연 이 코드는 정확할까요?</strong></p>
+<hr>
+<h1 id="정확성의-기준과-현실의-버그">정확성의 기준과 현실의 버그</h1>
+<p>정확성 (Correctness)의 척도로는 <strong>ULP (Unit in the Last Place) 에러</strong>를 씁니다. (0.5 ULP가 가장 정확함)</p>
+<p>라이브러리 개발자들은 정확성을 보장한다고 주장하지만, 현실은 다릅니다.</p>
+<ul>
+<li>
+<p><strong>Intel:</strong> &ldquo;1 ULP 이하 보장&quot;이라고 주장했지만, 2013년 특정 인풋에서 ULP 에러가 \(10^{20}\) 이상 발생하는 것이 발견됐습니다. 이는 하드웨어 명령어라, 하위 호환성 때문에 <strong>아직도 고쳐지지 않았습니다.</strong></p>
+</li>
+<li>
+<p><strong>glibc:</strong> &ldquo;7 ULP 이하&quot;가 목표였지만, 특정 버전에서 \(\sin\) 값이 망가져 부호가 반대로 나오는 버그가 리포트되었습니다. (버전업하면서 망가짐)</p>
+</li>
+<li>
+<p><strong>Core-Math:</strong> &ldquo;0.5 ULP 보장&rdquo; (가장 정확함)을 목표로 MPFR (초고정밀 라이브러리) 개발의 대가(Paul Zimmermann)가 만들었음에도 불구하고, \(1.0\)이어야 할 값이 \(10^{300}\)이 넘게 나오는 등 에러가 발견되었습니다.</p>
+</li>
+</ul>
+<p><strong>이 분야의 대가가 만들어도 버그가 나옵니다.</strong> 그만큼 이 문제는 어렵습니다.</p>
+<hr>
 <h1 id="새로운-방향-정확성을-보장하는-라이브러리-설계">새로운 방향: 정확성을 보장하는 라이브러리 설계</h1>
 <p>기존 라이브러리는 너무 복잡해서 검증이 어렵습니다. (제가 박사 때 Intel \(\sin\) 함수를 검증하려 64코어로 2주를 돌린 적도 있습니다.)</p>
 <p>그래서 저는 <strong>&ldquo;아예 처음부터 정확성 (correctness)을 염두에 두고&rdquo;</strong> 새로운 라이브러리를 만들자는 방향을 생각하고 있습니다.</p>

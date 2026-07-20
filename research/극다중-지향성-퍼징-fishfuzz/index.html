@@ -39,7 +39,7 @@
   <meta itemprop="description" content="너는 오류를 낚는 어부가 되어라">
   <meta itemprop="datePublished" content="2023-09-01T12:00:00+09:00">
   <meta itemprop="dateModified" content="2026-04-30T11:45:16+09:00">
-  <meta itemprop="wordCount" content="190">
+  <meta itemprop="wordCount" content="396">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="Paper-Summary">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -277,7 +277,7 @@
     </i>
     <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[research]</span>
     
-    <span style="opacity:0.6; font-size:0.85em;">1 min read</span>
+    <span style="opacity:0.6; font-size:0.85em;">2 min read</span>
     
   </p>
   <content>
@@ -291,6 +291,37 @@
 <li>시드-타깃 거리 계산 개선 (w/ function-lvl CG, CFG, and Static analysis)</li>
 <li>타깃 우선순위 동적 조정 (w/ instrumentation)</li>
 </ul>
+<hr>
+<h2 id="2-핵심-개념">2. <strong>핵심 개념</strong></h2>
+<ul>
+<li><strong>다이나믹 타깃 우선순위</strong>
+<ul>
+<li>타깃 메타데이터 (hit_freq, reached, triggered) 활용</li>
+<li>런타임 중 타깃 상태 갱신</li>
+<li>덜 탐험된 타깃 우선순위 상승</li>
+</ul>
+</li>
+<li><strong>다이나믹 시드-함수 거리</strong>
+<ul>
+<li>정적 거리 맵 (LLVM-IR 기반 분석)
+<ul>
+<li>f_i (prologue BB m) 에 f를 call하는 BB m_f가 있을 시,
+dbb(f_i, f) = mindbb(m, m_f)</li>
+<li>함수인 이유 : BB 단위면 오버헤드가 심해서</li>
+<li>함수 내부는 일반 퍼징 테크닉 활용</li>
+</ul>
+</li>
+<li>다이나믹 런타임 거리 계산
+<ul>
+<li>시드가 지나는 각 함수와 목표 함수간 거리의 min</li>
+</ul>
+</li>
+<li>indirect call은 고려하지 않지만, 잘 핸들됨을 예제로 보임</li>
+<li>기존 Directed Greybox Fuzzing (DGF), Sanitizer-guided fuzzing (SGF)에서 쓰이던 조화평균 거리가, 여러 타깃의 정보를 어 흐릿하게 만들어 버리는 단점을 해결.</li>
+</ul>
+</li>
+</ul>
+<hr>
 <p><img src="/Figure%203%20Overview%20of%20FISHFUZZ%20workflow.png" alt="../Figure 3 Overview of FISHFUZZ workflow.png"/></p>
 <h2 id="3-구현">3. <strong>구현</strong></h2>
 <ul>
@@ -318,6 +349,34 @@
 </ul>
 </li>
 </ul>
+<hr>
+<h2 id="4-전략">4. <strong>전략</strong></h2>
+<ul>
+<li><strong>큐컬링</strong>
+<ul>
+<li>함수 간 탐색 (inter-function exploration)
+<ul>
+<li>미도달 함수마다, 가장 가까운 시드.favored = 1</li>
+</ul>
+</li>
+<li>함수 내 탐색 (intra-function exploration)</li>
+<li>타깃 발동 기반 exploitation
+<ul>
+<li>t.reached를 모아, 가장 적게 건드린 20%의 각각마다, 가장 빠르게 도달하는 시드.favored = 1</li>
+</ul>
+</li>
+<li>각 행위가 목적달성 못하고 오랜시간 지나면 다음행위로</li>
+<li>자세한 건 cull_queue (FishFuzz)</li>
+</ul>
+</li>
+<li><strong>타깃 크기 관리</strong>
+<ul>
+<li>대규모 타깃 집합 (&gt;20k)에서도 효과적 동작</li>
+<li>작은 타깃 집합(~10)에서 한계 존재</li>
+</ul>
+</li>
+</ul>
+<hr>
 <h2 id="5-결과">5. <strong>결과</strong></h2>
 <ul>
 <li>벤치마크 성능 비교
@@ -339,6 +398,29 @@
 <li>다양한 프로그램에서 탐색 및 버그 발견 효과 확인</li>
 <li>UBSan 벤치마크는 타깃이 버그가 아니라 그냥 의도된 overflow일 수도 있음</li>
 </ul>
+<hr>
+<h2 id="6-이전-연구와-비교">6. <strong>이전 연구와 비교</strong></h2>
+<ul>
+<li><strong>SGF vs FishFuzz</strong>
+<ul>
+<li>SGF: 정적 타깃 우선순위</li>
+<li>FishFuzz: 다이나믹 타깃 우선순위</li>
+</ul>
+</li>
+<li><strong>ParmeSan, SAVIOR</strong>
+<ul>
+<li>ParmeSan : 큐컬링한 이후에는 우선순위가 불변</li>
+<li>FishFuzz는 더 빠른 타깃 검수 가능</li>
+</ul>
+</li>
+<li><strong>Two-stage Fuzzing</strong> (exploration + exploitation)
+<ul>
+<li>FishFuzz는 큐컬링과 타깃 우선순위로 개선</li>
+<li>기존 AFLFast, FairFuzz, EcoFuzz, K-Scheduler</li>
+</ul>
+</li>
+</ul>
+<hr>
 <h2 id="7-한계점">7. 한계점</h2>
 <ul>
 <li>cxxfilt에선 FFAFL이 우세, CVE-2017-13731은 FFAFL++과 AFL++만 발동

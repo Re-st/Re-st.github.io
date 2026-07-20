@@ -39,7 +39,7 @@
   <meta itemprop="description" content="(Method) Solve mega.nz sync error causing failure in launching Obsidian">
   <meta itemprop="datePublished" content="2024-08-01T17:20:13+09:00">
   <meta itemprop="dateModified" content="2024-08-01T17:20:13+09:00">
-  <meta itemprop="wordCount" content="139">
+  <meta itemprop="wordCount" content="222">
   <meta itemprop="image" content="https://re-st.github.io/images/share.png">
   <meta itemprop="keywords" content="How-To">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -277,7 +277,7 @@
     </i>
     <span style="font-weight:700; font-size:0.95em; color:var(--link-color);">[howto]</span>
     
-    <span style="opacity:0.6; font-size:0.85em;">1 min read</span>
+    <span style="opacity:0.6; font-size:0.85em;">2 min read</span>
     
   </p>
   <content>
@@ -294,6 +294,32 @@
 <p>WSL로 해당 Vault 디렉토리로 이동 후 다음 명령어 실행:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>find . -name <span style="color:#4070a0">&#34;*.mega&#34;</span> -type f -print0 | xargs -0 rm -f
 </span></span></code></pre></div><p><code>.mega</code> 파일은 Mega 클라이언트의 임시 파일로, 삭제해도 무방함.</p>
+<hr>
+<h2 id="2-충돌나는-파일-강제-삭제">2. 충돌나는 파일 강제 삭제</h2>
+<p>동기화 충돌로 인해 다운로드만 반복되는 파일이 존재함.<br>
+upstream에는 변경 사항이 있으나, 로컬에도 동일한 이름의 파일이 있어 충돌 발생.</p>
+<p>해결 방법:</p>
+<ol>
+<li>ChatGPT로 문제 파일 목록 추출 (OCR 기반)</li>
+<li>아래 스크립트를 사용하여 해당 파일들을 찾아 삭제:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#007020">#!/bin/bash
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#bb60d5">files</span><span style="color:#666">=(</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>  <span style="color:#4070a0">&#34;파일1.md&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>  <span style="color:#4070a0">&#34;파일2.md&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>  <span style="color:#60a0b0;font-style:italic"># ...</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#007020;font-weight:bold">for</span> file in <span style="color:#4070a0">&#34;</span><span style="color:#70a0d0">${</span><span style="color:#bb60d5">files</span>[@]<span style="color:#70a0d0">}</span><span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#007020;font-weight:bold">do</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>  find . -name <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$file</span><span style="color:#4070a0">&#34;</span> -type f -print0 | xargs -0 rm -f
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#007020;font-weight:bold">done</span>
+</span></span></code></pre></div><ul>
+<li>파일명이 길 경우 중간에 <code>*</code> 사용 가능</li>
+<li>특수문자(<code>\(!</code>) 등은 반드시 이스케이프 처리: <code>\\)\!.md</code></li>
+</ul>
+<hr>
 <h2 id="3-삭제한-파일-복구-최신본-유지">3. 삭제한 파일 복구 (최신본 유지)</h2>
 <p>Mega는 로컬에서 삭제된 파일을 <strong>휴지통 → syncdebris</strong> 경로에 저장함.</p>
 <p>복구 절차:</p>
